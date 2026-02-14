@@ -13,6 +13,30 @@ app.use(express.json());
 const PROJECTS_DIR = path.join(__dirname, 'data', 'projects');
 const CARDS_FILE = path.join(__dirname, 'data', 'cards.json');
 const SHARES_FILE = path.join(__dirname, 'data', 'shares.json');
+const SETTINGS_FILE = path.join(__dirname, 'data', 'settings.json');
+
+// 助手函数：读取/写入系统设置
+const getSettings = () => {
+  const defaultSettings = {
+    siteName: '趣味测试平台',
+    siteDescription: '发现未知的自己',
+    contactEmail: '',
+    cardDefaultValidDays: 3,
+    cardDefaultDeviceLimit: 3,
+    shareTitle: '这个测试太准了，快来试试！',
+    shareDescription: '发现一个超级好玩的心理测试，分享给你。'
+  };
+  if (!fs.existsSync(SETTINGS_FILE)) return defaultSettings;
+  try {
+    return { ...defaultSettings, ...JSON.parse(fs.readFileSync(SETTINGS_FILE, 'utf8')) };
+  } catch (e) {
+    return defaultSettings;
+  }
+};
+
+const saveSettings = (settings) => {
+  fs.writeFileSync(SETTINGS_FILE, JSON.stringify(settings, null, 2));
+};
 
 // 助手函数：读取/写入分享数据
 const getShares = () => {
@@ -44,6 +68,11 @@ if (!fs.existsSync(PROJECTS_DIR)) {
 // 确保分享数据文件存在
 if (!fs.existsSync(SHARES_FILE)) {
   fs.writeFileSync(SHARES_FILE, '{}');
+}
+
+// 确保设置文件存在
+if (!fs.existsSync(SETTINGS_FILE)) {
+  saveSettings(getSettings());
 }
 
 // 数据迁移：从 config.json 迁移分享数据到 shares.json
@@ -421,6 +450,20 @@ app.post('/api/projects/:projectId/share', (req, res) => {
     res.json({ success: true, shares: shares[projectId] });
   } catch (e) {
     res.status(500).json({ error: 'Failed to update share count' });
+  }
+});
+
+// 系统设置 API
+app.get('/api/settings', (req, res) => {
+  res.json(getSettings());
+});
+
+app.post('/api/settings', (req, res) => {
+  try {
+    saveSettings(req.body);
+    res.json({ success: true });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save settings' });
   }
 });
 

@@ -63,8 +63,42 @@ const importData = ref({
   questions: ''
 });
 
-const currentView = ref('projects'); // projects, cards, stats
+const currentView = ref('projects'); // projects, cards, stats, settings
 const statsData = ref<any>(null);
+
+// 系统设置相关状态
+const settings = ref({
+  siteName: '',
+  siteDescription: '',
+  contactEmail: '',
+  cardDefaultValidDays: 3,
+  cardDefaultDeviceLimit: 3,
+  shareTitle: '',
+  shareDescription: ''
+});
+const isSavingSettings = ref(false);
+
+const fetchSettings = async () => {
+  try {
+    const response = await axios.get('http://localhost:3000/api/settings');
+    settings.value = response.data;
+  } catch (error) {
+    console.error('Failed to fetch settings:', error);
+  }
+};
+
+const handleSaveSettings = async () => {
+  isSavingSettings.value = true;
+  try {
+    await axios.post('http://localhost:3000/api/settings', settings.value);
+    alert('系统设置已保存');
+  } catch (error) {
+    console.error('Failed to save settings:', error);
+    alert('保存设置失败');
+  } finally {
+    isSavingSettings.value = false;
+  }
+};
 
 // 统计页分页相关状态
 const statsCurrentPage = ref(1);
@@ -203,7 +237,11 @@ onMounted(fetchProjects);
           :class="currentView === 'stats' ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50'"
           class="w-full text-left px-4 py-2 rounded-lg font-medium transition-colors"
         >数据统计</button>
-        <button class="w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg">系统设置</button>
+        <button 
+          @click="currentView = 'settings'; fetchSettings()"
+          :class="currentView === 'settings' ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50'"
+          class="w-full text-left px-4 py-2 rounded-lg font-medium transition-colors"
+        >系统设置</button>
       </nav>
     </aside>
 
@@ -518,6 +556,124 @@ onMounted(fetchProjects);
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <!-- 系统设置 -->
+      <div v-if="currentView === 'settings'">
+        <header class="mb-6">
+          <h2 class="text-2xl font-bold text-gray-800">系统设置</h2>
+          <p class="text-sm text-gray-500 mt-1">管理平台的全局基础配置</p>
+        </header>
+
+        <div class="max-w-4xl space-y-6">
+          <!-- 站点信息 -->
+          <section class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="px-6 py-4 bg-gray-50 border-b">
+              <h3 class="font-bold text-gray-800">站点信息</h3>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="grid grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">站点名称</label>
+                  <input 
+                    v-model="settings.siteName" 
+                    type="text" 
+                    class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                    placeholder="如：趣味测试平台"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">联系邮箱</label>
+                  <input 
+                    v-model="settings.contactEmail" 
+                    type="email" 
+                    class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                    placeholder="用于接收用户反馈"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">站点描述</label>
+                <textarea 
+                  v-model="settings.siteDescription" 
+                  rows="3" 
+                  class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-none"
+                  placeholder="展示在首页的副标题"
+                ></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- 默认业务配置 -->
+          <section class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="px-6 py-4 bg-gray-50 border-b">
+              <h3 class="font-bold text-gray-800">业务默认值</h3>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="grid grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">卡密默认有效天数</label>
+                  <div class="flex items-center">
+                    <input 
+                      v-model.number="settings.cardDefaultValidDays" 
+                      type="number" 
+                      class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                    />
+                    <span class="ml-2 text-gray-500 text-sm">天</span>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">卡密默认设备限制</label>
+                  <div class="flex items-center">
+                    <input 
+                      v-model.number="settings.cardDefaultDeviceLimit" 
+                      type="number" 
+                      class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                    />
+                    <span class="ml-2 text-gray-500 text-sm">台</span>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xs text-gray-400">注：这些值将作为生成卡密时的初始填充值。</p>
+            </div>
+          </section>
+
+          <!-- 分享文案配置 -->
+          <section class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="px-6 py-4 bg-gray-50 border-b">
+              <h3 class="font-bold text-gray-800">全局分享文案</h3>
+            </div>
+            <div class="p-6 space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">默认分享标题</label>
+                <input 
+                  v-model="settings.shareTitle" 
+                  type="text" 
+                  class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">默认分享描述</label>
+                <textarea 
+                  v-model="settings.shareDescription" 
+                  rows="2" 
+                  class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-none"
+                ></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- 保存按钮 -->
+          <div class="flex justify-end pt-4">
+            <button 
+              @click="handleSaveSettings"
+              :disabled="isSavingSettings"
+              class="px-10 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg disabled:opacity-50 flex items-center gap-2"
+            >
+              <span v-if="isSavingSettings" class="animate-spin text-lg">⏳</span>
+              {{ isSavingSettings ? '正在保存...' : '保存全局设置' }}
+            </button>
           </div>
         </div>
       </div>
