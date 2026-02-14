@@ -78,6 +78,12 @@ app.get('/api/projects', (req, res) => {
         return {
           id,
           title: config.title || config.meta?.title || id,
+          description: config.description || config.meta?.description || '暂无描述',
+          category: config.category || '其他',
+          tags: config.tags || [],
+          coverImage: config.coverImage || 'https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+          isHot: config.isHot || config.meta?.isHot || false,
+          views: config.views || Math.floor(Math.random() * 10000) + 1000,
           access: config.settings?.accessMode || 'public',
           status: 'published',
           createdAt
