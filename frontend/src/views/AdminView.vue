@@ -46,6 +46,12 @@ const handlePageSizeChange = () => {
 const showCreateModal = ref(false);
 const showImportModal = ref(false);
 const editingProjectId = ref<string | null>(null);
+const managingCardProjectId = ref<string | null>(null);
+
+const handleManageCards = (projectId: string) => {
+  managingCardProjectId.value = projectId;
+  currentView.value = 'cards';
+};
 
 const newProject = ref({
   id: '',
@@ -246,6 +252,10 @@ onMounted(fetchProjects);
                     @click="editingProjectId = project.id"
                     class="text-blue-600 hover:underline text-sm font-medium"
                   >编辑</button>
+                  <button 
+                    @click="handleManageCards(project.id)"
+                    class="text-orange-600 hover:underline text-sm font-medium"
+                  >卡密</button>
                   <a 
                     :href="`/quiz/${project.id}`"
                     target="_blank"
@@ -313,11 +323,16 @@ onMounted(fetchProjects);
       </div>
 
       <div v-else-if="currentView === 'cards'">
-        <header class="mb-8">
+        <header class="flex justify-between items-center mb-6">
           <h2 class="text-2xl font-bold text-gray-800">卡密管理</h2>
-          <p class="text-gray-500 text-sm">管理测试项目的准入卡密，支持批量生成和状态追踪。</p>
+          <button 
+            @click="currentView = 'projects'; managingCardProjectId = null"
+            class="text-blue-600 hover:underline flex items-center gap-1"
+          >
+            ← 返回项目列表
+          </button>
         </header>
-        <CardManager />
+        <CardManager :initialProjectId="managingCardProjectId || undefined" />
       </div>
 
       <div v-else-if="currentView === 'stats'">

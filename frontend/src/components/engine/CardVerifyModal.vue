@@ -17,6 +17,15 @@ const cardCode = ref('');
 const isLoading = ref(false);
 const error = ref('');
 
+const getDeviceId = () => {
+  let deviceId = localStorage.getItem('device_id');
+  if (!deviceId) {
+    deviceId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    localStorage.setItem('device_id', deviceId);
+  }
+  return deviceId;
+};
+
 const verify = async () => {
   if (!cardCode.value) {
     error.value = '请输入卡密';
@@ -29,7 +38,8 @@ const verify = async () => {
   try {
     const response = await axios.post('http://localhost:3000/api/verify-card', {
       cardCode: cardCode.value,
-      projectId: props.projectId
+      projectId: props.projectId,
+      deviceId: getDeviceId()
     });
 
     if (response.data.success) {

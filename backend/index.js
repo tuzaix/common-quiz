@@ -38,19 +38,22 @@ app.get('/api/cards', (req, res) => {
 
 // 批量生成卡密
 app.post('/api/cards/generate', (req, res) => {
-  const { projectId, count } = req.body;
+  const { projectId, count, validDays, deviceLimit } = req.body;
   if (!projectId || !count) return res.status(400).json({ error: 'Project ID and count are required' });
 
   try {
     const cards = JSON.parse(fs.readFileSync(CARDS_FILE, 'utf8'));
     const newCards = [];
     for (let i = 0; i < count; i++) {
-      const code = Math.random().toString(36).substring(2, 8).toUpperCase();
+      const code = Math.random().toString(36).substring(2, 10).toUpperCase();
       newCards.push({
         code,
         projectId,
         status: 'unused',
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
+        validDays: validDays !== undefined ? validDays : 3, // Default to 3 days
+        deviceLimit: deviceLimit !== undefined ? deviceLimit : 3, // Default to 3 devices
+        usedDevices: [] // Store device identifiers
       });
     }
     const updatedCards = [...cards, ...newCards];
@@ -208,27 +211,58 @@ app.get('/api/projects/:projectId/config', (req, res) => {
   }
 });
 
-// 验证卡密 (更新之前的验证逻辑)
+// 验证卡密
 app.post('/api/verify-card', (req, res) => {
-  const { cardCode, projectId } = req.body;
+  const { cardCode, projectId, deviceId } = req.body;
   try {
     const cards = JSON.parse(fs.readFileSync(CARDS_FILE, 'utf8'));
-    const cardIndex = cards.findIndex(c => c.code === cardCode && c.projectId === projectId && c.status === 'unused');
     
     if (cardCode === '123456') { // 保留演示卡密
       return res.json({ success: true, message: 'Demo card verified' });
     }
 
-    if (cardIndex !== -1) {
-      cards[cardIndex].status = 'used';
-      cards[cardIndex].usedAt = new Date().toISOString();
-      fs.writeFileSync(CARDS_FILE, JSON.stringify(cards, null, 2));
-      res.json({ success: true, message: 'Card verified' });
-    } else {
-      res.status(403).json({ success: false, message: 'Invalid or already used card' });
+    const cardIndex = cards.findIndex(c => c.code === cardCode && c.projectId === projectId);
+    
+    if (cardIndex === -1) {
+      return res.status(403).json({ success: false, message: '卡密不存在' });
     }
+
+    const card = cards[cardIndex];
+
+    // 1. 检查状态和有效期
+    if (card.status === 'used') {
+      // 如果已使用，检查是否在有效期内且设备匹配
+      if (card.validDays > 0) {
+        const usedDate = new Date(card.usedAt);
+        const now = new Date();
+        const diffDays = (now - usedDate) / (1000 * 60 * 60 * 24);
+        
+        if (diffDays > card.validDays) {
+          return res.status(403).json({ success: false, message: '卡密已过期' });
+        }
+      }
+      
+      // 检查设备限制
+      if (deviceId && card.usedDevices && !card.usedDevices.includes(deviceId)) {
+        if (card.usedDevices.length >= (card.deviceLimit || 1)) {
+          return res.status(403).json({ success: false, message: '已达到最大设备授权限制' });
+        }
+        // 未超过限制，添加新设备
+        card.usedDevices.push(deviceId);
+      }
+    } else {
+      // 2. 首次使用
+      card.status = 'used';
+      card.usedAt = new Date().toISOString();
+      card.usedDevices = deviceId ? [deviceId] : [];
+    }
+
+    fs.writeFileSync(CARDS_FILE, JSON.stringify(cards, null, 2));
+    res.json({ success: true, message: '验证通过' });
+
   } catch (e) {
-    res.status(500).json({ success: false, message: 'Verification failed' });
+    console.error('Verification error:', e);
+    res.status(500).json({ success: false, message: '验证失败' });
   }
 });
 
