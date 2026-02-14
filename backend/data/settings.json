@@ -5,5 +5,6 @@
   "cardDefaultValidDays": 3,
   "cardDefaultDeviceLimit": 3,
   "shareTitle": "这个测试太准了，快来试试！",
-  "shareDescription": "发现一个超级好玩的心理测试，分享给你。"
+  "shareDescription": "发现一个超级好玩的心理测试，分享给你。",
+  "qrcodeUrl": "http://localhost:3000/uploads/qrcode_1771108734566.jpg"
 }

@@ -74,9 +74,33 @@ const settings = ref({
   cardDefaultValidDays: 3,
   cardDefaultDeviceLimit: 3,
   shareTitle: '',
-  shareDescription: ''
+  shareDescription: '',
+  qrcodeUrl: ''
 });
 const isSavingSettings = ref(false);
+const isUploading = ref(false);
+
+const handleUploadQrcode = async (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  if (!target.files || target.files.length === 0) return;
+  
+  const file = target.files[0];
+  const formData = new FormData();
+  if (file) formData.append('file', file);
+  
+  isUploading.value = true;
+  try {
+    const response = await axios.post('http://localhost:3000/api/settings/upload-qrcode', formData, {
+      headers: { 'Content-Type': 'multipart/form-data' }
+    });
+    settings.value.qrcodeUrl = response.data.url;
+  } catch (error) {
+    console.error('Failed to upload QR code:', error);
+    alert('上传失败');
+  } finally {
+    isUploading.value = false;
+  }
+};
 
 const fetchSettings = async () => {
   try {
@@ -265,20 +289,6 @@ onMounted(fetchProjects);
             </button>
           </div>
         </header>
-
-        <!-- 统计概览 -->
-        <div class="grid grid-cols-4 gap-6 mb-8">
-          <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-600 flex items-center justify-between">
-            <div>
-              <div class="text-sm text-gray-400 mb-1">总项目数</div>
-              <div class="text-2xl font-bold text-gray-800">{{ projects.length }}</div>
-            </div>
-            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 text-xl">
-              📊
-            </div>
-          </div>
-          <!-- 可以预留其他统计卡片 -->
-        </div>
 
         <!-- 加载状态 -->
         <div v-if="isLoading" class="flex justify-center py-12">
@@ -642,24 +652,54 @@ onMounted(fetchProjects);
           <!-- 分享文案配置 -->
           <section class="bg-white rounded-xl shadow-sm overflow-hidden">
             <div class="px-6 py-4 bg-gray-50 border-b">
-              <h3 class="font-bold text-gray-800">全局分享文案</h3>
+              <h3 class="font-bold text-gray-800">全局分享配置</h3>
             </div>
             <div class="p-6 space-y-4">
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">默认分享标题</label>
-                <input 
-                  v-model="settings.shareTitle" 
-                  type="text" 
-                  class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
-                />
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">默认分享描述</label>
-                <textarea 
-                  v-model="settings.shareDescription" 
-                  rows="2" 
-                  class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-none"
-                ></textarea>
+              <div class="grid grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">默认分享标题</label>
+                    <input 
+                      v-model="settings.shareTitle" 
+                      type="text" 
+                      class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">默认分享描述</label>
+                    <textarea 
+                      v-model="settings.shareDescription" 
+                      rows="3" 
+                      class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-none"
+                    ></textarea>
+                  </div>
+                </div>
+                
+                <div class="flex flex-col items-center justify-center border-2 border-dashed border-gray-200 rounded-xl p-4 bg-gray-50">
+                  <label class="block text-sm font-medium text-gray-700 mb-3">分享卡片二维码</label>
+                  <div class="relative group">
+                    <img 
+                      v-if="settings.qrcodeUrl" 
+                      :src="settings.qrcodeUrl" 
+                      class="w-32 h-32 object-contain bg-white rounded shadow-sm"
+                      alt="分享二维码"
+                    />
+                    <div v-else class="w-32 h-32 bg-gray-200 rounded flex items-center justify-center text-gray-400">
+                      <span class="text-xs">未上传</span>
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity rounded flex items-center justify-center">
+                      <label class="cursor-pointer text-white text-xs font-bold bg-blue-600 px-2 py-1 rounded">更换图片</label>
+                    </div>
+                    <input 
+                      type="file" 
+                      @change="handleUploadQrcode" 
+                      class="absolute inset-0 opacity-0 cursor-pointer"
+                      accept="image/*"
+                    />
+                  </div>
+                  <p class="text-[10px] text-gray-400 mt-3">建议尺寸：200x200px，PNG/JPG 格式</p>
+                  <div v-if="isUploading" class="mt-2 text-xs text-blue-600 animate-pulse font-medium">正在上传...</div>
+                </div>
               </div>
             </div>
           </section>

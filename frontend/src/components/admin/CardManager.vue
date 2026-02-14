@@ -26,6 +26,7 @@ const cards = ref<Card[]>([]);
 const projects = ref<Project[]>([]);
 const isLoading = ref(true);
 const isGenerating = ref(false);
+const showGenerateModal = ref(false);
 
 const generateForm = ref({
   projectId: '',
@@ -128,6 +129,7 @@ const handleGenerate = async () => {
   try {
     await axios.post('http://localhost:3000/api/cards/generate', generateForm.value);
     await fetchCards();
+    showGenerateModal.value = false;
     alert('卡密生成成功');
   } catch (error) {
     alert('生成失败');
@@ -144,101 +146,139 @@ onMounted(() => {
 
 <template>
   <div class="space-y-6">
-    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-      <h3 class="text-lg font-bold text-gray-800 mb-4">批量生成卡密</h3>
-      <div class="flex items-end gap-4">
-        <div class="flex-1">
-          <label class="block text-sm font-medium text-gray-700 mb-1">选择项目</label>
+    <!-- 顶部操作栏 -->
+    <div class="flex justify-between items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+      <div class="flex items-center gap-4">
+        <h3 class="font-bold text-gray-800">卡密管理</h3>
+        <div class="flex items-center gap-2">
+          <span class="text-sm text-gray-500">项目:</span>
           <select 
-            v-model="generateForm.projectId"
-            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+            v-model="filterProjectId"
+            class="px-3 py-1.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none bg-white min-w-[150px]"
           >
-            <option v-for="p in projects" :key="p.id" :value="p.id">{{ p.title }} ({{ p.id }})</option>
+            <option value="">全部项目</option>
+            <option v-for="p in projects" :key="p.id" :value="p.id">{{ p.title }}</option>
           </select>
         </div>
-        <div class="w-32">
-          <label class="block text-sm font-medium text-gray-700 mb-1">生成数量</label>
-          <div class="relative">
-            <input 
-              v-model.number="generateForm.count"
-              type="number"
-              min="1"
-              class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-            />
-            <span class="absolute right-3 top-2 text-gray-400 text-sm">个</span>
-          </div>
+        <div class="flex items-center gap-2">
+          <span class="text-sm text-gray-500">状态:</span>
+          <select 
+            v-model="filterStatus"
+            class="px-3 py-1.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none bg-white"
+          >
+            <option value="">全部状态</option>
+            <option value="unused">未使用</option>
+            <option value="used">已使用</option>
+          </select>
         </div>
-        <div class="w-32">
-          <label class="block text-sm font-medium text-gray-700 mb-1">有效天数</label>
-          <div class="relative">
-            <input 
-              v-model.number="generateForm.validDays"
-              type="number"
-              min="0"
-              class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-              placeholder="0为永久"
-            />
-            <span class="absolute right-3 top-2 text-gray-400 text-sm">天</span>
-          </div>
-        </div>
-        <div class="w-32">
-          <label class="block text-sm font-medium text-gray-700 mb-1">设备限制</label>
-          <div class="relative">
-            <input 
-              v-model.number="generateForm.deviceLimit"
-              type="number"
-              min="1"
-              class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-            />
-            <span class="absolute right-3 top-2 text-gray-400 text-sm">台</span>
-          </div>
-        </div>
+      </div>
+      
+      <div class="flex items-center gap-3">
         <button 
-          @click="handleGenerate"
-          :disabled="isGenerating"
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 disabled:bg-blue-300"
+          v-if="selectedCodes.length > 0"
+          @click="handleBatchDelete"
+          class="px-4 py-2 bg-red-50 text-red-600 hover:bg-red-100 rounded-lg text-sm font-bold transition-colors border border-red-100"
         >
-          {{ isGenerating ? '生成中...' : '立即生成' }}
+          批量删除 ({{ selectedCodes.length }})
         </button>
+        <button 
+          @click="fetchCards"
+          class="px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg text-sm font-medium border border-gray-200"
+        >
+          刷新
+        </button>
+        <button 
+          @click="showGenerateModal = true"
+          class="px-6 py-2 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 shadow-md transition-all flex items-center gap-2"
+        >
+          <span class="text-lg">+</span> 批量生成
+        </button>
+      </div>
+    </div>
+
+    <!-- 卡密生成弹窗 -->
+    <div v-if="showGenerateModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden animate-in fade-in zoom-in duration-200">
+        <div class="px-6 py-4 border-b flex justify-between items-center bg-gray-50">
+          <h3 class="text-xl font-bold text-gray-800">批量生成卡密</h3>
+          <button @click="showGenerateModal = false" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+        </div>
+        
+        <div class="p-6 space-y-5">
+          <div>
+            <label class="block text-sm font-bold text-gray-700 mb-2">选择项目</label>
+            <select 
+              v-model="generateForm.projectId"
+              class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none bg-white"
+            >
+              <option v-for="p in projects" :key="p.id" :value="p.id">{{ p.title }} ({{ p.id }})</option>
+            </select>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-bold text-gray-700 mb-2">生成数量</label>
+              <div class="relative">
+                <input 
+                  v-model.number="generateForm.count"
+                  type="number"
+                  min="1"
+                  class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+                />
+                <span class="absolute right-4 top-3.5 text-gray-400">个</span>
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-gray-700 mb-2">设备限制</label>
+              <div class="relative">
+                <input 
+                  v-model.number="generateForm.deviceLimit"
+                  type="number"
+                  min="1"
+                  class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+                />
+                <span class="absolute right-4 top-3.5 text-gray-400">台</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-bold text-gray-700 mb-2">有效天数 (0 为永久)</label>
+            <div class="relative">
+              <input 
+                v-model.number="generateForm.validDays"
+                type="number"
+                min="0"
+                class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+                placeholder="设置卡密激活后的有效期"
+              />
+              <span class="absolute right-4 top-3.5 text-gray-400">天</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-6 py-4 bg-gray-50 border-t flex justify-end gap-3">
+          <button 
+            @click="showGenerateModal = false"
+            class="px-6 py-2.5 text-gray-600 font-bold hover:bg-gray-200 rounded-xl transition-colors"
+          >
+            取消
+          </button>
+          <button 
+            @click="handleGenerate"
+            :disabled="isGenerating || !generateForm.projectId"
+            class="px-8 py-2.5 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 disabled:bg-blue-300 shadow-lg shadow-blue-200 transition-all flex items-center gap-2"
+          >
+            <div v-if="isGenerating" class="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+            {{ isGenerating ? '正在生成...' : '立即生成' }}
+          </button>
+        </div>
       </div>
     </div>
 
     <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
       <div class="p-4 border-b bg-gray-50 flex justify-between items-center">
         <h3 class="font-bold text-gray-800">卡密列表 ({{ filteredCards.length }})</h3>
-        <div class="flex items-center gap-4">
-          <div v-if="selectedCodes.length > 0" class="flex items-center gap-2 pr-4 border-r border-gray-200">
-            <span class="text-sm text-gray-600">已选 {{ selectedCodes.length }} 项</span>
-            <button 
-              @click="handleBatchDelete"
-              class="px-3 py-1 bg-red-50 text-red-600 hover:bg-red-100 rounded-lg text-sm font-bold transition-colors"
-            >
-              批量删除
-            </button>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="text-sm text-gray-500">状态:</span>
-            <select 
-              v-model="filterStatus"
-              class="px-3 py-1.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none bg-white"
-            >
-              <option value="">全部状态</option>
-              <option value="unused">未使用</option>
-              <option value="used">已使用</option>
-            </select>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="text-sm text-gray-500">项目:</span>
-            <select 
-              v-model="filterProjectId"
-              class="px-3 py-1.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none bg-white"
-            >
-              <option value="">全部项目</option>
-              <option v-for="p in projects" :key="p.id" :value="p.id">{{ p.title }}</option>
-            </select>
-          </div>
-          <button @click="fetchCards" class="text-sm text-blue-600 hover:underline">刷新列表</button>
-        </div>
       </div>
       <table class="w-full text-left">
         <thead class="bg-gray-50 text-gray-500 text-sm uppercase">

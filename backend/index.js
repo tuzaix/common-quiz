@@ -2,10 +2,28 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
+const multer = require('multer');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// 静态文件目录，允许跨域访问图片
+app.use('/uploads', cors(), express.static(path.join(__dirname, 'data/uploads')));
+
+// 确保目录存在
+const UPLOADS_DIR = path.join(__dirname, 'data/uploads');
+if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+
+// 配置 multer
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => cb(null, UPLOADS_DIR),
+  filename: (req, file, cb) => {
+    const ext = path.extname(file.originalname);
+    cb(null, `qrcode_${Date.now()}${ext}`);
+  }
+});
+const upload = multer({ storage });
 
 app.use(cors());
 app.use(express.json());
@@ -24,7 +42,8 @@ const getSettings = () => {
     cardDefaultValidDays: 3,
     cardDefaultDeviceLimit: 3,
     shareTitle: '这个测试太准了，快来试试！',
-    shareDescription: '发现一个超级好玩的心理测试，分享给你。'
+    shareDescription: '发现一个超级好玩的心理测试，分享给你。',
+    qrcodeUrl: ''
   };
   if (!fs.existsSync(SETTINGS_FILE)) return defaultSettings;
   try {
@@ -465,6 +484,14 @@ app.post('/api/settings', (req, res) => {
   } catch (e) {
     res.status(500).json({ error: 'Failed to save settings' });
   }
+});
+
+// 上传二维码接口
+app.post('/api/settings/upload-qrcode', upload.single('file'), (req, res) => {
+  if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
+  
+  const qrcodeUrl = `http://localhost:3000/uploads/${req.file.filename}`;
+  res.json({ url: qrcodeUrl });
 });
 
 app.listen(PORT, () => {

@@ -5,6 +5,7 @@
  */
 
 import { ref, onMounted } from 'vue';
+import axios from 'axios';
 import { CanvasRenderer, type Layer } from '../../services/CanvasRenderer';
 
 const props = defineProps<{
@@ -89,7 +90,34 @@ const defaultLayout: { width: number, height: number, layers: Layer[] } = {
 };
 
 onMounted(async () => {
-  const layout = props.layout || defaultLayout;
+  const layout = JSON.parse(JSON.stringify(props.layout || defaultLayout));
+  
+  // 获取系统配置中的二维码
+  try {
+    const settingsRes = await axios.get('http://localhost:3000/api/settings');
+    const qrcodeUrl = settingsRes.data.qrcodeUrl;
+    
+    if (qrcodeUrl) {
+      // 查找二维码图层（目前是占位矩形，我们可以替换它或者在它上面叠加）
+      // 我们的 defaultLayout 中，二维码相关的是第 82 行的 rect
+      const qrcodeLayerIndex = layout.layers.findIndex((l: any) => l.x === 100 && l.y === 700 && l.width === 90);
+      if (qrcodeLayerIndex !== -1) {
+        // 替换为图片图层
+        layout.layers[qrcodeLayerIndex] = {
+          type: 'image',
+          content: qrcodeUrl, // CanvasRenderer 使用 content 字段加载图片
+          x: 100,
+          y: 700,
+          width: 90,
+          height: 90,
+          borderRadius: 15
+        };
+      }
+    }
+  } catch (err) {
+    console.warn('Failed to fetch settings for QR code, using placeholder:', err);
+  }
+
   const renderer = new CanvasRenderer(layout.width, layout.height);
   try {
     imageBase64.value = await renderer.render(layout.layers, props.data);
