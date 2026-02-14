@@ -1,0 +1,631 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "周末朋友突然放鸽子，取消了约会，你通常会？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "有点生气，立刻发消息或朋友圈吐槽",
+        "value": 10
+      },
+      {
+        "id": "Q1_o2",
+        "label": "感到失望，但很快自己找点别的事做，比如玩游戏或追剧",
+        "value": 30
+      },
+      {
+        "id": "Q1_o3",
+        "label": "马上联系其他朋友，看看晚上有没有别的安排",
+        "value": 50
+      },
+      {
+        "id": "Q1_o4",
+        "label": "接受变化，正好利用独处时间整理房间或规划下周",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "当朋友之间发生争吵或冲突时，你通常扮演什么角色？"
+    },
+    "dimensionKey": "social",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "好奇的旁观者，甚至觉得有点“精彩”",
+        "value": 10
+      },
+      {
+        "id": "Q2_o2",
+        "label": "热心的和事佬，试图用轻松的方式缓和气氛",
+        "value": 30
+      },
+      {
+        "id": "Q2_o3",
+        "label": "回避者，觉得尴尬并选择暂时离开",
+        "value": 50
+      },
+      {
+        "id": "Q2_o4",
+        "label": "理性的沟通者，尝试帮助双方分析问题、达成理解",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何应对压力很大或让你非常焦虑的事情？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "情绪崩溃，通过发动态或自我封闭来表达",
+        "value": 10
+      },
+      {
+        "id": "Q3_o2",
+        "label": "通过打游戏、暴饮暴食等即时娱乐来暂时逃避",
+        "value": 30
+      },
+      {
+        "id": "Q3_o3",
+        "label": "找亲近的人反复倾诉和吐槽",
+        "value": 50
+      },
+      {
+        "id": "Q3_o4",
+        "label": "冷静分析压力来源，列出步骤计划并逐一解决",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何应对压力很大或让你非常焦虑的事情？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "情绪崩溃，通过发动态或自我封闭来表达",
+        "value": 10
+      },
+      {
+        "id": "Q3_o2",
+        "label": "通过打游戏、暴饮暴食等即时娱乐来暂时逃避",
+        "value": 30
+      },
+      {
+        "id": "Q3_o3",
+        "label": "找亲近的人反复倾诉和吐槽",
+        "value": 50
+      },
+      {
+        "id": "Q3_o4",
+        "label": "冷静分析压力来源，列出步骤计划并逐一解决",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "在社交聚会（如派对）上，你更倾向于？"
+    },
+    "dimensionKey": "social",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "活跃在中心，希望成为焦点",
+        "value": 10
+      },
+      {
+        "id": "Q4_o2",
+        "label": "和熟悉的朋友小圈子待在一起聊天",
+        "value": 30
+      },
+      {
+        "id": "Q4_o3",
+        "label": "主动与一些新面孔进行礼貌性交流",
+        "value": 50
+      },
+      {
+        "id": "Q4_o4",
+        "label": "更愿意观察，或待在相对安静的角落",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "请找出不同类的一项："
+    },
+    "dimensionKey": "cognitive",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "猫",
+        "value": 70
+      },
+      {
+        "id": "Q5_o2",
+        "label": "狗",
+        "value": 10
+      },
+      {
+        "id": "Q5_o3",
+        "label": "桌",
+        "value": 70
+      },
+      {
+        "id": "Q5_o4",
+        "label": "鸟",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "数字序列：1, 2, 4, 7, 11, 16, ? 你认为下一个数字是？"
+    },
+    "dimensionKey": "cognitive",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "20",
+        "value": 30
+      },
+      {
+        "id": "Q6_o2",
+        "label": "22",
+        "value": 70
+      },
+      {
+        "id": "Q6_o3",
+        "label": "23",
+        "value": 50
+      },
+      {
+        "id": "Q6_o4",
+        "label": "25",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "突然收到一笔额外的奖金或零花钱，你的第一反应是？"
+    },
+    "dimensionKey": "behavior",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "立刻买下购物车里那些让人开心的小玩意",
+        "value": 10
+      },
+      {
+        "id": "Q7_o2",
+        "label": "计划一次有趣的体验消费，比如短途旅行或玩剧本杀",
+        "value": 30
+      },
+      {
+        "id": "Q7_o3",
+        "label": "存起来一部分，另一部分用于投资自己（如课程）",
+        "value": 50
+      },
+      {
+        "id": "Q7_o4",
+        "label": "主要考虑用于理财、储蓄或购买长期实用的资产",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "你对个人健康和生活习惯（“养生”）的态度是？"
+    },
+    "dimensionKey": "behavior",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "“朋克养生”，边熬夜边用保健品找心理安慰",
+        "value": 10
+      },
+      {
+        "id": "Q8_o2",
+        "label": "不太在意，觉得那是年纪大了才需要考虑的事",
+        "value": 30
+      },
+      {
+        "id": "Q8_o3",
+        "label": "会关注并偶尔尝试一些流行的健康方法",
+        "value": 50
+      },
+      {
+        "id": "Q8_o4",
+        "label": "有意识并坚持规律作息、健康饮食和适度运动",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "当你与别人的观点产生严重分歧时，你通常会？"
+    },
+    "dimensionKey": "social",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "激烈辩论，坚持说服对方",
+        "value": 10
+      },
+      {
+        "id": "Q9_o2",
+        "label": "为了避免冲突，选择让步或不再讨论",
+        "value": 30
+      },
+      {
+        "id": "Q9_o3",
+        "label": "尝试倾听和理解对方的立场，再表达自己",
+        "value": 50
+      },
+      {
+        "id": "Q9_o4",
+        "label": "冷静地指出分歧核心，寻求基于事实或逻辑的共识",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何规划一个重要的长期目标（如职业发展、学习技能）？"
+    },
+    "dimensionKey": "behavior",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "更多是随性而为，走一步看一步",
+        "value": 10
+      },
+      {
+        "id": "Q10_o2",
+        "label": "有个大致的想法，但具体路径比较模糊",
+        "value": 30
+      },
+      {
+        "id": "Q10_o3",
+        "label": "会设定阶段性目标，但执行时可能调整",
+        "value": 50
+      },
+      {
+        "id": "Q10_o4",
+        "label": "制定详细的计划，包括步骤、时间表和备选方案",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "当你感到情绪非常低落或悲伤时，你如何安慰自己？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "放任情绪，可能哭泣或长时间沉浸在悲伤中",
+        "value": 10
+      },
+      {
+        "id": "Q11_o2",
+        "label": "用高强度的娱乐（如刷手机、玩游戏）来转移注意力",
+        "value": 30
+      },
+      {
+        "id": "Q11_o3",
+        "label": "给自己买点喜欢的东西或吃顿好的",
+        "value": 50
+      },
+      {
+        "id": "Q11_o4",
+        "label": "通过写日记、冥想或与信任的人理性交谈来梳理情绪",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "在公共场所看到“禁止踩踏草坪”的标语，而周围没人时，你会？"
+    },
+    "dimensionKey": "behavior",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "觉得无所谓，可能会为了捷径而踩上去",
+        "value": 10
+      },
+      {
+        "id": "Q12_o2",
+        "label": "通常不会主动踩，但如果别人踩了可能跟着",
+        "value": 30
+      },
+      {
+        "id": "Q12_o3",
+        "label": "遵守规则，并可能提醒同行的朋友",
+        "value": 50
+      },
+      {
+        "id": "Q12_o4",
+        "label": "严格遵守，并可能善意劝阻其他想踩踏的人",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "你最喜欢的休闲娱乐方式更接近哪一类？"
+    },
+    "dimensionKey": "behavior",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "刷短视频、看网络段子、追流行剧",
+        "value": 10
+      },
+      {
+        "id": "Q13_o2",
+        "label": "和朋友一起打游戏、玩桌游、参加热闹活动",
+        "value": 30
+      },
+      {
+        "id": "Q13_o3",
+        "label": "探店、打卡拍照、关注时尚潮流",
+        "value": 50
+      },
+      {
+        "id": "Q13_o4",
+        "label": "阅读、看纪录片、学习新知识或技能、接触大自然",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "朋友或同事最常用来形容你的关键词是？"
+    },
+    "dimensionKey": "social",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "有趣/搞笑/戏精",
+        "value": 10
+      },
+      {
+        "id": "Q14_o2",
+        "label": "热情/有活力/讲义气",
+        "value": 30
+      },
+      {
+        "id": "Q14_o3",
+        "label": "精致/会生活/有品位",
+        "value": 50
+      },
+      {
+        "id": "Q14_o4",
+        "label": "靠谱/稳重/有想法",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "对于未来五年，你更倾向于如何思考？"
+    },
+    "dimensionKey": "cognitive",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "很少想那么远，觉得变化太快，想了也没用",
+        "value": 10
+      },
+      {
+        "id": "Q15_o2",
+        "label": "有一些梦想和憧憬，但具体怎么实现不太清楚",
+        "value": 30
+      },
+      {
+        "id": "Q15_o3",
+        "label": "有大致的方向和几个想达成的目标",
+        "value": 50
+      },
+      {
+        "id": "Q15_o4",
+        "label": "有比较清晰的规划，包括职业、生活、财务等方面",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "当你需要学习一项复杂的新技能或知识时，你通常？"
+    },
+    "dimensionKey": "cognitive",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "容易分心，很难长时间集中精力",
+        "value": 10
+      },
+      {
+        "id": "Q16_o2",
+        "label": "有兴趣就学得快，没兴趣就很难坚持",
+        "value": 30
+      },
+      {
+        "id": "Q16_o3",
+        "label": "会寻找方法和教程，按部就班地学习",
+        "value": 50
+      },
+      {
+        "id": "Q16_o4",
+        "label": "会系统性地研究，制定学习计划并总结规律",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何看待“责任”这个词？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "感觉是种束缚和压力，能避免则避免",
+        "value": 10
+      },
+      {
+        "id": "Q17_o2",
+        "label": "对自己喜欢的事和人会负责，其他的看心情",
+        "value": 30
+      },
+      {
+        "id": "Q17_o3",
+        "label": "是成年人应该承担的东西，会尽力去做",
+        "value": 50
+      },
+      {
+        "id": "Q17_o4",
+        "label": "是个人成长和信誉的基石，会主动承担并履行",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "在团队合作中，如果任务进展不顺利，你通常？"
+    },
+    "dimensionKey": "social",
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "可能抱怨或指责任何一方",
+        "value": 10
+      },
+      {
+        "id": "Q18_o2",
+        "label": "做好自己分内的事，其他的不太过问",
+        "value": 30
+      },
+      {
+        "id": "Q18_o3",
+        "label": "主动沟通，尝试协调大家解决问题",
+        "value": 50
+      },
+      {
+        "id": "Q18_o4",
+        "label": "分析问题根源，提出建设性方案并推动执行",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何管理自己的空闲时间？"
+    },
+    "dimensionKey": "behavior",
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "经常不知道时间去哪了，刷手机就过去了",
+        "value": 10
+      },
+      {
+        "id": "Q19_o2",
+        "label": "根据当下的兴趣和心情来决定做什么",
+        "value": 30
+      },
+      {
+        "id": "Q19_o3",
+        "label": "会大致分配时间给休息、娱乐和自我提升",
+        "value": 50
+      },
+      {
+        "id": "Q19_o4",
+        "label": "有比较固定的时间安排和作息规律",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "综合来看，你认为自己内心更渴望的生活状态是？"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "自由自在，无忧无虑，每天都有新鲜好玩的事",
+        "value": 10
+      },
+      {
+        "id": "Q20_o2",
+        "label": "充满激情和挑战，有一群志同道合的朋友一起奋斗",
+        "value": 30
+      },
+      {
+        "id": "Q20_o3",
+        "label": "平衡且精致，在事业、生活和社交中游刃有余",
+        "value": 50
+      },
+      {
+        "id": "Q20_o4",
+        "label": "宁静而深刻，有明确的人生方向和内在的充实感",
+        "value": 70
+      }
+    ]
+  }
+]

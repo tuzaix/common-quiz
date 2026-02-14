@@ -1,0 +1,662 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "当你同时和两个及以上异性保持比较密切的联系时，你内心的主要感受是？"
+    },
+    "dimensionKey": "boundary_blurring",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "享受这种被多人关注和喜欢的感觉，并有意保持平衡",
+        "value": 3
+      },
+      {
+        "id": "Q1_o2",
+        "label": "感到有些麻烦和压力，知道需要尽快做出选择",
+        "value": 1
+      },
+      {
+        "id": "Q1_o3",
+        "label": "觉得不道德，会主动停止这种模糊的状态",
+        "value": 0
+      },
+      {
+        "id": "Q1_o4",
+        "label": "认为这只是普通交友，没有特别感觉",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "在重要的节日（如情人节、生日），你如何看待伴侣送礼物这件事？"
+    },
+    "dimensionKey": "material_demand",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "这是对方必须做到的，是爱意的证明，我会明确暗示或要求",
+        "value": 3
+      },
+      {
+        "id": "Q2_o2",
+        "label": "有礼物会开心，但不会强求，我也会为他准备礼物",
+        "value": 1
+      },
+      {
+        "id": "Q2_o3",
+        "label": "不在乎礼物，更看重陪伴和心意",
+        "value": 0
+      },
+      {
+        "id": "Q2_o4",
+        "label": "反感送礼物的形式主义，觉得是负担",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "吵架后，如果对方没有立刻来哄你，你通常会？"
+    },
+    "dimensionKey": "emotional_manipulation",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "更生气，冷战直到对方妥协道歉",
+        "value": 3
+      },
+      {
+        "id": "Q3_o2",
+        "label": "主动说出自己的感受，尝试沟通解决",
+        "value": 0
+      },
+      {
+        "id": "Q3_o3",
+        "label": "很难过，但会自己消化情绪",
+        "value": 1
+      },
+      {
+        "id": "Q3_o4",
+        "label": "觉得对方不在乎自己，考虑分手",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "当伴侣提出想带你见他的家人或朋友时，你的第一反应是？"
+    },
+    "dimensionKey": "future_ambiguity",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "压力很大，找各种理由推脱或延迟",
+        "value": 3
+      },
+      {
+        "id": "Q4_o2",
+        "label": "开心地接受，认为关系更进一步",
+        "value": 0
+      },
+      {
+        "id": "Q4_o3",
+        "label": "犹豫，需要时间考虑",
+        "value": 2
+      },
+      {
+        "id": "Q4_o4",
+        "label": "无所谓，见就见",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "你答应伴侣的事情（比如周末一起去某地），但临时有更吸引你的朋友聚会，你会？"
+    },
+    "dimensionKey": "responsibility_evasion",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "直接找借口（如身体不适）推掉和伴侣的约定",
+        "value": 3
+      },
+      {
+        "id": "Q5_o2",
+        "label": "坦诚告知，并尝试和伴侣商量改期",
+        "value": 1
+      },
+      {
+        "id": "Q5_o3",
+        "label": "优先履行对伴侣的承诺",
+        "value": 0
+      },
+      {
+        "id": "Q5_o4",
+        "label": "看心情，可能爽约也可能不去聚会",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "在社交平台（如朋友圈），你通常会如何展示自己的感情状态？"
+    },
+    "dimensionKey": "boundary_blurring",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "几乎不发与伴侣相关的内容，保持“单身”人设",
+        "value": 3
+      },
+      {
+        "id": "Q6_o2",
+        "label": "偶尔发合照或暗示，但不明确说明关系",
+        "value": 2
+      },
+      {
+        "id": "Q6_o3",
+        "label": "大方分享，会标注男友/女友",
+        "value": 0
+      },
+      {
+        "id": "Q6_o4",
+        "label": "很少发私人生活，专注分享其他内容",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "当伴侣遇到重大困难（如失业、家人生病）情绪低落时，你的做法更接近？"
+    },
+    "dimensionKey": "lack_of_reciprocity",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "觉得他负能量太多，暂时减少联系，等他自己好起来",
+        "value": 3
+      },
+      {
+        "id": "Q7_o2",
+        "label": "给予安慰和鼓励，并尽力提供实际帮助",
+        "value": 0
+      },
+      {
+        "id": "Q7_o3",
+        "label": "口头安慰一下，但不会花费太多精力",
+        "value": 2
+      },
+      {
+        "id": "Q7_o4",
+        "label": "感到烦躁，可能因此指责他不够坚强",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何看待恋爱中的消费？"
+    },
+    "dimensionKey": "material_demand",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "男生付钱是天经地义的",
+        "value": 3
+      },
+      {
+        "id": "Q8_o2",
+        "label": "轮流付钱或AA制比较公平",
+        "value": 0
+      },
+      {
+        "id": "Q8_o3",
+        "label": "大部分时候对方付，我偶尔付一点",
+        "value": 2
+      },
+      {
+        "id": "Q8_o4",
+        "label": "谁提出约会谁付钱，或者看经济情况",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "如果你对伴侣有所不满，你更倾向于如何表达？"
+    },
+    "dimensionKey": "emotional_manipulation",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "直接发脾气、冷战，让他自己意识到问题",
+        "value": 3
+      },
+      {
+        "id": "Q9_o2",
+        "label": "以“你如果爱我就会…”为开头提出要求",
+        "value": 2
+      },
+      {
+        "id": "Q9_o3",
+        "label": "平静地告诉他“当你做X时，我感到Y，我希望Z”",
+        "value": 0
+      },
+      {
+        "id": "Q9_o4",
+        "label": "憋在心里，默默扣分，直到爆发",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否有关系亲密的“男闺蜜”或“蓝颜知己”，并且会单独约会、分享心事？"
+    },
+    "dimensionKey": "boundary_blurring",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "有，并且觉得这很正常，伴侣不该干涉",
+        "value": 3
+      },
+      {
+        "id": "Q10_o2",
+        "label": "有，但会注意分寸，也会向伴侣介绍",
+        "value": 1
+      },
+      {
+        "id": "Q10_o3",
+        "label": "没有这样的异性朋友",
+        "value": 0
+      },
+      {
+        "id": "Q10_o4",
+        "label": "有，但恋爱后会自然减少联系",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "当伴侣质问你为何与其他异性互动过于亲密时，你的反应通常是？"
+    },
+    "dimensionKey": "responsibility_evasion",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "反指责他小心眼、不信任你，并可能大哭大闹",
+        "value": 3
+      },
+      {
+        "id": "Q11_o2",
+        "label": "耐心解释，并考虑调整行为以照顾他的感受",
+        "value": 0
+      },
+      {
+        "id": "Q11_o3",
+        "label": "觉得他无理取闹，懒得解释",
+        "value": 2
+      },
+      {
+        "id": "Q11_o4",
+        "label": "承认可能有些越界，但认为问题在于他太敏感",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你会在什么情况下主动为伴侣准备惊喜或礼物？"
+    },
+    "dimensionKey": "lack_of_reciprocity",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "几乎不会，觉得这是对方应该做的",
+        "value": 3
+      },
+      {
+        "id": "Q12_o2",
+        "label": "在他对我特别好的时候，或者特殊节日",
+        "value": 1
+      },
+      {
+        "id": "Q12_o3",
+        "label": "经常，只要想到或看到适合他的东西就会买",
+        "value": 0
+      },
+      {
+        "id": "Q12_o4",
+        "label": "只有在我做错了事想弥补的时候",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "你对于“恋爱关系”的长期看法是？"
+    },
+    "dimensionKey": "future_ambiguity",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "走一步看一步，未来太远说不准",
+        "value": 3
+      },
+      {
+        "id": "Q13_o2",
+        "label": "希望有结果，并愿意为之共同努力",
+        "value": 0
+      },
+      {
+        "id": "Q13_o3",
+        "label": "享受当下就好，不想考虑结婚之类的事",
+        "value": 2
+      },
+      {
+        "id": "Q13_o4",
+        "label": "恐惧承诺，觉得关系是一种束缚",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "如果你对一段感情感到厌倦了，但对方依然很投入，你会？"
+    },
+    "dimensionKey": "responsibility_evasion",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "直接冷暴力逼对方提分手",
+        "value": 3
+      },
+      {
+        "id": "Q14_o2",
+        "label": "找茬吵架，然后顺势分手",
+        "value": 2
+      },
+      {
+        "id": "Q14_o3",
+        "label": "坦诚沟通自己的感受，和平分手",
+        "value": 0
+      },
+      {
+        "id": "Q14_o4",
+        "label": "暂时不分手，但开始寻找新的目标",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否会经常在伴侣面前提及其他异性的优点，或者拿他和别人比较？"
+    },
+    "dimensionKey": "emotional_manipulation",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "会，为了激励他变得更好",
+        "value": 2
+      },
+      {
+        "id": "Q15_o2",
+        "label": "偶尔，当对他某方面不满时",
+        "value": 1
+      },
+      {
+        "id": "Q15_o3",
+        "label": "从来不会，觉得这样很伤人",
+        "value": 0
+      },
+      {
+        "id": "Q15_o4",
+        "label": "经常，并且享受他因此产生的紧张感",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "你相信“真正爱你的人，一定会无条件满足你的所有要求”这种说法吗？"
+    },
+    "dimensionKey": "lack_of_reciprocity",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "深信不疑",
+        "value": 3
+      },
+      {
+        "id": "Q16_o2",
+        "label": "部分相信，但知道现实中有限度",
+        "value": 1
+      },
+      {
+        "id": "Q16_o3",
+        "label": "不相信，爱是相互的",
+        "value": 0
+      },
+      {
+        "id": "Q16_o4",
+        "label": "用这个标准来考验对方",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "你手机里的聊天记录，对伴侣的开放程度是？"
+    },
+    "dimensionKey": "boundary_blurring",
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "绝对保密，手机不离身，认为这是隐私",
+        "value": 3
+      },
+      {
+        "id": "Q17_o2",
+        "label": "可以偶尔给他看，但有些内容会提前删除",
+        "value": 2
+      },
+      {
+        "id": "Q17_o3",
+        "label": "坦荡公开，不怕他看",
+        "value": 0
+      },
+      {
+        "id": "Q17_o4",
+        "label": "他从不要求看，所以没想过这个问题",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "当你需要帮助（如搬家、修电脑、情绪安慰）时，你第一个想到的是？"
+    },
+    "dimensionKey": "lack_of_reciprocity",
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "现任伴侣",
+        "value": 1
+      },
+      {
+        "id": "Q18_o2",
+        "label": "哪个异性朋友最擅长就找谁",
+        "value": 2
+      },
+      {
+        "id": "Q18_o3",
+        "label": "暧昧对象或追求者",
+        "value": 3
+      },
+      {
+        "id": "Q18_o4",
+        "label": "自己解决或找同性朋友",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "如果一段感情结束，你认为主要原因通常在于？"
+    },
+    "dimensionKey": "responsibility_evasion",
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "对方不够好、不够爱我",
+        "value": 3
+      },
+      {
+        "id": "Q19_o2",
+        "label": "双方都有责任",
+        "value": 1
+      },
+      {
+        "id": "Q19_o3",
+        "label": "性格不合或现实因素",
+        "value": 0
+      },
+      {
+        "id": "Q19_o4",
+        "label": "我厌倦了，想要新的开始",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何看待“承诺”在一段关系中的作用？"
+    },
+    "dimensionKey": "future_ambiguity",
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "是束缚，让人失去自由",
+        "value": 3
+      },
+      {
+        "id": "Q20_o2",
+        "label": "是安全感的基础，很重要",
+        "value": 0
+      },
+      {
+        "id": "Q20_o3",
+        "label": "可有可无，行动比承诺重要",
+        "value": 1
+      },
+      {
+        "id": "Q20_o4",
+        "label": "只要求对方给我承诺，我自己可以不给",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "当你和伴侣的规划产生冲突（如他想存钱买房，你想旅行消费），你通常会？"
+    },
+    "dimensionKey": "lack_of_reciprocity",
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "坚持自己的规划，认为他应该迁就我",
+        "value": 3
+      },
+      {
+        "id": "Q21_o2",
+        "label": "尝试沟通，寻找双方都能接受的方案",
+        "value": 0
+      },
+      {
+        "id": "Q21_o3",
+        "label": "表面同意他，但私下按自己的来",
+        "value": 2
+      },
+      {
+        "id": "Q21_o4",
+        "label": "认为他小气，可能因此疏远他",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否认为，在恋爱中“被多人喜欢”是个人魅力的体现，而非道德问题？"
+    },
+    "dimensionKey": "boundary_blurring",
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "完全认同",
+        "value": 3
+      },
+      {
+        "id": "Q22_o2",
+        "label": "部分认同，但要有底线",
+        "value": 1
+      },
+      {
+        "id": "Q22_o3",
+        "label": "不认同，专一是基本道德",
+        "value": 0
+      },
+      {
+        "id": "Q22_o4",
+        "label": "没想过这个问题",
+        "value": 1
+      }
+    ]
+  }
+]

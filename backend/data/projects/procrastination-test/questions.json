@@ -1,0 +1,627 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "我常常等到最后一刻才开始处理重要的任务。"
+    },
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "完全符合",
+        "value": 4
+      },
+      {
+        "id": "Q1_o2",
+        "label": "比较符合",
+        "value": 3
+      },
+      {
+        "id": "Q1_o3",
+        "label": "一般",
+        "value": 2
+      },
+      {
+        "id": "Q1_o4",
+        "label": "不太符合",
+        "value": 1
+      },
+      {
+        "id": "Q1_o5",
+        "label": "完全不符合",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "我会因为害怕做不好而推迟行动。"
+    },
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "完全符合",
+        "value": 4
+      },
+      {
+        "id": "Q2_o2",
+        "label": "比较符合",
+        "value": 3
+      },
+      {
+        "id": "Q2_o3",
+        "label": "一般",
+        "value": 2
+      },
+      {
+        "id": "Q2_o4",
+        "label": "不太符合",
+        "value": 1
+      },
+      {
+        "id": "Q2_o5",
+        "label": "完全不符合",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "不到最后期限，我通常不会提交工作或作业。"
+    },
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q3_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "上班或学习时，我总先做一些无关紧要的事（如瞎逛网页、吃零食），快到截止时间才开始忙正事。"
+    },
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q4_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "我没有明确的工作或学习计划，也不太懂时间管理。"
+    },
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q5_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "我总是认为时间还有，不急，即使他人催促，仍然淡定自若。"
+    },
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "经常",
+        "value": 2
+      },
+      {
+        "id": "Q6_o2",
+        "label": "偶尔",
+        "value": 1
+      },
+      {
+        "id": "Q6_o3",
+        "label": "从不",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "我总会对自己说：“这事儿我明天再做”。"
+    },
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "经常",
+        "value": 2
+      },
+      {
+        "id": "Q7_o2",
+        "label": "偶尔",
+        "value": 1
+      },
+      {
+        "id": "Q7_o3",
+        "label": "从不",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "开始做一件事之前，我总是要先磨蹭一会儿（比如冲杯咖啡、整理桌子）才开始干。"
+    },
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "经常",
+        "value": 2
+      },
+      {
+        "id": "Q8_o2",
+        "label": "偶尔",
+        "value": 1
+      },
+      {
+        "id": "Q8_o3",
+        "label": "从不",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "我经常为没有早些着手任务而后悔。"
+    },
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "我就是或总是这样",
+        "value": 5
+      },
+      {
+        "id": "Q9_o2",
+        "label": "我时常这样",
+        "value": 4
+      },
+      {
+        "id": "Q9_o3",
+        "label": "我有时这样",
+        "value": 3
+      },
+      {
+        "id": "Q9_o4",
+        "label": "我很少这样",
+        "value": 2
+      },
+      {
+        "id": "Q9_o5",
+        "label": "我不会或极少这样",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "我拖得太久，这令我的效率甚至健康都受到了不必要的影响。"
+    },
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "我就是或总是这样",
+        "value": 5
+      },
+      {
+        "id": "Q10_o2",
+        "label": "我时常这样",
+        "value": 4
+      },
+      {
+        "id": "Q10_o3",
+        "label": "我有时这样",
+        "value": 3
+      },
+      {
+        "id": "Q10_o4",
+        "label": "我很少这样",
+        "value": 2
+      },
+      {
+        "id": "Q10_o5",
+        "label": "我不会或极少这样",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "我总是到了最后才发现，其实可以把时间用在更好的地方。"
+    },
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "我就是或总是这样",
+        "value": 5
+      },
+      {
+        "id": "Q11_o2",
+        "label": "我时常这样",
+        "value": 4
+      },
+      {
+        "id": "Q11_o3",
+        "label": "我有时这样",
+        "value": 3
+      },
+      {
+        "id": "Q11_o4",
+        "label": "我很少这样",
+        "value": 2
+      },
+      {
+        "id": "Q11_o5",
+        "label": "我不会或极少这样",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "在本该做某件事情的时候，我却会去做别的事情。"
+    },
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "我就是或总是这样",
+        "value": 5
+      },
+      {
+        "id": "Q12_o2",
+        "label": "我时常这样",
+        "value": 4
+      },
+      {
+        "id": "Q12_o3",
+        "label": "我有时这样",
+        "value": 3
+      },
+      {
+        "id": "Q12_o4",
+        "label": "我很少这样",
+        "value": 2
+      },
+      {
+        "id": "Q12_o5",
+        "label": "我不会或极少这样",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "从工作或学习清单中，我会挑最不重要的事情先做；越重要的工作越拖延得久。"
+    },
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q13_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "每次开工我都想等到一个“整点”（如一点半、两点）才开始，却常常无法动手。"
+    },
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q14_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "我经常因为时间过于紧迫，草草交差，结果被同事、老师或老板责怪。"
+    },
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q15_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "要做事时，我脑子里能冒出各种理由：现在先做别的事，这个稍后。"
+    },
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q16_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "我经常自我麻痹：还来得及，不行就通宵赶工。"
+    },
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q17_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "处理问题不分主次，忙了半天，最紧要的事没做。"
+    },
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q18_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "每当同事或上司询问工作进展时，我经常说“让我再看看”。"
+    },
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q19_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "我从不主动汇报工作进展。"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q20_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "团队合作时，我能感觉到同事面露难色，不愿和我合作。"
+    },
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q21_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "面对一项复杂的任务时，我通常会找借口拖延而不是立即开始。"
+    },
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "总是",
+        "value": 4
+      },
+      {
+        "id": "Q22_o2",
+        "label": "经常",
+        "value": 3
+      },
+      {
+        "id": "Q22_o3",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q22_o4",
+        "label": "从不",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q23",
+    "type": "single_choice",
+    "content": {
+      "text": "我经常因为拖延而感到内疚或自责。"
+    },
+    "options": [
+      {
+        "id": "Q23_o1",
+        "label": "总是",
+        "value": 4
+      },
+      {
+        "id": "Q23_o2",
+        "label": "经常",
+        "value": 3
+      },
+      {
+        "id": "Q23_o3",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q23_o4",
+        "label": "从不",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q24",
+    "type": "single_choice",
+    "content": {
+      "text": "我经常在任务开始前感到焦虑和恐惧。"
+    },
+    "options": [
+      {
+        "id": "Q24_o1",
+        "label": "总是",
+        "value": 4
+      },
+      {
+        "id": "Q24_o2",
+        "label": "经常",
+        "value": 3
+      },
+      {
+        "id": "Q24_o3",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q24_o4",
+        "label": "从不",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q25",
+    "type": "single_choice",
+    "content": {
+      "text": "我能很妥善地安排自己的时间。（反向计分）"
+    },
+    "options": [
+      {
+        "id": "Q25_o1",
+        "label": "我不会或极少这样",
+        "value": 5
+      },
+      {
+        "id": "Q25_o2",
+        "label": "我很少这样",
+        "value": 4
+      },
+      {
+        "id": "Q25_o3",
+        "label": "我有时这样",
+        "value": 3
+      },
+      {
+        "id": "Q25_o4",
+        "label": "我时常这样",
+        "value": 2
+      },
+      {
+        "id": "Q25_o5",
+        "label": "我就是或总是这样",
+        "value": 1
+      }
+    ]
+  }
+]

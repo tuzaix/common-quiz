@@ -1,0 +1,452 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "当伴侣与异性朋友有说有笑时，你内心的第一反应是？"
+    },
+    "dimensionKey": "possessiveness",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "强烈不安，并想立刻介入或阻止",
+        "value": 3
+      },
+      {
+        "id": "Q1_o2",
+        "label": "有点介意，但会先观察",
+        "value": 2
+      },
+      {
+        "id": "Q1_o3",
+        "label": "轻微不舒服，但能自己消化",
+        "value": 1
+      },
+      {
+        "id": "Q1_o4",
+        "label": "完全不在意，这是正常的社交",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "如果伴侣超过2小时未回复你的消息，你会？"
+    },
+    "dimensionKey": "emotional_volatility",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "焦虑到无法专心做其他事",
+        "value": 3
+      },
+      {
+        "id": "Q2_o2",
+        "label": "反复查看手机，开始胡思乱想",
+        "value": 2
+      },
+      {
+        "id": "Q2_o3",
+        "label": "有点失落，但会找点别的事做",
+        "value": 1
+      },
+      {
+        "id": "Q2_o4",
+        "label": "理解对方可能有事在忙，耐心等待",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否认为“爱一个人，就应该完全属于彼此，没有秘密”？"
+    },
+    "dimensionKey": "possessiveness",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "完全认同，爱是绝对占有",
+        "value": 3
+      },
+      {
+        "id": "Q3_o2",
+        "label": "基本认同，但可以保留一点个人空间",
+        "value": 2
+      },
+      {
+        "id": "Q3_o3",
+        "label": "不太认同，每个人都需要独立性",
+        "value": 1
+      },
+      {
+        "id": "Q3_o4",
+        "label": "完全不认同，爱是信任与自由",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "在激烈争吵时，你更可能？"
+    },
+    "dimensionKey": "rational_threshold",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "说出非常伤人的话或做出过激行为，事后后悔",
+        "value": 3
+      },
+      {
+        "id": "Q4_o2",
+        "label": "情绪激动，难以冷静思考",
+        "value": 2
+      },
+      {
+        "id": "Q4_o3",
+        "label": "虽然生气，但会努力控制不说最伤人的话",
+        "value": 1
+      },
+      {
+        "id": "Q4_o4",
+        "label": "能主动暂停争吵，尝试理性沟通",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "你渴望得到伴侣的认同吗？"
+    },
+    "dimensionKey": "attachment",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "非常渴望，伴侣的认同对我至关重要",
+        "value": 3
+      },
+      {
+        "id": "Q5_o2",
+        "label": "比较渴望，希望得到TA的肯定",
+        "value": 2
+      },
+      {
+        "id": "Q5_o3",
+        "label": "有点渴望，但自己的认同更重要",
+        "value": 1
+      },
+      {
+        "id": "Q5_o4",
+        "label": "不太渴望，我对自己有清晰的认知",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "亲戚家的孩子索要你非常珍视的玩偶，你会？"
+    },
+    "dimensionKey": "possessiveness",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "直接拒绝，不解释理由",
+        "value": 3
+      },
+      {
+        "id": "Q6_o2",
+        "label": "拒绝，但可以给其他玩具作为替代",
+        "value": 2
+      },
+      {
+        "id": "Q6_o3",
+        "label": "内心纠结，但最后还是会给",
+        "value": 1
+      },
+      {
+        "id": "Q6_o4",
+        "label": "毫不在乎，直接给他",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "当你感到被伴侣冷落或忽视时，你通常会？"
+    },
+    "dimensionKey": "emotional_volatility",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "情绪立刻崩溃，可能哭泣或爆发",
+        "value": 3
+      },
+      {
+        "id": "Q7_o2",
+        "label": "感到非常伤心和愤怒，会质问对方",
+        "value": 2
+      },
+      {
+        "id": "Q7_o3",
+        "label": "感到失落，会委婉地表达自己的需求",
+        "value": 1
+      },
+      {
+        "id": "Q7_o4",
+        "label": "先反省自己是否太敏感，或与对方平静沟通",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否会时常担心伴侣离开你？"
+    },
+    "dimensionKey": "attachment",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "经常担心，没有安全感",
+        "value": 3
+      },
+      {
+        "id": "Q8_o2",
+        "label": "有时会担心，尤其是在发生矛盾后",
+        "value": 2
+      },
+      {
+        "id": "Q8_o3",
+        "label": "偶尔闪过念头，但很快能说服自己",
+        "value": 1
+      },
+      {
+        "id": "Q8_o4",
+        "label": "很少或从不担心，相信彼此的感情",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否认为，为了留住所爱之人，有时可以不择手段？"
+    },
+    "dimensionKey": "rational_threshold",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "是的，只要能得到/留住TA",
+        "value": 3
+      },
+      {
+        "id": "Q9_o2",
+        "label": "在极端痛苦的情况下，可能会考虑",
+        "value": 2
+      },
+      {
+        "id": "Q9_o3",
+        "label": "不会，爱应该建立在尊重和自愿上",
+        "value": 1
+      },
+      {
+        "id": "Q9_o4",
+        "label": "绝对不会，这是错误且危险的想法",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你的嫉妒心重吗？"
+    },
+    "dimensionKey": "possessiveness",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "很重，但我大多时候会隐藏起来",
+        "value": 3
+      },
+      {
+        "id": "Q10_o2",
+        "label": "比较重，有时会表现出来",
+        "value": 2
+      },
+      {
+        "id": "Q10_o3",
+        "label": "一般，每个人都会有点嫉妒心",
+        "value": 1
+      },
+      {
+        "id": "Q10_o4",
+        "label": "不重，我觉得没必要嫉妒",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "面对朋友的背叛，你更可能？"
+    },
+    "dimensionKey": "emotional_volatility",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "表现出强烈的愤怒和报复心理",
+        "value": 3
+      },
+      {
+        "id": "Q11_o2",
+        "label": "非常伤心，并与之断绝关系",
+        "value": 2
+      },
+      {
+        "id": "Q11_o3",
+        "label": "感到失望，但会选择原谅或远离",
+        "value": 1
+      },
+      {
+        "id": "Q11_o4",
+        "label": "理解人性复杂，尝试沟通或放下",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "当喜欢的人与他人有亲密接触时，你可能会？"
+    },
+    "dimensionKey": "possessiveness",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "心生怨恨，并计划如何“清除”障碍",
+        "value": 3
+      },
+      {
+        "id": "Q12_o2",
+        "label": "极度痛苦和嫉妒，情绪大起大落",
+        "value": 2
+      },
+      {
+        "id": "Q12_o3",
+        "label": "感到不舒服，但会尝试沟通自己的感受",
+        "value": 1
+      },
+      {
+        "id": "Q12_o4",
+        "label": "虽然介意，但尊重对方的社交自由",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否会偷看伴侣的手机、日记或社交软件？"
+    },
+    "dimensionKey": "rational_threshold",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "经常",
+        "value": 3
+      },
+      {
+        "id": "Q13_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q13_o3",
+        "label": "想过但没做过",
+        "value": 1
+      },
+      {
+        "id": "Q13_o4",
+        "label": "从不，尊重对方隐私",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否限制伴侣与朋友的交往？"
+    },
+    "dimensionKey": "possessiveness",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "严格限制，尤其是异性朋友",
+        "value": 3
+      },
+      {
+        "id": "Q14_o2",
+        "label": "偶尔会干涉或表达不满",
+        "value": 2
+      },
+      {
+        "id": "Q14_o3",
+        "label": "基本不限制，但希望TA能多陪我",
+        "value": 1
+      },
+      {
+        "id": "Q14_o4",
+        "label": "完全尊重TA的社交自由",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否认为“我的爱比任何人都纯粹”？"
+    },
+    "dimensionKey": "attachment",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "完全认同",
+        "value": 3
+      },
+      {
+        "id": "Q15_o2",
+        "label": "部分认同",
+        "value": 2
+      },
+      {
+        "id": "Q15_o3",
+        "label": "不太认同，爱没有高低之分",
+        "value": 1
+      },
+      {
+        "id": "Q15_o4",
+        "label": "完全不认同",
+        "value": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,287 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为只要两情相悦就可以发生性行为吗？"
+    },
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q1_o2",
+        "label": "否",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "你不赞成同性恋吗？"
+    },
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "是",
+        "value": 1
+      },
+      {
+        "id": "Q2_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为电视检查制度过于严格吗？"
+    },
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q3_o2",
+        "label": "否",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "你喜欢看色情电影或者小说吗？"
+    },
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q4_o2",
+        "label": "否",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "你厌恶杂志或报纸上刊出的裸体照片吗？"
+    },
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "是",
+        "value": 1
+      },
+      {
+        "id": "Q5_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "如果不会有人看见，你会在自家庭院里做日光浴吗？"
+    },
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q6_o2",
+        "label": "否",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "即使有人看见，你会在自家庭院里做日光浴吗？"
+    },
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q7_o2",
+        "label": "否",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "瞧见邻居做日光浴，你会尴尬吗？"
+    },
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "是",
+        "value": 1
+      },
+      {
+        "id": "Q8_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "你喜欢到裸泳海滩吗？"
+    },
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q9_o2",
+        "label": "否",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你曾经裸泳吗？"
+    },
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q10_o2",
+        "label": "否",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "你厌恶电视上的裸体镜头吗？"
+    },
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "是",
+        "value": 1
+      },
+      {
+        "id": "Q11_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你厌恶色情服务业吗？"
+    },
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "是",
+        "value": 1
+      },
+      {
+        "id": "Q12_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "家人里有人喜欢裸体走动，你会觉得尴尬吗？"
+    },
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "是",
+        "value": 1
+      },
+      {
+        "id": "Q13_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "如果让客人看到家人裸体走动，你会觉得尴尬吗？"
+    },
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "是",
+        "value": 1
+      },
+      {
+        "id": "Q14_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "如果没人在家，光着身子从卧房或浴室走出来，你会觉得尴尬吗？"
+    },
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "是",
+        "value": 1
+      },
+      {
+        "id": "Q15_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  }
+]

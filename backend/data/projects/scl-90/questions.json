@@ -1,0 +1,3152 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "头痛。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q1_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q1_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q1_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q1_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "神经过敏，心中不踏实。"
+    },
+    "dimensionKey": "anxiety",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q2_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q2_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q2_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q2_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "头脑中有不必要的想法或字句盘旋。"
+    },
+    "dimensionKey": "obsessive_compulsive",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q3_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q3_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q3_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q3_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "头昏或昏倒。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q4_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q4_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q4_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q4_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "对异性的兴趣减退。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q5_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q5_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q5_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q5_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "对旁人责备求全。"
+    },
+    "dimensionKey": "interpersonal_sensitivity",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q6_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q6_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q6_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q6_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "感到别人能控制您的思想。"
+    },
+    "dimensionKey": "psychoticism",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q7_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q7_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q7_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q7_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "责怪别人制造麻烦。"
+    },
+    "dimensionKey": "paranoid_ideation",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q8_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q8_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q8_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q8_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "忘性大。"
+    },
+    "dimensionKey": "obsessive_compulsive",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q9_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q9_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q9_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q9_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "担心自己的衣饰整齐及仪态的端正。"
+    },
+    "dimensionKey": "obsessive_compulsive",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q10_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q10_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q10_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q10_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "容易烦恼和激动。"
+    },
+    "dimensionKey": "hostility",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q11_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q11_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q11_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q11_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "胸痛。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q12_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q12_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q12_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q12_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "害怕空旷的场所或街道。"
+    },
+    "dimensionKey": "phobic_anxiety",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q13_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q13_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q13_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q13_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "感到自己的精力下降，活动减慢。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q14_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q14_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q14_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q14_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "想结束自己的生命。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q15_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q15_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q15_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q15_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "听到旁人听不到的声音。"
+    },
+    "dimensionKey": "psychoticism",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q16_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q16_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q16_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q16_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "发抖。"
+    },
+    "dimensionKey": "anxiety",
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q17_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q17_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q17_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q17_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "感到大多数人都不可信任。"
+    },
+    "dimensionKey": "paranoid_ideation",
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q18_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q18_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q18_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q18_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "胃口不好。"
+    },
+    "dimensionKey": "other",
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q19_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q19_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q19_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q19_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "容易哭泣。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q20_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q20_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q20_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q20_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "同异性相处时感到害羞不自在。"
+    },
+    "dimensionKey": "interpersonal_sensitivity",
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q21_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q21_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q21_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q21_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "感到受骗、中了圈套或有人想抓住您。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q22_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q22_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q22_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q22_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q23",
+    "type": "single_choice",
+    "content": {
+      "text": "无缘无故地突然感到害怕。"
+    },
+    "dimensionKey": "anxiety",
+    "options": [
+      {
+        "id": "Q23_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q23_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q23_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q23_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q23_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q24",
+    "type": "single_choice",
+    "content": {
+      "text": "自己不能控制地大发脾气。"
+    },
+    "dimensionKey": "hostility",
+    "options": [
+      {
+        "id": "Q24_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q24_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q24_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q24_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q24_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q25",
+    "type": "single_choice",
+    "content": {
+      "text": "怕单独出门。"
+    },
+    "dimensionKey": "phobic_anxiety",
+    "options": [
+      {
+        "id": "Q25_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q25_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q25_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q25_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q25_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q26",
+    "type": "single_choice",
+    "content": {
+      "text": "经常责怪自己。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q26_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q26_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q26_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q26_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q26_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q27",
+    "type": "single_choice",
+    "content": {
+      "text": "腰痛。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q27_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q27_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q27_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q27_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q27_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q28",
+    "type": "single_choice",
+    "content": {
+      "text": "感到难以完成任务。"
+    },
+    "dimensionKey": "obsessive_compulsive",
+    "options": [
+      {
+        "id": "Q28_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q28_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q28_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q28_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q28_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q29",
+    "type": "single_choice",
+    "content": {
+      "text": "感到孤独。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q29_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q29_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q29_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q29_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q29_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q30",
+    "type": "single_choice",
+    "content": {
+      "text": "感到苦闷。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q30_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q30_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q30_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q30_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q30_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q31",
+    "type": "single_choice",
+    "content": {
+      "text": "过分担忧。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q31_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q31_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q31_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q31_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q31_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q32",
+    "type": "single_choice",
+    "content": {
+      "text": "对事物不感兴趣。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q32_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q32_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q32_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q32_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q32_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q33",
+    "type": "single_choice",
+    "content": {
+      "text": "感到害怕。"
+    },
+    "dimensionKey": "anxiety",
+    "options": [
+      {
+        "id": "Q33_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q33_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q33_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q33_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q33_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q34",
+    "type": "single_choice",
+    "content": {
+      "text": "我的感情容易受到伤害。"
+    },
+    "dimensionKey": "interpersonal_sensitivity",
+    "options": [
+      {
+        "id": "Q34_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q34_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q34_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q34_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q34_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q35",
+    "type": "single_choice",
+    "content": {
+      "text": "旁人能知道您的私下想法。"
+    },
+    "dimensionKey": "psychoticism",
+    "options": [
+      {
+        "id": "Q35_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q35_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q35_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q35_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q35_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q36",
+    "type": "single_choice",
+    "content": {
+      "text": "感到别人不理解您、不同情您。"
+    },
+    "dimensionKey": "interpersonal_sensitivity",
+    "options": [
+      {
+        "id": "Q36_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q36_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q36_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q36_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q36_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q37",
+    "type": "single_choice",
+    "content": {
+      "text": "感到人们对您不友好，不喜欢您。"
+    },
+    "dimensionKey": "interpersonal_sensitivity",
+    "options": [
+      {
+        "id": "Q37_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q37_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q37_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q37_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q37_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q38",
+    "type": "single_choice",
+    "content": {
+      "text": "做事必须做得很慢以保证做得正确。"
+    },
+    "dimensionKey": "obsessive_compulsive",
+    "options": [
+      {
+        "id": "Q38_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q38_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q38_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q38_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q38_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q39",
+    "type": "single_choice",
+    "content": {
+      "text": "心跳得很厉害。"
+    },
+    "dimensionKey": "anxiety",
+    "options": [
+      {
+        "id": "Q39_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q39_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q39_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q39_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q39_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q40",
+    "type": "single_choice",
+    "content": {
+      "text": "恶心或胃部不舒服。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q40_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q40_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q40_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q40_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q40_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q41",
+    "type": "single_choice",
+    "content": {
+      "text": "感到比不上他人。"
+    },
+    "dimensionKey": "interpersonal_sensitivity",
+    "options": [
+      {
+        "id": "Q41_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q41_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q41_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q41_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q41_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q42",
+    "type": "single_choice",
+    "content": {
+      "text": "肌肉酸痛。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q42_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q42_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q42_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q42_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q42_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q43",
+    "type": "single_choice",
+    "content": {
+      "text": "感到有人在监视您、谈论您。"
+    },
+    "dimensionKey": "paranoid_ideation",
+    "options": [
+      {
+        "id": "Q43_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q43_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q43_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q43_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q43_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q44",
+    "type": "single_choice",
+    "content": {
+      "text": "难以入睡。"
+    },
+    "dimensionKey": "other",
+    "options": [
+      {
+        "id": "Q44_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q44_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q44_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q44_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q44_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q45",
+    "type": "single_choice",
+    "content": {
+      "text": "做事必须反复检查。"
+    },
+    "dimensionKey": "obsessive_compulsive",
+    "options": [
+      {
+        "id": "Q45_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q45_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q45_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q45_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q45_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q46",
+    "type": "single_choice",
+    "content": {
+      "text": "难以作出决定。"
+    },
+    "dimensionKey": "obsessive_compulsive",
+    "options": [
+      {
+        "id": "Q46_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q46_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q46_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q46_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q46_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q47",
+    "type": "single_choice",
+    "content": {
+      "text": "怕乘电车、公共汽车、地铁或火车。"
+    },
+    "dimensionKey": "phobic_anxiety",
+    "options": [
+      {
+        "id": "Q47_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q47_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q47_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q47_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q47_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q48",
+    "type": "single_choice",
+    "content": {
+      "text": "呼吸有困难。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q48_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q48_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q48_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q48_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q48_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q49",
+    "type": "single_choice",
+    "content": {
+      "text": "一阵阵发冷或发热。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q49_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q49_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q49_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q49_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q49_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q50",
+    "type": "single_choice",
+    "content": {
+      "text": "因为感到害怕而避开某些东西、场合或活动。"
+    },
+    "dimensionKey": "phobic_anxiety",
+    "options": [
+      {
+        "id": "Q50_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q50_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q50_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q50_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q50_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q51",
+    "type": "single_choice",
+    "content": {
+      "text": "脑子变空了。"
+    },
+    "dimensionKey": "obsessive_compulsive",
+    "options": [
+      {
+        "id": "Q51_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q51_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q51_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q51_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q51_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q52",
+    "type": "single_choice",
+    "content": {
+      "text": "身体发麻或刺痛。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q52_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q52_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q52_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q52_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q52_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q53",
+    "type": "single_choice",
+    "content": {
+      "text": "喉咙有梗塞感。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q53_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q53_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q53_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q53_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q53_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q54",
+    "type": "single_choice",
+    "content": {
+      "text": "感到没有前途没有希望。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q54_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q54_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q54_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q54_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q54_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q55",
+    "type": "single_choice",
+    "content": {
+      "text": "不能集中注意。"
+    },
+    "dimensionKey": "obsessive_compulsive",
+    "options": [
+      {
+        "id": "Q55_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q55_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q55_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q55_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q55_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q56",
+    "type": "single_choice",
+    "content": {
+      "text": "感到身体的某一部分软弱无力。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q56_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q56_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q56_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q56_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q56_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q57",
+    "type": "single_choice",
+    "content": {
+      "text": "感到紧张或容易紧张。"
+    },
+    "dimensionKey": "anxiety",
+    "options": [
+      {
+        "id": "Q57_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q57_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q57_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q57_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q57_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q58",
+    "type": "single_choice",
+    "content": {
+      "text": "感到手或脚发重。"
+    },
+    "dimensionKey": "somatization",
+    "options": [
+      {
+        "id": "Q58_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q58_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q58_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q58_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q58_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q59",
+    "type": "single_choice",
+    "content": {
+      "text": "想到死亡的事。"
+    },
+    "dimensionKey": "other",
+    "options": [
+      {
+        "id": "Q59_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q59_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q59_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q59_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q59_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q60",
+    "type": "single_choice",
+    "content": {
+      "text": "吃得太多。"
+    },
+    "dimensionKey": "other",
+    "options": [
+      {
+        "id": "Q60_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q60_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q60_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q60_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q60_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q61",
+    "type": "single_choice",
+    "content": {
+      "text": "当别人看着您或谈论您时感到不自在。"
+    },
+    "dimensionKey": "interpersonal_sensitivity",
+    "options": [
+      {
+        "id": "Q61_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q61_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q61_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q61_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q61_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q62",
+    "type": "single_choice",
+    "content": {
+      "text": "有一些不属于您自己的想法。"
+    },
+    "dimensionKey": "psychoticism",
+    "options": [
+      {
+        "id": "Q62_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q62_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q62_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q62_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q62_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q63",
+    "type": "single_choice",
+    "content": {
+      "text": "有想打人或伤害他人的冲动。"
+    },
+    "dimensionKey": "hostility",
+    "options": [
+      {
+        "id": "Q63_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q63_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q63_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q63_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q63_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q64",
+    "type": "single_choice",
+    "content": {
+      "text": "醒得太早。"
+    },
+    "dimensionKey": "other",
+    "options": [
+      {
+        "id": "Q64_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q64_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q64_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q64_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q64_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q65",
+    "type": "single_choice",
+    "content": {
+      "text": "必须反复洗手、点数目或触摸某些东西。"
+    },
+    "dimensionKey": "obsessive_compulsive",
+    "options": [
+      {
+        "id": "Q65_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q65_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q65_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q65_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q65_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q66",
+    "type": "single_choice",
+    "content": {
+      "text": "睡得不稳不深。"
+    },
+    "dimensionKey": "other",
+    "options": [
+      {
+        "id": "Q66_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q66_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q66_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q66_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q66_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q67",
+    "type": "single_choice",
+    "content": {
+      "text": "有想摔坏或破坏东西的冲动。"
+    },
+    "dimensionKey": "hostility",
+    "options": [
+      {
+        "id": "Q67_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q67_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q67_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q67_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q67_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q68",
+    "type": "single_choice",
+    "content": {
+      "text": "有一些别人没有的想法或念头。"
+    },
+    "dimensionKey": "paranoid_ideation",
+    "options": [
+      {
+        "id": "Q68_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q68_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q68_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q68_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q68_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q69",
+    "type": "single_choice",
+    "content": {
+      "text": "感到对别人神经过敏。"
+    },
+    "dimensionKey": "interpersonal_sensitivity",
+    "options": [
+      {
+        "id": "Q69_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q69_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q69_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q69_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q69_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q70",
+    "type": "single_choice",
+    "content": {
+      "text": "在商店或电影院等人多的地方感到不自在。"
+    },
+    "dimensionKey": "phobic_anxiety",
+    "options": [
+      {
+        "id": "Q70_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q70_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q70_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q70_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q70_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q71",
+    "type": "single_choice",
+    "content": {
+      "text": "感到任何事情都很困难。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q71_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q71_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q71_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q71_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q71_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q72",
+    "type": "single_choice",
+    "content": {
+      "text": "一阵阵恐惧或惊恐。"
+    },
+    "dimensionKey": "anxiety",
+    "options": [
+      {
+        "id": "Q72_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q72_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q72_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q72_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q72_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q73",
+    "type": "single_choice",
+    "content": {
+      "text": "感到在公共场合吃东西很不舒服。"
+    },
+    "dimensionKey": "interpersonal_sensitivity",
+    "options": [
+      {
+        "id": "Q73_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q73_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q73_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q73_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q73_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q74",
+    "type": "single_choice",
+    "content": {
+      "text": "经常与人争论。"
+    },
+    "dimensionKey": "hostility",
+    "options": [
+      {
+        "id": "Q74_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q74_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q74_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q74_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q74_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q75",
+    "type": "single_choice",
+    "content": {
+      "text": "单独一人时神经很紧张。"
+    },
+    "dimensionKey": "phobic_anxiety",
+    "options": [
+      {
+        "id": "Q75_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q75_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q75_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q75_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q75_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q76",
+    "type": "single_choice",
+    "content": {
+      "text": "别人对您的成绩没有作出恰当的评价。"
+    },
+    "dimensionKey": "paranoid_ideation",
+    "options": [
+      {
+        "id": "Q76_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q76_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q76_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q76_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q76_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q77",
+    "type": "single_choice",
+    "content": {
+      "text": "即使和别人在一起也感到孤单。"
+    },
+    "dimensionKey": "psychoticism",
+    "options": [
+      {
+        "id": "Q77_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q77_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q77_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q77_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q77_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q78",
+    "type": "single_choice",
+    "content": {
+      "text": "感到坐立不安心神不定。"
+    },
+    "dimensionKey": "anxiety",
+    "options": [
+      {
+        "id": "Q78_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q78_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q78_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q78_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q78_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q79",
+    "type": "single_choice",
+    "content": {
+      "text": "感到自己没有什么价值。"
+    },
+    "dimensionKey": "depression",
+    "options": [
+      {
+        "id": "Q79_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q79_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q79_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q79_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q79_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q80",
+    "type": "single_choice",
+    "content": {
+      "text": "感到熟悉的东西变成陌生或不像是真的。"
+    },
+    "dimensionKey": "anxiety",
+    "options": [
+      {
+        "id": "Q80_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q80_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q80_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q80_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q80_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q81",
+    "type": "single_choice",
+    "content": {
+      "text": "大叫或摔东西。"
+    },
+    "dimensionKey": "hostility",
+    "options": [
+      {
+        "id": "Q81_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q81_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q81_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q81_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q81_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q82",
+    "type": "single_choice",
+    "content": {
+      "text": "害怕会在公共场合昏倒。"
+    },
+    "dimensionKey": "phobic_anxiety",
+    "options": [
+      {
+        "id": "Q82_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q82_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q82_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q82_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q82_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q83",
+    "type": "single_choice",
+    "content": {
+      "text": "感到别人想占您的便宜。"
+    },
+    "dimensionKey": "paranoid_ideation",
+    "options": [
+      {
+        "id": "Q83_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q83_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q83_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q83_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q83_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q84",
+    "type": "single_choice",
+    "content": {
+      "text": "为一些有关“性”的想法而很苦恼。"
+    },
+    "dimensionKey": "psychoticism",
+    "options": [
+      {
+        "id": "Q84_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q84_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q84_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q84_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q84_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q85",
+    "type": "single_choice",
+    "content": {
+      "text": "您认为应该因为自己的过错而受到惩罚。"
+    },
+    "dimensionKey": "psychoticism",
+    "options": [
+      {
+        "id": "Q85_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q85_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q85_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q85_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q85_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q86",
+    "type": "single_choice",
+    "content": {
+      "text": "感到要赶快把事情做完。"
+    },
+    "dimensionKey": "anxiety",
+    "options": [
+      {
+        "id": "Q86_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q86_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q86_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q86_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q86_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q87",
+    "type": "single_choice",
+    "content": {
+      "text": "感到自己的身体有严重问题。"
+    },
+    "dimensionKey": "psychoticism",
+    "options": [
+      {
+        "id": "Q87_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q87_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q87_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q87_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q87_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q88",
+    "type": "single_choice",
+    "content": {
+      "text": "从未感到和其他人很亲近。"
+    },
+    "dimensionKey": "psychoticism",
+    "options": [
+      {
+        "id": "Q88_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q88_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q88_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q88_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q88_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q89",
+    "type": "single_choice",
+    "content": {
+      "text": "感到自己有罪。"
+    },
+    "dimensionKey": "other",
+    "options": [
+      {
+        "id": "Q89_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q89_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q89_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q89_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q89_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q90",
+    "type": "single_choice",
+    "content": {
+      "text": "感到自己的脑子有毛病。"
+    },
+    "dimensionKey": "psychoticism",
+    "options": [
+      {
+        "id": "Q90_o1",
+        "label": "没有",
+        "value": 1
+      },
+      {
+        "id": "Q90_o2",
+        "label": "很轻",
+        "value": 2
+      },
+      {
+        "id": "Q90_o3",
+        "label": "中等",
+        "value": 3
+      },
+      {
+        "id": "Q90_o4",
+        "label": "偏重",
+        "value": 4
+      },
+      {
+        "id": "Q90_o5",
+        "label": "严重",
+        "value": 5
+      }
+    ]
+  }
+]

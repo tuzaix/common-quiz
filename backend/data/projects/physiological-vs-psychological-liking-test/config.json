@@ -1,0 +1,57 @@
+{
+  "id": "physiological-vs-psychological-liking-test",
+  "title": "生理性喜欢 VS 心理性喜欢测试",
+  "description": "本测试基于进化心理学、神经科学及亲密关系研究，旨在帮助你拨开多巴胺的迷雾，看清你对TA情感的底层驱动力。通过分析你的行为反应、思维模式与情感体验，区分是源于生物本能的“生理性喜欢”，还是基于内在价值认可的“心理性喜欢”，或是两者兼具的理想状态。",
+  "theme": {
+    "primaryColor": "#9C27B0",
+    "backgroundColor": "#F3E5F5"
+  },
+  "resultConfig": {
+    "scoringEngine": "formula",
+    "formula": "var d = dimensions || {}; var physScore = d.physiological || 0; var psychScore = d.psychological || 0; var total = physScore + psychScore; var ratio = psychScore > 0 ? physScore / psychScore : (physScore > 0 ? 99 : 0); var primaryType = 'balanced'; if (psychScore === 0) { primaryType = physScore > 0 ? 'physiological' : 'balanced'; } else if (ratio > 1.5) { primaryType = 'physiological'; } else if (physScore === 0 || ratio < 0.67) { primaryType = 'psychological'; } var intensity = total >= 70 ? 'high' : total >= 50 ? 'medium' : total >= 30 ? 'low' : 'veryLow'; return { primaryType: primaryType, intensity: intensity, physScore: physScore, psychScore: psychScore, totalScore: total, ratio: Number(ratio).toFixed(2), dimensions: d };",
+    "dimensions": [
+      {
+        "key": "physiological",
+        "name": "生理性喜欢",
+        "description": "源于生物本能、由激素和基因驱动的深层吸引力。不受理性控制，往往在无意识的0.3秒内瞬间发生，表现为心跳加速、脸红、对气味敏感、强烈的肢体接触欲望等。"
+      },
+      {
+        "key": "psychological",
+        "name": "心理性喜欢",
+        "description": "基于内在价值认可、情感共鸣和理性判断的吸引力。建立在价值观、兴趣相近以及深度的互信之上，表现为感到安心、愿意分享秘密、共同规划未来等。"
+      }
+    ],
+    "resultRules": [
+      {
+        "condition": "primaryType === 'physiological' && intensity === 'high'",
+        "title": "强烈生理吸引 · 多巴胺主导",
+        "description": "你对TA的情感主要由强烈的生理性喜欢驱动。TA对于你就像美味的佳肴，一举一动都让你心跳不已。这是一种源于生物本能、由激素（多巴胺、去甲肾上腺素）和基因驱动的深层吸引力。你会迷恋对方身上的独特气味，渴望突破45公分的私人距离，甚至产生模仿对方动作的“镜像效应”。这种喜欢来得快，但若没有后续的其他延续则会退得也快。神经科学研究显示，持续接触同一刺激源时，多巴胺受体的敏感度会逐渐降低，热恋期平均只能维持3-6个月。建议在享受激情的同时，有意识地培养深层次的情感联结。"
+      },
+      {
+        "condition": "primaryType === 'psychological' && intensity === 'high'",
+        "title": "深度心理联结 · 灵魂共鸣",
+        "description": "你对TA的喜欢更倾向于心灵上的契合。这是一种基于对TA内在特质（如性格、价值观、才华）认可的情感。你们欣赏彼此的价值观，内心世界都想去好好了解与交流，一个眼神就能懂对方。这种喜欢是发自内心、由内而外的深远情感，让你感到和TA在一起很安心，愿意分享最深处的秘密，并共同规划未来的蓝图。它建立在深入了解的基础上，需要时间和互动积累，因此更加持久和深刻，能经受时间考验。长期关系中起关键作用的是催产素，这种心理联结的形成需要时间沉淀和深度互动。"
+      },
+      {
+        "condition": "primaryType === 'balanced' && physScore >= 30 && psychScore >= 30",
+        "title": "灵肉合一 · 理想之爱",
+        "description": "你对TA的情感是一种身心灵都觉得舒适的状态。这段感情同时包含了热恋的心动与稳定的承诺。外在无论打扮气质都让你很着迷，内在上的世界观也与你不谋而合。既有因外貌、气味等感官刺激产生的本能吸引，又有对性格、价值观等内在特质的深度认可。专家观点认为，生理性喜欢让爱情诞生，心理性喜欢让爱情长大。没有生理吸引，关系可能沦为普通朋友；没有心理契合，激情退去后只剩空虚。你的状态正是“既有心动频率，又有灵魂共振的理想状态”。"
+      },
+      {
+        "condition": "primaryType === 'physiological' && intensity === 'medium'",
+        "title": "本能心动 · 激情初燃",
+        "description": "你对TA有明显的生理性好感，但强度中等。这可能表现为初见时的心跳加速、被TA的外表或瞬间气质吸引。这种喜欢基于生理需求和感官刺激，比较直接。你可能会有想靠近对方、亲近对方的冲动，但尚未陷入强烈的迷恋。需要注意的是，生理性喜欢新鲜感易消减，因为它更依赖即时的生理反应。如果希望关系长久，需要观察在激情之外，是否能在价值观、性格等方面产生更深层次的共鸣。"
+      },
+      {
+        "condition": "primaryType === 'psychological' && intensity === 'medium'",
+        "title": "渐生好感 · 精神契合",
+        "description": "你对TA有好感，这种好感更多地建立在性格、价值观等心理因素的契合上。可能是在相处中逐渐积累的“慢热”情感。你更倾向于与TA进行深入的交流和了解，关注“我们如何配合”而非仅仅“TA有多迷人”。这种情感依赖和信任感正在形成，但深度可能尚未达到灵魂伴侣的程度。它比纯粹的生理吸引更稳定，有发展为长期关系的良好基础。可以继续通过深度对话和共同经历来强化彼此的心理联结。"
+      },
+      {
+        "condition": "totalScore <= 30",
+        "title": "情感萌芽 · 尚不明确",
+        "description": "目前你对TA的情感尚处于萌芽或非常平淡的阶段。无论是生理上的本能吸引，还是心理上的深度认同，都表现得不够强烈。这可能是因为接触时间尚短，了解不深；或者你们之间的关系更偏向普通的友谊。建议给自己更多时间和机会去相处，观察在更多的互动中，哪种类型的情感会逐渐浮现并加强。"
+      }
+    ]
+  }
+}

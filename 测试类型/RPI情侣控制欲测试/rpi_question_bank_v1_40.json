@@ -1,0 +1,712 @@
+{
+  "meta": {
+    "bank_id": "rpi_v1_40",
+    "title": "RPI占有欲指数题库（40题完整版）",
+    "version": "1.0.0",
+    "locale": "zh-CN",
+    "scale": {
+      "type": "likert",
+      "min": 1,
+      "max": 7,
+      "anchors": {
+        "1": "完全不符合",
+        "4": "一般/说不清",
+        "7": "完全符合"
+      },
+      "reverse_scoring": {
+        "enabled": true,
+        "rule": "reversed = (min + max) - raw",
+        "example": "1-7量表：reversed = 8 - raw"
+      }
+    },
+    "dimensions": [
+      {
+        "id": "Control",
+        "name": "控制欲",
+        "default_weight": 0.3
+      },
+      {
+        "id": "Jealousy",
+        "name": "嫉妒强度",
+        "default_weight": 0.25
+      },
+      {
+        "id": "Dependency",
+        "name": "情感依赖",
+        "default_weight": 0.2
+      },
+      {
+        "id": "Insecurity",
+        "name": "关系不安全感",
+        "default_weight": 0.25
+      }
+    ],
+    "time_window": "回忆过去30天内的感受与行为作答"
+  },
+  "items": [
+    {
+      "id": "C_01",
+      "dimension": "Control",
+      "sub_dimension": "Monitoring",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "我会经常查看伴侣的手机、聊天记录或社交媒体动态。",
+        "partner": "我的伴侣经常查看我的手机、聊天记录或社交媒体动态。"
+      }
+    },
+    {
+      "id": "C_02",
+      "dimension": "Control",
+      "sub_dimension": "Monitoring",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "如果伴侣回复消息慢，我会反复追问他/她在做什么。",
+        "partner": "如果我回复消息慢，伴侣会反复追问我在做什么。"
+      }
+    },
+    {
+      "id": "C_03",
+      "dimension": "Control",
+      "sub_dimension": "Monitoring",
+      "direction": "positive",
+      "weight": 1.1,
+      "text": {
+        "self": "我会要求伴侣共享定位或随时报备行程。",
+        "partner": "伴侣会要求我共享定位或随时报备行程。"
+      }
+    },
+    {
+      "id": "C_04",
+      "dimension": "Control",
+      "sub_dimension": "SocialRestriction",
+      "direction": "positive",
+      "weight": 1.1,
+      "text": {
+        "self": "当伴侣和异性朋友单独相处时，我会强烈不满或要求避免。",
+        "partner": "当我和异性朋友单独相处时，伴侣会强烈不满或要求避免。"
+      }
+    },
+    {
+      "id": "C_05",
+      "dimension": "Control",
+      "sub_dimension": "SocialRestriction",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "我会干预伴侣的社交圈（例如要求他/她少和某些朋友来往）。",
+        "partner": "伴侣会干预我的社交圈（例如要求我少和某些朋友来往）。"
+      }
+    },
+    {
+      "id": "C_06",
+      "dimension": "Control",
+      "sub_dimension": "DecisionInterference",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "我会希望伴侣的重要决定（工作/学习/旅行）必须先征求我的同意。",
+        "partner": "伴侣希望我做重要决定（工作/学习/旅行）前必须先征求他/她同意。"
+      }
+    },
+    {
+      "id": "C_07",
+      "dimension": "Control",
+      "sub_dimension": "DecisionInterference",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "当伴侣没有按我的方式做事时，我会用冷淡/生气来让他/她改变。",
+        "partner": "当我没有按伴侣的方式做事时，他/她会用冷淡/生气来让我改变。"
+      }
+    },
+    {
+      "id": "C_08",
+      "dimension": "Control",
+      "sub_dimension": "BoundaryViolation",
+      "direction": "positive",
+      "weight": 1.1,
+      "text": {
+        "self": "我会认为伴侣不应该对我有任何秘密。",
+        "partner": "伴侣认为我不应该对他/她有任何秘密。"
+      }
+    },
+    {
+      "id": "C_09",
+      "dimension": "Control",
+      "sub_dimension": "HealthyBoundary",
+      "direction": "reverse",
+      "weight": 1.0,
+      "text": {
+        "self": "我尊重伴侣的隐私边界，即使我有不安也不会强行检查。",
+        "partner": "伴侣尊重我的隐私边界，即使他/她不安也不会强行检查。"
+      }
+    },
+    {
+      "id": "C_10",
+      "dimension": "Control",
+      "sub_dimension": "HealthyBoundary",
+      "direction": "reverse",
+      "weight": 1.0,
+      "text": {
+        "self": "我能接受伴侣有自己的社交与独处时间，不需要随时向我解释。",
+        "partner": "伴侣能接受我有自己的社交与独处时间，不需要我随时解释。"
+      }
+    },
+
+    {
+      "id": "J_01",
+      "dimension": "Jealousy",
+      "sub_dimension": "Cognitive",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "即使没有证据，我也常怀疑伴侣可能对我不忠。",
+        "partner": "即使没有证据，伴侣也常怀疑我可能不忠。"
+      }
+    },
+    {
+      "id": "J_02",
+      "dimension": "Jealousy",
+      "sub_dimension": "Cognitive",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "当伴侣提到某个异性时，我会忍不住反复揣测他们的关系。",
+        "partner": "当我提到某个异性时，伴侣会忍不住反复揣测我们的关系。"
+      }
+    },
+    {
+      "id": "J_03",
+      "dimension": "Jealousy",
+      "sub_dimension": "Emotional",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "看到伴侣与异性亲近互动时，我会明显焦虑/生气/难受。",
+        "partner": "看到我与异性亲近互动时，伴侣会明显焦虑/生气/难受。"
+      }
+    },
+    {
+      "id": "J_04",
+      "dimension": "Jealousy",
+      "sub_dimension": "Emotional",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "我会因嫉妒而情绪失控（例如冲动发火、冷战、报复）。",
+        "partner": "伴侣会因嫉妒而情绪失控（例如冲动发火、冷战、报复）。"
+      }
+    },
+    {
+      "id": "J_05",
+      "dimension": "Jealousy",
+      "sub_dimension": "Behavioral",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "如果不在一起，我会频繁发消息确认伴侣的位置与在做什么。",
+        "partner": "如果不在一起，伴侣会频繁发消息确认我的位置与在做什么。"
+      }
+    },
+    {
+      "id": "J_06",
+      "dimension": "Jealousy",
+      "sub_dimension": "Behavioral",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "我会因为吃醋而贬低或敌视伴侣身边的某个人。",
+        "partner": "伴侣会因为吃醋而贬低或敌视我身边的某个人。"
+      }
+    },
+    {
+      "id": "J_07",
+      "dimension": "Jealousy",
+      "sub_dimension": "Rumination",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "我会反复回想一些小细节，并把它们当作“有问题”的证据。",
+        "partner": "伴侣会反复回想一些小细节，并把它们当作“有问题”的证据。"
+      }
+    },
+    {
+      "id": "J_08",
+      "dimension": "Jealousy",
+      "sub_dimension": "ReassuranceSeeking",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "我需要伴侣频繁保证“只爱我”，否则会不安。",
+        "partner": "伴侣需要我频繁保证“只爱他/她”，否则会不安。"
+      }
+    },
+    {
+      "id": "J_09",
+      "dimension": "Jealousy",
+      "sub_dimension": "HealthyCoping",
+      "direction": "reverse",
+      "weight": 1.0,
+      "text": {
+        "self": "当我吃醋时，我更倾向于先稳定情绪，再用沟通表达需要。",
+        "partner": "当伴侣吃醋时，他/她更倾向于先稳定情绪，再用沟通表达需要。"
+      }
+    },
+    {
+      "id": "J_10",
+      "dimension": "Jealousy",
+      "sub_dimension": "Trust",
+      "direction": "reverse",
+      "weight": 1.0,
+      "text": {
+        "self": "总体来说，我相信伴侣会尊重我们的关系边界。",
+        "partner": "总体来说，伴侣相信我会尊重我们的关系边界。"
+      }
+    },
+
+    {
+      "id": "D_01",
+      "dimension": "Dependency",
+      "sub_dimension": "SelfLoss",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "如果没有伴侣在身边，我会觉得自己不完整。",
+        "partner": "如果没有我在身边，伴侣会觉得他/她不完整。"
+      }
+    },
+    {
+      "id": "D_02",
+      "dimension": "Dependency",
+      "sub_dimension": "EmotionOutsourcing",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "我很难独自把情绪稳定下来，经常需要伴侣来安抚。",
+        "partner": "伴侣很难独自把情绪稳定下来，经常需要我来安抚。"
+      }
+    },
+    {
+      "id": "D_03",
+      "dimension": "Dependency",
+      "sub_dimension": "SeparationAnxiety",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "当伴侣忙或不在身边时，我会强烈不安、坐立难安。",
+        "partner": "当我忙或不在身边时，伴侣会强烈不安、坐立难安。"
+      }
+    },
+    {
+      "id": "D_04",
+      "dimension": "Dependency",
+      "sub_dimension": "BoundaryBlur",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "我常把伴侣的情绪问题当作自己的责任，需要“解决”。",
+        "partner": "伴侣常把我的情绪问题当作他/她的责任，需要“解决”。"
+      }
+    },
+    {
+      "id": "D_05",
+      "dimension": "Dependency",
+      "sub_dimension": "DecisionDependence",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "我做重要决定时很难不考虑伴侣的态度，否则会内疚或害怕失去。",
+        "partner": "伴侣做重要决定时很难不考虑我的态度，否则会内疚或害怕失去。"
+      }
+    },
+    {
+      "id": "D_06",
+      "dimension": "Dependency",
+      "sub_dimension": "OverGiving",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "我会为了让关系稳定而过度牺牲自己的需求。",
+        "partner": "伴侣会为了让关系稳定而过度牺牲自己的需求。"
+      }
+    },
+    {
+      "id": "D_07",
+      "dimension": "Dependency",
+      "sub_dimension": "LifeCentering",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "我的生活重心很大程度围绕着伴侣展开。",
+        "partner": "伴侣的生活重心很大程度围绕着我展开。"
+      }
+    },
+    {
+      "id": "D_08",
+      "dimension": "Dependency",
+      "sub_dimension": "LonelinessIntolerance",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "我不太能享受独处，独处会让我觉得空虚或难受。",
+        "partner": "伴侣不太能享受独处，独处会让他/她觉得空虚或难受。"
+      }
+    },
+    {
+      "id": "D_09",
+      "dimension": "Dependency",
+      "sub_dimension": "Independence",
+      "direction": "reverse",
+      "weight": 1.0,
+      "text": {
+        "self": "即使在恋爱中，我也能维持自己的兴趣、目标和节奏。",
+        "partner": "即使在恋爱中，伴侣也能维持他/她的兴趣、目标和节奏。"
+      }
+    },
+    {
+      "id": "D_10",
+      "dimension": "Dependency",
+      "sub_dimension": "SelfRegulation",
+      "direction": "reverse",
+      "weight": 1.0,
+      "text": {
+        "self": "当我情绪波动时，我通常能先自我调节，而不是立即要求伴侣回应。",
+        "partner": "当伴侣情绪波动时，他/她通常能先自我调节，而不是立即要求我回应。"
+      }
+    },
+
+    {
+      "id": "I_01",
+      "dimension": "Insecurity",
+      "sub_dimension": "AbandonmentFear",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "我经常担心伴侣会突然不再爱我了。",
+        "partner": "伴侣经常担心我会突然不再爱他/她了。"
+      }
+    },
+    {
+      "id": "I_02",
+      "dimension": "Insecurity",
+      "sub_dimension": "SelfWorthDoubt",
+      "direction": "positive",
+      "weight": 1.0,
+      "text": {
+        "self": "我常觉得自己不够好，担心配不上伴侣。",
+        "partner": "伴侣常觉得自己不够好，担心配不上我。"
+      }
+    },
+    {
+      "id": "I_03",
+      "dimension": "Insecurity",
+      "sub_dimension": "ThreatSensitivity",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "伴侣的一点点冷淡或忙碌，会让我立刻联想到“关系出问题”。",
+        "partner": "我的一点点冷淡或忙碌，会让伴侣立刻联想到“关系出问题”。"
+      }
+    },
+    {
+      "id": "I_04",
+      "dimension": "Insecurity",
+      "sub_dimension": "RejectionRumination",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "我会反复想“他/她是不是不在乎我了”，很难停下来。",
+        "partner": "伴侣会反复想“我是不是不在乎他/她了”，很难停下来。"
+      }
+    },
+    {
+      "id": "I_05",
+      "dimension": "Insecurity",
+      "sub_dimension": "FutureUncertainty",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "我对关系的未来缺乏安全感，经常担心会失去这段关系。",
+        "partner": "伴侣对关系的未来缺乏安全感，经常担心会失去这段关系。"
+      }
+    },
+    {
+      "id": "I_06",
+      "dimension": "Insecurity",
+      "sub_dimension": "ReassuranceSeeking",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "我需要不断确认“你还爱我吗”，否则会不安。",
+        "partner": "伴侣需要不断确认“你还爱我吗”，否则会不安。"
+      }
+    },
+    {
+      "id": "I_07",
+      "dimension": "Insecurity",
+      "sub_dimension": "Comparison",
+      "direction": "positive",
+      "weight": 0.8,
+      "text": {
+        "self": "我容易把自己和伴侣周围的人比较，并担心被替代。",
+        "partner": "伴侣容易把他/她自己和我周围的人比较，并担心被替代。"
+      }
+    },
+    {
+      "id": "I_08",
+      "dimension": "Insecurity",
+      "sub_dimension": "Hypervigilance",
+      "direction": "positive",
+      "weight": 0.9,
+      "text": {
+        "self": "我会对伴侣的言行“过度敏感”，容易解读出负面含义。",
+        "partner": "伴侣会对我的言行“过度敏感”，容易解读出负面含义。"
+      }
+    },
+    {
+      "id": "I_09",
+      "dimension": "Insecurity",
+      "sub_dimension": "SecureBase",
+      "direction": "reverse",
+      "weight": 1.0,
+      "text": {
+        "self": "即使发生小摩擦，我也相信我们能通过沟通把关系修复。",
+        "partner": "即使发生小摩擦，伴侣也相信我们能通过沟通把关系修复。"
+      }
+    },
+    {
+      "id": "I_10",
+      "dimension": "Insecurity",
+      "sub_dimension": "SelfReassurance",
+      "direction": "reverse",
+      "weight": 1.0,
+      "text": {
+        "self": "当我不安时，我能用自我安抚让自己冷静下来，而不是立刻质问伴侣。",
+        "partner": "当伴侣不安时，他/她能用自我安抚冷静下来，而不是立刻质问我。"
+      }
+    },
+
+    {
+      "id": "ATTN_01",
+      "dimension": "AttentionCheck",
+      "sub_dimension": "Instruction",
+      "direction": "check",
+      "weight": 0.0,
+      "expected_value": 7,
+      "text": {
+        "self": "为了确保您在认真答题，本题请选择“完全符合”。",
+        "partner": "为了确保您在认真答题，本题请选择“完全符合”。"
+      }
+    },
+    {
+      "id": "ATTN_02",
+      "dimension": "AttentionCheck",
+      "sub_dimension": "Instruction",
+      "direction": "check",
+      "weight": 0.0,
+      "expected_value": 1,
+      "text": {
+        "self": "为了确保您在认真答题，本题请选择“完全不符合”。",
+        "partner": "为了确保您在认真答题，本题请选择“完全不符合”。"
+      }
+    }
+  ],
+  "recommendations": {
+    "Control": [
+      {
+        "id": "Control_R1",
+        "title": "把‘查证’改成‘约定’",
+        "detail": "将‘我要看’‘我要确认’改成双方共同制定的透明规则（例如：临时改行程是否需要提前说、能否共享日历而不是随时报备）。",
+        "action_steps": ["列出你最在意的3个触发点（例如：晚回/与异性单独/夜不归宿）","把触发点翻译成可协商的规则（例如：晚回30分钟以内不追问）","约定‘升级条件’：只有触发条件发生时才沟通，而不是日常监控"],
+        "caution": "规则应对等、可执行；任何一方都拥有拒绝不合理要求的权利。"
+      },
+      {
+        "id": "Control_R2",
+        "title": "使用‘我感受’句式替代指令",
+        "detail": "控制往往来自恐惧。用表达脆弱代替命令：‘你不回我会焦虑’比‘你必须秒回’更容易获得合作。",
+        "action_steps": ["用固定模板沟通：当___发生时，我感到___，我需要___，你愿意___吗？","把‘你怎么又…’全部改写为‘我担心…’","对方回应后先复述确认再讨论方案"],
+        "caution": "表达需求不等于合理化控制；避免把‘焦虑’当作要求对方让渡隐私的理由。"
+      },
+      {
+        "id": "Control_R3",
+        "title": "给自己建立‘不监控替代动作’",
+        "detail": "监控行为（翻手机/查定位）会短期缓解焦虑，但长期放大不安全感。为冲动准备替代动作。",
+        "action_steps": ["设定‘10分钟延迟规则’：想检查时先等待10分钟","做一个替代清单：走路/冷水洗手/写下3个事实与3个猜测","10分钟后若仍不安，再选择沟通而非检查"],
+        "caution": "如果你担心存在真实暴力风险，优先考虑安全计划与求助，而非仅靠自我调节。"
+      },
+      {
+        "id": "Control_R4",
+        "title": "建立双方可接受的边界清单",
+        "detail": "边界越清晰，越不需要控制。建议做一次‘可接受/不可接受’对齐。",
+        "action_steps": ["分别写下：我能接受的5件事/我不能接受的5件事","对照差异，优先解决‘不可接受’中的前2项","把结果写成一份‘关系边界备忘录’（可随时修订）"],
+        "caution": "边界不是威胁（‘不照做就分手’），而是共同维护安全与尊重的规则。"
+      },
+      {
+        "id": "Control_R5",
+        "title": "把注意力从伴侣转回自己：恢复个人生活半径",
+        "detail": "控制欲越强，往往代表个人生活半径越小。扩大自我价值来源能显著降低控制冲动。",
+        "action_steps": ["每周固定一次‘个人时间’（不与伴侣绑定）","恢复/建立至少1个稳定的兴趣或运动习惯","把‘关系问题’与‘自我情绪’分开记录：我能控制的是哪些？"],
+        "caution": "如果伴侣反对你拥有个人生活，这本身就是需要警惕的控制信号。"
+      }
+    ],
+    "Jealousy": [
+      {
+        "id": "Jealousy_R1",
+        "title": "区分事实与脑补：做一次‘证据清单’",
+        "detail": "嫉妒的认知成分常来自灾难化推理。用‘证据’把思维拉回现实。",
+        "action_steps": ["写下触发事件（例如：他点赞了某人）","列出支持你担心的证据（事实）与反证（事实）","把‘最坏推测’改写为‘更可能解释’（至少3个）"],
+        "caution": "如果确有明确背叛证据，避免用自我说服压抑；需要讨论关系边界与后续选择。"
+      },
+      {
+        "id": "Jealousy_R2",
+        "title": "给嫉妒‘命名’并允许它存在",
+        "detail": "嫉妒常混合了恐惧、羞耻、被忽视。先命名情绪，才能减少冲动行为。",
+        "action_steps": ["把情绪拆成词：我现在是‘害怕’还是‘愤怒’还是‘委屈’？","给情绪强度打分0-10","强度≥7时先暂停沟通，先降到≤5再谈"],
+        "caution": "强度高时不要做重大决定（分手/拉黑/发长文），给自己至少24小时。"
+      },
+      {
+        "id": "Jealousy_R3",
+        "title": "把‘确认’从拷问改成请求",
+        "detail": "你需要的是安全感，而不是审讯。用可被同意的请求替代追问细节。",
+        "action_steps": ["把问题从‘你跟谁’改为‘我想知道你今天大概的安排’","只问‘必要信息’：是否有边界内的行为、是否需要调整规则","沟通后明确结束语：谢谢你告诉我，我会自己消化"],
+        "caution": "避免反复盘问同一件事；重复确认会让双方都更焦虑。"
+      },
+      {
+        "id": "Jealousy_R4",
+        "title": "建立‘被触发后的修复流程’",
+        "detail": "关系里难免会触发。关键是建立修复仪式，减少反复争吵。",
+        "action_steps": ["约定一个安全词/暂停词（例如：‘先停一下’）","约定修复三步：表达感受→表达需要→共同确认边界","修复后做一次连接行为：拥抱/散步/共进晚餐"],
+        "caution": "修复≠和稀泥；边界问题仍需具体讨论。"
+      },
+      {
+        "id": "Jealousy_R5",
+        "title": "提升自我价值感：从‘竞争’回到‘自我’",
+        "detail": "嫉妒常与自我价值怀疑相关。把注意力从比较转回成长。",
+        "action_steps": ["停止‘对标’：减少刷让你焦虑的社交媒体内容","每周记录3件你做得不错的事（不与关系绑定）","建立一个独立目标（学习/运动/项目）并持续4周"],
+        "caution": "不要用‘变优秀来赢回对方’作为唯一动机；目标应服务于你的自我稳定。"
+      }
+    ],
+    "Dependency": [
+      {
+        "id": "Dependency_R1",
+        "title": "练习‘可承受的独处’：从10分钟开始",
+        "detail": "情感依赖的核心是‘无法独自安放情绪’。独处耐受度可以训练。",
+        "action_steps": ["设定每日10分钟独处（不刷消息、不找人确认）","独处时做低门槛活动：听歌/拉伸/泡茶","每周增加5分钟，直到能稳定30分钟"],
+        "caution": "若独处触发强烈惊恐/自伤想法，请及时寻求专业帮助。"
+      },
+      {
+        "id": "Dependency_R2",
+        "title": "建立‘多元支持系统’",
+        "detail": "把所有情绪需求压在伴侣身上，会让关系承压。需要多点支撑。",
+        "action_steps": ["列出你可以求助的3类人：朋友/家人/同事或社群","每周至少一次与伴侣无关的社交连接","把‘倾诉’与‘解决’分开：先找人陪伴，再谈方案"],
+        "caution": "避免把‘第三者’变成新的依赖对象；目标是分散而非转移依赖。"
+      },
+      {
+        "id": "Dependency_R3",
+        "title": "把‘需求’说清楚，而不是用黏人表达",
+        "detail": "依赖常用‘黏’来表达需要，但对方很难理解你到底要什么。",
+        "action_steps": ["把需求拆成具体项：陪伴/肯定/身体接触/共同计划","用具体请求替代抽象抱怨：‘今晚能视频15分钟吗’","请求被拒时给出备选：‘不方便的话，明天中午可以吗’"],
+        "caution": "如果对方持续冷漠拒绝你的合理需求，需要评估关系质量，而不是一味自责。"
+      },
+      {
+        "id": "Dependency_R4",
+        "title": "重建边界：区分‘我负责’与‘你负责’",
+        "detail": "共依赖会把对方的情绪/问题变成自己的任务。重新划分责任能减轻焦虑。",
+        "action_steps": ["写两列：我能控制的/我不能控制的","遇到对方情绪时先问：他/她是在‘倾诉’还是‘求助’？","如果只是倾诉，练习回应：‘我听见了，我在这里’"],
+        "caution": "不要把‘我不负责’误解为冷漠；边界是为了更可持续的关心。"
+      },
+      {
+        "id": "Dependency_R5",
+        "title": "建立‘自我安抚工具箱’",
+        "detail": "当你能自己安抚自己，依赖会自然下降。",
+        "action_steps": ["准备3个快速安抚法：呼吸4-6、渐进式放松、冷敷/温热","准备1个长期安抚法：规律运动或正念练习（每周3次）","焦虑来时先用工具箱15分钟，再决定是否联系伴侣"],
+        "caution": "工具箱不是压抑情绪；若长期高压，建议配合心理咨询。"
+      }
+    ],
+    "Insecurity": [
+      {
+        "id": "Insecurity_R1",
+        "title": "把不安‘外化’：这是一种反应，不是事实",
+        "detail": "不安全感会让你把‘感觉’当成‘真相’。先把它当作一种心理反应来看待。",
+        "action_steps": ["当不安出现时说一句：‘这是我的不安全感在发声’","写下触发点与身体反应（心跳/胸闷）","在做任何行动前先做一次深呼吸(4-6)"],
+        "caution": "外化不是否认问题；如果确有反复伤害行为，需要同时处理现实边界。"
+      },
+      {
+        "id": "Insecurity_R2",
+        "title": "建立‘安全连接’的日常仪式",
+        "detail": "安全感靠一次次可预测的回应累积。用小而稳定的仪式增强确定性。",
+        "action_steps": ["每日固定一个短连接：早安/晚安/下班报平安（可选）","每周一次‘关系复盘’10分钟：我这周最需要什么？","当出现误会时，优先在24小时内做修复"],
+        "caution": "仪式应双方都舒服；不要把仪式变成硬性考核。"
+      },
+      {
+        "id": "Insecurity_R3",
+        "title": "练习‘请求而非测试’",
+        "detail": "不安全感的人容易用‘试探’来验证爱（冷处理、假装不在乎）。改为直接请求更有效。",
+        "action_steps": ["把‘你是不是不爱我了’改为‘我想听你肯定我’","避免‘消失/拉黑’作为测试手段","请求前先确认：我在要的是安抚还是控制？"],
+        "caution": "如果对方只在你闹情绪时才回应，可能形成恶性循环，需调整互动规则。"
+      },
+      {
+        "id": "Insecurity_R4",
+        "title": "修复自我价值：把评价体系从‘关系’迁移出来",
+        "detail": "关系不安全感常伴随‘我不够好’。建立独立的自我价值指标。",
+        "action_steps": ["写下你认可自己的3个特质（与恋爱无关）","设定一个可完成的周目标并打勾（学习/工作/健康）","每周找一次能让你感到胜任的活动（输出型）"],
+        "caution": "避免用‘表现更好’来换取爱；爱不是绩效。"
+      },
+      {
+        "id": "Insecurity_R5",
+        "title": "当不安全感长期高位：考虑专业支持",
+        "detail": "如果你发现自己长期处在高焦虑/高警觉状态，可能与依恋经历、创伤或抑郁焦虑有关。",
+        "action_steps": ["给自己设一个观察窗口：连续2-4周高强度不安","优先选择擅长依恋/关系议题的咨询师（CBT/EFT/依恋取向）","必要时与伴侣一起做伴侣咨询，聚焦沟通与边界"],
+        "caution": "若存在暴力/胁迫控制风险，先安全撤离与求助，再考虑共同咨询。"
+      }
+    ]
+  },
+  "scoring": {
+    "dimension_score": {
+      "method": "weighted_mean",
+      "ignore_dimensions": ["AttentionCheck"],
+      "missing_policy": {
+        "max_missing_rate": 0.1,
+        "impute": "mean_within_dimension",
+        "otherwise": "require_completion"
+      }
+    },
+    "total_score": {
+      "method": "weighted_mean_of_dimensions",
+      "weights_source": "meta.dimensions.default_weight",
+      "normalize_to_0_100": true
+    },
+    "tiers": [
+      {
+        "id": "Healthy",
+        "min": 0,
+        "max": 29,
+        "label": "健康安稳型"
+      },
+      {
+        "id": "Moderate",
+        "min": 30,
+        "max": 49,
+        "label": "轻度焦虑型"
+      },
+      {
+        "id": "High",
+        "min": 50,
+        "max": 74,
+        "label": "高压控制型"
+      },
+      {
+        "id": "Dangerous",
+        "min": 75,
+        "max": 100,
+        "label": "危险/需干预"
+      }
+    ],
+    "attention_check": {
+      "fail_if_wrong_count_gte": 1,
+      "items": ["ATTN_01", "ATTN_02"]
+    }
+  }
+}

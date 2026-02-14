@@ -1,0 +1,662 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "当团队接到一项重要且有挑战性的新任务时，你通常会？"
+    },
+    "dimensionKey": "leadership",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "主动站出来，分析形势并分配工作，带领大家推进",
+        "value": 3
+      },
+      {
+        "id": "Q1_o2",
+        "label": "先听听大家的想法，然后积极配合，完成自己分内的部分",
+        "value": 1
+      },
+      {
+        "id": "Q1_o3",
+        "label": "快速思考并提出一个创新的解决方案或执行思路",
+        "value": 2
+      },
+      {
+        "id": "Q1_o4",
+        "label": "确保自己负责的部分万无一失，默默支持团队",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "朋友向你倾诉烦恼，情绪非常低落，你的第一反应是？"
+    },
+    "dimensionKey": "gentleness",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "耐心倾听，努力理解他的感受，并给予安慰和支持",
+        "value": 3
+      },
+      {
+        "id": "Q2_o2",
+        "label": "理性地帮他分析问题，找出可行的解决办法",
+        "value": 1
+      },
+      {
+        "id": "Q2_o3",
+        "label": "用轻松的话题或幽默转移他的注意力，希望他开心起来",
+        "value": 2
+      },
+      {
+        "id": "Q2_o4",
+        "label": "陪伴在他身边，但可能不太会说太多安慰的话",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "计划好的事情突然出现意外变故，打乱了所有安排，你会？"
+    },
+    "dimensionKey": "smart_flexible",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "有点烦躁，但会迅速接受现实，并思考新的应对方案",
+        "value": 3
+      },
+      {
+        "id": "Q3_o2",
+        "label": "感到焦虑和压力，需要一点时间平复情绪才能思考",
+        "value": 1
+      },
+      {
+        "id": "Q3_o3",
+        "label": "认为这或许是新的机会，兴致勃勃地探索其他可能性",
+        "value": 2
+      },
+      {
+        "id": "Q3_o4",
+        "label": "按兵不动，先观察情况会如何发展",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "对于一项重复性高、需要极大耐心和细致的工作，你的态度是？"
+    },
+    "dimensionKey": "diligence_responsibility",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "只要是我的责任，就会一丝不苟、保质保量地完成",
+        "value": 3
+      },
+      {
+        "id": "Q4_o2",
+        "label": "会尽力做好，但过程中可能会感到枯燥，需要克服",
+        "value": 1
+      },
+      {
+        "id": "Q4_o3",
+        "label": "尝试寻找更高效的方法或工具来优化流程",
+        "value": 2
+      },
+      {
+        "id": "Q4_o4",
+        "label": "很难长时间专注，更偏好有变化的工作",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "周末更倾向于如何度过？"
+    },
+    "dimensionKey": "independence_vision",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "独自一人，看书、学习新技能或进行深度思考",
+        "value": 3
+      },
+      {
+        "id": "Q5_o2",
+        "label": "与家人或三五好友相聚，享受温馨热闹的时光",
+        "value": 1
+      },
+      {
+        "id": "Q5_o3",
+        "label": "探索新开的店铺、展览或去没去过的地方冒险",
+        "value": 2
+      },
+      {
+        "id": "Q5_o4",
+        "label": "完全放松，睡到自然醒，随心所欲做点喜欢的事",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "当与他人发生意见冲突时，你通常如何处理？"
+    },
+    "dimensionKey": "steadiness_tolerance",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "保持冷静，试图从对方的角度理解，寻求共识",
+        "value": 3
+      },
+      {
+        "id": "Q6_o2",
+        "label": "尽量避免正面冲突，选择退让或暂时搁置",
+        "value": 1
+      },
+      {
+        "id": "Q6_o3",
+        "label": "坚持自己的观点，并努力说服对方",
+        "value": 1
+      },
+      {
+        "id": "Q6_o4",
+        "label": "觉得冲突很麻烦，可能直接放弃自己的主张",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "你怎么看待社会规则和他人对你的期望？"
+    },
+    "dimensionKey": "casual_free",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "在合理范围内遵守，但内心有自己的标准和节奏",
+        "value": 2
+      },
+      {
+        "id": "Q7_o2",
+        "label": "认为很重要，会努力符合以维持和谐与认可",
+        "value": 0
+      },
+      {
+        "id": "Q7_o3",
+        "label": "是一种参考，但更愿意追随自己的兴趣和直觉",
+        "value": 3
+      },
+      {
+        "id": "Q7_o4",
+        "label": "是必要的框架，能提供安全感和方向",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为自己在团队合作中最不可替代的价值是？"
+    },
+    "dimensionKey": "loyalty_cooperation",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "强大的执行力和对承诺的兑现",
+        "value": 2
+      },
+      {
+        "id": "Q8_o2",
+        "label": "凝聚团队士气，关心成员感受",
+        "value": 1
+      },
+      {
+        "id": "Q8_o3",
+        "label": "提供关键决策或打破僵局的创意",
+        "value": 1
+      },
+      {
+        "id": "Q8_o4",
+        "label": "无论顺境逆境，都坚定地与团队站在一起",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "面对一个渴望已久但竞争激烈的目标（如心仪职位），你会？"
+    },
+    "dimensionKey": "leadership",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "制定详细计划，主动争取，展现自己的全部优势",
+        "value": 3
+      },
+      {
+        "id": "Q9_o2",
+        "label": "尽力准备，但结果顺其自然",
+        "value": 1
+      },
+      {
+        "id": "Q9_o3",
+        "label": "分析对手和自身特点，寻找差异化突破口",
+        "value": 2
+      },
+      {
+        "id": "Q9_o4",
+        "label": "担心失败，可能因此退缩或不敢全力投入",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "看到路边受伤的小动物，你的做法最可能是？"
+    },
+    "dimensionKey": "gentleness",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "感到心疼，想办法提供帮助或联系救助机构",
+        "value": 3
+      },
+      {
+        "id": "Q10_o2",
+        "label": "同情但可能不知道具体该怎么办，或担心惹上麻烦",
+        "value": 1
+      },
+      {
+        "id": "Q10_o3",
+        "label": "观察一下情况，判断最有效率的帮助方式",
+        "value": 1
+      },
+      {
+        "id": "Q10_o4",
+        "label": "匆匆走过，但心里会惦记着",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "玩解谜游戏或遇到逻辑难题时，你享受的是？"
+    },
+    "dimensionKey": "smart_flexible",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "抽丝剥茧、最终找到唯一正确答案的过程",
+        "value": 1
+      },
+      {
+        "id": "Q11_o2",
+        "label": "灵光一现，想到别人想不到的巧妙解法的瞬间",
+        "value": 3
+      },
+      {
+        "id": "Q11_o3",
+        "label": "一步步按照规则推进，最终完成的成就感",
+        "value": 1
+      },
+      {
+        "id": "Q11_o4",
+        "label": "不太喜欢，觉得烧脑",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何管理自己的工作任务或学习计划？"
+    },
+    "dimensionKey": "diligence_responsibility",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "有清晰的日程表或清单，喜欢按计划井井有条地完成",
+        "value": 3
+      },
+      {
+        "id": "Q12_o2",
+        "label": "大概有个方向，根据当天状态和优先级灵活处理",
+        "value": 1
+      },
+      {
+        "id": "Q12_o3",
+        "label": "在截止日期前高效冲刺",
+        "value": 0
+      },
+      {
+        "id": "Q12_o4",
+        "label": "需要他人督促或置身于有压力的环境中才能推进",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "对于人生或职业的重大选择（如换城市、转行），你更依赖？"
+    },
+    "dimensionKey": "independence_vision",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "自己的直觉、长远规划和风险评估",
+        "value": 3
+      },
+      {
+        "id": "Q13_o2",
+        "label": "家人、伴侣或挚友的建议和支持",
+        "value": 1
+      },
+      {
+        "id": "Q13_o3",
+        "label": "对当下机会的利弊分析",
+        "value": 2
+      },
+      {
+        "id": "Q13_o4",
+        "label": "随大流，或者哪个选择压力小就选哪个",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "当亲近的人犯了错，并对你造成影响时，你会？"
+    },
+    "dimensionKey": "steadiness_tolerance",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "会不高兴，但愿意理解对方的处境，一起想办法补救",
+        "value": 3
+      },
+      {
+        "id": "Q14_o2",
+        "label": "感到受伤和生气，可能需要时间消化情绪",
+        "value": 1
+      },
+      {
+        "id": "Q14_o3",
+        "label": "直接指出问题，并要求对方承担责任",
+        "value": 1
+      },
+      {
+        "id": "Q14_o4",
+        "label": "选择原谅，但心里可能会留下疙瘩",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "你怎么看待“必须合群”这种社会压力？"
+    },
+    "dimensionKey": "casual_free",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "尊重群体，但坚持自我的舒适度更重要",
+        "value": 3
+      },
+      {
+        "id": "Q15_o2",
+        "label": "为了融入和和谐，会适当调整自己",
+        "value": 1
+      },
+      {
+        "id": "Q15_o3",
+        "label": "视群体质量而定，值得的群体才愿意融入",
+        "value": 2
+      },
+      {
+        "id": "Q15_o4",
+        "label": "感到压力，并常常为此焦虑",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "为了团队的整体成功，你是否愿意暂时牺牲个人突出的机会？"
+    },
+    "dimensionKey": "loyalty_cooperation",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "愿意，团队的成功就是我的成功",
+        "value": 3
+      },
+      {
+        "id": "Q16_o2",
+        "label": "看情况，取决于团队是否值得以及牺牲的程度",
+        "value": 1
+      },
+      {
+        "id": "Q16_o3",
+        "label": "更倾向于寻找双赢的方案",
+        "value": 2
+      },
+      {
+        "id": "Q16_o4",
+        "label": "不太愿意，个人发展同样重要",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "在公开场合需要即兴发言或表达观点时，你通常？"
+    },
+    "dimensionKey": "leadership",
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "不怯场，能清晰、有逻辑地表达自己的想法",
+        "value": 3
+      },
+      {
+        "id": "Q17_o2",
+        "label": "会紧张，但如果准备充分或话题熟悉，可以做到",
+        "value": 1
+      },
+      {
+        "id": "Q17_o3",
+        "label": "尽量简短，或者用幽默化解",
+        "value": 1
+      },
+      {
+        "id": "Q17_o4",
+        "label": "尽量避免，希望别人发言",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "你更容易被什么样的人或故事打动？"
+    },
+    "dimensionKey": "gentleness",
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "展现坚韧不拔、战胜逆境的励志故事",
+        "value": 1
+      },
+      {
+        "id": "Q18_o2",
+        "label": "充满温情、关爱与无私奉献的细腻情感",
+        "value": 3
+      },
+      {
+        "id": "Q18_o3",
+        "label": "智慧过人、巧妙破局的精彩智斗",
+        "value": 1
+      },
+      {
+        "id": "Q18_o4",
+        "label": "追求自由、打破束缚的灵魂共鸣",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "学习一项全新且复杂的技能（如编程、乐器），你的入门策略是？"
+    },
+    "dimensionKey": "smart_flexible",
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "寻找最高效的捷径、核心原理或独特的学习方法",
+        "value": 3
+      },
+      {
+        "id": "Q19_o2",
+        "label": "从最基础开始，严格按照教程或课程一步步练习",
+        "value": 1
+      },
+      {
+        "id": "Q19_o3",
+        "label": "先尝试做出一个简单成果，在过程中查漏补缺",
+        "value": 2
+      },
+      {
+        "id": "Q19_o4",
+        "label": "需要有人带领或同伴一起学，否则容易放弃",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何看待承诺？"
+    },
+    "dimensionKey": "diligence_responsibility",
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "非常重视，一旦答应就会尽全力做到",
+        "value": 3
+      },
+      {
+        "id": "Q20_o2",
+        "label": "尽力而为，但如果情况有变也会理解",
+        "value": 1
+      },
+      {
+        "id": "Q20_o3",
+        "label": "不轻易承诺，承诺前会仔细权衡",
+        "value": 2
+      },
+      {
+        "id": "Q20_o4",
+        "label": "觉得承诺有时是一种负担",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "在人群中，你更习惯处于什么位置？"
+    },
+    "dimensionKey": "independence_vision",
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "边缘或角落，方便观察全场",
+        "value": 3
+      },
+      {
+        "id": "Q21_o2",
+        "label": "中心或靠近中心，积极参与互动",
+        "value": 1
+      },
+      {
+        "id": "Q21_o3",
+        "label": "靠近出口或熟悉的人",
+        "value": 1
+      },
+      {
+        "id": "Q21_o4",
+        "label": "无所谓，哪里都可以",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "当朋友做出一个你认为是错误的选择时，你会？"
+    },
+    "dimensionKey": "steadiness_tolerance",
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "温和但坚定地提出自己的看法和担忧，但尊重他的决定",
+        "value": 3
+      },
+      {
+        "id": "Q22_o2",
+        "label": "强烈劝阻，甚至可能因此发生争执",
+        "value": 1
+      },
+      {
+        "id": "Q22_o3",
+        "label": "点到为止，说一次不听就算了",
+        "value": 1
+      },
+      {
+        "id": "Q22_o4",
+        "label": "不多说，让他自己承担后果",
+        "value": 0
+      }
+    ]
+  }
+]

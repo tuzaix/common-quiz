@@ -1,0 +1,32 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "示例题目：你通常如何处理压力？"
+    },
+    "dimensionKey": "Dim1",
+    "options": [
+      {
+        "id": "o1",
+        "label": "选项A描述",
+        "value": 1
+      },
+      {
+        "id": "o2",
+        "label": "选项B描述",
+        "value": 2
+      },
+      {
+        "id": "o3",
+        "label": "选项C描述",
+        "value": 3
+      },
+      {
+        "id": "o4",
+        "label": "选项D描述",
+        "value": 4
+      }
+    ]
+  }
+]

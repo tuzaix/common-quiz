@@ -1,0 +1,852 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "你刚刚买了一件家电设备，可是打开包装箱接通电源后，发现它不运转。"
+    },
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q1_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q1_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q1_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q1_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "你迫于无奈，被维修工敲诈了一顿。"
+    },
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q2_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q2_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q2_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q2_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "你和其他人都犯了错误，可别人侥幸逃过，上司单单把你拎出来批评。"
+    },
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q3_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q3_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q3_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q3_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "开车时不小心陷入泥潭或雪窝中。"
+    },
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q4_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q4_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q4_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q4_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "你和别人说话，可对方不理不睬。"
+    },
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q5_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q5_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q5_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q5_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "有人欺骗你。"
+    },
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q6_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q6_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q6_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q6_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "你在咖啡馆拿着4杯咖啡，好不容易快走到桌前，可有人撞到你了，咖啡全洒了。"
+    },
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q7_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q7_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q7_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q7_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "你已经把衣服挂好了，可有人却把它们碰到地上，而且还不把它们捡起来。"
+    },
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q8_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q8_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q8_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q8_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "从你进商店的那一刻起，售货员就一直缠着你卖东西。"
+    },
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q9_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q9_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q9_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q9_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你已经和人约好去某个地方碰头，可对方却在最后一刻爽约了，把你一个人晾在那里。"
+    },
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q10_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q10_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q10_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q10_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "被人取笑或愚弄。"
+    },
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q11_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q11_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q11_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q11_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你的车停在红灯前，可后面的家伙却一个劲地猛按喇叭。"
+    },
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q12_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q12_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q12_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q12_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "你在停车场不小心进错了道。刚一下车，就有人朝你吼：“你到底会不会开车？”"
+    },
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q13_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q13_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q13_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q13_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "有人做错了事反而还埋怨你。"
+    },
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q14_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q14_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q14_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q14_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "你想集中注意力，但旁边有个人总用脚敲地板响。"
+    },
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q15_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q15_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q15_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q15_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "你借给别人一本书或一件工具，后来对方不还了。"
+    },
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q16_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q16_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q16_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q16_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "你忙了一整天，可你的室友却开始埋怨你，说你把答应他（或她）的事给忘了。"
+    },
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q17_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q17_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q17_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q17_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "你想和爱人谈一件重要的事，可他（或她）就不让你说。"
+    },
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q18_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q18_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q18_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q18_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "有个人对某个问题本来知之甚少，可他（或她）还要固执地和你争论个没完。"
+    },
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q19_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q19_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q19_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q19_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "你正在与人争论，却有人过来多管闲事。"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q20_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q20_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q20_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q20_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "你急着要去某个地方，可前面有辆车却以40公里/小时的速度缓慢前移，而这条路明明可以跑60公里/小时。此时你还不能超车。"
+    },
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q21_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q21_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q21_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q21_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "不小心踩到了一块嚼过的口香糖。"
+    },
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q22_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q22_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q22_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q22_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q23",
+    "type": "single_choice",
+    "content": {
+      "text": "经过一小群人身边时，听到他们在嘲笑你。"
+    },
+    "options": [
+      {
+        "id": "Q23_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q23_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q23_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q23_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q23_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q24",
+    "type": "single_choice",
+    "content": {
+      "text": "本来要赶着去一个地方，可裤子被锋利的东西给划破了。这条裤子还很贵呢。"
+    },
+    "options": [
+      {
+        "id": "Q24_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q24_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q24_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q24_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q24_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q25",
+    "type": "single_choice",
+    "content": {
+      "text": "你用身上的最后一枚硬币打电话，可是还没打完就断线了，而硬币也没有了。"
+    },
+    "options": [
+      {
+        "id": "Q25_o1",
+        "label": "几乎不生气",
+        "value": 0
+      },
+      {
+        "id": "Q25_o2",
+        "label": "有一点点恼火",
+        "value": 1
+      },
+      {
+        "id": "Q25_o3",
+        "label": "有些生气",
+        "value": 2
+      },
+      {
+        "id": "Q25_o4",
+        "label": "相当生气",
+        "value": 3
+      },
+      {
+        "id": "Q25_o5",
+        "label": "极为愤怒",
+        "value": 4
+      }
+    ]
+  }
+]

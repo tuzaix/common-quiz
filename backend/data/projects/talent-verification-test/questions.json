@@ -1,0 +1,662 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "当你学习一首新的诗歌或歌词时，你通常？"
+    },
+    "dimensionKey": "linguistic",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "能很快记住并富有感情地朗诵出来",
+        "value": 3
+      },
+      {
+        "id": "Q1_o2",
+        "label": "需要多读几遍才能记住大意",
+        "value": 2
+      },
+      {
+        "id": "Q1_o3",
+        "label": "记起来比较吃力，更关注内容意思",
+        "value": 1
+      },
+      {
+        "id": "Q1_o4",
+        "label": "不太感兴趣，很难集中注意力去记",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "面对一个复杂的逻辑谜题（如数独、推理游戏），你的第一反应是？"
+    },
+    "dimensionKey": "logical_mathematical",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "感到兴奋，立刻开始寻找规律和突破口",
+        "value": 3
+      },
+      {
+        "id": "Q2_o2",
+        "label": "愿意尝试，但需要一些提示或时间",
+        "value": 2
+      },
+      {
+        "id": "Q2_o3",
+        "label": "觉得有点难，可能尝试一下就放弃",
+        "value": 1
+      },
+      {
+        "id": "Q2_o4",
+        "label": "完全不感兴趣，避开这类游戏",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "去过一个陌生的地方一次后，你再次前往时？"
+    },
+    "dimensionKey": "spatial",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "基本不会迷路，能清晰回忆沿途标志和方向",
+        "value": 3
+      },
+      {
+        "id": "Q3_o2",
+        "label": "大致记得，但可能需要确认一两个路口",
+        "value": 2
+      },
+      {
+        "id": "Q3_o3",
+        "label": "容易忘记，经常需要借助地图或导航",
+        "value": 1
+      },
+      {
+        "id": "Q4_o4",
+        "label": "几乎一定会迷路，方向感很差",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "学习一套新的舞蹈动作或体育运动技巧时，你？"
+    },
+    "dimensionKey": "bodily_kinesthetic",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "模仿能力强，能较快协调身体做出动作",
+        "value": 3
+      },
+      {
+        "id": "Q4_o2",
+        "label": "需要多练习几次才能掌握要领",
+        "value": 2
+      },
+      {
+        "id": "Q4_o3",
+        "label": "感觉身体不协调，学起来比较慢",
+        "value": 1
+      },
+      {
+        "id": "Q4_o4",
+        "label": "非常不擅长，尽量避免这类活动",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "听到一段陌生的旋律，你能？"
+    },
+    "dimensionKey": "musical",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "很快记住并可能哼唱出来，且音准较好",
+        "value": 3
+      },
+      {
+        "id": "Q5_o2",
+        "label": "能记住主旋律的一部分",
+        "value": 2
+      },
+      {
+        "id": "Q5_o3",
+        "label": "有印象但很难准确复现",
+        "value": 1
+      },
+      {
+        "id": "Q5_o4",
+        "label": "听完就忘，对旋律不敏感",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "在小组活动中，当成员间出现意见分歧或情绪低落时，你通常会？"
+    },
+    "dimensionKey": "interpersonal",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "主动察觉并尝试调解，促进沟通和理解",
+        "value": 3
+      },
+      {
+        "id": "Q6_o2",
+        "label": "能感觉到，但不知如何有效介入",
+        "value": 2
+      },
+      {
+        "id": "Q6_o3",
+        "label": "不太关注，专注于完成自己的任务",
+        "value": 1
+      },
+      {
+        "id": "Q6_o4",
+        "label": "完全没注意到，或觉得与自己无关",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何应对自己的失败或挫折？"
+    },
+    "dimensionKey": "intrapersonal",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "能较快平复情绪，冷静分析原因并制定改进计划",
+        "value": 3
+      },
+      {
+        "id": "Q7_o2",
+        "label": "需要一些时间消化情绪，之后会反思",
+        "value": 2
+      },
+      {
+        "id": "Q7_o3",
+        "label": "情绪低落持续较久，容易自我怀疑",
+        "value": 1
+      },
+      {
+        "id": "Q7_o4",
+        "label": "倾向于回避或归咎于外部因素",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "在公园或郊外，你更可能被什么吸引？"
+    },
+    "dimensionKey": "naturalist",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "观察不同植物的形态、昆虫的行为或云朵的变化",
+        "value": 3
+      },
+      {
+        "id": "Q8_o2",
+        "label": "欣赏自然风景的美丽，但不会深入观察细节",
+        "value": 2
+      },
+      {
+        "id": "Q8_o3",
+        "label": "更享受和朋友一起活动的乐趣，对自然本身关注不多",
+        "value": 1
+      },
+      {
+        "id": "Q8_o4",
+        "label": "觉得户外活动很无聊，更喜欢室内",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "当你需要向别人解释一个复杂概念时，你倾向于？"
+    },
+    "dimensionKey": "linguistic",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "用生动的比喻、故事或清晰的逻辑层层展开",
+        "value": 3
+      },
+      {
+        "id": "Q9_o2",
+        "label": "按自己理解的方式陈述，但可能不够生动",
+        "value": 2
+      },
+      {
+        "id": "Q9_o3",
+        "label": "感觉词不达意，需要借助图表或例子",
+        "value": 1
+      },
+      {
+        "id": "Q9_o4",
+        "label": "尽量避免做解释，让别人来说",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "看到一组杂乱的数据或信息，你的第一想法是？"
+    },
+    "dimensionKey": "logical_mathematical",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "想找出其中的规律、模式或对其进行分类",
+        "value": 3
+      },
+      {
+        "id": "Q10_o2",
+        "label": "尝试理解它们，但可能缺乏系统方法",
+        "value": 2
+      },
+      {
+        "id": "Q10_o3",
+        "label": "感到头疼，希望有人已经整理好",
+        "value": 1
+      },
+      {
+        "id": "Q10_o4",
+        "label": "直接忽略，不关心这些数据",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "玩拼图游戏或看建筑设计图时，你？"
+    },
+    "dimensionKey": "spatial",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "能快速想象整体结构和各部分的空间关系",
+        "value": 3
+      },
+      {
+        "id": "Q11_o2",
+        "label": "需要边看边拼，慢慢建立空间感",
+        "value": 2
+      },
+      {
+        "id": "Q11_o3",
+        "label": "主要靠试错，空间想象力一般",
+        "value": 1
+      },
+      {
+        "id": "Q11_o4",
+        "label": "非常不擅长，很快失去耐心",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你的手工制作能力（如做模型、编织、修理小物件）如何？"
+    },
+    "dimensionKey": "bodily_kinesthetic",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "很好，手很灵巧，享受制作过程",
+        "value": 3
+      },
+      {
+        "id": "Q12_o2",
+        "label": "还行，能完成但不算精致",
+        "value": 2
+      },
+      {
+        "id": "Q12_o3",
+        "label": "一般，经常做得不太理想",
+        "value": 1
+      },
+      {
+        "id": "Q12_o4",
+        "label": "很差，尽量避免动手操作",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "对不同乐器演奏的声音，你能？"
+    },
+    "dimensionKey": "musical",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "轻易辨别出是什么乐器，并描述音色特点",
+        "value": 3
+      },
+      {
+        "id": "Q13_o2",
+        "label": "能听出大部分常见乐器的区别",
+        "value": 2
+      },
+      {
+        "id": "Q13_o3",
+        "label": "只能分辨非常明显的几种",
+        "value": 1
+      },
+      {
+        "id": "Q13_o4",
+        "label": "听不出什么区别",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "在新环境中（如新班级、新公司），你结识新朋友的速度？"
+    },
+    "dimensionKey": "interpersonal",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "很快，能自然地和不同的人开启话题并建立联系",
+        "value": 3
+      },
+      {
+        "id": "Q14_o2",
+        "label": "一般，需要一些时间慢慢熟悉",
+        "value": 2
+      },
+      {
+        "id": "Q14_o3",
+        "label": "较慢，通常只和少数人深入交往",
+        "value": 1
+      },
+      {
+        "id": "Q14_o4",
+        "label": "非常慢，感到紧张和困难",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "你对自己未来的目标和规划清晰吗？"
+    },
+    "dimensionKey": "intrapersonal",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "非常清晰，有明确的长期和短期目标，并知道如何推进",
+        "value": 3
+      },
+      {
+        "id": "Q15_o2",
+        "label": "有大方向，但具体路径还在探索中",
+        "value": 2
+      },
+      {
+        "id": "Q15_o3",
+        "label": "比较模糊，随遇而安",
+        "value": 1
+      },
+      {
+        "id": "Q15_o4",
+        "label": "完全没有规划，走一步看一步",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否喜欢并擅长对动植物、岩石、天气现象等进行分类和记忆其特征？"
+    },
+    "dimensionKey": "naturalist",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "非常喜欢且擅长，这是我的乐趣之一",
+        "value": 3
+      },
+      {
+        "id": "Q16_o2",
+        "label": "有点兴趣，但不会特意去研究",
+        "value": 2
+      },
+      {
+        "id": "Q16_o3",
+        "label": "不太感兴趣，也记不住太多特征",
+        "value": 1
+      },
+      {
+        "id": "Q16_o4",
+        "label": "完全不感兴趣",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "阅读时，除了故事情节，你是否会特别关注作者的用词、句式和写作技巧？"
+    },
+    "dimensionKey": "linguistic",
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "经常会，并会欣赏或学习好的表达",
+        "value": 3
+      },
+      {
+        "id": "Q17_o2",
+        "label": "偶尔会注意到",
+        "value": 2
+      },
+      {
+        "id": "Q17_o3",
+        "label": "很少，主要关注内容本身",
+        "value": 1
+      },
+      {
+        "id": "Q17_o4",
+        "label": "从不",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为自己善于从一堆信息中快速抓住核心问题和关键点吗？"
+    },
+    "dimensionKey": "logical_mathematical",
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "非常善于，这是我的强项",
+        "value": 3
+      },
+      {
+        "id": "Q18_o2",
+        "label": "比较善于，但需要一点时间",
+        "value": 2
+      },
+      {
+        "id": "Q18_o3",
+        "label": "一般，容易被细节干扰",
+        "value": 1
+      },
+      {
+        "id": "Q18_o4",
+        "label": "不善于，经常抓不住重点",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "闭上眼睛，你能否在脑海中清晰地想象出一个熟悉物体的各个角度（如你的手机）？"
+    },
+    "dimensionKey": "spatial",
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "能，图像非常清晰且可以旋转视角",
+        "value": 3
+      },
+      {
+        "id": "Q19_o2",
+        "label": "能想象出大概样子，但细节模糊",
+        "value": 2
+      },
+      {
+        "id": "Q19_o3",
+        "label": "比较困难，图像不稳定",
+        "value": 1
+      },
+      {
+        "id": "Q19_o4",
+        "label": "几乎无法形成清晰图像",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "通过观察他人的细微表情或肢体动作，你能否大致判断其情绪或真实想法？"
+    },
+    "dimensionKey": "interpersonal",
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "通常可以，准确度较高",
+        "value": 3
+      },
+      {
+        "id": "Q20_o2",
+        "label": "有时可以，但不确定",
+        "value": 2
+      },
+      {
+        "id": "Q20_o3",
+        "label": "很少注意到这些细节",
+        "value": 1
+      },
+      {
+        "id": "Q20_o4",
+        "label": "完全不会",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "当你有强烈的情绪（开心或难过）时，你倾向于如何梳理它们？"
+    },
+    "dimensionKey": "intrapersonal",
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "通过写日记、独自思考或与信任的人深谈来理清根源",
+        "value": 3
+      },
+      {
+        "id": "Q21_o2",
+        "label": "做点别的事转移注意力，让情绪自然过去",
+        "value": 2
+      },
+      {
+        "id": "Q21_o3",
+        "label": "容易陷在情绪里，不知如何有效处理",
+        "value": 1
+      },
+      {
+        "id": "Q21_o4",
+        "label": "发泄出来或压抑下去",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否能轻易分辨出不同季节空气中气味的变化，或对不同食物的味道有敏锐的感知？"
+    },
+    "dimensionKey": "naturalist",
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "是的，我对气味和味道非常敏感",
+        "value": 3
+      },
+      {
+        "id": "Q22_o2",
+        "label": "有一定感知，但不算特别敏锐",
+        "value": 2
+      },
+      {
+        "id": "Q22_o3",
+        "label": "不太注意这些",
+        "value": 1
+      },
+      {
+        "id": "Q22_o4",
+        "label": "几乎分辨不出",
+        "value": 0
+      }
+    ]
+  }
+]

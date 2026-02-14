@@ -1,0 +1,1562 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "我天生就有一种能影响人们的本事。"
+    },
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q1_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q1_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q1_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q1_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q1_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "我不是一个谦虚的人。"
+    },
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q2_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q2_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q2_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q2_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q2_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "我几乎敢挑战任何事情。"
+    },
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q3_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q3_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q3_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q3_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q3_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "我是一个非凡的人。"
+    },
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q4_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q4_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q4_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q4_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q4_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "如果让我来统治世界，这个世界将会更好。"
+    },
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q5_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q5_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q5_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q5_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q5_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "我能靠口才说服他人以避免麻烦。"
+    },
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q6_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q6_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q6_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q6_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q6_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢成为注意的中心。"
+    },
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q7_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q7_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q7_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q7_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q7_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "我将会是一个成功的人。"
+    },
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q8_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q8_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q8_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q8_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q8_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "我觉得我是个特别的人。"
+    },
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q9_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q9_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q9_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q9_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q9_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "我认为我是一个好领导。"
+    },
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q10_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q10_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q10_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q10_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q10_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "我是一个坚定自信的人。"
+    },
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q11_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q11_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q11_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q11_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q11_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢拥有支配他人的权力。"
+    },
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q12_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q12_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q12_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q12_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q12_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "我发现操纵别人是容易的。"
+    },
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q13_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q13_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q13_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q13_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q13_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "我坚持获得我应得的尊重。"
+    },
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q14_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q14_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q14_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q14_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q14_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢展示我的身体。"
+    },
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q15_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q15_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q15_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q15_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q15_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "我能看透别人的心思。"
+    },
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q16_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q16_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q16_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q16_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q16_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢负责去做决定。"
+    },
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q17_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q17_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q17_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q17_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q17_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "我要成为世人眼里有成就的人。"
+    },
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q18_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q18_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q18_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q18_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q18_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢看自己的身体。"
+    },
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q19_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q19_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q19_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q19_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q19_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "当我有机会时，我就乐于表现自己。"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q20_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q20_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q20_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q20_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q20_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "我总是知道我在做什么。"
+    },
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q21_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q21_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q21_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q21_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q21_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "我很少依靠别人来完成事情。"
+    },
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q22_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q22_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q22_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q22_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q22_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q23",
+    "type": "single_choice",
+    "content": {
+      "text": "每个人都喜欢听我的故事或轶事。"
+    },
+    "options": [
+      {
+        "id": "Q23_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q23_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q23_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q23_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q23_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q23_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q24",
+    "type": "single_choice",
+    "content": {
+      "text": "我对他人的期望很多。"
+    },
+    "options": [
+      {
+        "id": "Q24_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q24_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q24_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q24_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q24_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q24_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q25",
+    "type": "single_choice",
+    "content": {
+      "text": "在没有得到我想得到的东西之前，我是永远不会满足的。"
+    },
+    "options": [
+      {
+        "id": "Q25_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q25_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q25_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q25_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q25_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q25_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q26",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢被人恭维。"
+    },
+    "options": [
+      {
+        "id": "Q26_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q26_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q26_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q26_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q26_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q26_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q27",
+    "type": "single_choice",
+    "content": {
+      "text": "我对权力有强烈的欲望。"
+    },
+    "options": [
+      {
+        "id": "Q27_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q27_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q27_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q27_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q27_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q27_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q28",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢开创时尚。"
+    },
+    "options": [
+      {
+        "id": "Q28_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q28_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q28_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q28_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q28_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q28_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q29",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢照镜子。"
+    },
+    "options": [
+      {
+        "id": "Q29_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q29_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q29_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q29_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q29_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q29_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q30",
+    "type": "single_choice",
+    "content": {
+      "text": "我真的喜欢成为注意的焦点。"
+    },
+    "options": [
+      {
+        "id": "Q30_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q30_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q30_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q30_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q30_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q30_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q31",
+    "type": "single_choice",
+    "content": {
+      "text": "我能按照我喜爱的方式生活。"
+    },
+    "options": [
+      {
+        "id": "Q31_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q31_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q31_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q31_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q31_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q31_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q32",
+    "type": "single_choice",
+    "content": {
+      "text": "人们似乎总是认可我的权威。"
+    },
+    "options": [
+      {
+        "id": "Q32_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q32_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q32_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q32_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q32_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q32_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q33",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢当领导。"
+    },
+    "options": [
+      {
+        "id": "Q33_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q33_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q33_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q33_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q33_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q33_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q34",
+    "type": "single_choice",
+    "content": {
+      "text": "我将会成为一个伟大的人。"
+    },
+    "options": [
+      {
+        "id": "Q34_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q34_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q34_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q34_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q34_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q34_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q35",
+    "type": "single_choice",
+    "content": {
+      "text": "我能让任何人相信我想让他们相信的事。"
+    },
+    "options": [
+      {
+        "id": "Q35_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q35_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q35_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q35_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q35_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q35_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q36",
+    "type": "single_choice",
+    "content": {
+      "text": "我是天生的领导者。"
+    },
+    "options": [
+      {
+        "id": "Q36_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q36_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q36_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q36_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q36_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q36_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q37",
+    "type": "single_choice",
+    "content": {
+      "text": "我希望将来有一天有人给我写传记。"
+    },
+    "options": [
+      {
+        "id": "Q37_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q37_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q37_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q37_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q37_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q37_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q38",
+    "type": "single_choice",
+    "content": {
+      "text": "在公共场所，如果人们不注意我的外表，我会感到不开心。"
+    },
+    "options": [
+      {
+        "id": "Q38_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q38_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q38_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q38_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q38_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q38_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q39",
+    "type": "single_choice",
+    "content": {
+      "text": "我比其他人更能干。"
+    },
+    "options": [
+      {
+        "id": "Q39_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q39_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q39_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q39_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q39_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q39_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "Q40",
+    "type": "single_choice",
+    "content": {
+      "text": "我知道自己很好，因为别人一直这么跟我说。"
+    },
+    "options": [
+      {
+        "id": "Q40_o1",
+        "label": "非常不同意",
+        "value": 1
+      },
+      {
+        "id": "Q40_o2",
+        "label": "很不同意",
+        "value": 2
+      },
+      {
+        "id": "Q40_o3",
+        "label": "有点不同意",
+        "value": 3
+      },
+      {
+        "id": "Q40_o4",
+        "label": "有点同意",
+        "value": 4
+      },
+      {
+        "id": "Q40_o5",
+        "label": "很同意",
+        "value": 5
+      },
+      {
+        "id": "Q40_o6",
+        "label": "非常同意",
+        "value": 6
+      }
+    ]
+  }
+]

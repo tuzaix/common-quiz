@@ -1,0 +1,67 @@
+{
+  "id": "elk-sexual-preference-test",
+  "title": "麋鹿·性偏好测试",
+  "description": "本测试是一套基于心理学行为模型与亲密关系互动模式设计的倾向评估量表。通过多维度答题，旨在帮助你更清晰地了解自己在亲密关系中的偏好倾向，包括互动风格、氛围偏好、核心需求等。所有结果仅反映当前的心理偏好倾向，不作好坏评判，核心目的是促进自我觉察与理解。",
+  "theme": {
+    "primaryColor": "#8B4513",
+    "backgroundColor": "#FFF8DC"
+  },
+  "resultConfig": {
+    "scoringEngine": "formula",
+    "formula": "const d = dimensions || {}; const radarData = {}; for (const key in d) { radarData[key] = d[key]; } radarData.overallTendency = Object.values(d).reduce((a, b) => a + b, 0) / Object.keys(d).length; radarData.totalScore = Object.values(d).reduce((a, b) => a + b, 0); return radarData;",
+    "dimensions": [
+      {
+        "key": "interaction_style",
+        "name": "互动风格",
+        "description": "评估你在亲密关系中更倾向于主导、配合还是平等协作。"
+      },
+      {
+        "key": "atmosphere_preference",
+        "name": "氛围偏好",
+        "description": "评估你是否看重浪漫、情调与情绪氛围的营造。"
+      },
+      {
+        "key": "interaction_capacity",
+        "name": "互动能力",
+        "description": "评估你进行引导与调情的意愿与能力。"
+      },
+      {
+        "key": "energy_mode",
+        "name": "能量模式",
+        "description": "评估你更喜欢温柔舒缓的相处，还是富有张力的互动。"
+      },
+      {
+        "key": "core_needs",
+        "name": "核心需求",
+        "description": "评估你的情感需求强度、信任建立速度与个人界限水平。"
+      },
+      {
+        "key": "relationship_values",
+        "name": "关系价值观",
+        "description": "评估你在相处中更看重掌控感、情绪共鸣还是平等。"
+      },
+      {
+        "key": "sexual_attitude",
+        "name": "性态度",
+        "description": "评估你对性行为、性关系的总体看法是开放、保守还是探索。"
+      }
+    ],
+    "resultRules": [
+      {
+        "condition": "overallTendency >= 4",
+        "title": "高张力探索型",
+        "description": "你在亲密关系中表现出较强的主动性与探索欲。你可能偏好富有张力的互动，重视氛围营造与情绪共鸣，在关系中寻求一定的掌控感与深度连接。你的性态度可能较为开放，对多样的性实践抱有好奇心。这让你在关系中充满活力，但也需注意伴侣的节奏与边界。"
+      },
+      {
+        "condition": "overallTendency >= 2.5 && overallTendency < 4",
+        "title": "平衡协作型",
+        "description": "你在亲密关系中注重平衡与协作。你既能享受浪漫氛围，也看重平等沟通；既有一定的互动意愿，也尊重彼此的独立空间。你的性态度较为理性与健康，能在个人偏好与社会规范间找到平衡。这种模式有助于建立 stable、互相尊重的关系，是许多健康伴侣关系的基石。"
+      },
+      {
+        "condition": "overallTendency < 2.5",
+        "title": "温和舒缓型",
+        "description": "你在亲密关系中更倾向于温和、舒缓的节奏。你可能更偏好配合的角色，重视安全感与稳定的情感连接，而非强烈的戏剧张力。你的性态度可能相对保守或私密，将性视为深度情感联结的一部分。你给予伴侣的是细腻的关怀与持久的支持，需要能欣赏这种宁静深情的伴侣。"
+      }
+    ]
+  }
+}

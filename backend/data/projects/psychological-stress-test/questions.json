@@ -1,0 +1,512 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "总觉得时间紧张，所以分秒必争。时间观念混乱。例如，过马路时冲红灯，走路和说话节奏很快。"
+    },
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q1_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q1_o3",
+        "label": "经常",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "昨天想好的某件事今天怎么也记不起来了，而且经常出现这种情况。"
+    },
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q2_o2",
+        "label": "偶尔",
+        "value": 5
+      },
+      {
+        "id": "Q2_o3",
+        "label": "经常",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "感到情绪有些抑郁，莫名情绪低沉，常静坐发呆。"
+    },
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q3_o2",
+        "label": "偶尔",
+        "value": 1
+      },
+      {
+        "id": "Q3_o3",
+        "label": "经常",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "三餐进食甚少或进食不规律，即使口味非常适合自己的菜也经常吃得很少。"
+    },
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q4_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q4_o3",
+        "label": "经常",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "不像以前那样喜欢参加朋友的聚会。对各种娱乐没有兴趣。有勉强应酬的感觉。"
+    },
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q5_o2",
+        "label": "偶尔",
+        "value": 1
+      },
+      {
+        "id": "Q5_o3",
+        "label": "经常",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "对城市的污染以及噪声很敏感，比常人更渴望清净，且容易发火。"
+    },
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q6_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q6_o3",
+        "label": "经常",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "不愿走进办公室，觉得工作令人厌倦。"
+    },
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q7_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q7_o3",
+        "label": "经常",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "担心工作不好，过于在意别人对自己工作表现的评价。"
+    },
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q8_o2",
+        "label": "偶尔",
+        "value": 5
+      },
+      {
+        "id": "Q8_o3",
+        "label": "经常",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "不想面对同事和上司，有一种自我封闭的倾向。"
+    },
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q9_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q9_o3",
+        "label": "经常",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "每天工作很短时间，就感到身心倦怠，胸闷气短。"
+    },
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q10_o2",
+        "label": "偶尔",
+        "value": 5
+      },
+      {
+        "id": "Q10_o3",
+        "label": "经常",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "工作情绪始终无法高涨，容易发脾气，但又没有精力发作。"
+    },
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q11_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q11_o3",
+        "label": "经常",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "盼望早早地逃离办公室，为的是能够回家，躺在床上休息片刻。"
+    },
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q12_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q12_o3",
+        "label": "经常",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "晚上经常失眠。即使睡着也老是在做梦的状态中，睡眠质量很糟糕。"
+    },
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q13_o2",
+        "label": "偶尔",
+        "value": 5
+      },
+      {
+        "id": "Q13_o3",
+        "label": "经常",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "食欲低迷，体重有明显下降趋势。"
+    },
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q14_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q14_o3",
+        "label": "经常",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "当空闲时，轻松一下也会觉得内疚。"
+    },
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q15_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q15_o3",
+        "label": "经常",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "有头痛/胃痛/背痛的毛病，难于治愈。"
+    },
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q16_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q16_o3",
+        "label": "经常",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "上床后觉得思潮起伏，牵挂很多事情，难以入睡。"
+    },
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q17_o2",
+        "label": "偶尔",
+        "value": 2
+      },
+      {
+        "id": "Q17_o3",
+        "label": "经常",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否经常感到无法控制生活中的重要事情？"
+    },
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "从不",
+        "value": 0
+      },
+      {
+        "id": "Q18_o2",
+        "label": "偶尔",
+        "value": 1
+      },
+      {
+        "id": "Q18_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q18_o4",
+        "label": "经常",
+        "value": 3
+      },
+      {
+        "id": "Q18_o5",
+        "label": "总是",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否感到紧张不安和压力过大？"
+    },
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "从不",
+        "value": 0
+      },
+      {
+        "id": "Q19_o2",
+        "label": "偶尔",
+        "value": 1
+      },
+      {
+        "id": "Q19_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q19_o4",
+        "label": "经常",
+        "value": 3
+      },
+      {
+        "id": "Q19_o5",
+        "label": "总是",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否对自己处理个人问题的能力感到有信心？"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "总是",
+        "value": 0
+      },
+      {
+        "id": "Q20_o2",
+        "label": "经常",
+        "value": 1
+      },
+      {
+        "id": "Q20_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q20_o4",
+        "label": "偶尔",
+        "value": 3
+      },
+      {
+        "id": "Q20_o5",
+        "label": "从不",
+        "value": 4
+      }
+    ]
+  }
+]

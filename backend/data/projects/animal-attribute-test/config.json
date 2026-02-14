@@ -1,0 +1,106 @@
+{
+  "id": "animal-attribute-test",
+  "title": "动物属性测试",
+  "description": "本测试借助自然界中动物的典型特质作为参照，将抽象的性格概念转化为直观可感的生物形象，帮助人们快速捕捉自身的核心性格特征。通过一系列生活化情景的选择，最终匹配出与你性格最契合的动物形象，开启一场轻松有趣的自我探索之旅。",
+  "theme": {
+    "primaryColor": "#2E8B57",
+    "backgroundColor": "#F5FFFA"
+  },
+  "resultConfig": {
+    "scoringEngine": "formula",
+    "formula": "var d = dimensions || {}; var animalScores = { 'lion': 0, 'deer': 0, 'fox': 0, 'bee': 0, 'eagle': 0, 'elephant': 0, 'cat': 0, 'wolf': 0, 'cheetah': 0, 'panda': 0 }; for (var key in d) { var val = d[key]; if (key.indexOf('leadership') !== -1 || key.indexOf('decisive') !== -1) animalScores.lion += val; if (key.indexOf('gentle') !== -1 || key.indexOf('empathy') !== -1) animalScores.deer += val; if (key.indexOf('smart') !== -1 || key.indexOf('flexible') !== -1) animalScores.fox += val; if (key.indexOf('diligent') !== -1 || key.indexOf('responsible') !== -1) animalScores.bee += val; if (key.indexOf('independent') !== -1 || key.indexOf('vision') !== -1) animalScores.eagle += val; if (key.indexOf('steady') !== -1 || key.indexOf('tolerant') !== -1) animalScores.elephant += val; if (key.indexOf('casual') !== -1 || key.indexOf('free') !== -1) animalScores.cat += val; if (key.indexOf('loyal') !== -1 || key.indexOf('cooperative') !== -1) animalScores.wolf += val; if (key.indexOf('focused') !== -1 || key.indexOf('fast') !== -1) animalScores.cheetah += val; if (key.indexOf('friendly') !== -1 || key.indexOf('patient') !== -1) animalScores.panda += val; } var maxScore = -1; var resultType = 'lion'; for (var animal in animalScores) { if (animalScores[animal] > maxScore) { maxScore = animalScores[animal]; resultType = animal; } } return { resultType: resultType, animalScores: animalScores, dimensions: d };",
+    "dimensions": [
+      {
+        "key": "leadership",
+        "name": "领导力",
+        "description": "衡量你在团队中引领他人、做出决策的倾向与能力。"
+      },
+      {
+        "key": "gentleness",
+        "name": "温和友善",
+        "description": "衡量你待人接物的亲和力、共情能力与追求和谐的倾向。"
+      },
+      {
+        "key": "smart_flexible",
+        "name": "聪慧机敏",
+        "description": "衡量你思维敏捷、善于变通和解决复杂问题的能力。"
+      },
+      {
+        "key": "diligence_responsibility",
+        "name": "勤奋尽责",
+        "description": "衡量你做事踏实、注重细节和有强烈责任感的程度。"
+      },
+      {
+        "key": "independence_vision",
+        "name": "独立远见",
+        "description": "衡量你喜欢独处、自主决策和洞察长远趋势的倾向。"
+      },
+      {
+        "key": "steadiness_tolerance",
+        "name": "沉稳包容",
+        "description": "衡量你情绪稳定、心胸宽广和给人安全感的特质。"
+      },
+      {
+        "key": "casual_free",
+        "name": "随性自由",
+        "description": "衡量你遵循内心节奏、不喜欢被束缚、享受独立的程度。"
+      },
+      {
+        "key": "loyalty_cooperation",
+        "name": "忠诚协作",
+        "description": "衡量你重视团队、善于配合、对认可的人或事全心付出的特质。"
+      }
+    ],
+    "resultRules": [
+      {
+        "condition": "resultType === 'lion'",
+        "title": "草原王者 · 狮子",
+        "description": "你自信、果敢，领导力爆棚。如同草原之王，你天生具备掌控全局的意识，面对困难从不退缩，敢于主动承担责任，在团队中往往是决策者与核心引领者。你目标感强烈，一旦确定方向就会坚定不移地推进。在人际交往中，你坦诚直接，重视荣誉与尊严，内心深处有着强烈的保护欲，愿意为亲近的人遮风挡雨。"
+      },
+      {
+        "condition": "resultType === 'deer'",
+        "title": "林间精灵 · 鹿",
+        "description": "你温和、善良，共情力强。如同灵动的鹿，你待人谦和有礼，总能敏锐感知他人的情绪变化，是身边人眼中的“治愈系”存在。你不喜欢冲突与争执，追求人际关系的和谐。内心敏感细腻，对周围环境变化感知力强，做事谨慎，喜欢在熟悉的环境中从容、优雅地稳步前行。"
+      },
+      {
+        "condition": "resultType === 'fox'",
+        "description": "你聪慧、机敏，善于变通。如同灵动的狐狸，你思维敏捷，面对复杂问题时总能快速找到出人意料的解决办法。你善于观察细节，精准捕捉他人的需求，在人际交往中懂得灵活变通，巧妙地化解尴尬。好奇心旺盛，对新鲜事物充满探索欲，但有时会因过于追求效率而显得注重结果。"
+      },
+      {
+        "condition": "resultType === 'bee'",
+        "title": "勤勉工匠 · 蜜蜂",
+        "description": "你勤奋、踏实，责任心强。如同采蜜的蜜蜂，你脚踏实地、任劳任怨，对自己承担的任务会全力以赴，注重细节，做事条理清晰。在团队中，你是可靠的“实干家”，不擅长张扬自己，却总能用实际行动赢得信任。你有强烈的集体荣誉感，愿意为共同目标默默付出，不计较个人得失。"
+      },
+      {
+        "condition": "resultType === 'eagle'",
+        "title": "苍穹孤鹰 · 鹰",
+        "description": "你独立、果敢，有远见。如同高空翱翔的鹰，你喜欢独来独往，具备较强的自主决策能力，面对选择能快速判断。你目光长远，善于洞察事物本质与发展趋势，能在复杂环境中发现潜在机会。你不畏挑战，敢于突破常规，喜欢尝试未被探索的领域。在人际交往中较为独立，享受独处的时光。"
+      },
+      {
+        "condition": "resultType === 'elephant'",
+        "title": "大地守护 · 大象",
+        "description": "你沉稳、包容，有担当。如同温和的大象，你给人一种踏实可靠的感觉，做事沉稳，总能在关键时刻保持冷静，为身边人提供安全感。你心胸宽广，善于包容他人的缺点，待人真诚，重情重义。你有强烈的责任感，尤其重视家庭与团队的和谐，愿意为了守护身边的人付出努力。"
+      },
+      {
+        "condition": "resultType === 'cat'",
+        "title": "自在灵魂 · 猫",
+        "description": "你随性、独立，追求自由。如同慵懒的猫，你遵循自己的内心节奏，不喜欢被规则束缚，做事全凭兴趣。你享受独处的时光，能在自己的世界里找到乐趣。在人际交往中，你看似高冷，实则内心细腻，对亲近的人会展现温柔，但始终保持着独立的人格与骄傲的底线。"
+      },
+      {
+        "condition": "resultType === 'wolf'",
+        "title": "荒野同盟 · 狼",
+        "description": "你忠诚、团结，有韧性。如同群居的狼，你重视团队合作，善于与他人配合，能在团队中找准自己的位置，为了共同目标并肩作战。你忠诚度极高，对自己认可的人或团队会全心全意付出，不离不弃。面对挫折时不轻易放弃，能凭借顽强意志坚持到底。在人际交往中坦诚直率，重视彼此的信任。"
+      },
+      {
+        "condition": "resultType === 'cheetah'",
+        "title": "目标猎手 · 猎豹",
+        "description": "你果断、专注，目标感极强。如同闪电般的猎豹，你面对目标时会迅速锁定方向，以最高效率推进计划，不受外界干扰。你不喜欢拖延，做事雷厉风行，能在短时间内集中全部精力解决问题，擅长在竞争环境中突破自我，赢得先机。在人际交往中直接坦率，更关注如何达成目标。"
+      },
+      {
+        "condition": "resultType === 'panda'",
+        "title": "治愈使者 · 熊猫",
+        "description": "你友善、耐心，极具包容心。如同憨态可掬的熊猫，你待人谦和，总能敏锐察觉他人情绪，在他人陷入困境时会主动伸出援手给予安慰。你不喜欢冲突，遇到矛盾时更倾向于退让与和解，追求人际关系的和谐。你做事沉稳，擅长在团队中扮演“调和者”的角色，用耐心与包容化解分歧，在平淡中找到属于自己的乐趣。"
+      }
+    ]
+  }
+}

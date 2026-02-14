@@ -1,0 +1,607 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "最近一周，你是否经常感到情绪低落、沮丧或无缘由的悲伤？"
+    },
+    "dimensionKey": "emotion",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "没有或很少时间（少于1天）",
+        "value": 0
+      },
+      {
+        "id": "Q1_o2",
+        "label": "小部分时间（1-2天）",
+        "value": 25
+      },
+      {
+        "id": "Q1_o3",
+        "label": "相当多时间（3-4天）",
+        "value": 50
+      },
+      {
+        "id": "Q1_o4",
+        "label": "绝大部分或全部时间（5-7天）",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "最近一周，你是否感到紧张、焦虑或烦躁不安？"
+    },
+    "dimensionKey": "emotion",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "没有或很少时间",
+        "value": 0
+      },
+      {
+        "id": "Q2_o2",
+        "label": "小部分时间",
+        "value": 25
+      },
+      {
+        "id": "Q2_o3",
+        "label": "相当多时间",
+        "value": 50
+      },
+      {
+        "id": "Q2_o4",
+        "label": "绝大部分或全部时间",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "面对生活、工作或学习中的压力，你通常感到难以承受吗？"
+    },
+    "dimensionKey": "stress",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "从不，我能很好地应对",
+        "value": 0
+      },
+      {
+        "id": "Q3_o2",
+        "label": "偶尔感到有压力，但基本能处理",
+        "value": 25
+      },
+      {
+        "id": "Q3_o3",
+        "label": "经常感到压力很大，有些吃力",
+        "value": 50
+      },
+      {
+        "id": "Q3_o4",
+        "label": "总是感到压力难以承受，几乎崩溃",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "你每晚的平均睡眠时间是多少？睡眠质量如何？"
+    },
+    "dimensionKey": "sleep",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "7-9小时，睡眠质量好，醒来精神充沛",
+        "value": 0
+      },
+      {
+        "id": "Q4_o2",
+        "label": "6-7小时或>9小时，睡眠质量一般",
+        "value": 25
+      },
+      {
+        "id": "Q4_o3",
+        "label": "<6小时，经常失眠、多梦或早醒",
+        "value": 50
+      },
+      {
+        "id": "Q4_o4",
+        "label": "睡眠严重不足或紊乱，白天极度困倦",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否感到孤独，缺乏可以深入交谈、获得支持的亲密朋友或家人？"
+    },
+    "dimensionKey": "social",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "不，我有稳定的社交圈和亲密支持",
+        "value": 0
+      },
+      {
+        "id": "Q5_o2",
+        "label": "偶尔感到孤独，但大体上有人支持",
+        "value": 25
+      },
+      {
+        "id": "Q5_o3",
+        "label": "经常感到孤独，支持系统薄弱",
+        "value": 50
+      },
+      {
+        "id": "Q5_o4",
+        "label": "总是感到非常孤独，几乎无人理解和支持",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "你对自己的价值、能力和外貌是否有清晰的认知？是否经常自我怀疑或否定？"
+    },
+    "dimensionKey": "self",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "能全面客观认识自己，自信且接纳不足",
+        "value": 0
+      },
+      {
+        "id": "Q6_o2",
+        "label": "大体认可自己，但偶尔会自我怀疑",
+        "value": 25
+      },
+      {
+        "id": "Q6_o3",
+        "label": "经常自我怀疑，对自己评价较低",
+        "value": 50
+      },
+      {
+        "id": "Q6_o4",
+        "label": "总是否定自己，感到自己毫无价值",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否对以往感兴趣的活动或爱好失去了兴趣和乐趣？"
+    },
+    "dimensionKey": "emotion",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "没有，兴趣依旧",
+        "value": 0
+      },
+      {
+        "id": "Q7_o2",
+        "label": "兴趣略有减少",
+        "value": 25
+      },
+      {
+        "id": "Q7_o3",
+        "label": "兴趣明显减少",
+        "value": 50
+      },
+      {
+        "id": "Q7_o4",
+        "label": "对几乎所有活动都失去兴趣",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否容易感到疲劳或精力不足？"
+    },
+    "dimensionKey": "stress",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "没有或很少",
+        "value": 0
+      },
+      {
+        "id": "Q8_o2",
+        "label": "有时",
+        "value": 25
+      },
+      {
+        "id": "Q8_o3",
+        "label": "经常",
+        "value": 50
+      },
+      {
+        "id": "Q8_o4",
+        "label": "总是",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "你与同事、同学或家人的关系是否和谐？是否经常发生冲突？"
+    },
+    "dimensionKey": "social",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "关系和谐，很少冲突",
+        "value": 0
+      },
+      {
+        "id": "Q9_o2",
+        "label": "基本和谐，偶有小摩擦",
+        "value": 25
+      },
+      {
+        "id": "Q9_o3",
+        "label": "关系紧张，冲突较多",
+        "value": 50
+      },
+      {
+        "id": "Q9_o4",
+        "label": "关系恶劣，经常发生激烈冲突",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否会因为担心某些事情（如工作、健康、未来）而难以放松？"
+    },
+    "dimensionKey": "stress",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "从不",
+        "value": 0
+      },
+      {
+        "id": "Q10_o2",
+        "label": "偶尔",
+        "value": 25
+      },
+      {
+        "id": "Q10_o3",
+        "label": "经常",
+        "value": 50
+      },
+      {
+        "id": "Q10_o4",
+        "label": "总是",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否感到害怕，却没有明确的原因？（例如，害怕站在高处、当众发言等）"
+    },
+    "dimensionKey": "emotion",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q11_o2",
+        "label": "轻微，不影响生活",
+        "value": 25
+      },
+      {
+        "id": "Q11_o3",
+        "label": "中等，有时会回避某些场合",
+        "value": 50
+      },
+      {
+        "id": "Q11_o4",
+        "label": "严重，严重影响生活",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否有一些奇怪的想法或念头反复出现，明知无聊却无法摆脱？"
+    },
+    "dimensionKey": "emotion",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "没有",
+        "value": 0
+      },
+      {
+        "id": "Q12_o2",
+        "label": "极少，一闪而过",
+        "value": 25
+      },
+      {
+        "id": "Q12_o3",
+        "label": "有时会出现",
+        "value": 50
+      },
+      {
+        "id": "Q12_o4",
+        "label": "经常出现，难以控制",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否总担心自己的健康，害怕会染上严重的疾病？"
+    },
+    "dimensionKey": "stress",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "从不担心",
+        "value": 0
+      },
+      {
+        "id": "Q13_o2",
+        "label": "偶尔担心",
+        "value": 25
+      },
+      {
+        "id": "Q13_o3",
+        "label": "经常担心",
+        "value": 50
+      },
+      {
+        "id": "Q13_o4",
+        "label": "总是非常担心",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "当你遭遇失败或与他人不和谐时，你是否会非常敏感地觉得“别人在嘲笑我”？"
+    },
+    "dimensionKey": "social",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "不会",
+        "value": 0
+      },
+      {
+        "id": "Q14_o2",
+        "label": "偶尔会",
+        "value": 25
+      },
+      {
+        "id": "Q14_o3",
+        "label": "经常会",
+        "value": 50
+      },
+      {
+        "id": "Q14_o4",
+        "label": "总是会",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否能协调控制自己的情绪，在大多数时候保持相对平静的心情？"
+    },
+    "dimensionKey": "emotion",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "能，情绪稳定",
+        "value": 0
+      },
+      {
+        "id": "Q15_o2",
+        "label": "基本能，偶尔失控",
+        "value": 25
+      },
+      {
+        "id": "Q15_o3",
+        "label": "较难控制，情绪波动大",
+        "value": 50
+      },
+      {
+        "id": "Q15_o4",
+        "label": "完全不能控制，情绪善变",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否热爱生活，对学习或工作抱有热情和乐于投入的态度？"
+    },
+    "dimensionKey": "self",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "是的，充满热情",
+        "value": 0
+      },
+      {
+        "id": "Q16_o2",
+        "label": "一般，按部就班",
+        "value": 25
+      },
+      {
+        "id": "Q16_o3",
+        "label": "缺乏热情，感到厌倦",
+        "value": 50
+      },
+      {
+        "id": "Q16_o4",
+        "label": "非常厌恶，觉得毫无意义",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否能积极应对挫折，从中吸取经验教训，而不是一蹶不振或一味抱怨？"
+    },
+    "dimensionKey": "stress",
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "通常能积极应对",
+        "value": 0
+      },
+      {
+        "id": "Q17_o2",
+        "label": "有时能，有时会消沉",
+        "value": 25
+      },
+      {
+        "id": "Q17_o3",
+        "label": "大多时候感到困难，难以应对",
+        "value": 50
+      },
+      {
+        "id": "Q17_o4",
+        "label": "完全无法应对，感到绝望",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否能信任和理解他人，在人际关系中善于合作和换位思考？"
+    },
+    "dimensionKey": "social",
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "是的，通常可以",
+        "value": 0
+      },
+      {
+        "id": "Q18_o2",
+        "label": "多数时候可以",
+        "value": 25
+      },
+      {
+        "id": "Q18_o3",
+        "label": "比较困难，经常猜疑或排斥他人",
+        "value": 50
+      },
+      {
+        "id": "Q18_o4",
+        "label": "很难，人际关系充满冲突",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否接受自己的不完美和不足，同时也能看到自己的优点和价值？"
+    },
+    "dimensionKey": "self",
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "能，自我认知客观全面",
+        "value": 0
+      },
+      {
+        "id": "Q19_o2",
+        "label": "基本能，但有时会纠结",
+        "value": 25
+      },
+      {
+        "id": "Q19_o3",
+        "label": "较难接受，容易聚焦于缺点",
+        "value": 50
+      },
+      {
+        "id": "Q19_o4",
+        "label": "完全否定自己，看不到任何价值",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "text": "综合来看，你认为自己最近的心理健康状况如何？",
+    "type": "single_choice",
+    "content": {
+      "text": "综合来看，你认为自己最近的心理健康状况如何？"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "非常好，积极乐观",
+        "value": 0
+      },
+      {
+        "id": "Q20_o2",
+        "label": "还不错，基本稳定",
+        "value": 25
+      },
+      {
+        "id": "Q20_o3",
+        "label": "一般，有些困扰",
+        "value": 50
+      },
+      {
+        "id": "Q20_o4",
+        "label": "不太好，感到痛苦",
+        "value": 75
+      },
+      {
+        "id": "Q20_o5",
+        "label": "非常糟糕，难以忍受",
+        "value": 100
+      }
+    ]
+  }
+]

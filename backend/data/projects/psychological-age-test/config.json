@@ -1,0 +1,62 @@
+{
+  "id": "psychological-age-test",
+  "title": "心理年龄测试",
+  "description": "本测试基于发展心理学理论，旨在评估您的心理发展水平与成熟度。心理年龄是指个体心理特征所表露的年龄特征，与实际年龄并不完全一致。人的一生共经历8个心理时期，每个时期都有不同的心理特点。本测试通过评估您在情感、社交、认知及行为等多个维度的表现，为您提供一个了解自身心理年龄的参考。请注意，本测试结果为娱乐和自我探索参考，不能替代专业心理评估。",
+  "theme": {
+    "primaryColor": "#FF9800",
+    "backgroundColor": "#FFF3E0"
+  },
+  "resultConfig": {
+    "scoringEngine": "formula",
+    "formula": "const d = dimensions || {}; const emotional = d.emotional || 0; const social = d.social || 0; const cognitive = d.cognitive || 0; const behavior = d.behavior || 0; const total = emotional + social + cognitive + behavior; const avg = total / 4; let ageRange = ''; let ageLabel = ''; if (avg <= 25) { ageRange = '12-18岁'; ageLabel = '顽童型人格'; } else if (avg <= 50) { ageRange = '19-25岁'; ageLabel = '少年型人格'; } else if (avg <= 75) { ageRange = '26-35岁'; ageLabel = '轻熟型人格'; } else { ageRange = '36岁+'; ageLabel = '智者型人格'; } const gap = avg - 50; return { ageRange, ageLabel, totalScore: total, avgScore: avg, gap, dimensions: d };",
+    "dimensions": [
+      {
+        "key": "emotional",
+        "name": "情感成熟度",
+        "description": "评估个体情感理解、情绪调节及应对负面情绪的能力，反映心理年龄在情感方面的发展水平。"
+      },
+      {
+        "key": "social",
+        "name": "社交能力",
+        "description": "评估个体在人际交往、处理冲突及社会适应方面的成熟度，是心理年龄的重要体现。"
+      },
+      {
+        "key": "cognitive",
+        "name": "认知能力",
+        "description": "评估个体的思维逻辑、问题解决及学习能力，与智力年龄概念相关。"
+      },
+      {
+        "key": "behavior",
+        "name": "行为模式",
+        "description": "评估个体在时间管理、计划制定及责任承担方面的行为特征，反映心理年龄的行为表现。"
+      }
+    ],
+    "resultRules": [
+      {
+        "condition": "ageRange === '12-18岁'",
+        "title": "顽童型人格 · 青春永驻",
+        "description": "您的心理年龄约在12-18岁之间，属于顽童型人格。您可能永远充满好奇心与探索精神，心态年轻，对事物保持积极乐观、充满活力。在情感上可能更直接外露，在社交中喜欢有趣、轻松的互动。这使您在生活中容易获得快乐，富有创造力，但有时可能在承担责任和长远规划上显得经验不足。如果您的实际年龄远大于此，这可能意味着您保持了珍贵的童真和乐观，但也需注意在需要成熟应对的场合调整自己的状态。"
+      },
+      {
+        "condition": "ageRange === '19-25岁'",
+        "title": "少年型人格 · 热血未凉",
+        "description": "您的心理年龄约在19-25岁之间，属于少年型人格。您正处于在成熟与探索之间反复横跳的阶段，追求新鲜刺激，社交能量充沛。自我意识增强，心理活动可能进入一个剧烈动荡期。您开始更深入地思考未来，建立更独立的价值观，但在面对重大决策和长期压力时，可能仍会感到犹豫或焦虑。这是人生中充满可能性和变化的阶段，合理引导这份热情，能帮助您更好地成长。"
+      },
+      {
+        "condition": "ageRange === '26-35岁'",
+        "title": "轻熟型人格 · 稳步前行",
+        "description": "您的心理年龄约在26-35岁之间，属于轻熟型人格。您的心理发展已进入成熟期，思维更加缜密，情感更加内敛，行为更加自律。您可能更注重生活品质的平衡，擅长在工作、社交与个人空间之间找到支点。您对自我和世界有了更稳定的认知，能够更理性地处理问题和人际关系。如果您的实际年龄小于此，表明您的心智成熟度可能超前于同龄人，这通常与经历、思考深度或个性有关。"
+      },
+      {
+        "condition": "ageRange === '36岁+'",
+        "title": "智者型人格 · 通透豁达",
+        "description": "您的心理年龄约在36岁以上，属于智者型人格。您的心理活动趋向成熟稳定、老成持重。您可能表现出超越实际年龄的沉稳、可靠和深刻，活得通透，追求内在的秩序感。您更倾向于深思熟虑，有较强的责任感和大局观。如果您的实际年龄远小于此，这意味着您可能经历了较多的生活磨砺或天生拥有沉静的性格，但有时需注意避免过早失去对生活的冒险精神和新奇感。心理年龄高于实际年龄可能带来更强的自控力，但也可能产生孤独感。"
+      },
+      {
+        "condition": "Math.abs(gap) < 10",
+        "title": "心理年龄与实际年龄基本吻合",
+        "description": "您的测试结果显示，您的心理年龄与实际年龄相近，这表明您的心理发展水平符合您的年龄阶段预期。这是一种相对均衡和健康的状态，意味着您能较好地适应年龄所对应的社会角色与责任。请继续保持这种良好的自我认知与发展。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "how-much-you-like-ta-test",
+  "title": "你有多喜欢TA测试",
+  "description": "本测试基于心理学中经典的“爱情与喜欢”理论框架（如鲁宾量表）及热恋程度研究，旨在帮助你量化分析自己对特定对象（TA）的情感深度，区分是“喜欢”还是“爱”，并评估当前情感的强度与特征。通过一系列行为与心理倾向的选择，为你提供一份关于内心情感的参考报告。",
+  "theme": {
+    "primaryColor": "#FF4081",
+    "backgroundColor": "#FCE4EC"
+  },
+  "resultConfig": {
+    "scoringEngine": "formula",
+    "formula": "var d = dimensions || {}; var loveScore = d.love || 0; var likeScore = d.like || 0; var obsessionScore = d.obsession || 0; var total = loveScore + likeScore + obsessionScore; var primaryType = 'uncertain'; if (loveScore > likeScore && loveScore > obsessionScore) { primaryType = 'love'; } else if (likeScore > loveScore && likeScore > obsessionScore) { primaryType = 'like'; } else if (obsessionScore > loveScore && obsessionScore > likeScore) { primaryType = 'obsession'; } var intensityLevel = total >= 80 ? 'high' : total >= 60 ? 'mediumHigh' : total >= 40 ? 'medium' : total >= 20 ? 'low' : 'veryLow'; return { primaryType: primaryType, intensityLevel: intensityLevel, loveScore: loveScore, likeScore: likeScore, obsessionScore: obsessionScore, totalScore: total, dimensions: d };",
+    "dimensions": [
+      {
+        "key": "love",
+        "name": "爱",
+        "description": "基于鲁宾量表“爱情”部分，包含关怀、责任、依赖、亲密等深层次情感联结。"
+      },
+      {
+        "key": "like",
+        "name": "喜欢",
+        "description": "基于鲁宾量表“喜欢”部分，包含欣赏、尊重、好感、认为对方讨人喜欢等积极评价。"
+      },
+      {
+        "key": "obsession",
+        "name": "迷恋/热恋",
+        "description": "基于《热恋量表》及常见迷恋特征，包含强烈思念、占有欲、情绪波动、生理反应等。"
+      }
+    ],
+    "resultRules": [
+      {
+        "condition": "primaryType === 'love' && intensityLevel === 'high'",
+        "title": "深爱 · 灵魂羁绊",
+        "description": "你对TA的情感深度已远超普通喜欢，达到了“爱”的层次。你不仅觉得TA非常好、非常讨人喜欢，更感到一种深刻的责任：TA情绪低落时，你觉得有职责使TA快乐；TA的幸福是你非常关心的事。你愿意为TA做所有事情，并且觉得没有TA，自己难以生活下去。这种爱包含了高度的信赖、愿意宽恕TA的过失，以及“二人都有相同的心情”的亲密感。你的情感是稳固、成熟且以对方福祉为中心的，是建立长期承诺关系的坚实基础。"
+      },
+      {
+        "condition": "primaryType === 'love' && (intensityLevel === 'mediumHigh' || intensityLevel === 'medium')",
+        "title": "爱意萌生 · 稳步加深",
+        "description": "你对TA的情感正从“喜欢”稳步地向“爱”过渡。你欣赏和尊重TA，认为TA聪明、成熟、容易赢得别人好感。同时，你开始体验到更深层的情感联结：你会关心TA的幸福，在TA需要时想要提供帮助，对TA有一定的占有欲。当和TA在一起时，你会感到快乐和安心。虽然可能还未达到“难以生活下去”的强烈依赖，但TA在你心中已占据特殊位置。这种情感兼具欣赏与关怀，有潜力发展为更深刻的爱情。"
+      },
+      {
+        "condition": "primaryType === 'like' && likeScore > loveScore + 10",
+        "title": "欣赏与好感 · 友达以上",
+        "description": "目前你对TA的情感以“喜欢”和欣赏为主。你觉得TA是许多人中容易让别人尊敬的一个，非常讨人喜欢，并且你愿意推荐TA去做为人尊敬的事。你认为TA跟你很相似，或者是你很想学的那种人。你们在一起可能很愉快，有共同话题，但情感上更多是好感、佩服和友情般的亲近，缺乏那种强烈的、排他的关怀 and 依赖感。这可能是深厚友谊的基础，或是爱情尚未被充分点燃的阶段。"
+      },
+      {
+        "condition": "primaryType === 'obsession' && intensityLevel === 'high'",
+        "title": "热恋上头 · 全神贯注",
+        "description": "你正处于强烈的“热恋”或迷恋状态。TA几乎占据了你的所有思绪：TA总是在你的脑海之中挥之不去；你频繁看手机期待TA的消息；听到TA的声音会笑，想到TA时心跳会变化。这种情感带有强烈的激情和占有欲：只要想象TA爱上别人，你就会感到嫉妒；你觉得对TA有着强大的吸引力，甚至幻想亲密关系。和TA的关系出现问题时你会感到极度沮丧。这种状态浪漫而强烈，但心理学提醒，它可能伴随着“被欲望牢牢地控制”的特点，需要理性审视关系的健康度。"
+      },
+      {
+        "condition": "primaryType === 'obsession' && intensityLevel === 'mediumHigh'",
+        "title": "怦然心动 · 陷入思念",
+        "description": "你明显对TA心动了，陷入了甜蜜的思念。你会经常看TA的空间或社交动态；空下来时会一遍遍读TA的短信；闻到TA的气味会很兴奋。你渴望了解关于TA的一切，对TA的小事也充满好奇。和TA在一起时，你容易开心，甚至看不见周围的所有人。你可能会故意装作不在乎TA，但TA离开时又会着急地找TA。这是典型的初期迷恋症状，充满了探索的兴奋和情绪的起伏。"
+      },
+      {
+        "condition": "totalScore <= 30",
+        "title": "波澜不惊 · 浅淡好感",
+        "description": "你对TA的情感目前比较平淡，可能只是普通的好感或习惯性关注。你或许觉得TA不错，但并没有强烈的思念、占有欲或为之付出一切的冲动。你不会因为TA而严重影响自己的生活或情绪。这可能是因为感情尚在萌芽，或者你们的关系更偏向于友谊。建议给自己更多时间相处和了解，看看这份感觉是否会随着互动而加深。"
+      }
+    ]
+  }
+}

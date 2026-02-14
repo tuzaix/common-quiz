@@ -1,0 +1,651 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "与同龄人相比，你通常更倾向于扮演领导者的角色，还是在社交情境中处于顺从的地位？"
+    },
+    "dimensionKey": "power",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "几乎总是领导者或主导者",
+        "value": 3
+      },
+      {
+        "id": "Q1_o2",
+        "label": "有时领导，有时配合",
+        "value": 2
+      },
+      {
+        "id": "Q1_o3",
+        "label": "更喜欢处于顺从或配合的地位",
+        "value": 1
+      },
+      {
+        "id": "Q1_o4",
+        "label": "强烈避免领导角色",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何看待他人的建议和指导？你是否将自力更生、自由自在视为幸福的基础？"
+    },
+    "dimensionKey": "independence",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "通常拒绝建议，坚信自力更生是幸福的基石",
+        "value": 3
+      },
+      {
+        "id": "Q2_o2",
+        "label": "会参考建议，但最终自己做决定，重视一定自由",
+        "value": 2
+      },
+      {
+        "id": "Q2_o3",
+        "label": "乐于接受建议，不觉得自力更生特别重要",
+        "value": 1
+      },
+      {
+        "id": "Q4_o4",
+        "label": "依赖他人建议，不喜欢独自一人",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "与同龄人相比，你是否是一个“好问宝宝”，经常思考“什么才是真实的”？"
+    },
+    "dimensionKey": "curiosity",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "是的，求知若渴，经常提问和深入思考",
+        "value": 3
+      },
+      {
+        "id": "Q3_o2",
+        "label": "有一定好奇心，但不会特别主动去探究本质",
+        "value": 2
+      },
+      {
+        "id": "Q3_o3",
+        "label": "不太喜欢智力活动，很少提问",
+        "value": 1
+      },
+      {
+        "id": "Q3_o4",
+        "label": "对抽象问题几乎不感兴趣",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "你通常给自己设定容易达成的目标，还是富有挑战性的目标？你如何应对别人的批评？"
+    },
+    "dimensionKey": "acceptance",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "设定容易目标，很难应对批评，容易半途而废",
+        "value": 3
+      },
+      {
+        "id": "Q4_o2",
+        "label": "目标适中，对批评有些在意但能调整",
+        "value": 2
+      },
+      {
+        "id": "Q4_o3",
+        "label": "设定挑战性目标，善于应对批评，不太烦恼",
+        "value": 1
+      },
+      {
+        "id": "Q4_o4",
+        "label": "非常有自信，批评几乎不影响我",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "与大多数人相比，你的生活和工作环境是否更具条理性？你是否喜欢整理打扫并遵循许多规则？"
+    },
+    "dimensionKey": "order",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "非常有条理，喜欢整理，严格遵守规则",
+        "value": 3
+      },
+      {
+        "id": "Q5_o2",
+        "label": "比较有条理，但不会过度拘泥于规则",
+        "value": 2
+      },
+      {
+        "id": "Q5_o3",
+        "label": "环境通常乱糟糟，讨厌做计划",
+        "value": 1
+      },
+      {
+        "id": "Q5_o4",
+        "label": "极度混乱，完全排斥规则和整理",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "你是一个收藏家或守财奴吗？与其他人相比，你是否对金钱控制得更紧？"
+    },
+    "dimensionKey": "collection",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "是的，我是收藏家，对钱看得很紧",
+        "value": 3
+      },
+      {
+        "id": "Q6_o2",
+        "label": "有一些收藏爱好，对金钱态度适中",
+        "value": 2
+      },
+      {
+        "id": "Q6_o3",
+        "label": "花钱随意，几乎不收集任何东西",
+        "value": 1
+      },
+      {
+        "id": "Q6_o4",
+        "label": "完全不在乎金钱和收藏",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "大家是否认为你是一个很有原则、很忠诚的人？你如何看待道德规则？"
+    },
+    "dimensionKey": "honor",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "是的，我非常重视原则、忠诚和道德",
+        "value": 3
+      },
+      {
+        "id": "Q7_o2",
+        "label": "比较重视，但不会刻板遵守所有道德规则",
+        "value": 2
+      },
+      {
+        "id": "Q7_o3",
+        "label": "认为每个人都应为自己而活，不太在乎道德规则",
+        "value": 1
+      },
+      {
+        "id": "Q7_o4",
+        "label": "完全无视原则和忠诚",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否为社会事务或人道事业作出过个人奉献？你是否相信并参与慈善事业？"
+    },
+    "dimensionKey": "idealism",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "经常奉献和牺牲，积极参与志愿服务和慈善",
+        "value": 3
+      },
+      {
+        "id": "Q8_o2",
+        "label": "偶尔关注和参与，有一定理想主义",
+        "value": 2
+      },
+      {
+        "id": "Q8_o3",
+        "label": "对社会大事不感兴趣，不太相信慈善",
+        "value": 1
+      },
+      {
+        "id": "Q8_o4",
+        "label": "完全漠不关心",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "你觉得在人群中才会感到快活吗？别人是否认为你是一个喜欢找乐子的人？"
+    },
+    "dimensionKey": "social",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "是的，在人群中很快乐，喜欢派对和热闹",
+        "value": 3
+      },
+      {
+        "id": "Q9_o2",
+        "label": "享受社交，但也需要独处时间",
+        "value": 2
+      },
+      {
+        "id": "Q9_o3",
+        "label": "喜欢独处，讨厌派对，对陌生人兴趣不大",
+        "value": 1
+      },
+      {
+        "id": "Q9_o4",
+        "label": "极度内向，回避社交",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "养育子女是否是你得到幸福的必备条件？与其他父母相比，你和孩子在一起的时间是否更长？"
+    },
+    "dimensionKey": "family",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "是的，家庭和孩子至关重要，投入大量时间",
+        "value": 3
+      },
+      {
+        "id": "Q10_o2",
+        "label": "重视家庭，但平衡其他生活部分",
+        "value": 2
+      },
+      {
+        "id": "Q10_o3",
+        "label": "觉得成为父母是难以负担的任务",
+        "value": 1
+      },
+      {
+        "id": "Q10_o4",
+        "label": "完全不想成为父母",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "你买东西时，是否总是只想买最贵和最好的？是否经常为了给他人留下深刻印象而购物？"
+    },
+    "dimensionKey": "status",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "是的，追求最贵最好，购物很在意他人看法",
+        "value": 3
+      },
+      {
+        "id": "Q11_o2",
+        "label": "有时会买好的，但不完全为了炫耀",
+        "value": 2
+      },
+      {
+        "id": "Q11_o3",
+        "label": "不太在乎别人怎么看，对钱的态度更随意",
+        "value": 1
+      },
+      {
+        "id": "Q11_o4",
+        "label": "完全不在乎物质和地位",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你很难控制自己的愤怒吗？你是否具有攻击性，并热爱与他人竞争？"
+    },
+    "dimensionKey": "counterattack",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "很难控制愤怒，有攻击性，热爱竞争和反击",
+        "value": 3
+      },
+      {
+        "id": "Q12_o2",
+        "label": "偶尔会生气，有一定竞争意识",
+        "value": 2
+      },
+      {
+        "id": "Q12_o3",
+        "label": "不容易被激怒，能从另一角度看问题",
+        "value": 1
+      },
+      {
+        "id": "Q12_o4",
+        "label": "极度平和，讨厌任何竞争",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "与大多数人相比，你是否会花更多时间追求浪漫、欣赏美或思考性？你是否很难控制自己的性冲动？"
+    },
+    "dimensionKey": "romance",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "花大量时间在浪漫和性上，难以控制性冲动",
+        "value": 3
+      },
+      {
+        "id": "Q13_o2",
+        "label": "有一定兴趣，但不会过度沉迷",
+        "value": 2
+      },
+      {
+        "id": "Q13_o3",
+        "label": "很少追求或考虑性，认为性生活不重要甚至恶心",
+        "value": 1
+      },
+      {
+        "id": "Q13_o4",
+        "label": "完全无兴趣",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "你花在满足食欲或节食上的时间，是否明显比同龄人多很多？你是否有过体重问题或暴饮暴食？"
+    },
+    "dimensionKey": "appetite",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "花大量时间在吃或节食上，有体重问题",
+        "value": 3
+      },
+      {
+        "id": "Q14_o2",
+        "label": "比较关注饮食，但不算极端",
+        "value": 2
+      },
+      {
+        "id": "Q14_o3",
+        "label": "从未有体重问题，几乎不暴饮暴食",
+        "value": 1
+      },
+      {
+        "id": "Q14_o4",
+        "label": "对食物毫无兴趣",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否一生都保持着规律的锻炼习惯？参与某项运动是否是你人生的重要组成部分？"
+    },
+    "dimensionKey": "exercise",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "坚持规律锻炼，运动是生活重要部分",
+        "value": 3
+      },
+      {
+        "id": "Q15_o2",
+        "label": "偶尔锻炼，不算核心习惯",
+        "value": 2
+      },
+      {
+        "id": "Q15_o3",
+        "label": "一向懒得动，生活方式静态",
+        "value": 1
+      },
+      {
+        "id": "Q15_o4",
+        "label": "极度厌恶运动",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否对焦虑敏感？例如，当你发抖、心跳加快或胃咕噜作响时，是否会感到害怕或尴尬？"
+    },
+    "dimensionKey": "tranquility",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "对焦虑非常敏感，常有上述恐惧，胆小羞涩",
+        "value": 3
+      },
+      {
+        "id": "Q16_o2",
+        "label": "有一定敏感，但能控制",
+        "value": 2
+      },
+      {
+        "id": "Q16_o3",
+        "label": "比较勇敢，比同龄人胆子大",
+        "value": 1
+      },
+      {
+        "id": "Q16_o4",
+        "label": "极度勇敢，几乎从不焦虑",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "如果你的面前有一份巨无霸牛排，你会怎么切开再吃？"
+    },
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "全部切开，一块一块分好再吃",
+        "value": 1
+      },
+      {
+        "id": "Q17_o2",
+        "label": "从右边开始切",
+        "value": 2
+      },
+      {
+        "id": "Q17_o3",
+        "label": "从左边开始切",
+        "value": 3
+      },
+      {
+        "id": "Q17_o4",
+        "label": "从中间开始切",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "若你参加一场宴会，服务生端着的托盘里有不同分量的果汁，你会选择哪一杯？"
+    },
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "空杯，正准备要倒入",
+        "value": 4
+      },
+      {
+        "id": "Q18_o2",
+        "label": "半杯",
+        "value": 2
+      },
+      {
+        "id": "Q18_o3",
+        "label": "七分满",
+        "value": 3
+      },
+      {
+        "id": "Q18_o4",
+        "label": "全满",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "如果你拥有让时间暂停的特殊力量，在暂停时你最想做什么？"
+    },
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "好好地睡一觉",
+        "value": 2
+      },
+      {
+        "id": "Q19_o2",
+        "label": "情愿快点将时间回复原状",
+        "value": 1
+      },
+      {
+        "id": "Q19_o3",
+        "label": "立即偷吃雪糕或其他食物",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为自己对奢侈品的欲望如何？一个LV牛皮包能带给你强烈的骄傲感吗？"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "非常强烈，奢侈品能极大提升我的心态和感受",
+        "value": 3
+      },
+      {
+        "id": "Q20_o2",
+        "label": "有一定欲望，但不会过度追求",
+        "value": 2
+      },
+      {
+        "id": "Q20_o3",
+        "label": "欲望很弱，觉得生活不能全部由奢侈品堆砌",
+        "value": 1
+      },
+      {
+        "id": "Q20_o4",
+        "label": "完全没有欲望，甚至反感",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "当你获得巨大的成功或满足一个长期欲望后，你的主要感受是？"
+    },
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "喜悦，但伴随质疑、困惑甚至恐惧",
+        "value": 3
+      },
+      {
+        "id": "Q21_o2",
+        "label": "纯粹的喜悦和满足",
+        "value": 2
+      },
+      {
+        "id": "Q21_o3",
+        "label": "空虚和茫然，无所适从",
+        "value": 3
+      },
+      {
+        "id": "Q21_o4",
+        "label": "平静，没有太大情绪波动",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否容易陷入“欲望的怪圈”，为了追求某个目标（如最新款手机）而不断付出，却永远感到不满足？"
+    },
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "经常如此，难以抗拒欲望的牵引",
+        "value": 3
+      },
+      {
+        "id": "Q22_o2",
+        "label": "偶尔会，但能意识到并控制",
+        "value": 2
+      },
+      {
+        "id": "Q22_o3",
+        "label": "很少，我比较知足",
+        "value": 1
+      },
+      {
+        "id": "Q22_o4",
+        "label": "从未有过",
+        "value": 0
+      }
+    ]
+  }
+]

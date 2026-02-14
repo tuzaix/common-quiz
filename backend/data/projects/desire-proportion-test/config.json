@@ -1,0 +1,122 @@
+{
+  "id": "desire-proportion-test",
+  "title": "欲望比重测试",
+  "description": "本测试基于心理学中关于人类基本欲望的理论，旨在评估你在权力、独立、好奇、接纳、有序、收集、荣誉、理想、社交、家庭、地位、反击、浪漫、食欲、运动、安宁等16个核心欲望维度上的相对强弱。通过分析你的欲望结构，帮助你了解驱动你行为的内在动力与潜在需求。",
+  "theme": {
+    "primaryColor": "#9C27B0",
+    "backgroundColor": "#F3E5F5"
+  },
+  "resultConfig": {
+    "scoringEngine": "formula",
+    "formula": "const d = dimensions || {}; const total = Object.values(d).reduce((a, b) => a + b, 0); const avg = total / Object.keys(d).length; const dominantDesires = []; const weakDesires = []; for (const [key, score] of Object.entries(d)) { if (score >= avg * 1.5) dominantDesires.push(key); if (score <= avg * 0.5) weakDesires.push(key); } return { dominantDesires, weakDesires, dimensions: d, totalIntensity: total, profileType: dominantDesires.length > 3 ? 'complex' : dominantDesires.length === 0 ? 'balanced' : 'focused' };",
+    "dimensions": [
+      {
+        "key": "power",
+        "name": "权力",
+        "description": "渴望影响、控制他人或环境，扮演领导者角色。"
+      },
+      {
+        "key": "independence",
+        "name": "独立",
+        "description": "追求自力更生、自由自在，拒绝他人的建议和指导。"
+      },
+      {
+        "key": "curiosity",
+        "name": "好奇",
+        "description": "求知若渴，喜欢提问和思考真实本质。"
+      },
+      {
+        "key": "acceptance",
+        "name": "接纳",
+        "description": "希望被认可，设定容易达成的目标，难以应对批评。"
+      },
+      {
+        "key": "order",
+        "name": "有序",
+        "description": "注重条理性，遵循规则，喜欢整理打扫。"
+      },
+      {
+        "key": "collection",
+        "name": "收集",
+        "description": "喜欢收藏物品，对金钱控制较紧，有守财倾向。"
+      },
+      {
+        "key": "honor",
+        "name": "荣誉",
+        "description": "重视原则和忠诚，在乎道德规则。"
+      },
+      {
+        "key": "idealism",
+        "name": "理想",
+        "description": "为社会事务或人道事业奉献，相信慈善。"
+      },
+      {
+        "key": "social",
+        "name": "社交",
+        "description": "在人群中感到快乐，喜欢找乐子和派对。"
+      },
+      {
+        "key": "family",
+        "name": "家庭",
+        "description": "重视养育子女，与孩子共度时间长。"
+      },
+      {
+        "key": "status",
+        "name": "地位",
+        "description": "追求最贵最好的东西，渴望给他人留下深刻印象。"
+      },
+      {
+        "key": "counterattack",
+        "name": "反击",
+        "description": "难以控制愤怒，具有攻击性，热爱竞争。"
+      },
+      {
+        "key": "romance",
+        "name": "浪漫",
+        "description": "花大量时间追求浪漫和性，难以控制性冲动。"
+      },
+      {
+        "key": "appetite",
+        "name": "食欲",
+        "description": "花大量时间满足食欲或节食。"
+      },
+      {
+        "key": "exercise",
+        "name": "运动",
+        "description": "保持规律锻炼，运动是人生重要组成部分。"
+      },
+      {
+        "key": "tranquility",
+        "name": "安宁",
+        "description": "渴望平静，对焦虑敏感，容易胆小羞涩。"
+      }
+    ],
+    "resultRules": [
+      {
+        "condition": "profileType === 'complex' && dominantDesires.includes('romance') && dominantDesires.includes('status')",
+        "title": "多维驱动 · 欲望交织型",
+        "description": "你的欲望结构复杂且强烈，尤其在浪漫与地位维度表现突出。你既渴望亲密关系中的激情与认可，又追求社会层面的成功与优越感。这种组合可能让你在情感与事业上都充满动力，但也需警惕欲望的“多米诺骨牌效应”——当某一方面的追求受挫时，可能引发连锁的情绪低落。你对奢侈品的欲望可能较强，如同一个LV牛皮包带给你的骄傲感。建议学习区分对伴侣的“欲望”（参与动机）和“喜爱”（从中获得的乐趣），这有助于建立更健康的关系。"
+      },
+      {
+        "condition": "profileType === 'focused' && dominantDesires.includes('power') && dominantDesires.includes('independence')",
+        "title": "掌控自主 · 领导导向型",
+        "description": "你的核心欲望集中在权力与独立。你极具野心，喜欢在社交中扮演主导角色，同时珍视自力更生与自由。这使你天生具备领导潜质，但可能对批评较为敏感（如果接纳欲望弱）。你的欲望模式类似“电梯型”，事业的成功与挫折会带来情绪的巨大起伏。你对金钱的欲望可能属于“做事非常谨慎”的类型，但需注意避免像“地主追日”的故事那样，被无止境的欲望牵引至疲惫不堪。"
+      },
+      {
+        "condition": "profileType === 'focused' && dominantDesires.includes('curiosity') && dominantDesires.includes('idealism')",
+        "title": "求知向善 · 探索奉献型",
+        "description": "好奇与理想是你的主要驱动力。你求知若渴，热衷于思考真实与本质，同时愿意为社会公益或人道事业作出个人奉献。你的欲望水平可能较为平和，如同测试中选择“半杯”果汁的人，对金钱欲望不强且处事谨慎。你对“性”的动机可能更偏向“喜爱”（享受乐趣）而非纯粹的“欲望”（参与动机）。这种欲望结构让你在精神层面获得丰富满足，但需确保在现实中也建立了稳固的根基。"
+      },
+      {
+        "condition": "profileType === 'balanced' && totalIntensity < 100",
+        "title": "清心寡欲 · 平和自洽型",
+        "description": "你的各项欲望强度相对均衡且总体偏低，没有特别突出的驱动力。你可能是现代社会中对金钱“清心寡欲”的少数人，更在乎内心是否开心，做自己喜欢的事。你的欲望指数可能较低，如同测试中选择“半杯”果汁的人，喜欢安稳过日子。你对爱情的欲求可能不大，且能较好控制自己的生理欲求，是个较为理智的人。这种状态让你容易获得平凡的小幸福，但偶尔也可能因缺乏强烈目标而感到生活平淡。"
+      },
+      {
+        "condition": "profileType === 'focused' && dominantDesires.includes('romance') && weakDesires.includes('tranquility')",
+        "title": "激情主导 · 感官追寻型",
+        "description": "浪漫欲望是你最突出的驱动力，同时你对安宁的渴望很低。你花在追求浪漫和性上的时间明显多于常人，且难以控制自己的性冲动。你对焦虑不敏感，胆子较大。根据研究，男性通常比女性对性的欲望更强烈、更主动。你的欲望模式可能类似“潜水艇型”，在情感与感官的深海中悄无声息地行进，背负着沉重的渴望。需要警惕的是，过度专注于欲望满足可能会像“苏虹换手机”的例子一样，陷入不断追逐最新款却永远无法满足的怪圈。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,387 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "你正前往与恋人的约会地点，有两条路线可选：一条是笔直的大路，能快速到达但平淡；另一条沿途风光好，但需要更长时间。你会选？"
+    },
+    "dimensionKey": "enthusiasm",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "短而快的那条",
+        "value": 1
+      },
+      {
+        "id": "Q1_o2",
+        "label": "长而美的那条",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "道路两旁有红玫瑰和白玫瑰。你想摘10朵花送给恋人，你会选择几朵红玫瑰和几朵白玫瑰？（红玫瑰代表你的付出，白玫瑰代表你的期望）"
+    },
+    "dimensionKey": "giving",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "10朵红玫瑰，0朵白玫瑰",
+        "value": 3
+      },
+      {
+        "id": "Q2_o2",
+        "label": "7朵红玫瑰，3朵白玫瑰",
+        "value": 2
+      },
+      {
+        "id": "Q2_o3",
+        "label": "5朵红玫瑰，5朵白玫瑰",
+        "value": 1
+      },
+      {
+        "id": "Q2_o4",
+        "label": "3朵红玫瑰，7朵白玫瑰",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "来到约会餐厅，服务员在门口迎接。你可以让服务员带你进去，也可以自行进去找已在里面的恋人。你会？"
+    },
+    "dimensionKey": "conflictHandling",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "让服务员带路",
+        "value": 0
+      },
+      {
+        "id": "Q3_o2",
+        "label": "自己进去就行",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "进入餐厅发现恋人暂时离开。你手里拿着刚摘的玫瑰，你会？"
+    },
+    "dimensionKey": "independence",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "拿在手上等对方",
+        "value": 0
+      },
+      {
+        "id": "Q4_o2",
+        "label": "先放在桌子上",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "约会结束回家，面前有两条路：一条平坦可快速到家；另一条风景好但曲折需慢行。你会选？"
+    },
+    "dimensionKey": "persistence",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "短而快的那条",
+        "value": 0
+      },
+      {
+        "id": "Q5_o2",
+        "label": "长而美的那条",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "你理想的第一次约会是？"
+    },
+    "dimensionKey": "enthusiasm",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "浪漫晚餐",
+        "value": 1
+      },
+      {
+        "id": "Q6_o2",
+        "label": "激动人心的冒险活动",
+        "value": 2
+      },
+      {
+        "id": "Q6_o3",
+        "label": "家里看电影",
+        "value": 0
+      },
+      {
+        "id": "Q6_o4",
+        "label": "参加工作坊或一起学习",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "如果与伴侣发生争执，你倾向于？"
+    },
+    "dimensionKey": "conflictHandling",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "立刻解决冲突",
+        "value": 1
+      },
+      {
+        "id": "Q7_o2",
+        "label": "给彼此空间，稍后解决",
+        "value": 0
+      },
+      {
+        "id": "Q7_o3",
+        "label": "寻求朋友建议",
+        "value": 0
+      },
+      {
+        "id": "Q7_o4",
+        "label": "写下感受，找合适时机讨论",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "在重要的关系里，你最看重？"
+    },
+    "dimensionKey": "expectation",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "忠诚",
+        "value": 1
+      },
+      {
+        "id": "Q8_o2",
+        "label": "激情",
+        "value": 2
+      },
+      {
+        "id": "Q8_o3",
+        "label": "相互理解",
+        "value": 1
+      },
+      {
+        "id": "Q8_o4",
+        "label": "支持",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何看待浪漫？"
+    },
+    "dimensionKey": "enthusiasm",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "非常重要，是爱情的保鲜剂",
+        "value": 2
+      },
+      {
+        "id": "Q9_o2",
+        "label": "偶尔需要，但不是必需品",
+        "value": 1
+      },
+      {
+        "id": "Q9_o3",
+        "label": "不太重要，平淡的生活更真实",
+        "value": 0
+      },
+      {
+        "id": "Q9_o4",
+        "label": "觉得很幼稚，不喜欢刻意的浪漫",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为情侣之间应该保持多少个人空间？"
+    },
+    "dimensionKey": "independence",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "充分个人空间，互不干涉",
+        "value": 2
+      },
+      {
+        "id": "Q10_o2",
+        "label": "有一定个人空间，但也要保持亲密",
+        "value": 1
+      },
+      {
+        "id": "Q10_o3",
+        "label": "尽量多在一起，分享彼此生活",
+        "value": 0
+      },
+      {
+        "id": "Q10_o4",
+        "label": "最好不要有个人空间，时刻黏在一起",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何看待爱情中的牺牲？"
+    },
+    "dimensionKey": "giving",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "为了爱情，可以做出适当的牺牲",
+        "value": 1
+      },
+      {
+        "id": "Q11_o2",
+        "label": "牺牲是相互的，不能只要求一方付出",
+        "value": 2
+      },
+      {
+        "id": "Q11_o3",
+        "label": "不应该牺牲自己，爱情应该是平等的",
+        "value": 0
+      },
+      {
+        "id": "Q11_o4",
+        "label": "绝对不能牺牲自己，要以自我为中心",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你理想的恋爱节奏是？"
+    },
+    "dimensionKey": "enthusiasm",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "快速确定关系",
+        "value": 2
+      },
+      {
+        "id": "Q12_o2",
+        "label": "慢慢了解",
+        "value": 0
+      },
+      {
+        "id": "Q12_o3",
+        "label": "顺其自然",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "恋爱中，当和爱人兴趣不同时，你会？"
+    },
+    "dimensionKey": "giving",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "坚持自己",
+        "value": 0
+      },
+      {
+        "id": "Q13_o2",
+        "label": "迁就对方",
+        "value": 1
+      },
+      {
+        "id": "Q13_o3",
+        "label": "寻找平衡点",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "对于异地恋，你的态度是？"
+    },
+    "dimensionKey": "persistence",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "坚决不接受",
+        "value": 0
+      },
+      {
+        "id": "Q14_o2",
+        "label": "可以尝试",
+        "value": 1
+      },
+      {
+        "id": "Q14_o3",
+        "label": "很乐意",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "你相信一见钟情吗？"
+    },
+    "dimensionKey": "enthusiasm",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "相信",
+        "value": 1
+      },
+      {
+        "id": "Q15_o2",
+        "label": "不相信",
+        "value": 0
+      }
+    ]
+  }
+]

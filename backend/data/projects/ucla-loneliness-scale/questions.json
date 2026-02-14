@@ -1,0 +1,582 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到与周围人的关系和谐吗？"
+    },
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "从不",
+        "value": 4
+      },
+      {
+        "id": "Q1_o2",
+        "label": "很少",
+        "value": 3
+      },
+      {
+        "id": "Q1_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q1_o4",
+        "label": "经常",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到缺少伙伴吗？"
+    },
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "从不",
+        "value": 1
+      },
+      {
+        "id": "Q2_o2",
+        "label": "很少",
+        "value": 2
+      },
+      {
+        "id": "Q2_o3",
+        "label": "有时",
+        "value": 3
+      },
+      {
+        "id": "Q2_o4",
+        "label": "经常",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到没人可以求助吗？"
+    },
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "从不",
+        "value": 1
+      },
+      {
+        "id": "Q3_o2",
+        "label": "很少",
+        "value": 2
+      },
+      {
+        "id": "Q3_o3",
+        "label": "有时",
+        "value": 3
+      },
+      {
+        "id": "Q3_o4",
+        "label": "经常",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到孤单吗？"
+    },
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "从不",
+        "value": 1
+      },
+      {
+        "id": "Q4_o2",
+        "label": "很少",
+        "value": 2
+      },
+      {
+        "id": "Q4_o3",
+        "label": "有时",
+        "value": 3
+      },
+      {
+        "id": "Q4_o4",
+        "label": "经常",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到自己是朋友中的一员吗？"
+    },
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "从不",
+        "value": 4
+      },
+      {
+        "id": "Q5_o2",
+        "label": "很少",
+        "value": 3
+      },
+      {
+        "id": "Q5_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q5_o4",
+        "label": "经常",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到与周围的人有许多共同点吗？"
+    },
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "从不",
+        "value": 4
+      },
+      {
+        "id": "Q6_o2",
+        "label": "很少",
+        "value": 3
+      },
+      {
+        "id": "Q6_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q6_o4",
+        "label": "经常",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到与任何人都不亲近了吗？"
+    },
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "从不",
+        "value": 1
+      },
+      {
+        "id": "Q7_o2",
+        "label": "很少",
+        "value": 2
+      },
+      {
+        "id": "Q7_o3",
+        "label": "有时",
+        "value": 3
+      },
+      {
+        "id": "Q7_o4",
+        "label": "经常",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到你的兴趣和想法与周围人不同吗？"
+    },
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "从不",
+        "value": 1
+      },
+      {
+        "id": "Q8_o2",
+        "label": "很少",
+        "value": 2
+      },
+      {
+        "id": "Q8_o3",
+        "label": "有时",
+        "value": 3
+      },
+      {
+        "id": "Q8_o4",
+        "label": "经常",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到自己外向而友好吗？"
+    },
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "从不",
+        "value": 4
+      },
+      {
+        "id": "Q9_o2",
+        "label": "很少",
+        "value": 3
+      },
+      {
+        "id": "Q9_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q9_o4",
+        "label": "经常",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到与别人亲近吗？"
+    },
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "从不",
+        "value": 4
+      },
+      {
+        "id": "Q10_o2",
+        "label": "很少",
+        "value": 3
+      },
+      {
+        "id": "Q10_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q10_o4",
+        "label": "经常",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到被人冷落吗？"
+    },
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "从不",
+        "value": 1
+      },
+      {
+        "id": "Q11_o2",
+        "label": "很少",
+        "value": 2
+      },
+      {
+        "id": "Q11_o3",
+        "label": "有时",
+        "value": 3
+      },
+      {
+        "id": "Q11_o4",
+        "label": "经常",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到你与他人的交往没有意义吗？"
+    },
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "从不",
+        "value": 1
+      },
+      {
+        "id": "Q12_o2",
+        "label": "很少",
+        "value": 2
+      },
+      {
+        "id": "Q12_o3",
+        "label": "有时",
+        "value": 3
+      },
+      {
+        "id": "Q12_o4",
+        "label": "经常",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到没人真正了解你吗？"
+    },
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "从不",
+        "value": 1
+      },
+      {
+        "id": "Q13_o2",
+        "label": "很少",
+        "value": 2
+      },
+      {
+        "id": "Q13_o3",
+        "label": "有时",
+        "value": 3
+      },
+      {
+        "id": "Q13_o4",
+        "label": "经常",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到自己与他人隔绝了吗？"
+    },
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "从不",
+        "value": 1
+      },
+      {
+        "id": "Q14_o2",
+        "label": "很少",
+        "value": 2
+      },
+      {
+        "id": "Q14_o3",
+        "label": "有时",
+        "value": 3
+      },
+      {
+        "id": "Q14_o4",
+        "label": "经常",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到如果你想，就一定能找到伴儿吗？"
+    },
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "从不",
+        "value": 4
+      },
+      {
+        "id": "Q15_o2",
+        "label": "很少",
+        "value": 3
+      },
+      {
+        "id": "Q15_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q15_o4",
+        "label": "经常",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到还是有人真正理解你吗？"
+    },
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "从不",
+        "value": 4
+      },
+      {
+        "id": "Q16_o2",
+        "label": "很少",
+        "value": 3
+      },
+      {
+        "id": "Q16_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q16_o4",
+        "label": "经常",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到害羞吗？"
+    },
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "从不",
+        "value": 1
+      },
+      {
+        "id": "Q17_o2",
+        "label": "很少",
+        "value": 2
+      },
+      {
+        "id": "Q17_o3",
+        "label": "有时",
+        "value": 3
+      },
+      {
+        "id": "Q17_o4",
+        "label": "经常",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到虽然身边有人，但他们却没真正和你在一起吗？"
+    },
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "从不",
+        "value": 1
+      },
+      {
+        "id": "Q18_o2",
+        "label": "很少",
+        "value": 2
+      },
+      {
+        "id": "Q18_o3",
+        "label": "有时",
+        "value": 3
+      },
+      {
+        "id": "Q18_o4",
+        "label": "经常",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到还是有人可以说说话吗？"
+    },
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "从不",
+        "value": 4
+      },
+      {
+        "id": "Q19_o2",
+        "label": "很少",
+        "value": 3
+      },
+      {
+        "id": "Q19_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q19_o4",
+        "label": "经常",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "你常感到还是有人可以求助、分享或依靠吗？"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "从不",
+        "value": 4
+      },
+      {
+        "id": "Q20_o2",
+        "label": "很少",
+        "value": 3
+      },
+      {
+        "id": "Q20_o3",
+        "label": "有时",
+        "value": 2
+      },
+      {
+        "id": "Q20_o4",
+        "label": "经常",
+        "value": 1
+      }
+    ]
+  }
+]

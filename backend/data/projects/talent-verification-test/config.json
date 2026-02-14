@@ -1,0 +1,97 @@
+{
+  "id": "talent-verification-test",
+  "title": "天赋测试验证",
+  "description": "本测试基于霍华德·加德纳的多元智能理论、斯腾伯格的三元智力理论及耶鲁大学天赋测试表的核心观察项，旨在通过一系列日常行为与思维倾向的题目，帮助你初步探索自己在多个智能领域的潜在优势。测试结果仅为自我认知的参考起点和探索导航，真正的天赋需要在持续尝试、动态观察和积极培养中得以验证和发展。",
+  "theme": {
+    "primaryColor": "#1E88E5",
+    "backgroundColor": "#E3F2FD"
+  },
+  "resultConfig": {
+    "scoringEngine": "formula",
+    "formula": "var d = dimensions || {}; var maxScore = 0; for (var k in d) { if (d[k] > maxScore) maxScore = d[k]; } var primaryTalents = []; for (var key in d) { if (maxScore > 0 && d[key] >= maxScore * 0.8) { primaryTalents.push(key); } } return { totalScore: score || 0, primaryTalents: primaryTalents, dimensions: d, advice: '建议结合日常观察与多元尝试进行交叉验证。' };",
+    "dimensions": [
+      {
+        "key": "linguistic",
+        "name": "语言智能",
+        "description": "有效运用口头和书面语言的能力，表现为喜欢阅读、写作、讲故事和辩论。"
+      },
+      {
+        "key": "logical_mathematical",
+        "name": "逻辑数学智能",
+        "description": "有效运用数字和进行逻辑推理的能力，表现为善于发现规律、提出问题、解决逻辑难题。"
+      },
+      {
+        "key": "spatial",
+        "name": "空间智能",
+        "description": "准确感知视觉空间世界并进行转换的能力，表现为良好的方向感、绘画、构图和想象能力。"
+      },
+      {
+        "key": "bodily_kinesthetic",
+        "name": "身体动觉智能",
+        "description": "善于运用身体表达思想和情感，以及动手操作物体的能力，表现为协调性好、模仿能力强。"
+      },
+      {
+        "key": "musical",
+        "name": "音乐智能",
+        "description": "感知、辨别、改变和表达音乐的能力，表现为对节奏、音调、音色敏感，学习乐器较快。"
+      },
+      {
+        "key": "interpersonal",
+        "name": "人际智能",
+        "description": "察觉并理解他人的情绪、动机和意图，并做出适当反应的能力，表现为善于沟通、合作与领导。"
+      },
+      {
+        "key": "intrapersonal",
+        "name": "内省智能",
+        "description": "认识、洞察和反省自身的能力，表现为有清晰的自我认知，能管理自身情绪与动机。"
+      },
+      {
+        "key": "naturalist",
+        "name": "自然观察智能",
+        "description": "辨别动植物及对自然现象敏感的能力，表现为热爱自然，善于观察、分类和总结规律。"
+      }
+    ],
+    "resultRules": [
+      {
+        "condition": "primaryTalents.includes('linguistic')",
+        "title": "语言表达者",
+        "description": "你在语言文字方面表现出较强的敏感度和兴趣。你可能喜欢阅读、写作，擅长用生动的语言描述事物或讲述故事。这提示你在文学、法律、教育、传媒等领域可能有较好的发展潜力。建议通过广泛阅读、参与辩论或写作练习来进一步验证和强化这一优势。"
+      },
+      {
+        "condition": "primaryTalents.includes('logical_mathematical')",
+        "title": "逻辑探索者",
+        "description": "你对数字、逻辑和因果关系有较强的兴趣和感知力。你可能善于发现规律，喜欢提问“为什么”，并享受解决数学或逻辑难题的过程。这提示你在科学、技术、工程、金融等领域可能有天赋。建议通过参与数学竞赛、编程学习或科学实验来深入探索。"
+      },
+      {
+        "condition": "primaryTalents.includes('spatial')",
+        "title": "空间构想家",
+        "description": "你对图形、空间和方位有良好的感知 and 记忆能力。你可能方向感好，善于绘画、搭积木或玩拼图，在脑海中能清晰地构想三维图像。这提示你在建筑、设计、艺术、地理或某些工程领域可能有优势。建议多进行绘图、模型制作或玩空间解谜游戏来验证和发展。"
+      },
+      {
+        "condition": "primaryTalents.includes('bodily_kinesthetic')",
+        "title": "动觉协调者",
+        "description": "你能够很好地协调身体动作，善于通过身体来表达和学习。你可能学跳舞、打球或操作工具时上手较快，动作协调优美。这提示你在体育、舞蹈、表演、手工艺或外科医学等领域可能有潜力。建议通过系统性的运动训练或手工创作来进一步发掘。"
+      },
+      {
+        "condition": "primaryTalents.includes('musical')",
+        "title": "节奏感知者",
+        "description": "你对声音、节奏和旋律有天然的敏感度和喜爱。你可能唱歌音准，能轻易记住歌曲旋律，或对不同乐器的声音有辨别力。这提示你在音乐表演、创作、教育或声音技术领域可能有天赋。建议通过系统学习乐器、乐理或参与合唱来验证这份热爱。"
+      },
+      {
+        "condition": "primaryTalents.includes('interpersonal')",
+        "title": "人际联结者",
+        "description": "你善于理解和回应他人的情绪与需求，能够轻松建立良好的人际关系。你可能在团队中自然地成为协调者或鼓舞者。这提示你在管理、销售、咨询、教育或社会工作等领域可能有突出优势。建议通过组织活动、团队合作或志愿服务来锻炼这项能力。"
+      },
+      {
+        "condition": "primaryTalents.includes('intrapersonal')",
+        "title": "内在反思者",
+        "description": "你拥有较强的自我认知和内省能力，能清晰地了解自己的情绪、动机和优缺点。你可能喜欢独处思考，善于设定个人目标并自我激励。这提示你在写作、心理学、哲学、自主创业或需要高度自律的领域可能有独特优势。建议通过写日记、冥想或设定个人挑战项目来深化自我探索。"
+      },
+      {
+        "condition": "primaryTalents.includes('naturalist')",
+        "title": "自然观察家",
+        "description": "你对自然世界充满好奇和热爱，善于观察动植物的特征和自然现象的规律。你可能喜欢户外活动，擅长对事物进行分类和归纳。这提示你在生物学、环境科学、农业、园艺、地质学或动物学等领域可能有潜在天赋。建议通过实地观察、自然笔记或参与环保项目来连接这份与生俱来的兴趣。"
+      }
+    ]
+  }
+}

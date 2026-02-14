@@ -1,0 +1,41 @@
+{
+  "id": "rpi-couple-control",
+  "title": "RPI 情侣控制欲/占有欲指数测评",
+  "theme": {
+    "primaryColor": "#e11d48"
+  },
+  "settings": {
+    "accessMode": "public"
+  },
+  "resultConfig": {
+    "scoringEngine": "formula",
+    "formula": "var dimWeights = { Control: 0.3, Jealousy: 0.25, Dependency: 0.2, Insecurity: 0.25 }; var weightedSum = 0; var totalWeight = 0; var dimScores = {}; var dimCounts = {}; for (var i = 0; i < answers.length; i++) { var a = answers[i]; if (a.dimensionKey && dimWeights[a.dimensionKey] !== undefined) { dimScores[a.dimensionKey] = (dimScores[a.dimensionKey] || 0) + a.value; dimCounts[a.dimensionKey] = (dimCounts[a.dimensionKey] || 0) + 1; } } for (var key in dimWeights) { if (dimCounts[key]) { var avg = dimScores[key] / dimCounts[key]; weightedSum += avg * dimWeights[key]; totalWeight += dimWeights[key]; } } var finalScore = totalWeight > 0 ? (weightedSum / totalWeight) : 0; var normalizedScore = ((finalScore - 1) / 6) * 100; var finalDimensions = {}; for (var k in dimScores) { finalDimensions[k] = Math.round(((dimScores[k] / dimCounts[k] - 1) / 6) * 100); } return { totalScore: Math.round(normalizedScore), rawAvg: Number(finalScore.toFixed(2)), dimensions: finalDimensions };",
+    "resultRules": [
+      {
+        "condition": "totalScore >= 75",
+        "title": "危险/需干预：高压控制型",
+        "description": "您的占有欲指数极高，表现出强烈的控制倾向和关系不安全感。这可能已经对伴侣造成了心理压力，建议寻求专业心理咨询，探讨不安全感的根源。"
+      },
+      {
+        "condition": "totalScore >= 50",
+        "title": "高：显著占有倾向",
+        "description": "您在关系中表现出明显的占有倾向和嫉妒心。虽然这可能源于对关系的在乎，但过度的干预可能会损害双方的信任。建议学习建立健康的边界感。"
+      },
+      {
+        "condition": "totalScore >= 30",
+        "title": "中：轻度焦虑/依赖",
+        "description": "您在关系中偶尔会感到不安或产生依赖，这属于比较常见的状态。通过加强沟通和提升自我价值感，可以建立更稳固的安全感。"
+      },
+      {
+        "condition": "totalScore >= 0",
+        "title": "低：健康安稳型",
+        "description": "您的关系非常健康，表现出高度的信任和清晰的边界。您和伴侣都能在关系中感到自由且安全，请继续保持这种积极的互动模式。"
+      }
+    ],
+    "shareCard": {
+      "elements": {
+        "showRadar": true
+      }
+    }
+  }
+}

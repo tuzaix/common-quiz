@@ -1,0 +1,852 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "我一般很少考虑别人的想法。"
+    },
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "非常不符合",
+        "value": 5
+      },
+      {
+        "id": "Q1_o2",
+        "label": "比较不符合",
+        "value": 4
+      },
+      {
+        "id": "Q1_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q1_o4",
+        "label": "基本符合",
+        "value": 2
+      },
+      {
+        "id": "Q1_o5",
+        "label": "非常符合",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "当我遇到不顺心的事情时，会因心情不好而需要很长时间才能摆脱。"
+    },
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "非常不符合",
+        "value": 5
+      },
+      {
+        "id": "Q2_o2",
+        "label": "比较不符合",
+        "value": 4
+      },
+      {
+        "id": "Q2_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q2_o4",
+        "label": "基本符合",
+        "value": 2
+      },
+      {
+        "id": "Q2_o5",
+        "label": "非常符合",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "遇到困难时，我往往会越挫越勇。"
+    },
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q3_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q3_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q3_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q3_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "当意识到危机来临时，我能平静地承认它的存在。"
+    },
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q4_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q4_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q4_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q4_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "对于社会公共事件，我的立场会随着别人的观点改变。"
+    },
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "非常不符合",
+        "value": 5
+      },
+      {
+        "id": "Q5_o2",
+        "label": "比较不符合",
+        "value": 4
+      },
+      {
+        "id": "Q5_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q5_o4",
+        "label": "基本符合",
+        "value": 2
+      },
+      {
+        "id": "Q5_o5",
+        "label": "非常符合",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "在陌生人面前，我常无话可说，以至感到尴尬。"
+    },
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "非常不符合",
+        "value": 5
+      },
+      {
+        "id": "Q6_o2",
+        "label": "比较不符合",
+        "value": 4
+      },
+      {
+        "id": "Q6_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q6_o4",
+        "label": "基本符合",
+        "value": 2
+      },
+      {
+        "id": "Q6_o5",
+        "label": "非常符合",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "别人在想什么，关我什么事。"
+    },
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "非常不符合",
+        "value": 5
+      },
+      {
+        "id": "Q7_o2",
+        "label": "比较不符合",
+        "value": 4
+      },
+      {
+        "id": "Q7_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q7_o4",
+        "label": "基本符合",
+        "value": 2
+      },
+      {
+        "id": "Q7_o5",
+        "label": "非常符合",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "我不能忍受别人违背我的意愿行事。"
+    },
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "非常不符合",
+        "value": 5
+      },
+      {
+        "id": "Q8_o2",
+        "label": "比较不符合",
+        "value": 4
+      },
+      {
+        "id": "Q8_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q8_o4",
+        "label": "基本符合",
+        "value": 2
+      },
+      {
+        "id": "Q8_o5",
+        "label": "非常符合",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "状态不好时，我也能高质量完成任务。"
+    },
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q9_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q9_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q9_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q9_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "不利局面出现后，我会寻求专业性的帮助。"
+    },
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q10_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q10_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q10_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q10_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "即使多数人都不赞同我，我也会做我自己。"
+    },
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q11_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q11_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q11_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q11_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "无论身处任何不熟悉的工作、学习环境中，我都能保持很强的社会适应力。"
+    },
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q12_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q12_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q12_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q12_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "别人说我善于为他人着想。"
+    },
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q13_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q13_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q13_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q13_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "当日常工作被意料不到的不悦事情打断，我能将情绪调整回轨道。"
+    },
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q14_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q14_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q14_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q14_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "吃力不讨好时，我仍然笑脸待人。"
+    },
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q15_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q15_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q15_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q15_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "即便在最沮丧、失落的日子里，我也不会意志消沉、悲观抑郁。"
+    },
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q16_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q16_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q16_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q16_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "很多事情我拿不定主意，需要向身边人求助。"
+    },
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "非常不符合",
+        "value": 5
+      },
+      {
+        "id": "Q17_o2",
+        "label": "比较不符合",
+        "value": 4
+      },
+      {
+        "id": "Q17_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q17_o4",
+        "label": "基本符合",
+        "value": 2
+      },
+      {
+        "id": "Q17_o5",
+        "label": "非常符合",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "我能很快化解与他人的矛盾冲突。"
+    },
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q18_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q18_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q18_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q18_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "我总是会被各种观点所左右。"
+    },
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "非常不符合",
+        "value": 5
+      },
+      {
+        "id": "Q19_o2",
+        "label": "比较不符合",
+        "value": 4
+      },
+      {
+        "id": "Q19_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q19_o4",
+        "label": "基本符合",
+        "value": 2
+      },
+      {
+        "id": "Q19_o5",
+        "label": "非常符合",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "我的情绪起伏很大，自己都不知道是为什么。"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "非常不符合",
+        "value": 5
+      },
+      {
+        "id": "Q20_o2",
+        "label": "比较不符合",
+        "value": 4
+      },
+      {
+        "id": "Q20_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q20_o4",
+        "label": "基本符合",
+        "value": 2
+      },
+      {
+        "id": "Q20_o5",
+        "label": "非常符合",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "虽然不确定是否有机会实施，但我在最困难的时候也会坚持制订下一步的行动计划。"
+    },
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q21_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q21_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q21_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q21_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "不顺心的日子里，我会找朋友求助（包括情感、物质方面等）。"
+    },
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q22_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q22_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q22_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q22_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q23",
+    "type": "single_choice",
+    "content": {
+      "text": "我能在根据不同的情景适应调整对他人的态度。"
+    },
+    "options": [
+      {
+        "id": "Q23_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q23_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q23_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q23_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q23_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "Q24",
+    "type": "single_choice",
+    "content": {
+      "text": "我觉得自己非常好，很少有什么不足。"
+    },
+    "options": [
+      {
+        "id": "Q24_o1",
+        "label": "非常不符合",
+        "value": 5
+      },
+      {
+        "id": "Q24_o2",
+        "label": "比较不符合",
+        "value": 4
+      },
+      {
+        "id": "Q24_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q24_o4",
+        "label": "基本符合",
+        "value": 2
+      },
+      {
+        "id": "Q24_o5",
+        "label": "非常符合",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q25",
+    "type": "single_choice",
+    "content": {
+      "text": "遇到意想不到的突发事件时，我能够冷静应对。"
+    },
+    "options": [
+      {
+        "id": "Q25_o1",
+        "label": "非常不符合",
+        "value": 1
+      },
+      {
+        "id": "Q25_o2",
+        "label": "比较不符合",
+        "value": 2
+      },
+      {
+        "id": "Q25_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q25_o4",
+        "label": "基本符合",
+        "value": 4
+      },
+      {
+        "id": "Q25_o5",
+        "label": "非常符合",
+        "value": 5
+      }
+    ]
+  }
+]

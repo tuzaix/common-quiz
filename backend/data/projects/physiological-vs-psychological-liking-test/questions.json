@@ -1,0 +1,552 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "和他一起参加音乐节的时候，你最想和他做什么？"
+    },
+    "dimensionKey": "physiological",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "全程一起狂欢，从日出到夜晚都一起嗨！",
+        "value": 3
+      },
+      {
+        "id": "Q1_o2",
+        "label": "各自享受当下，偶尔一起交流精彩的瞬间",
+        "value": 2
+      },
+      {
+        "id": "Q1_o3",
+        "label": "全程安静的一起肩并肩听音乐",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "看见他的笑容，你通常会有怎样的感受呢？"
+    },
+    "dimensionKey": "physiological",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "好有魅力好可爱，心跳加速！",
+        "value": 3
+      },
+      {
+        "id": "Q2_o2",
+        "label": "好奇可能是有发生什么事所以开心",
+        "value": 2
+      },
+      {
+        "id": "Q2_o3",
+        "label": "看来他今天心情很好哦",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "走在路上突然闻到像他身上的味道，你会？"
+    },
+    "dimensionKey": "physiological",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "下意识的看四周、寻找他的身影",
+        "value": 3
+      },
+      {
+        "id": "Q3_o2",
+        "label": "发觉自己已经熟记他的味道",
+        "value": 2
+      },
+      {
+        "id": "Q3_o3",
+        "label": "可能只是恰好类似，不会过多思考",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "发现他健身效果很好，你会怎么想？"
+    },
+    "dimensionKey": "physiological",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "看到在专注健身的他的模样很帅气",
+        "value": 3
+      },
+      {
+        "id": "Q4_o2",
+        "label": "计划下次和他一起健身",
+        "value": 2
+      },
+      {
+        "id": "Q4_o3",
+        "label": "钦佩他的毅力与自律",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "当他专注做某件事时（如工作、阅读），你更关注什么？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "他专注的样子很有魅力，让我心动",
+        "value": 1
+      },
+      {
+        "id": "Q5_o2",
+        "label": "欣赏他认真负责的态度或深入的思考能力",
+        "value": 3
+      },
+      {
+        "id": "Q5_o3",
+        "label": "两者都有，但更偏向欣赏他的内在品质",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "旅行中飞机延误，你的第一反应更接近？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "觉得“你真扫兴”（如果他在场）或感到烦躁",
+        "value": 1
+      },
+      {
+        "id": "Q6_o2",
+        "label": "和他说“我们想办法解决”",
+        "value": 3
+      },
+      {
+        "id": "Q6_o3",
+        "label": "自己生闷气或抱怨，但不会直接怪他",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "你对他产生的幻想，更多是关于以下哪方面？"
+    },
+    "dimensionKey": "physiological",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "亲密的身体接触或浪漫的约会场景",
+        "value": 3
+      },
+      {
+        "id": "Q7_o2",
+        "label": "一起装修房子、规划未来生活等日常场景",
+        "value": 1
+      },
+      {
+        "id": "Q7_o3",
+        "label": "两者都有，但前者略多",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "和他在海边漫步时，你更专注于哪种感受？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "这个风景因为有他而更特别",
+        "value": 3
+      },
+      {
+        "id": "Q8_o2",
+        "label": "一起漫步有一种安心的感觉",
+        "value": 2
+      },
+      {
+        "id": "Q8_o3",
+        "label": "海边是个浪漫的地方",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否会迷恋他身上的独特气味，甚至是他出的汗？"
+    },
+    "dimensionKey": "physiological",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "是的，非常迷恋，觉得很好闻",
+        "value": 3
+      },
+      {
+        "id": "Q9_o2",
+        "label": "不讨厌，但谈不上迷恋",
+        "value": 2
+      },
+      {
+        "id": "Q9_o3",
+        "label": "没什么特别感觉，或不喜欢",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否愿意与他分享你最深处的秘密或脆弱面？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "非常愿意，觉得他是最值得信赖的人",
+        "value": 3
+      },
+      {
+        "id": "Q10_o2",
+        "label": "会分享一部分，但会有所保留",
+        "value": 2
+      },
+      {
+        "id": "Q10_o3",
+        "label": "不太愿意，觉得这是个人隐私",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "当他情绪低落时，你最主要的感受是？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "心疼，很想帮助他快乐起来",
+        "value": 3
+      },
+      {
+        "id": "Q11_o2",
+        "label": "有点不知所措，希望他自己快点好起来",
+        "value": 2
+      },
+      {
+        "id": "Q11_o3",
+        "label": "觉得他低落的樣子也很有魅力",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你渴望了解他的内心世界、过去和梦想吗？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "非常渴望，对他的一切都充满好奇",
+        "value": 3
+      },
+      {
+        "id": "Q12_o2",
+        "label": "有一定兴趣，但不会主动深挖",
+        "value": 2
+      },
+      {
+        "id": "Q12_o3",
+        "label": "更享受当下的相处，对过去不太关心",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否曾对他产生过“想咬他一口”的冲动？"
+    },
+    "dimensionKey": "physiological",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "是的，经常有这种可爱的冲动",
+        "value": 3
+      },
+      {
+        "id": "Q13_o2",
+        "label": "偶尔有过一闪而过的念头",
+        "value": 2
+      },
+      {
+        "id": "Q13_o3",
+        "label": "从来没有过",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "和他在一起时，你是否感到情绪稳定、有安全感，甚至能快速入睡？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "是的，在他身边特别放松和安心",
+        "value": 3
+      },
+      {
+        "id": "Q14_o2",
+        "label": "有时会，取决于当时的心情和情境",
+        "value": 2
+      },
+      {
+        "id": "Q14_o3",
+        "label": "不会，反而可能因为兴奋或紧张而睡不着",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "如果一段时间不见，你对他的思念更类似于？"
+    },
+    "dimensionKey": "physiological",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "戒咖啡般的烦躁但短暂",
+        "value": 3
+      },
+      {
+        "id": "Q15_o2",
+        "label": "停用抗抑郁药般的持续低落",
+        "value": 1
+      },
+      {
+        "id": "Q15_o3",
+        "label": "淡淡的想念，不影响正常生活",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否会自然地幻想与他共同规划未来的生活蓝图？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "经常，已经想过很多细节",
+        "value": 3
+      },
+      {
+        "id": "Q16_o2",
+        "label": "偶尔会想一下，但不会深入",
+        "value": 2
+      },
+      {
+        "id": "Q16_o3",
+        "label": "很少，更关注当下的快乐",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "当他获得成功时，你最主要的感受是？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "为他感到由衷的高兴和骄傲",
+        "value": 3
+      },
+      {
+        "id": "Q17_o2",
+        "label": "觉得他更迷人了，自己也要加油",
+        "value": 2
+      },
+      {
+        "id": "Q17_o3",
+        "label": "有点羡慕或嫉妒",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "你对他产生的吸引力，更多的是源于？"
+    },
+    "dimensionKey": "physiological",
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "外貌、身材、气质等外在感官刺激",
+        "value": 3
+      },
+      {
+        "id": "Q18_o2",
+        "label": "性格、价值观、才华等内在特质",
+        "value": 1
+      },
+      {
+        "id": "Q18_o3",
+        "label": "两者差不多，难以区分",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否觉得你们的价值观和三观非常一致？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "是的，非常一致，很有共鸣",
+        "value": 3
+      },
+      {
+        "id": "Q19_o2",
+        "label": "大部分一致，有些小差异",
+        "value": 2
+      },
+      {
+        "id": "Q19_o3",
+        "label": "不太一致，但其他方面很吸引我",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "与他相处时，你更关注“TA有多迷人”，还是“我们如何配合”？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "更关注“我们如何配合”",
+        "value": 3
+      },
+      {
+        "id": "Q20_o2",
+        "label": "更关注“TA有多迷人”",
+        "value": 1
+      },
+      {
+        "id": "Q20_o3",
+        "label": "两者都会关注",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "你渴望与他进行肢体接触（如拥抱、牵手）的程度如何？"
+    },
+    "dimensionKey": "physiological",
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "非常强烈，总是想靠近",
+        "value": 3
+      },
+      {
+        "id": "Q21_o2",
+        "label": "适度，在合适的时机会想",
+        "value": 2
+      },
+      {
+        "id": "Q21_o3",
+        "label": "不太强烈，更享受精神交流",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为他对你的吸引力，会随时间（比如他变老/变胖）而明显减弱吗？"
+    },
+    "dimensionKey": "psychological",
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "不会，内在的吸引力更重要",
+        "value": 3
+      },
+      {
+        "id": "Q22_o2",
+        "label": "可能会减弱一些，但不会消失",
+        "value": 2
+      },
+      {
+        "id": "Q22_o3",
+        "label": "可能会明显减弱",
+        "value": 1
+      }
+    ]
+  }
+]

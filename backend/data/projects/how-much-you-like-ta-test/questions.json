@@ -1,0 +1,587 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "如果TA离开我，我会感到深深的绝望。"
+    },
+    "dimensionKey": "obsession",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "完全符合 (9分)",
+        "value": 9
+      },
+      {
+        "id": "Q1_o2",
+        "label": "非常符合 (7-8分)",
+        "value": 8
+      },
+      {
+        "id": "Q1_o3",
+        "label": "比较符合 (5-6分)",
+        "value": 6
+      },
+      {
+        "id": "Q1_o4",
+        "label": "有点符合 (3-4分)",
+        "value": 4
+      },
+      {
+        "id": "Q1_o5",
+        "label": "完全不符合 (1-2分)",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "TA情绪低落的时候，我觉得很重要的职责就是使TA快乐起来。"
+    },
+    "dimensionKey": "love",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "是",
+        "value": 5
+      },
+      {
+        "id": "Q2_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "我认为TA是十二万分聪明的。"
+    },
+    "dimensionKey": "like",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "是",
+        "value": 5
+      },
+      {
+        "id": "Q3_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "有时我不能控制自己为TA纠结的思绪。"
+    },
+    "dimensionKey": "obsession",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "完全符合 (9分)",
+        "value": 9
+      },
+      {
+        "id": "Q4_o2",
+        "label": "非常符合 (7-8分)",
+        "value": 8
+      },
+      {
+        "id": "Q4_o3",
+        "label": "比较符合 (5-6分)",
+        "value": 6
+      },
+      {
+        "id": "Q4_o4",
+        "label": "有点符合 (3-4分)",
+        "value": 4
+      },
+      {
+        "id": "Q4_o5",
+        "label": "完全不符合 (1-2分)",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "我愿意为TA做所有的事情。"
+    },
+    "dimensionKey": "love",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "是",
+        "value": 5
+      },
+      {
+        "id": "Q5_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "我觉得TA是许多人中，容易让别人尊敬的一个。"
+    },
+    "dimensionKey": "like",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "是",
+        "value": 5
+      },
+      {
+        "id": "Q6_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "能做一些令TA快乐的事情我就感到快乐。"
+    },
+    "dimensionKey": "love",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "完全符合 (9分)",
+        "value": 9
+      },
+      {
+        "id": "Q7_o2",
+        "label": "非常符合 (7-8分)",
+        "value": 8
+      },
+      {
+        "id": "Q7_o3",
+        "label": "比较符合 (5-6分)",
+        "value": 6
+      },
+      {
+        "id": "Q7_o4",
+        "label": "有点符合 (3-4分)",
+        "value": 4
+      },
+      {
+        "id": "Q7_o5",
+        "label": "完全不符合 (1-2分)",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "对TA，有一点占有欲。"
+    },
+    "dimensionKey": "obsession",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "是",
+        "value": 5
+      },
+      {
+        "id": "Q8_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "TA和别人相比，我更愿意和TA在一起。"
+    },
+    "dimensionKey": "love",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "完全符合 (9分)",
+        "value": 9
+      },
+      {
+        "id": "Q9_o2",
+        "label": "非常符合 (7-8分)",
+        "value": 8
+      },
+      {
+        "id": "Q9_o3",
+        "label": "比较符合 (5-6分)",
+        "value": 6
+      },
+      {
+        "id": "Q9_o4",
+        "label": "有点符合 (3-4分)",
+        "value": 4
+      },
+      {
+        "id": "Q9_o5",
+        "label": "完全不符合 (1-2分)",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "我觉得TA跟我很相似。"
+    },
+    "dimensionKey": "like",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "是",
+        "value": 5
+      },
+      {
+        "id": "Q10_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "只要想象TA爱上别人，我就会感到嫉妒。"
+    },
+    "dimensionKey": "obsession",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "完全符合 (9分)",
+        "value": 9
+      },
+      {
+        "id": "Q11_o2",
+        "label": "非常符合 (7-8分)",
+        "value": 8
+      },
+      {
+        "id": "Q11_o3",
+        "label": "比较符合 (5-6分)",
+        "value": 6
+      },
+      {
+        "id": "Q11_o4",
+        "label": "有点符合 (3-4分)",
+        "value": 4
+      },
+      {
+        "id": "Q11_o5",
+        "label": "完全不符合 (1-2分)",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "没有TA，我觉得难以生活下去。"
+    },
+    "dimensionKey": "love",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "是",
+        "value": 5
+      },
+      {
+        "id": "Q12_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "TA是我很想学的那种人。"
+    },
+    "dimensionKey": "like",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "是",
+        "value": 5
+      },
+      {
+        "id": "Q13_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "我渴望了解关于TA的一切。"
+    },
+    "dimensionKey": "obsession",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "完全符合 (9分)",
+        "value": 9
+      },
+      {
+        "id": "Q14_o2",
+        "label": "非常符合 (7-8分)",
+        "value": 8
+      },
+      {
+        "id": "Q14_o3",
+        "label": "比较符合 (5-6分)",
+        "value": 6
+      },
+      {
+        "id": "Q14_o4",
+        "label": "有点符合 (3-4分)",
+        "value": 4
+      },
+      {
+        "id": "Q14_o5",
+        "label": "完全不符合 (1-2分)",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "TA幸福与否是我很关心的事。"
+    },
+    "dimensionKey": "love",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "是",
+        "value": 5
+      },
+      {
+        "id": "Q15_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "我觉得TA在我所有认识的人中，是非常讨人喜欢的。"
+    },
+    "dimensionKey": "like",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "是",
+        "value": 5
+      },
+      {
+        "id": "Q16_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "我在身体上、情感上、精神上都需要TA。"
+    },
+    "dimensionKey": "obsession",
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "完全符合 (9分)",
+        "value": 9
+      },
+      {
+        "id": "Q17_o2",
+        "label": "非常符合 (7-8分)",
+        "value": 8
+      },
+      {
+        "id": "Q17_o3",
+        "label": "比较符合 (5-6分)",
+        "value": 6
+      },
+      {
+        "id": "Q17_o4",
+        "label": "有点符合 (3-4分)",
+        "value": 4
+      },
+      {
+        "id": "Q17_o5",
+        "label": "完全不符合 (1-2分)",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "当和TA在一起时，我发觉好像二人都有相同的心情。"
+    },
+    "dimensionKey": "love",
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "是",
+        "value": 5
+      },
+      {
+        "id": "Q18_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "你经常看TA的空间或社交动态吗？"
+    },
+    "dimensionKey": "obsession",
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "是的，非常频繁",
+        "value": 4
+      },
+      {
+        "id": "Q19_o2",
+        "label": "偶尔会看",
+        "value": 2
+      },
+      {
+        "id": "Q19_o3",
+        "label": "很少看",
+        "value": 1
+      },
+      {
+        "id": "Q19_o4",
+        "label": "几乎不看",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "当你想到TA的时候，心跳会忽快忽慢吗？"
+    },
+    "dimensionKey": "obsession",
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "是的，经常这样",
+        "value": 4
+      },
+      {
+        "id": "Q20_o2",
+        "label": "偶尔会",
+        "value": 2
+      },
+      {
+        "id": "Q20_o3",
+        "label": "很少",
+        "value": 1
+      },
+      {
+        "id": "Q20_o4",
+        "label": "完全不会",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "你闻到TA的气味就会很兴奋吗？"
+    },
+    "dimensionKey": "obsession",
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "是的，非常明显",
+        "value": 4
+      },
+      {
+        "id": "Q21_o2",
+        "label": "有点感觉",
+        "value": 2
+      },
+      {
+        "id": "Q21_o3",
+        "label": "没什么特别感觉",
+        "value": 1
+      },
+      {
+        "id": "Q21_o4",
+        "label": "完全没注意过",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否幻想过和TA有亲密的身体关系？"
+    },
+    "dimensionKey": "obsession",
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "是的，经常",
+        "value": 4
+      },
+      {
+        "id": "Q22_o2",
+        "label": "偶尔想过",
+        "value": 2
+      },
+      {
+        "id": "Q22_o3",
+        "label": "很少或没有",
+        "value": 1
+      },
+      {
+        "id": "Q22_o4",
+        "label": "完全没有",
+        "value": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,611 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "我感到悲伤。"
+    },
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "我没觉得悲伤。",
+        "value": 0
+      },
+      {
+        "id": "Q1_o2",
+        "label": "我感到悲伤。",
+        "value": 1
+      },
+      {
+        "id": "Q1_o3",
+        "label": "我一直感到悲伤，没法儿摆脱这种感觉。",
+        "value": 2
+      },
+      {
+        "id": "Q1_o4",
+        "label": "我这么悲伤、不快乐，我都顶不住了。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "我对未来感到泄气。"
+    },
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "我对将来并不特别感到泄气。",
+        "value": 0
+      },
+      {
+        "id": "Q2_o2",
+        "label": "我对将来感到泄气。",
+        "value": 1
+      },
+      {
+        "id": "Q2_o3",
+        "label": "我感到没有盼头。",
+        "value": 2
+      },
+      {
+        "id": "Q2_o4",
+        "label": "我感到将来没有希望，情况也不可能改善。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "我觉得自己是一个失败者。"
+    },
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "我不觉得自己是一个失败者。",
+        "value": 0
+      },
+      {
+        "id": "Q3_o2",
+        "label": "我觉得自己比一般人要失败。",
+        "value": 1
+      },
+      {
+        "id": "Q3_o3",
+        "label": "回首往事，我发现我的人生充满失败。",
+        "value": 2
+      },
+      {
+        "id": "Q3_o4",
+        "label": "我感觉我是一个彻底失败的人。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "我对事情感到满意。"
+    },
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "我像过去一样对事情感到满意。",
+        "value": 0
+      },
+      {
+        "id": "Q4_o2",
+        "label": "我不像过去那样欣赏事物。",
+        "value": 1
+      },
+      {
+        "id": "Q4_o3",
+        "label": "我不再对事情真正感到满意。",
+        "value": 2
+      },
+      {
+        "id": "Q4_o4",
+        "label": "我对什么事情都不满意，甚至感到烦躁。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "我有负罪感。"
+    },
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "我没觉得有什么特别的负罪感。",
+        "value": 0
+      },
+      {
+        "id": "Q5_o2",
+        "label": "好多时候我有一种负罪感。",
+        "value": 1
+      },
+      {
+        "id": "Q5_o3",
+        "label": "我大部分时间感到有一种负罪感。",
+        "value": 2
+      },
+      {
+        "id": "Q5_o4",
+        "label": "我一直有一种负罪感。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "我对自己感到失望。"
+    },
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "我不对自己感到失望。",
+        "value": 0
+      },
+      {
+        "id": "Q6_o2",
+        "label": "我对自己感到失望。",
+        "value": 1
+      },
+      {
+        "id": "Q6_o3",
+        "label": "我讨厌我自己。",
+        "value": 2
+      },
+      {
+        "id": "Q6_o4",
+        "label": "我恨我自己。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "我有要伤害自己的想法。"
+    },
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "我压根儿就没有想过要杀掉自己。",
+        "value": 0
+      },
+      {
+        "id": "Q7_o2",
+        "label": "我曾经想过要杀掉自己，但是没有实施。",
+        "value": 1
+      },
+      {
+        "id": "Q7_o3",
+        "label": "我愿意杀掉自己。",
+        "value": 2
+      },
+      {
+        "id": "Q7_o4",
+        "label": "只要一有机会我就杀掉自己。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "我对他人的兴趣。"
+    },
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "我一直没有对别人失去兴趣。",
+        "value": 0
+      },
+      {
+        "id": "Q8_o2",
+        "label": "我不像过去那样对别人有兴趣了。",
+        "value": 1
+      },
+      {
+        "id": "Q8_o3",
+        "label": "我对别人基本上失去了兴趣。",
+        "value": 2
+      },
+      {
+        "id": "Q8_o4",
+        "label": "我对别人完全失去了兴趣。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "我做出决定。"
+    },
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "我能像平时一样做出决定。",
+        "value": 0
+      },
+      {
+        "id": "Q9_o2",
+        "label": "和过去比，我现在总是推迟做决定。",
+        "value": 1
+      },
+      {
+        "id": "Q9_o3",
+        "label": "和过去比，我现在做起决定来更加困难了。",
+        "value": 2
+      },
+      {
+        "id": "Q9_o4",
+        "label": "我不再能够做出决定。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "我对自己的形象感到担心。"
+    },
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "我没觉得自己比过去看起来更糟。",
+        "value": 0
+      },
+      {
+        "id": "Q10_o2",
+        "label": "我担心我看起来老了，不再吸引人了。",
+        "value": 1
+      },
+      {
+        "id": "Q10_o3",
+        "label": "我感到自己的形象老是在变化，已经变得不再吸引人了。",
+        "value": 2
+      },
+      {
+        "id": "Q10_o4",
+        "label": "我相信我很丑陋。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "我的工作状态。"
+    },
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "我可以和过去一样工作得很好。",
+        "value": 0
+      },
+      {
+        "id": "Q11_o2",
+        "label": "需要加倍努力我才能够开始工作。",
+        "value": 1
+      },
+      {
+        "id": "Q11_o3",
+        "label": "我需要费很大的劲才能做成一件事。",
+        "value": 2
+      },
+      {
+        "id": "Q11_o4",
+        "label": "我什么工作也干不了了。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "我的睡眠情况。"
+    },
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "我和过去一样能睡。",
+        "value": 0
+      },
+      {
+        "id": "Q12_o2",
+        "label": "我不像过去那样能睡。",
+        "value": 1
+      },
+      {
+        "id": "Q12_o3",
+        "label": "我比过去要早醒1—2个小时，而且很难再入睡。",
+        "value": 2
+      },
+      {
+        "id": "Q12_o4",
+        "label": "我比过去要早醒好几个小时，而且没法儿再入睡。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "我感到疲劳。"
+    },
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "我和过去一样不知疲倦。",
+        "value": 0
+      },
+      {
+        "id": "Q13_o2",
+        "label": "我比过去更容易疲劳。",
+        "value": 1
+      },
+      {
+        "id": "Q13_o3",
+        "label": "我几乎做任何事情都容易疲劳。",
+        "value": 2
+      },
+      {
+        "id": "Q13_o4",
+        "label": "我很疲劳，什么也做不了。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "我的胃口。"
+    },
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "我的胃口和过去一样好。",
+        "value": 0
+      },
+      {
+        "id": "Q14_o2",
+        "label": "我的胃口没有过去好。",
+        "value": 1
+      },
+      {
+        "id": "Q14_o3",
+        "label": "我的胃口现在更糟了。",
+        "value": 2
+      },
+      {
+        "id": "Q14_o4",
+        "label": "我一点胃口也没有。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "我对体重的关注。"
+    },
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "最近，我的体重没有怎么（如果有的话）减轻。",
+        "value": 0
+      },
+      {
+        "id": "Q15_o2",
+        "label": "我的体重已经减轻了五磅多了。",
+        "value": 1
+      },
+      {
+        "id": "Q15_o3",
+        "label": "我的体重已经减轻了十磅多了。",
+        "value": 2
+      },
+      {
+        "id": "Q15_o4",
+        "label": "我的体重已经减轻了十五磅多了。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "我担心自己的健康。"
+    },
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "我和过去一样并不担心自己的健康。",
+        "value": 0
+      },
+      {
+        "id": "Q16_o2",
+        "label": "我为自己身体出现的问题感到担心，如腰酸背痛、胃烧、便秘。",
+        "value": 1
+      },
+      {
+        "id": "Q16_o3",
+        "label": "我很担心自己身体出现的问题，很难再想别的事了。",
+        "value": 2
+      },
+      {
+        "id": "Q16_o4",
+        "label": "我非常担心自己身体出现的问题，根本顾不上别的事了。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "我对性的兴趣。"
+    },
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "我对性的兴趣依然不减。",
+        "value": 0
+      },
+      {
+        "id": "Q17_o2",
+        "label": "我不像过去那样对性那么有兴趣了。",
+        "value": 1
+      },
+      {
+        "id": "Q17_o3",
+        "label": "我现在对性很少有兴趣了。",
+        "value": 2
+      },
+      {
+        "id": "Q17_o4",
+        "label": "我对性完全失去了兴趣。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "我容易被激怒。"
+    },
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "我不再像过去那样容易被激怒了。",
+        "value": 0
+      },
+      {
+        "id": "Q18_o2",
+        "label": "我比过去稍稍容易被激怒。",
+        "value": 1
+      },
+      {
+        "id": "Q18_o3",
+        "label": "很多时候我很苦恼或恼怒。",
+        "value": 2
+      },
+      {
+        "id": "Q18_o4",
+        "label": "现在我一直感觉很恼怒。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "我的哭泣情况。"
+    },
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "我不再像过去那样哭泣了。",
+        "value": 0
+      },
+      {
+        "id": "Q19_o2",
+        "label": "我现在比过去哭得要多。",
+        "value": 1
+      },
+      {
+        "id": "Q19_o3",
+        "label": "我现在总是哭。",
+        "value": 2
+      },
+      {
+        "id": "Q19_o4",
+        "label": "我过去还能哭，但是现在想哭也哭不出来了。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "我觉得自己比其他人更糟。"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "我没觉得自己比其他人更糟。",
+        "value": 0
+      },
+      {
+        "id": "Q20_o2",
+        "label": "我因为自己的弱点和错误而对自己提出批评。",
+        "value": 1
+      },
+      {
+        "id": "Q20_o3",
+        "label": "我一直因为自己犯下的错误而责备自己。",
+        "value": 2
+      },
+      {
+        "id": "Q20_o4",
+        "label": "我为发生的所有坏事情而责备自己。",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "我是否觉得受到惩罚。"
+    },
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "我没有觉得我正受到惩罚。",
+        "value": 0
+      },
+      {
+        "id": "Q21_o2",
+        "label": "我感到自己或许受到了惩罚。",
+        "value": 1
+      },
+      {
+        "id": "Q21_o3",
+        "label": "我期望受到惩罚。",
+        "value": 2
+      },
+      {
+        "id": "Q21_o4",
+        "label": "我觉得自己正受到惩罚。",
+        "value": 3
+      }
+    ]
+  }
+]

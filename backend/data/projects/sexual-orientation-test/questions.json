@@ -1,0 +1,711 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "在社交聚会或活动中，你发现自己更关注谁的言行举止？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "几乎总是更关注异性",
+        "value": 0
+      },
+      {
+        "id": "Q1_o2",
+        "label": "多数时候更关注异性，但也会注意同性",
+        "value": 10
+      },
+      {
+        "id": "Q1_o3",
+        "label": "对异性和同性的关注度差不多",
+        "value": 30
+      },
+      {
+        "id": "Q1_o4",
+        "label": "多数时候更关注同性，但也会注意异性",
+        "value": 50
+      },
+      {
+        "id": "Q1_o5",
+        "label": "几乎总是更关注同性",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "当你观看浪漫爱情电影或阅读爱情小说时，你幻想中的浪漫对象通常是？"
+    },
+    "dimensionKey": "fantasy",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "几乎总是异性",
+        "value": 0
+      },
+      {
+        "id": "Q2_o2",
+        "label": "通常是异性，但偶尔幻想对象是同性",
+        "value": 10
+      },
+      {
+        "id": "Q2_o3",
+        "label": "异性或同性都有可能，取决于具体角色",
+        "value": 30
+      },
+      {
+        "id": "Q2_o4",
+        "label": "通常是同性，但偶尔幻想对象是异性",
+        "value": 50
+      },
+      {
+        "id": "Q2_o5",
+        "label": "几乎总是同性",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "回顾你过去的情感经历或强烈的爱慕之情，这些情感主要指向？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "全部是异性",
+        "value": 0
+      },
+      {
+        "id": "Q3_o2",
+        "label": "主要是异性，但对同性有过一次或几次爱慕",
+        "value": 15
+      },
+      {
+        "id": "Q3_o3",
+        "label": "对异性和同性都有过数次爱慕，程度相当",
+        "value": 30
+      },
+      {
+        "id": "Q3_o4",
+        "label": "主要是同性，但对异性有过一次或几次爱慕",
+        "value": 45
+      },
+      {
+        "id": "Q3_o5",
+        "label": "全部是同性",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "当你想到“性”或产生性欲望时，你性幻想中的对象通常是？"
+    },
+    "dimensionKey": "fantasy",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "几乎总是异性",
+        "value": 0
+      },
+      {
+        "id": "Q4_o2",
+        "label": "绝大多数是异性，极少数情况是同性",
+        "value": 20
+      },
+      {
+        "id": "Q4_o3",
+        "label": "异性和同性大约各半",
+        "value": 30
+      },
+      {
+        "id": "Q4_o4",
+        "label": "绝大多数是同性，极少数情况是异性",
+        "value": 40
+      },
+      {
+        "id": "Q4_o5",
+        "label": "几乎总是同性",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "如果考虑发展一段严肃的、包含承诺的浪漫关系，你更倾向于选择？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "只考虑异性作为伴侣",
+        "value": 0
+      },
+      {
+        "id": "Q5_o2",
+        "label": "强烈倾向于异性，但理论上不排除同性的可能性",
+        "value": 15
+      },
+      {
+        "id": "Q5_o3",
+        "label": "伴侣的性别不重要，更看重个人特质",
+        "value": 30
+      },
+      {
+        "id": "Q5_o4",
+        "label": "强烈倾向于同性，但理论上不排除异性的可能性",
+        "value": 45
+      },
+      {
+        "id": "Q5_o5",
+        "label": "只考虑同性作为伴侣",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "从纯粹的审美角度（不涉及欲望），你觉得哪种性别的身体更让你欣赏或觉得有魅力？"
+    },
+    "dimensionKey": "fantasy",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "几乎只欣赏异性的身体",
+        "value": 0
+      },
+      {
+        "id": "Q6_o2",
+        "label": "主要欣赏异性，但也认可同性身体的魅力",
+        "value": 15
+      },
+      {
+        "id": "Q6_o3",
+        "label": "对两种性别的身体都有同等的欣赏",
+        "value": 30
+      },
+      {
+        "id": "Q6_o4",
+        "label": "主要欣赏同性，但也认可异性身体的魅力",
+        "value": 45
+      },
+      {
+        "id": "Q6_o5",
+        "label": "几乎只欣赏同性的身体",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "在现实生活中，你是否有过与同性发生性行为或亲密身体接触的经历或强烈意愿？"
+    },
+    "dimensionKey": "behavior",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "从未有过，也完全不想",
+        "value": 0
+      },
+      {
+        "id": "Q7_o2",
+        "label": "从未有过，但有过轻微的好奇或一闪而过的念头",
+        "value": 10
+      },
+      {
+        "id": "Q7_o3",
+        "label": "有过一次或少数几次尝试/经历",
+        "value": 30
+      },
+      {
+        "id": "Q7_o4",
+        "label": "有过多次经历，或持续有这方面的意愿",
+        "value": 50
+      },
+      {
+        "id": "Q7_o5",
+        "label": "只与同性有过性行为或亲密接触",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "当你描绘“梦中情人”或理想伴侣的形象时，你首先会赋予Ta什么性别？"
+    },
+    "dimensionKey": "fantasy",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "总是异性",
+        "value": 0
+      },
+      {
+        "id": "Q8_o2",
+        "label": "通常是异性，形象偶尔模糊",
+        "value": 15
+      },
+      {
+        "id": "Q8_o3",
+        "label": "性别模糊，或有时是异性有时是同性",
+        "value": 30
+      },
+      {
+        "id": "Q8_o4",
+        "label": "通常是同性，形象偶尔模糊",
+        "value": 45
+      },
+      {
+        "id": "Q8_o5",
+        "label": "总是同性",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "你更容易对哪种性别的人产生“心动”的感觉（如紧张、害羞、想靠近）？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "几乎只对异性",
+        "value": 0
+      },
+      {
+        "id": "Q9_o2",
+        "label": "主要对异性，但对同性有过少数几次心动",
+        "value": 20
+      },
+      {
+        "id": "Q9_o3",
+        "label": "对两种性别都曾有过心动",
+        "value": 30
+      },
+      {
+        "id": "Q9_o4",
+        "label": "主要对同性，但对异性有过少数几次心动",
+        "value": 40
+      },
+      {
+        "id": "Q9_o5",
+        "label": "几乎只对同性",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否有过与异性发生性行为或亲密身体接触的经历或意愿？"
+    },
+    "dimensionKey": "behavior",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "只与异性有过性行为或亲密接触",
+        "value": 0
+      },
+      {
+        "id": "Q10_o2",
+        "label": "有过多次与异性的经历，或持续有这方面的意愿",
+        "value": 10
+      },
+      {
+        "id": "Q10_o3",
+        "label": "有过一次或少数几次与异性的尝试/经历",
+        "value": 30
+      },
+      {
+        "id": "Q10_o4",
+        "label": "从未有过，但有过轻微的好奇或一闪而过的念头",
+        "value": 50
+      },
+      {
+        "id": "Q10_o5",
+        "label": "从未有过，也完全不想",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "当你需要情感支持、倾诉秘密或寻求深刻理解时，你更自然地倾向于向谁敞开？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "几乎总是异性朋友/伴侣",
+        "value": 0
+      },
+      {
+        "id": "Q11_o2",
+        "label": "多数是异性，但有一两位亲密的同性知己",
+        "value": 15
+      },
+      {
+        "id": "Q11_o3",
+        "label": "对朋友的性别没有偏好，更看重信任度",
+        "value": 30
+      },
+      {
+        "id": "Q11_o4",
+        "label": "多数是同性，但有一两位亲密的异性知己",
+        "value": 45
+      },
+      {
+        "id": "Q11_o5",
+        "label": "几乎总是同性朋友/伴侣",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "在公共场合（如地铁、街道），你更可能不由自主地注意到并欣赏哪种性别的人的外貌？"
+    },
+    "dimensionKey": "fantasy",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "几乎总是异性",
+        "value": 0
+      },
+      {
+        "id": "Q12_o2",
+        "label": "主要是异性，偶尔也会欣赏同性的穿搭或气质",
+        "value": 15
+      },
+      {
+        "id": "Q12_o3",
+        "label": "两者都会欣赏，没有明显区别",
+        "value": 30
+      },
+      {
+        "id": "Q12_o4",
+        "label": "主要是同性，偶尔也会欣赏异性的穿搭或气质",
+        "value": 45
+      },
+      {
+        "id": "Q12_o5",
+        "label": "几乎总是同性",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "如果抛开一切社会压力和家庭期望，仅从你内心最真实的渴望出发，你希望与谁共度一生？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "毫无疑问是异性",
+        "value": 0
+      },
+      {
+        "id": "Q13_o2",
+        "label": "强烈倾向于异性，但内心有过一丝对同性的憧憬",
+        "value": 20
+      },
+      {
+        "id": "Q13_o3",
+        "label": "不确定，性别不是决定因素，人本身更重要",
+        "value": 30
+      },
+      {
+        "id": "Q13_o4",
+        "label": "强烈倾向于同性，但内心有过一丝对异性的憧憬",
+        "value": 40
+      },
+      {
+        "id": "Q13_o5",
+        "label": "毫无疑问是同性",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "在梦境中，你出现性相关梦境或浪漫亲密梦境时，梦中的对象通常是？"
+    },
+    "dimensionKey": "fantasy",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "几乎总是异性",
+        "value": 0
+      },
+      {
+        "id": "Q14_o2",
+        "label": "大多是异性，极少数梦到过同性",
+        "value": 20
+      },
+      {
+        "id": "Q14_o3",
+        "label": "两种性别都梦到过，频率差不多",
+        "value": 30
+      },
+      {
+        "id": "Q14_o4",
+        "label": "大多是同性，极少数梦到过异性",
+        "value": 40
+      },
+      {
+        "id": "Q14_o5",
+        "label": "几乎总是同性",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何看待“与同性建立家庭（如结婚、领养孩子）”的可能性？"
+    },
+    "dimensionKey": "behavior",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "完全无法想象，自己绝不会考虑",
+        "value": 0
+      },
+      {
+        "id": "Q15_o2",
+        "label": "自己不太可能，但支持别人这样做",
+        "value": 20
+      },
+      {
+        "id": "Q15_o3",
+        "label": "如果遇到对的人，性别不是障碍",
+        "value": 30
+      },
+      {
+        "id": "Q15_o4",
+        "label": "更倾向于与同性建立家庭，但也不完全排除异性",
+        "value": 45
+      },
+      {
+        "id": "Q15_o5",
+        "label": "这正是我渴望和计划的人生",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "当你感到孤独，渴望拥抱、牵手等非性意味的亲密接触时，你更希望来自谁？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "几乎总是希望来自异性",
+        "value": 0
+      },
+      {
+        "id": "Q16_o2",
+        "label": "主要希望来自异性，但来自亲密的同性朋友也能接受",
+        "value": 15
+      },
+      {
+        "id": "Q16_o3",
+        "label": "来自信任的人即可，性别不重要",
+        "value": 30
+      },
+      {
+        "id": "Q16_o4",
+        "label": "主要希望来自同性，但来自亲密的异性朋友也能接受",
+        "value": 45
+      },
+      {
+        "id": "Q16_o5",
+        "label": "几乎总是希望来自同性",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "你对涉及同性的情色内容（如小说、影视、图片）有何反应？"
+    },
+    "dimensionKey": "fantasy",
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "感到不适、排斥或毫无兴趣",
+        "value": 0
+      },
+      {
+        "id": "Q17_o2",
+        "label": "没有特别感觉，能理性看待但不会兴奋",
+        "value": 20
+      },
+      {
+        "id": "Q17_o3",
+        "label": "有时会觉得有吸引力，取决于内容和情境",
+        "value": 30
+      },
+      {
+        "id": "Q17_o4",
+        "label": "经常觉得有吸引力，会主动寻找或观看",
+        "value": 45
+      },
+      {
+        "id": "Q17_o5",
+        "label": "只对同性情色内容有强烈兴趣和反应",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "在结交非常亲密、无话不谈的“挚友”时，你对其性别有倾向吗？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "我的挚友几乎都是异性",
+        "value": 0
+      },
+      {
+        "id": "Q18_o2",
+        "label": "挚友以异性为主，但有1-2位同性挚友",
+        "value": 15
+      },
+      {
+        "id": "Q18_o3",
+        "label": "挚友的性别分布比较均衡",
+        "value": 30
+      },
+      {
+        "id": "Q18_o4",
+        "label": "挚友以同性为主，但有1-2位异性挚友",
+        "value": 45
+      },
+      {
+        "id": "Q18_o5",
+        "label": "我的挚友几乎都是同性",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "想象一下，如果社会对性取向完全没有偏见，你的自我认知会更接近？"
+    },
+    "dimensionKey": "emotional",
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "我就是一个喜欢异性的人",
+        "value": 0
+      },
+      {
+        "id": "Q19_o2",
+        "label": "我主要喜欢异性，但承认对同性有轻微吸引力",
+        "value": 20
+      },
+      {
+        "id": "Q19_o3",
+        "label": "我喜欢的是人，而不是特定的性别",
+        "value": 30
+      },
+      {
+        "id": "Q19_o4",
+        "label": "我主要喜欢同性，但承认对异性有轻微吸引力",
+        "value": 40
+      },
+      {
+        "id": "Q19_o5",
+        "label": "我就是一个喜欢同性的人",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "综合来看，你认为自己对异性和同性的“整体吸引力”（结合情感、浪漫、性）比例更接近？"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "100%异性，0%同性",
+        "value": 0
+      },
+      {
+        "id": "Q20_o2",
+        "label": "大约80%异性，20%同性",
+        "value": 12
+      },
+      {
+        "id": "Q20_o3",
+        "label": "大约60%异性，40%同性",
+        "value": 24
+      },
+      {
+        "id": "Q20_o4",
+        "label": "各50%",
+        "value": 30
+      },
+      {
+        "id": "Q20_o5",
+        "label": "大约40%异性，60%同性",
+        "value": 36
+      },
+      {
+        "id": "Q20_o6",
+        "label": "大约20%异性，80%同性",
+        "value": 48
+      },
+      {
+        "id": "Q20_o7",
+        "label": "0%异性，100%同性",
+        "value": 60
+      }
+    ]
+  }
+]

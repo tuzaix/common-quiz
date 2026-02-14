@@ -1,0 +1,76 @@
+{
+  "id": "scl-90",
+  "title": "SCL-90 症状自评量表",
+  "description": "本量表共有90个项目，包含较广泛的精神症状学内容，从感觉、情感、思维、意识、行为直至生活习惯、人际关系、饮食睡眠等，用于评估最近一周的心理健康状况。",
+  "theme": {
+    "primaryColor": "#4F6DF5",
+    "backgroundColor": "#F8F9FA"
+  },
+  "resultConfig": {
+    "scoringEngine": "sum",
+    "dimensions": [
+      {
+        "key": "somatization",
+        "name": "躯体化",
+        "description": "反映主观的身体不适感。"
+      },
+      {
+        "key": "obsessive_compulsive",
+        "name": "强迫症状",
+        "description": "反映无意义的思想、冲动和行为。"
+      },
+      {
+        "key": "interpersonal_sensitivity",
+        "name": "人际关系敏感",
+        "description": "反映人际交往中的不自在感和自卑感。"
+      },
+      {
+        "key": "depression",
+        "name": "抑郁",
+        "description": "反映与抑郁相关的广泛症状，如情绪低落、兴趣减退。"
+      },
+      {
+        "key": "anxiety",
+        "name": "焦虑",
+        "description": "反映烦躁、紧张、神经过敏等焦虑症状。"
+      },
+      {
+        "key": "hostility",
+        "name": "敌对",
+        "description": "反映厌烦、争论、脾气爆发等敌对表现。"
+      },
+      {
+        "key": "phobic_anxiety",
+        "name": "恐怖",
+        "description": "反映对特定场景、物体或社交的恐惧。"
+      },
+      {
+        "key": "paranoid_ideation",
+        "name": "偏执",
+        "description": "反映猜疑、关系妄想等思维内容。"
+      },
+      {
+        "key": "psychoticism",
+        "name": "精神病性",
+        "description": "反映幻听、被控制感等精神分裂样症状。"
+      },
+      {
+        "key": "other",
+        "name": "其他",
+        "description": "主要反映睡眠及饮食情况。"
+      }
+    ],
+    "resultRules": [
+      {
+        "condition": "totalScore <= 160 && Math.max(...Object.values(dimensionScores)) <= 2",
+        "title": "筛查阴性",
+        "description": "您的总分及各因子分均未超过常规筛查阈值。这表明您近期的心理困扰程度在正常范围内。请注意，本量表仅为筛查工具，不能作为诊断依据，定期关注自我心理健康状态仍是重要的。"
+      },
+      {
+        "condition": "totalScore > 160 || Math.max(...Object.values(dimensionScores)) > 2",
+        "title": "筛查阳性（建议进一步评估）",
+        "description": "您的总分或部分因子分超过了常规筛查阈值，表明您近期可能体验到一定程度的心理困扰。这只是一个初步筛查结果，强烈建议您携带此结果前往正规医疗机构的精神科或心理科，由专业人员进行面谈和综合评估，以获得准确的诊断和适当的干预建议。早期关注和干预对心理健康至关重要。"
+      }
+    ]
+  }
+}

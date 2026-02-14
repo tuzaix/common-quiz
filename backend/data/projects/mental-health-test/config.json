@@ -1,0 +1,62 @@
+{
+  "id": "mental-health-test",
+  "title": "心理健康测试",
+  "description": "本测试旨在依据心理学理论，采用标准化的自评问卷对您的心理健康状况进行初步的科学评估。测试内容涵盖情绪状态、压力应对、睡眠质量、人际关系及自我认知等多个核心维度，帮助您了解自己近期的心理状态，识别潜在的心理困扰。请注意，本测试结果仅供参考，不能替代专业医疗诊断。若测试结果提示您可能存在心理健康问题，建议寻求专业心理咨询师或精神科医生的帮助。",
+  "theme": {
+    "primaryColor": "#4CAF50",
+    "backgroundColor": "#E8F5E9"
+  },
+  "resultConfig": {
+    "scoringEngine": "formula",
+    "formula": "var d = dimensions || {}; var emotion = d.emotion || 0; var stress = d.stress || 0; var sleep = d.sleep || 0; var social = d.social || 0; var self = d.self || 0; var total = emotion + stress + sleep + social + self; var avg = total / 5; var riskLevel = 'healthy'; if (avg <= 20) riskLevel = 'healthy'; else if (avg <= 40) riskLevel = 'mild'; else if (avg <= 60) riskLevel = 'moderate'; else if (avg <= 80) riskLevel = 'severe'; else riskLevel = 'critical'; var flaggedDimensions = []; for (var key in d) { if (d[key] > 60) flaggedDimensions.push(key); } return { riskLevel: riskLevel, totalScore: total, flaggedDimensions: flaggedDimensions, dimensions: d };",
+    "dimensions": [
+      {
+        "key": "emotion",
+        "name": "情绪状态",
+        "description": "评估个体是否存在持续的负面情绪，如情绪低落、悲伤、焦虑或情绪不稳定。"
+      },
+      {
+        "key": "stress",
+        "name": "压力应对",
+        "description": "评估个体面对生活或工作压力时的感受及应对策略的有效性，是否感到难以承受。"
+      },
+      {
+        "key": "sleep",
+        "name": "睡眠质量",
+        "description": "评估个体的睡眠状况，包括睡眠时间、是否失眠或早醒，睡眠质量直接影响心理健康。"
+      },
+      {
+        "key": "social",
+        "name": "人际关系",
+        "description": "评估个体的社交状况及感受，是否感到孤独、缺乏支持，人际关系对心理健康至关重要。"
+      },
+      {
+        "key": "self",
+        "name": "自我认知",
+        "description": "评估个体的自我认同感、自信心，是否对自己的价值和能力有清晰认知，或经常自我怀疑。"
+      }
+    ],
+    "resultRules": [
+      {
+        "condition": "riskLevel === 'healthy' && totalScore <= 100",
+        "title": "心理健康状态良好",
+        "description": "您的测试结果显示，您的整体心理健康状况良好。您在情绪、压力、睡眠、人际和自我认知等多个维度都表现出较好的适应性。您可能能够较好地认识并接纳自己，情绪相对稳定，拥有一定的社会支持系统，并能以较为积极的方式应对生活中的压力。建议继续保持健康的生活方式和积极的心态，定期进行自我关怀。"
+      },
+      {
+        "condition": "riskLevel === 'mild'",
+        "title": "存在轻微心理困扰",
+        "description": "您的测试结果显示，您在某些方面可能存在轻微的心理困扰或神经疲倦。这可能表现为偶尔的情绪波动、一定的压力感、睡眠略有不安或人际交往中偶感吃力。这是很多人都会经历的常态范围。建议您可以尝试通过适度运动、培养兴趣爱好、与亲友倾诉等方式来主动调节生活，放松精神。增加对心理健康的关注，学习一些压力管理技巧。"
+      },
+      {
+        "condition": "riskLevel === 'moderate'",
+        "title": "心理困扰程度中等",
+        "description": "您的测试结果显示，您目前正经历中等程度的心理困扰。在某些维度（如情绪、压力或睡眠）上，问题可能已经对您的日常生活产生了一些影响。例如，可能经常感到情绪低落、压力难以承受，或睡眠质量持续不佳。心理健康与生理健康相互影响，长期处于此状态可能需要主动干预。建议您认真考虑寻求朋友、家人或专业心理服务的支持，学习更有效的情绪调节和压力应对方法。"
+      },
+      {
+        "condition": "riskLevel === 'severe' || riskLevel === 'critical'",
+        "title": "心理困扰程度较重，建议寻求专业帮助",
+        "description": "您的测试结果显示，您在多个维度的得分较高，表明心理困扰程度可能较重。您可能长期感到显著的情绪痛苦（如持续悲伤、焦虑）、承受巨大压力、睡眠严重失调、感到极度孤独或自我价值感极低。这些信号提示您的心理健康需要更多关注。**强烈建议您考虑寻求专业心理咨询师或精神科医生的帮助**。专业的评估和干预可以帮助您更好地理解当前状态，并找到有效的改善途径。请记住，寻求帮助是关爱自己、有力量的表现。"
+      }
+    ]
+  }
+}

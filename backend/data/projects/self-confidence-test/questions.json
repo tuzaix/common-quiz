@@ -1,0 +1,382 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "一旦下了决心，即使没有人赞同，你仍然会坚持做到底吗？"
+    },
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q1_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "如果同事善意地取笑你，你是否会很在意？"
+    },
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q2_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "在聚会上，你经常等别人先跟你打招呼吗？"
+    },
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q3_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "你经常跟人说抱歉吗？即使不是在你有错的情况下。"
+    },
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q4_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "别人批评你，你会觉得难过吗？"
+    },
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q5_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "你很少对人说出你真正的意见吗？"
+    },
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q6_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "对别人的赞美，你持怀疑的态度吗？"
+    },
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q7_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "你总是觉得自己比别人差吗？"
+    },
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q8_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "你每天照镜子超过三次吗？"
+    },
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q9_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为自己的能力比别人强吗？"
+    },
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q10_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "在一个正式场合，只有你一个人穿得比较随便，你会感到不自然吗？"
+    },
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q11_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你是个受欢迎的人吗？"
+    },
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q12_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为自己很有魅力吗？"
+    },
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q13_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为你的优点比缺点多吗？"
+    },
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q14_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "目前的工作是你的专长吗？"
+    },
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q15_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "你与别人合作无间吗？"
+    },
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q16_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "危急时，你很冷静吗？"
+    },
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "是",
+        "value": 2
+      },
+      {
+        "id": "Q17_o2",
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "在作决定时，你通常先听取别人的意见吗？"
+    },
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q18_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "当你进入一间很多人的房间，而其中你只认识少数几位时，你是否会感到紧张？"
+    },
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q19_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "在大庭广众面前讲话，你是否会害怕？"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "是",
+        "value": 0
+      },
+      {
+        "id": "Q20_o2",
+        "label": "否",
+        "value": 2
+      }
+    ]
+  }
+]

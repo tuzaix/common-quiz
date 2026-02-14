@@ -1,0 +1,100 @@
+{
+  "id": "mbti-test",
+  "title": "MBTI 16型人格专业性格测评",
+  "theme": {
+    "primaryColor": "#6366f1"
+  },
+  "settings": {
+    "accessMode": "public"
+  },
+  "resultConfig": {
+    "scoringEngine": "mbti",
+    "resultRules": [
+      {
+        "condition": "mbti === 'INTJ'",
+        "title": "INTJ - 建筑师型人格",
+        "description": "富有想象力和战略性的思想家，一切皆在计划之中。"
+      },
+      {
+        "condition": "mbti === 'INTP'",
+        "title": "INTP - 逻辑学家型人格",
+        "description": "具有创造力的发明家，对知识有着止步不前的渴望。"
+      },
+      {
+        "condition": "mbti === 'ENTJ'",
+        "title": "ENTJ - 指挥官型人格",
+        "description": "大胆，富有想象力且意志强大的领导者，总能找到或创造解决办法。"
+      },
+      {
+        "condition": "mbti === 'ENTP'",
+        "title": "ENTP - 辩论家型人格",
+        "description": "聪明好奇的思想者，无法抗拒智力挑战。"
+      },
+      {
+        "condition": "mbti === 'INFJ'",
+        "title": "INFJ - 提倡者型人格",
+        "description": "安静而神秘，同时鼓舞人心且不知疲倦的理想主义者。"
+      },
+      {
+        "condition": "mbti === 'INFP'",
+        "title": "INFP - 调解者型人格",
+        "description": "诗意，善良又无私的人，总是热衷于帮助正义的事业。"
+      },
+      {
+        "condition": "mbti === 'ENFJ'",
+        "title": "ENFJ - 主人公型人格",
+        "description": "富有魅力鼓舞人心的领导者，听众听得如痴如醉。"
+      },
+      {
+        "condition": "mbti === 'ENFP'",
+        "title": "ENFP - 竞选者型人格",
+        "description": "热情，创造力强且爱社交的自由灵魂，总能找到理由微笑。"
+      },
+      {
+        "condition": "mbti === 'ISTJ'",
+        "title": "ISTJ - 物流师型人格",
+        "description": "实际且注重事实的人，其可靠性不容置疑。"
+      },
+      {
+        "condition": "mbti === 'ISFJ'",
+        "title": "ISFJ - 守卫者型人格",
+        "description": "非常专注且温暖的守护者，时刻准备保护爱着的人。"
+      },
+      {
+        "condition": "mbti === 'ESTJ'",
+        "title": "ESTJ - 总经理型人格",
+        "description": "优秀的管理者，在管理事物或人方面无与伦比。"
+      },
+      {
+        "condition": "mbti === 'ESFJ'",
+        "title": "ESFJ - 执政官型人格",
+        "description": "极度奉献和乐于助人的社交达人，总能提供所需的帮助。"
+      },
+      {
+        "condition": "mbti === 'ISTP'",
+        "title": "ISTP - 鉴赏家型人格",
+        "description": "大胆而实际的实验家，擅长使用各类工具。"
+      },
+      {
+        "condition": "mbti === 'ISFP'",
+        "title": "ISFP - 探险家型人格",
+        "description": "灵活有魅力的艺术家，时刻准备着探索和体验新鲜事物。"
+      },
+      {
+        "condition": "mbti === 'ESTP'",
+        "title": "ESTP - 企业家型人格",
+        "description": "聪明，精力充沛且观察力极强的人，真心享受挑战。"
+      },
+      {
+        "condition": "mbti === 'ESFP'",
+        "title": "ESFP - 表演者型人格",
+        "description": "精力充沛而慷慨的表演者，总能给周围的人带来欢乐。"
+      }
+    ],
+    "shareCard": {
+      "elements": {
+        "showRadar": false
+      }
+    }
+  }
+}

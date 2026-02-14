@@ -1,0 +1,31 @@
+{
+  "id": "project-id-placeholder",
+  "title": "项目标题样板",
+  "theme": {
+    "primaryColor": "#3b82f6"
+  },
+  "settings": {
+    "accessMode": "public"
+  },
+  "resultConfig": {
+    "scoringEngine": "formula",
+    "formula": "(() => {\n  // 1. 定义权重或维度\n  const dimWeights = { Dim1: 0.5, Dim2: 0.5 };\n  \n  // 2. 初始化统计\n  const dimScores = {};\n  const dimCounts = {};\n  \n  // 3. 遍历答案计算\n  answers.forEach(a => {\n    if (a.dimensionKey) {\n      dimScores[a.dimensionKey] = (dimScores[a.dimensionKey] || 0) + a.value;\n      dimCounts[a.dimensionKey] = (dimCounts[a.dimensionKey] || 0) + 1;\n    }\n  });\n\n  // 4. 计算总分或归一化\n  let totalScore = 0;\n  // ... 自定义逻辑\n\n  return { \n    totalScore: Math.round(totalScore),\n    dimensions: dimScores // 返回各个维度的得分情况\n  };\n})()",
+    "resultRules": [
+      {
+        "condition": "totalScore >= 80",
+        "title": "优秀/高分",
+        "description": "描述文案..."
+      },
+      {
+        "condition": "totalScore < 80",
+        "title": "普通/低分",
+        "description": "描述文案..."
+      }
+    ],
+    "shareCard": {
+      "elements": {
+        "showRadar": true
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "sexual-orientation-test",
+  "title": "性取向测试",
+  "description": "本测试基于国际公认的性学权威工具——金赛量表（Kinsey Scale），旨在帮助你科学、客观地探索自己的性取向倾向。性取向是一个人在情感、浪漫、性上对特定性别的持久吸引倾向，它并非简单的二元分类（异性恋/同性恋），而是一个从0（完全异性恋）到6（完全同性恋）的连续谱系。本测试通过评估你在情感吸引、性幻想、行为倾向等多个维度的反应，提供一个自我认知的参考。请注意，测试结果仅为自我探索的辅助工具，并非医学诊断。我们鼓励以开放、尊重的心态看待自己与他人的多样性。",
+  "theme": {
+    "primaryColor": "#7B1FA2",
+    "backgroundColor": "#F3E5F5"
+  },
+  "resultConfig": {
+    "scoringEngine": "formula",
+    "formula": "var d = dimensions || {}; var emotional = d.emotional || 0; var fantasy = d.fantasy || 0; var behavior = d.behavior || 0; var total = emotional + fantasy + behavior; var avg = total / 3; var kinseyScore = 0; if (avg <= 10) kinseyScore = 0; else if (avg <= 30) kinseyScore = 1; else if (avg <= 50) kinseyScore = 2; else if (avg <= 70) kinseyScore = 3; else if (avg <= 90) kinseyScore = 4; else if (avg <= 110) kinseyScore = 5; else kinseyScore = 6; var descriptions = [ '完全异性恋：对异性有排他性的情感与性吸引。', '主要为异性恋，只偶有同性恋行为或想法。', '主要为异性恋，但也有明显的同性恋倾向。', '双性恋倾向：对异性和同性的情感与性吸引程度大致相当。', '主要为同性恋，但也有异性恋倾向。', '主要为同性恋，只偶有异性恋行为或想法。', '完全同性恋：对同性有排他性的情感与性吸引。' ]; var additionalType = total < 20 ? '可能为无性恋倾向（对两性都缺乏性吸引）。' : ''; return { kinseyScore: kinseyScore, description: descriptions[kinseyScore], additionalType: additionalType, dimensions: d, totalScore: total };",
+    "dimensions": [
+      {
+        "key": "emotional",
+        "name": "情感吸引",
+        "description": "指在浪漫、爱慕、情感依赖方面，更倾向于哪个性别。这包括你想与谁建立亲密关系、分享生活、获得情感支持。"
+      },
+      {
+        "key": "fantasy",
+        "name": "性幻想与偏好",
+        "description": "指在性幻想、性欲望、审美欣赏方面，更倾向于哪个性别。这包括你的性幻想对象、觉得谁更有身体魅力、对谁的性特征更感兴趣。"
+      },
+      {
+        "key": "behavior",
+        "name": "行为倾向",
+        "description": "指在实际或意愿中的性行为、亲密接触、社交偏好方面，更倾向于哪个性别。这包括你过去的行为经历以及未来可能的行为意愿。"
+      }
+    ],
+    "resultRules": [
+      {
+        "condition": "kinseyScore === 0",
+        "title": "完全异性恋",
+        "description": "根据金赛量表，你的测试结果为0级：完全异性恋。这意味着你在情感、浪漫和性方面，主要或完全被异性所吸引。你对同性的情感和性吸引非常微弱或不存在。这是社会中最常见的性取向模式之一。请记住，性取向是个人内在的、持久的倾向，无论结果如何，都值得被尊重。"
+      },
+      {
+        "condition": "kinseyScore >= 1 && kinseyScore <= 2",
+        "title": "主要为异性恋",
+        "description": "根据金赛量表，你的测试结果为1-2级：主要为异性恋。这意味着你的性取向以异性吸引为主导，但同时存在一定程度的同性吸引（可能是情感上的欣赏、偶尔的幻想或有限的行为倾向）。金赛博士的研究表明，很多人其实都处在这个谱系上，纯粹的、100%的异性恋或同性恋可能并非大多数人的状态。这反映了性取向的连续性和多样性。"
+      },
+      {
+        "condition": "kinseyScore === 3",
+        "title": "双性恋倾向",
+        "description": "根据金赛量表，你的测试结果为3级：双性恋倾向。这意味着你对异性和同性的情感与性吸引程度大致相当，没有明显的偏向。双性恋是一种独立且稳定的性取向，并非“过渡阶段”或“混淆不清”。双性恋者可能同时被多种性别吸引，但吸引的程度 and 模式因人而异，且不一定是对等的。"
+      },
+      {
+        "condition": "kinseyScore >= 4 && kinseyScore <= 5",
+        "title": "主要为同性恋",
+        "description": "根据金赛量表，你的测试结果为4-5级：主要为同性恋。这意味着你的性取向以同性吸引为主导，但同时可能保留一些对异性的情感联系或性吸引。同性恋是一种自然的性取向变异。2016年英国一项针对年轻人的调查显示，约有6%的人自评为完全同性恋，而更多人的性取向处于谱系中间。社会应秉持包容、理解、平等的态度对待不同性取向群体。"
+      },
+      {
+        "condition": "kinseyScore === 6",
+        "title": "完全同性恋",
+        "description": "根据金赛量表，你的测试结果为6级：完全同性恋。这意味着你在情感、浪漫和性方面，主要或完全被同性所吸引。你对异性的情感和性吸引非常微弱或不存在。同性恋是人类性取向多样性的自然组成部分。探索和确认自己的性取向是一个重要的自我认知过程，如果感到困惑或压力，寻求朋友、社群或专业心理咨询师的支持是很有帮助的。"
+      },
+      {
+        "condition": "totalScore < 20 && additionalType.includes('无性恋')",
+        "title": "无性恋倾向",
+        "description": "你的测试总分极低，同时在情感、幻想和行为三个维度上都表现出极弱的吸引力。这可能表明你具有无性恋（Asexual）倾向。无性恋是指对任何性别都缺乏性吸引力的性取向。需要注意的是，无性恋者仍然可能有浪漫情感需求（如渴望亲密关系但不涉及性），也可能有审美欣赏，这与性吸引力是不同的。无性恋是一个光谱，其体验因人而异。"
+      }
+    ]
+  }
+}

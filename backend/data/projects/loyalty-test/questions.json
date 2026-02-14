@@ -1,0 +1,772 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否会在其他企业为你提供更好的薪水和待遇等情况下，离开现在的公司？"
+    },
+    "dimensionKey": "continuance",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "无论如何都不会离开",
+        "value": 5
+      },
+      {
+        "id": "Q1_o2",
+        "label": "基本不会，除非差距巨大",
+        "value": 4
+      },
+      {
+        "id": "Q1_o3",
+        "label": "会慎重考虑，权衡利弊",
+        "value": 3
+      },
+      {
+        "id": "Q1_o4",
+        "label": "很可能会被吸引",
+        "value": 2
+      },
+      {
+        "id": "Q1_o5",
+        "label": "会立即准备跳槽",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "当听别人说起你是所在组织的一员时，你会感到骄傲吗？"
+    },
+    "dimensionKey": "affective",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "非常骄傲，并积极介绍组织的优点",
+        "value": 5
+      },
+      {
+        "id": "Q2_o2",
+        "label": "比较骄傲",
+        "value": 4
+      },
+      {
+        "id": "Q2_o3",
+        "label": "没什么特别感觉",
+        "value": 3
+      },
+      {
+        "id": "Q2_o4",
+        "label": "有点尴尬，不愿多提",
+        "value": 2
+      },
+      {
+        "id": "Q2_o5",
+        "label": "感到不光彩",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "对于承诺过的事情（无论是对公司、朋友还是伴侣），你通常会？"
+    },
+    "dimensionKey": "normative",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "无论如何都会想尽办法兑现",
+        "value": 5
+      },
+      {
+        "id": "Q3_o2",
+        "label": "大部分时候会兑现",
+        "value": 4
+      },
+      {
+        "id": "Q3_o3",
+        "label": "看情况，尽力而为",
+        "value": 3
+      },
+      {
+        "id": "Q3_o4",
+        "label": "有时会因为困难或忘记而不兑现",
+        "value": 2
+      },
+      {
+        "id": "Q3_o5",
+        "label": "经常不兑现",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否认为组织的使命和目标使你的工作非常重要？"
+    },
+    "dimensionKey": "affective",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "非常同意，我的工作与组织目标紧密相连",
+        "value": 5
+      },
+      {
+        "id": "Q4_o2",
+        "label": "同意",
+        "value": 4
+      },
+      {
+        "id": "Q4_o3",
+        "label": "不确定",
+        "value": 3
+      },
+      {
+        "id": "Q4_o4",
+        "label": "不同意",
+        "value": 2
+      },
+      {
+        "id": "Q4_o5",
+        "label": "很不同意",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "考虑到你已掌握的专业技能、积累的人脉和福利，离开当前组织的代价有多大？"
+    },
+    "dimensionKey": "continuance",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "代价极高，几乎不可接受",
+        "value": 5
+      },
+      {
+        "id": "Q5_o2",
+        "label": "代价较高，会慎重考虑",
+        "value": 4
+      },
+      {
+        "id": "Q5_o3",
+        "label": "代价一般，可以承受",
+        "value": 3
+      },
+      {
+        "id": "Q5_o4",
+        "label": "代价较低",
+        "value": 2
+      },
+      {
+        "id": "Q5_o5",
+        "label": "几乎没有代价",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "即使没有人监督，你也会因为觉得“这是对组织应尽的义务”而主动做好工作吗？"
+    },
+    "dimensionKey": "normative",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "总是如此",
+        "value": 5
+      },
+      {
+        "id": "Q6_o2",
+        "label": "经常如此",
+        "value": 4
+      },
+      {
+        "id": "Q6_o3",
+        "label": "有时如此",
+        "value": 3
+      },
+      {
+        "id": "Q6_o4",
+        "label": "很少如此",
+        "value": 2
+      },
+      {
+        "id": "Q6_o5",
+        "label": "从不如此",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "你愿意向亲友推荐你所在的组织或你正在使用的品牌吗？"
+    },
+    "dimensionKey": "affective",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "非常愿意，并经常主动推荐",
+        "value": 5
+      },
+      {
+        "id": "Q7_o2",
+        "label": "愿意，如果对方问起",
+        "value": 4
+      },
+      {
+        "id": "Q7_o3",
+        "label": "看情况",
+        "value": 3
+      },
+      {
+        "id": "Q7_o4",
+        "label": "不太愿意",
+        "value": 2
+      },
+      {
+        "id": "Q7_o5",
+        "label": "绝对不会推荐",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "如果组织面临暂时的困境（如业绩下滑、舆论危机），你的第一反应是？"
+    },
+    "dimensionKey": "affective",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "付出更多努力，与组织共渡难关",
+        "value": 5
+      },
+      {
+        "id": "Q8_o2",
+        "label": "做好本职工作，观望情况",
+        "value": 4
+      },
+      {
+        "id": "Q8_o3",
+        "label": "开始关注外部机会，以备不时之需",
+        "value": 3
+      },
+      {
+        "id": "Q8_o4",
+        "label": "考虑尽快离开，避免被牵连",
+        "value": 2
+      },
+      {
+        "id": "Q8_o5",
+        "label": "立即寻找下家并离开",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否觉得，长期服务于一个组织或对一个人忠诚，是社会期待的美德，你应该遵守？"
+    },
+    "dimensionKey": "normative",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "非常认同，这是我内心的准则",
+        "value": 5
+      },
+      {
+        "id": "Q9_o2",
+        "label": "比较认同",
+        "value": 4
+      },
+      {
+        "id": "Q9_o3",
+        "label": "无所谓",
+        "value": 3
+      },
+      {
+        "id": "Q9_o4",
+        "label": "不太认同，更看重个人发展",
+        "value": 2
+      },
+      {
+        "id": "Q9_o5",
+        "label": "完全不认同，认为这是束缚",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你对于自己长期投入（如时间、精力、情感）的领域（工作、爱好、关系），即使遇到瓶颈，也倾向于坚持而非放弃？"
+    },
+    "dimensionKey": "continuance",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "总是坚持，放弃意味着前功尽弃",
+        "value": 5
+      },
+      {
+        "id": "Q10_o2",
+        "label": "通常坚持",
+        "value": 4
+      },
+      {
+        "id": "Q10_o3",
+        "label": "看困难程度和回报",
+        "value": 3
+      },
+      {
+        "id": "Q10_o4",
+        "label": "容易感到厌倦并想尝试新的",
+        "value": 2
+      },
+      {
+        "id": "Q10_o5",
+        "label": "很容易放弃",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "当你的同事或团队获得荣誉时，你通常的感受是？"
+    },
+    "dimensionKey": "affective",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "为他们感到由衷的高兴和骄傲",
+        "value": 5
+      },
+      {
+        "id": "Q11_o2",
+        "label": "感到高兴",
+        "value": 4
+      },
+      {
+        "id": "Q11_o3",
+        "label": "没什么特别感觉",
+        "value": 3
+      },
+      {
+        "id": "Q11_o4",
+        "label": "有点嫉妒",
+        "value": 2
+      },
+      {
+        "id": "Q11_o5",
+        "label": "非常嫉恨，觉得不公",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否会严格遵守并维护组织的规章制度，即使觉得某些规定不太合理？"
+    },
+    "dimensionKey": "normative",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "总是遵守并维护",
+        "value": 5
+      },
+      {
+        "id": "Q12_o2",
+        "label": "一般会遵守",
+        "value": 4
+      },
+      {
+        "id": "Q12_o3",
+        "label": "只遵守合理的部分",
+        "value": 3
+      },
+      {
+        "id": "Q12_o4",
+        "label": "经常阳奉阴违",
+        "value": 2
+      },
+      {
+        "id": "Q12_o5",
+        "label": "完全无视",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何看待“跳槽”行为？"
+    },
+    "dimensionKey": "continuance",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "非常谨慎，除非万不得已",
+        "value": 5
+      },
+      {
+        "id": "Q13_o2",
+        "label": "比较谨慎，会综合考虑",
+        "value": 4
+      },
+      {
+        "id": "Q13_o3",
+        "label": "是职业发展的正常手段",
+        "value": 3
+      },
+      {
+        "id": "Q13_o4",
+        "label": "有更好机会就会考虑",
+        "value": 2
+      },
+      {
+        "id": "Q13_o5",
+        "label": "经常通过跳槽寻求提升",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否觉得自己的价值观与组织的价值观很契合？"
+    },
+    "dimensionKey": "affective",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "非常契合",
+        "value": 5
+      },
+      {
+        "id": "Q14_o2",
+        "label": "比较契合",
+        "value": 4
+      },
+      {
+        "id": "Q14_o3",
+        "label": "一般",
+        "value": 3
+      },
+      {
+        "id": "Q14_o4",
+        "label": "不太契合",
+        "value": 2
+      },
+      {
+        "id": "Q14_o5",
+        "label": "严重冲突",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "当朋友向你倾诉秘密后，你会如何处理？"
+    },
+    "dimensionKey": "normative",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "绝对保密，守口如瓶",
+        "value": 5
+      },
+      {
+        "id": "Q15_o2",
+        "label": "基本保密，除非特殊情况",
+        "value": 4
+      },
+      {
+        "id": "Q15_o3",
+        "label": "看秘密的内容和对象",
+        "value": 3
+      },
+      {
+        "id": "Q15_o4",
+        "label": "可能会不小心说出去",
+        "value": 2
+      },
+      {
+        "id": "Q15_o5",
+        "label": "不觉得需要保密",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "你对自己喜欢的品牌，会持续购买其新品并推荐给他人吗？"
+    },
+    "dimensionKey": "affective",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "会，我是该品牌的忠实拥护者",
+        "value": 5
+      },
+      {
+        "id": "Q16_o2",
+        "label": "经常购买，偶尔推荐",
+        "value": 4
+      },
+      {
+        "id": "Q16_o3",
+        "label": "继续购买，但不会特意推荐",
+        "value": 3
+      },
+      {
+        "id": "Q16_o4",
+        "label": "可能会尝试其他品牌",
+        "value": 2
+      },
+      {
+        "id": "Q16_o5",
+        "label": "很容易被其他品牌吸引",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否认为，在当前组织长期工作所获得的退休金、福利等，是你难以割舍的重要保障？"
+    },
+    "dimensionKey": "continuance",
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "是，这是最重要的考虑因素之一",
+        "value": 5
+      },
+      {
+        "id": "Q17_o2",
+        "label": "是比较重要的因素",
+        "value": 4
+      },
+      {
+        "id": "Q17_o3",
+        "label": "是因素之一，但非决定性",
+        "value": 3
+      },
+      {
+        "id": "Q17_o4",
+        "label": "不太重要",
+        "value": 2
+      },
+      {
+        "id": "Q17_o5",
+        "label": "完全不重要",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "在一段长期感情中，即使遇到矛盾和困难，你的本能倾向是？"
+    },
+    "dimensionKey": "normative",
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "积极沟通解决，坚持维护关系",
+        "value": 5
+      },
+      {
+        "id": "Q18_o2",
+        "label": "努力尝试解决",
+        "value": 4
+      },
+      {
+        "id": "Q18_o3",
+        "label": "看问题的严重程度",
+        "value": 3
+      },
+      {
+        "id": "Q18_o4",
+        "label": "容易产生放弃的念头",
+        "value": 2
+      },
+      {
+        "id": "Q18_o5",
+        "label": "倾向于结束关系",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "你经常主动了解组织的发展动态，并思考自己如何能为组织发展出谋划策吗？"
+    },
+    "dimensionKey": "affective",
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "经常如此，觉得这是分内之事",
+        "value": 5
+      },
+      {
+        "id": "Q19_o2",
+        "label": "有时如此",
+        "value": 4
+      },
+      {
+        "id": "Q19_o3",
+        "label": "偶尔关注",
+        "value": 3
+      },
+      {
+        "id": "Q19_o4",
+        "label": "很少关心",
+        "value": 2
+      },
+      {
+        "id": "Q19_o5",
+        "label": "从不关心",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "如果离开当前组织，你是否会觉得对不起培养你的领导或同事？"
+    },
+    "dimensionKey": "normative",
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "会有很强的愧疚感",
+        "value": 5
+      },
+      {
+        "id": "Q20_o2",
+        "label": "会有一些愧疚感",
+        "value": 4
+      },
+      {
+        "id": "Q20_o3",
+        "label": "有点不好意思，但能想通",
+        "value": 3
+      },
+      {
+        "id": "Q20_o4",
+        "label": "没什么感觉，人往高处走",
+        "value": 2
+      },
+      {
+        "id": "Q20_o5",
+        "label": "完全不会",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否认为，你在这个组织积累的独特经验和人脉，在其他地方很难复制或从头开始？"
+    },
+    "dimensionKey": "continuance",
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "是的，独特性很高，难以替代",
+        "value": 5
+      },
+      {
+        "id": "Q21_o2",
+        "label": "有一定独特性",
+        "value": 4
+      },
+      {
+        "id": "Q21_o3",
+        "label": "部分可以迁移，部分不能",
+        "value": 3
+      },
+      {
+        "id": "Q21_o4",
+        "label": "大部分经验通用，迁移容易",
+        "value": 2
+      },
+      {
+        "id": "Q21_o5",
+        "label": "完全通用，没有迁移成本",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "你渴望在组织中长久地待下去，并成为其稳定的一份子吗？"
+    },
+    "dimensionKey": "affective",
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "非常渴望，希望一直在这里发展",
+        "value": 5
+      },
+      {
+        "id": "Q22_o2",
+        "label": "希望如此",
+        "value": 4
+      },
+      {
+        "id": "Q22_o3",
+        "label": "顺其自然",
+        "value": 3
+      },
+      {
+        "id": "Q22_o4",
+        "label": "没想过那么远",
+        "value": 2
+      },
+      {
+        "id": "Q22_o5",
+        "label": "把现在的工作当作暂时的",
+        "value": 1
+      }
+    ]
+  }
+]

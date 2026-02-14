@@ -1,0 +1,637 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "在亲密关系的互动中，你更倾向于扮演怎样的角色？"
+    },
+    "dimensionKey": "interaction_style",
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "主导和引领的一方",
+        "value": 4
+      },
+      {
+        "id": "Q1_o2",
+        "label": "配合和响应的一方",
+        "value": 1
+      },
+      {
+        "id": "Q1_o3",
+        "label": "视情况而定，喜欢平等协作",
+        "value": 2.5
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为浪漫的仪式感（如纪念日、礼物、特定环境）对于亲密关系有多重要？"
+    },
+    "dimensionKey": "atmosphere_preference",
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "非常重要，是情感的必需品",
+        "value": 4
+      },
+      {
+        "id": "Q2_o2",
+        "label": "比较重要，能增进感情",
+        "value": 3
+      },
+      {
+        "id": "Q2_o3",
+        "label": "一般，有更好没有也行",
+        "value": 2
+      },
+      {
+        "id": "Q2_o4",
+        "label": "不太重要，更看重日常相处",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "你发起或响应亲密调情的频率和自在程度如何？"
+    },
+    "dimensionKey": "interaction_capacity",
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "非常频繁且自然，乐于主动",
+        "value": 4
+      },
+      {
+        "id": "Q3_o2",
+        "label": "比较频繁，感觉自在",
+        "value": 3
+      },
+      {
+        "id": "Q3_o3",
+        "label": "偶尔，需要特定氛围",
+        "value": 2
+      },
+      {
+        "id": "Q3_o4",
+        "label": "很少，感觉有些害羞或不习惯",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "你更偏好哪种类型的亲密互动氛围？"
+    },
+    "dimensionKey": "energy_mode",
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "温柔、舒缓、充满爱意的",
+        "value": 1
+      },
+      {
+        "id": "Q4_o2",
+        "label": "热烈、充满张力、激情四射的",
+        "value": 4
+      },
+      {
+        "id": "Q4_o3",
+        "label": "两者混合，依心情而定",
+        "value": 2.5
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "在建立亲密关系时，你的情感需求强度和个人界限是怎样的？"
+    },
+    "dimensionKey": "core_needs",
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "情感需求强，界限相对灵活，信任建立快",
+        "value": 4
+      },
+      {
+        "id": "Q5_o2",
+        "label": "情感需求适度，有清晰界限，信任逐步建立",
+        "value": 2.5
+      },
+      {
+        "id": "Q5_o3",
+        "label": "情感需求较独立，界限非常清晰，信任建立慢",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "在亲密相处中，你更看重以下哪一点？"
+    },
+    "dimensionKey": "relationship_values",
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "关系的掌控感与主导性",
+        "value": 4
+      },
+      {
+        "id": "Q6_o2",
+        "label": "深度的情绪共鸣与理解",
+        "value": 3
+      },
+      {
+        "id": "Q6_o3",
+        "label": "绝对的平等与共同决策",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "你对性所持的总体态度更接近以下哪一种？"
+    },
+    "dimensionKey": "sexual_attitude",
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "开放：接受并尊重多样的性行为与取向",
+        "value": 4
+      },
+      {
+        "id": "Q7_o2",
+        "label": "保守：倾向于遵循传统或熟悉的规范",
+        "value": 1
+      },
+      {
+        "id": "Q7_o3",
+        "label": "探索：对性知识、技巧有持续的好奇心",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "当伴侣提出一个你未曾尝试过的亲密行为建议时，你的第一反应是？"
+    },
+    "dimensionKey": "sexual_attitude",
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "感到兴奋，愿意积极探讨和尝试",
+        "value": 4
+      },
+      {
+        "id": "Q8_o2",
+        "label": "谨慎评估，需要考虑安全性和舒适度",
+        "value": 2.5
+      },
+      {
+        "id": "Q8_o3",
+        "label": "感到不安或抵触，倾向于拒绝",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何理解亲密关系中的“权力动态”？"
+    },
+    "dimensionKey": "interaction_style",
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "是自然存在的，享受主导或臣服的角色",
+        "value": 4
+      },
+      {
+        "id": "Q9_o2",
+        "label": "应该被最小化，理想状态是完全平等",
+        "value": 1
+      },
+      {
+        "id": "Q9_o3",
+        "label": "可以流动和交换，增加情趣",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为性幻想在亲密关系中扮演什么角色？"
+    },
+    "dimensionKey": "interaction_capacity",
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "重要的催化剂，乐于与伴侣分享并实践",
+        "value": 4
+      },
+      {
+        "id": "Q10_o2",
+        "label": "私密的个人空间，很少主动分享",
+        "value": 2
+      },
+      {
+        "id": "Q10_o3",
+        "label": "不太重要，更关注现实中的互动",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "对你而言，亲密行为中的情感连接与生理刺激，哪个比重更大？"
+    },
+    "dimensionKey": "core_needs",
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "情感连接绝对重要，是前提",
+        "value": 1
+      },
+      {
+        "id": "Q11_o2",
+        "label": "生理刺激很重要，能增强连接",
+        "value": 3
+      },
+      {
+        "id": "Q11_o3",
+        "label": "两者同等重要，不可或缺",
+        "value": 2.5
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "你更喜欢伴侣用哪种方式表达爱欲？"
+    },
+    "dimensionKey": "energy_mode",
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "直接、热烈、充满侵略性的",
+        "value": 4
+      },
+      {
+        "id": "Q12_o2",
+        "label": "含蓄、温柔、充满呵护的",
+        "value": 1
+      },
+      {
+        "id": "Q12_o3",
+        "label": "多变，根据情境不同",
+        "value": 2.5
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "你是否愿意为了满足伴侣的偏好，而尝试自己原本不熟悉的亲密行为？"
+    },
+    "dimensionKey": "relationship_values",
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "非常愿意，只要在安全范围内",
+        "value": 4
+      },
+      {
+        "id": "Q13_o2",
+        "label": "视情况而定，需要充分沟通和准备",
+        "value": 2.5
+      },
+      {
+        "id": "Q13_o3",
+        "label": "不太愿意，更希望坚持自己的舒适区",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为在亲密关系中，保持神秘感和新鲜感重要吗？"
+    },
+    "dimensionKey": "atmosphere_preference",
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "非常重要，是长期吸引力的关键",
+        "value": 4
+      },
+      {
+        "id": "Q14_o2",
+        "label": "比较重要，但坦诚更重要",
+        "value": 2.5
+      },
+      {
+        "id": "Q14_o3",
+        "label": "不太重要，完全坦诚才是最舒服的",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "你对“角色扮演”或“情景幻想”在亲密关系中的看法是？"
+    },
+    "dimensionKey": "sexual_attitude",
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "非常有情趣，乐于尝试",
+        "value": 4
+      },
+      {
+        "id": "Q15_o2",
+        "label": "可以理解，但自己不太感兴趣",
+        "value": 2
+      },
+      {
+        "id": "Q15_o3",
+        "label": "感到尴尬或不自然",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "在发生亲密行为前，你认为哪一步骤最关键？"
+    },
+    "dimensionKey": "core_needs",
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "情感上的预热与沟通",
+        "value": 1
+      },
+      {
+        "id": "Q16_o2",
+        "label": "氛围的营造（灯光、音乐等）",
+        "value": 3
+      },
+      {
+        "id": "Q16_o3",
+        "label": "直接的身体接触与挑逗",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "如果伴侣的性需求频率与你明显不同，你会如何处理？"
+    },
+    "dimensionKey": "relationship_values",
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "主动调整，试图主导节奏达成一致",
+        "value": 4
+      },
+      {
+        "id": "Q17_o2",
+        "label": "坦诚沟通，寻找双方都能接受的折中方案",
+        "value": 2.5
+      },
+      {
+        "id": "Q17_o3",
+        "label": "感到压力，可能妥协或回避",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "你如何看待亲密关系中的“言语挑逗”或“色情对话”？"
+    },
+    "dimensionKey": "interaction_capacity",
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "是重要的前戏和互动部分，非常享受",
+        "value": 4
+      },
+      {
+        "id": "Q18_o2",
+        "label": "可以接受，但更偏好非言语交流",
+        "value": 2
+      },
+      {
+        "id": "Q18_o3",
+        "label": "感到不自在或尴尬",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为自己的性偏好是相对固定的，还是会随着时间和经历而变化？"
+    },
+    "dimensionKey": "sexual_attitude",
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "可能会随着探索和经历而发展和变化",
+        "value": 4
+      },
+      {
+        "id": "Q19_o2",
+        "label": "基本固定，核心偏好不太会变",
+        "value": 2
+      },
+      {
+        "id": "Q19_o3",
+        "label": "没有仔细思考过这个问题",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "在亲密时刻，你更关注的是伴侣的反应，还是自身的感受？"
+    },
+    "dimensionKey": "interaction_style",
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "更关注伴侣的反应，并据此调整",
+        "value": 1
+      },
+      {
+        "id": "Q20_o2",
+        "label": "更关注自身的感受，并希望伴侣配合",
+        "value": 4
+      },
+      {
+        "id": "Q20_o3",
+        "label": "两者平衡关注，寻求共同愉悦",
+        "value": 2.5
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "一次理想的亲密经历结束后，你更期待什么样的后续？"
+    },
+    "dimensionKey": "energy_mode",
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "热烈的拥抱和激情的话语",
+        "value": 4
+      },
+      {
+        "id": "Q21_o2",
+        "label": "安静的相拥、抚摸或入睡",
+        "value": 1
+      },
+      {
+        "id": "Q21_o3",
+        "label": "轻松的交谈或一起做点别的事",
+        "value": 2.5
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "你能否轻易地向伴侣表达你在亲密关系中的不喜欢或边界？"
+    },
+    "dimensionKey": "core_needs",
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "可以，能够清晰、直接地表达",
+        "value": 4
+      },
+      {
+        "id": "Q22_o2",
+        "label": "比较困难，需要鼓起勇气或委婉表达",
+        "value": 2
+      },
+      {
+        "id": "Q22_o3",
+        "label": "非常困难，常常选择忍耐",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q23",
+    "type": "single_choice",
+    "content": {
+      "text": "你认为“性”在你们的关系中主要扮演什么角色？"
+    },
+    "dimensionKey": "relationship_values",
+    "options": [
+      {
+        "id": "Q23_o1",
+        "label": "是爱情的核心表达和重要支柱之一",
+        "value": 4
+      },
+      {
+        "id": "Q23_o2",
+        "label": "是情感连接的组成部分之一，但不是全部",
+        "value": 2.5
+      },
+      {
+        "id": "Q23_o3",
+        "label": "主要是生理需求或生育目的",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q24",
+    "type": "single_choice",
+    "content": {
+      "text": "你享受在亲密关系中制造“惊喜”或“小意外”吗？"
+    },
+    "dimensionKey": "atmosphere_preference",
+    "options": [
+      {
+        "id": "Q24_o1",
+        "label": "非常享受，并经常这样做",
+        "value": 4
+      },
+      {
+        "id": "Q24_o2",
+        "label": "偶尔享受，需要灵感",
+        "value": 2.5
+      },
+      {
+        "id": "Q24_o3",
+        "label": "不太擅长或不喜欢，偏好可预测性",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "Q25",
+    "type": "single_choice",
+    "content": {
+      "text": "总体而言，你对自己在亲密关系中的偏好与需求的了解程度是？"
+    },
+    "dimensionKey": "sexual_attitude",
+    "options": [
+      {
+        "id": "Q25_o1",
+        "label": "非常清晰，能够明确描述",
+        "value": 4
+      },
+      {
+        "id": "Q25_o2",
+        "label": "比较模糊，正在探索中",
+        "value": 2.5
+      },
+      {
+        "id": "Q25_o3",
+        "label": "不太清楚，顺其自然",
+        "value": 1
+      }
+    ]
+  }
+]
