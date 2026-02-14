@@ -31,7 +31,10 @@ app.use(express.json());
 const PROJECTS_DIR = path.join(__dirname, 'data', 'projects');
 const CARDS_FILE = path.join(__dirname, 'data', 'cards.json');
 const SHARES_FILE = path.join(__dirname, 'data', 'shares.json');
+const VIEWS_FILE = path.join(__dirname, 'data', 'views.json');
+const COMPLETIONS_FILE = path.join(__dirname, 'data', 'completions.json');
 const SETTINGS_FILE = path.join(__dirname, 'data', 'settings.json');
+const DAILY_STATS_FILE = path.join(__dirname, 'data', 'daily_stats.json');
 
 // 助手函数：读取/写入系统设置
 const getSettings = () => {
@@ -57,18 +60,46 @@ const saveSettings = (settings) => {
   fs.writeFileSync(SETTINGS_FILE, JSON.stringify(settings, null, 2));
 };
 
-// 助手函数：读取/写入分享数据
-const getShares = () => {
-  if (!fs.existsSync(SHARES_FILE)) return {};
+// 助手函数：读取/写入通用统计数据
+const getStatsData = (filePath) => {
+  if (!fs.existsSync(filePath)) return {};
   try {
-    return JSON.parse(fs.readFileSync(SHARES_FILE, 'utf8'));
+    const content = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(content || '{}');
   } catch (e) {
+    console.error(`Error reading ${filePath}:`, e);
     return {};
   }
 };
 
-const saveShares = (shares) => {
-  fs.writeFileSync(SHARES_FILE, JSON.stringify(shares, null, 2));
+const saveStatsData = (filePath, data) => {
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+};
+
+// 助手函数：读取/写入分享数据
+const getShares = () => getStatsData(SHARES_FILE);
+const saveShares = (shares) => saveStatsData(SHARES_FILE, shares);
+
+// 助手函数：读取/写入访问数据
+const getViews = () => getStatsData(VIEWS_FILE);
+const saveViews = (views) => saveStatsData(VIEWS_FILE, views);
+
+// 助手函数：读取/写入完成数据
+const getCompletions = () => getStatsData(COMPLETIONS_FILE);
+const saveCompletions = (completions) => saveStatsData(COMPLETIONS_FILE, completions);
+
+// 助手函数：读取/写入每日统计数据
+const getDailyStats = () => getStatsData(DAILY_STATS_FILE);
+const saveDailyStats = (stats) => saveStatsData(DAILY_STATS_FILE, stats);
+
+const recordDailyStat = (type) => {
+  const dateStr = new Date().toISOString().split('T')[0];
+  const stats = getDailyStats();
+  if (!stats[dateStr]) {
+    stats[dateStr] = { views: 0, completions: 0 };
+  }
+  stats[dateStr][type] = (stats[dateStr][type] || 0) + 1;
+  saveDailyStats(stats);
 };
 
 // 确保数据目录存在
@@ -84,10 +115,12 @@ if (!fs.existsSync(PROJECTS_DIR)) {
   fs.mkdirSync(PROJECTS_DIR, { recursive: true });
 }
 
-// 确保分享数据文件存在
-if (!fs.existsSync(SHARES_FILE)) {
-  fs.writeFileSync(SHARES_FILE, '{}');
-}
+// 确保统计数据文件存在
+[SHARES_FILE, VIEWS_FILE, COMPLETIONS_FILE, DAILY_STATS_FILE].forEach(file => {
+  if (!fs.existsSync(file)) {
+    fs.writeFileSync(file, '{}');
+  }
+});
 
 // 确保设置文件存在
 if (!fs.existsSync(SETTINGS_FILE)) {
@@ -187,6 +220,9 @@ app.get('/api/stats/overview', (req, res) => {
     }
 
     const allShares = getShares();
+    const allViews = getViews();
+    const allCompletions = getCompletions();
+    const dailyStats = getDailyStats();
 
     // 计算统计信息
     const stats = {
@@ -194,6 +230,8 @@ app.get('/api/stats/overview', (req, res) => {
       totalCards: cards.length,
       usedCards: cards.filter(c => c.status === 'used').length,
       unusedCards: cards.filter(c => c.status === 'unused').length,
+      totalViews: Object.values(allViews).reduce((a, b) => a + b, 0),
+      totalCompletions: Object.values(allCompletions).reduce((a, b) => a + b, 0),
       
       // 按项目统计卡密使用情况
       projectStats: projects.map(projectId => {
@@ -205,21 +243,25 @@ app.get('/api/stats/overview', (req, res) => {
           total: projectCards.length,
           used: projectCards.filter(c => c.status === 'used').length,
           unused: projectCards.filter(c => c.status === 'unused').length,
-          shares: allShares[projectId] || 0
+          shares: allShares[projectId] || 0,
+          views: allViews[projectId] || 0,
+          completions: allCompletions[projectId] || 0
         };
       }),
 
-      // 最近 7 天的趋势 (模拟数据或从日志中提取)
-      // 这里暂时根据卡密生成时间做简单统计
+      // 最近 7 天的趋势
       trends: Array.from({ length: 7 }).map((_, i) => {
         const date = new Date();
         date.setDate(date.getDate() - (6 - i));
         const dateStr = date.toISOString().split('T')[0];
+        const dayStat = dailyStats[dateStr] || { views: 0, completions: 0 };
         
         return {
           date: dateStr,
           newCards: cards.filter(c => c.createdAt && c.createdAt.startsWith(dateStr)).length,
-          usedCards: cards.filter(c => c.usedAt && c.usedAt.startsWith(dateStr)).length
+          usedCards: cards.filter(c => c.usedAt && c.usedAt.startsWith(dateStr)).length,
+          views: dayStat.views || 0,
+          completions: dayStat.completions || 0
         };
       })
     };
@@ -394,6 +436,14 @@ app.get('/api/projects/:projectId/config', (req, res) => {
       return res.status(403).json({ error: 'Project is offline', status: 'offline' });
     }
 
+    // 记录访问次数 (非预览模式)
+    if (req.query.preview !== 'true') {
+      const views = getViews();
+      views[projectId] = (views[projectId] || 0) + 1;
+      saveViews(views);
+      recordDailyStat('views');
+    }
+
     res.json({ config, questions });
   } catch (e) {
     res.status(500).json({ error: 'Failed to parse project data' });
@@ -500,6 +550,21 @@ app.post('/api/projects/:projectId/share', (req, res) => {
     res.json({ success: true, shares: shares[projectId] });
   } catch (e) {
     res.status(500).json({ error: 'Failed to update share count' });
+  }
+});
+
+// 增加项目完成统计
+app.post('/api/projects/:projectId/complete', (req, res) => {
+  const { projectId } = req.params;
+  
+  try {
+    const completions = getCompletions();
+    completions[projectId] = (completions[projectId] || 0) + 1;
+    saveCompletions(completions);
+    recordDailyStat('completions');
+    res.json({ success: true, completions: completions[projectId] });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to update completion count' });
   }
 });
 

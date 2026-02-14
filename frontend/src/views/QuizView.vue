@@ -74,9 +74,17 @@ const handleNext = () => {
   }
 };
 
-const handleComplete = () => {
+const handleComplete = async () => {
   store.calculateResult();
   isFinished.value = true;
+  
+  // 记录完成次数
+  try {
+    const projectId = route.params.id as string;
+    await axios.post(`http://localhost:3000/api/projects/${projectId}/complete`);
+  } catch (err) {
+    console.error('Failed to record completion:', err);
+  }
   
   // 如果需要卡密验证且尚未验证，则弹出弹窗
   if (!isCodeVerified.value) {

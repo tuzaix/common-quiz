@@ -533,57 +533,95 @@ onMounted(fetchProjects);
 
         <div v-else class="space-y-8">
           <!-- 核心指标 -->
-          <div class="grid grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
-              <div class="text-sm text-gray-400 mb-1">总项目数</div>
-              <div class="text-3xl font-bold text-gray-800">{{ statsData.totalProjects }}</div>
+          <div class="grid grid-cols-6 gap-4">
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-blue-500">
+              <div class="text-xs text-gray-400 mb-1">总项目数</div>
+              <div class="text-2xl font-bold text-gray-800">{{ statsData.totalProjects }}</div>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-indigo-500">
-              <div class="text-sm text-gray-400 mb-1">总卡密数</div>
-              <div class="text-3xl font-bold text-gray-800">{{ statsData.totalCards }}</div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-indigo-500">
+              <div class="text-xs text-gray-400 mb-1">总卡密数</div>
+              <div class="text-2xl font-bold text-gray-800">{{ statsData.totalCards }}</div>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
-              <div class="text-sm text-gray-400 mb-1">已使用卡密</div>
-              <div class="text-3xl font-bold text-gray-800">{{ statsData.usedCards }}</div>
-              <div class="text-xs text-green-500 mt-1">使用率: {{ statsData.totalCards ? Math.round(statsData.usedCards / statsData.totalCards * 100) : 0 }}%</div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
+              <div class="text-xs text-gray-400 mb-1">已使用卡密</div>
+              <div class="text-2xl font-bold text-gray-800">{{ statsData.usedCards }}</div>
+              <div class="text-[10px] text-green-500 mt-1">使用率: {{ statsData.totalCards ? Math.round(statsData.usedCards / statsData.totalCards * 100) : 0 }}%</div>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-orange-500">
-              <div class="text-sm text-gray-400 mb-1">待使用卡密</div>
-              <div class="text-3xl font-bold text-gray-800">{{ statsData.unusedCards }}</div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-orange-500">
+              <div class="text-xs text-gray-400 mb-1">待使用卡密</div>
+              <div class="text-2xl font-bold text-gray-800">{{ statsData.unusedCards }}</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-purple-500">
+              <div class="text-xs text-gray-400 mb-1">累计访问次数</div>
+              <div class="text-2xl font-bold text-gray-800">{{ statsData.totalViews || 0 }}</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-pink-500">
+              <div class="text-xs text-gray-400 mb-1">累计完成答题</div>
+              <div class="text-2xl font-bold text-gray-800">{{ statsData.totalCompletions || 0 }}</div>
+              <div class="text-[10px] text-pink-500 mt-1">完成率: {{ statsData.totalViews ? Math.round(statsData.totalCompletions / statsData.totalViews * 100) : 0 }}%</div>
             </div>
           </div>
 
           <!-- 最近 7 天趋势 -->
           <div class="bg-white p-6 rounded-xl shadow-sm">
-            <h3 class="font-bold text-gray-800 mb-6 flex items-center gap-2">
-              <span class="w-1 h-4 bg-blue-600 rounded"></span>
-              最近 7 天活跃趋势
+            <h3 class="font-bold text-gray-800 mb-6 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-1 h-4 bg-blue-600 rounded"></span>
+                最近 7 天活跃趋势
+              </div>
+              <div class="flex gap-4 text-xs font-normal">
+                <div class="flex items-center gap-1">
+                  <span class="w-2 h-2 bg-purple-400 rounded-full"></span> 访问次数
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="w-2 h-2 bg-pink-400 rounded-full"></span> 完成答题
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="w-2 h-2 bg-blue-200 rounded-full"></span> 新生成卡密
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="w-2 h-2 bg-green-400 rounded-full"></span> 已验证卡密
+                </div>
+              </div>
             </h3>
             <div class="flex items-end justify-between h-48 gap-2">
-              <div v-for="day in statsData.trends" :key="day.date" class="flex-1 flex flex-col items-center group">
-                <div class="w-full flex justify-center gap-1 mb-2">
+              <div v-for="day in statsData.trends" :key="day.date" class="flex-1 flex flex-col items-center group relative">
+                <div class="w-full flex justify-center items-end gap-1 mb-2 h-full">
+                  <!-- 访问次数条 (紫色) -->
+                  <div 
+                    class="w-2 bg-purple-400 rounded-t-sm transition-all group-hover:bg-purple-500" 
+                    :style="{ height: `${Math.min(day.views * 2, 100)}%` }"
+                    :title="`访问次数: ${day.views}`"
+                  ></div>
+                  <!-- 完成次数条 (粉色) -->
+                  <div 
+                    class="w-2 bg-pink-400 rounded-t-sm transition-all group-hover:bg-pink-500" 
+                    :style="{ height: `${Math.min(day.completions * 2, 100)}%` }"
+                    :title="`完成次数: ${day.completions}`"
+                  ></div>
                   <!-- 生成条 -->
                   <div 
-                    class="w-3 bg-blue-200 rounded-t-sm transition-all group-hover:bg-blue-300" 
-                    :style="{ height: `${Math.max(day.newCards * 5, 2)}px` }"
-                    :title="`新生成: ${day.newCards}`"
+                    class="w-2 bg-blue-200 rounded-t-sm transition-all group-hover:bg-blue-300" 
+                    :style="{ height: `${Math.min(day.newCards * 5, 100)}%` }"
+                    :title="`新生成卡密: ${day.newCards}`"
                   ></div>
                   <!-- 使用条 -->
                   <div 
-                    class="w-3 bg-green-400 rounded-t-sm transition-all group-hover:bg-green-500" 
-                    :style="{ height: `${Math.max(day.usedCards * 5, 2)}px` }"
-                    :title="`已使用: ${day.usedCards}`"
+                    class="w-2 bg-green-400 rounded-t-sm transition-all group-hover:bg-green-500" 
+                    :style="{ height: `${Math.min(day.usedCards * 5, 100)}%` }"
+                    :title="`已验证卡密: ${day.usedCards}`"
                   ></div>
                 </div>
-                <div class="text-[10px] text-gray-400 rotate-45 mt-2 origin-left">{{ day.date.split('-').slice(1).join('/') }}</div>
-              </div>
-            </div>
-            <div class="mt-8 flex justify-center gap-6 text-xs text-gray-500">
-              <div class="flex items-center gap-1">
-                <span class="w-3 h-3 bg-blue-200 rounded-sm"></span> 新生成卡密
-              </div>
-              <div class="flex items-center gap-1">
-                <span class="w-3 h-3 bg-green-400 rounded-sm"></span> 已验证卡密
+                <div class="text-[10px] text-gray-400 rotate-45 mt-2 origin-left whitespace-nowrap">{{ day.date.split('-').slice(1).join('/') }}</div>
+                
+                <!-- 悬浮详情 -->
+                <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] p-2 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none whitespace-nowrap shadow-lg">
+                  <div class="font-bold mb-1 border-b border-gray-600 pb-1">{{ day.date }}</div>
+                  <div class="flex justify-between gap-4"><span>访问:</span> <span class="text-purple-300">{{ day.views }}</span></div>
+                  <div class="flex justify-between gap-4"><span>完成:</span> <span class="text-pink-300">{{ day.completions }}</span></div>
+                  <div class="flex justify-between gap-4"><span>生成:</span> <span class="text-blue-300">{{ day.newCards }}</span></div>
+                  <div class="flex justify-between gap-4"><span>验证:</span> <span class="text-green-300">{{ day.usedCards }}</span></div>
+                </div>
               </div>
             </div>
           </div>
@@ -599,7 +637,8 @@ onMounted(fetchProjects);
                   <th class="px-6 py-3 font-semibold text-left">项目名称</th>
                   <th class="px-6 py-3 font-semibold text-center">总卡密</th>
                   <th class="px-6 py-3 font-semibold text-center">已使用</th>
-                  <th class="px-6 py-3 font-semibold text-center">未使用</th>
+                  <th class="px-6 py-3 font-semibold text-center">访问次数</th>
+                  <th class="px-6 py-3 font-semibold text-center">完成答题</th>
                   <th class="px-6 py-3 font-semibold text-center">分享次数</th>
                   <th class="px-6 py-3 font-semibold">使用进度</th>
                 </tr>
@@ -609,7 +648,8 @@ onMounted(fetchProjects);
                   <td class="px-6 py-4 font-medium text-gray-800">{{ p.title }}</td>
                   <td class="px-6 py-4 text-center text-gray-600">{{ p.total }}</td>
                   <td class="px-6 py-4 text-center text-green-600 font-bold">{{ p.used }}</td>
-                  <td class="px-6 py-4 text-center text-gray-400">{{ p.unused }}</td>
+                  <td class="px-6 py-4 text-center text-purple-600 font-bold">{{ p.views || 0 }}</td>
+                  <td class="px-6 py-4 text-center text-pink-600 font-bold">{{ p.completions || 0 }}</td>
                   <td class="px-6 py-4 text-center text-blue-600 font-bold">{{ p.shares || 0 }}</td>
                   <td class="px-6 py-4">
                     <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
