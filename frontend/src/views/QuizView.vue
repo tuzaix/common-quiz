@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useQuizStore } from '../store/quiz';
 import QuestionContainer from '../components/engine/QuestionContainer.vue';
 import ResultFactory from '../components/engine/ResultFactory.vue';
+import CardVerifyModal from '../components/engine/CardVerifyModal.vue';
 
 import axios from 'axios';
 
@@ -11,6 +12,15 @@ const route = useRoute();
 const router = useRouter();
 const store = useQuizStore();
 const isFinished = ref(false);
+const showVerifyModal = ref(false);
+
+const isCodeVerified = computed(() => {
+  if (!store.projectConfig?.settings?.accessMode) return true;
+  if (store.projectConfig.settings.accessMode !== 'code_required') return true;
+  
+  const projectId = route.params.id as string;
+  return !!localStorage.getItem(`card_${projectId}`);
+});
 
 // 从后端获取配置
 const fetchConfig = async (id: string) => {
@@ -19,7 +29,8 @@ const fetchConfig = async (id: string) => {
     const response = await axios.get(`http://localhost:3000/api/projects/${id}/config`);
     const { config, questions } = response.data;
     
-    // 检查访问模式
+    // 检查访问模式 - 暂时移除进入时的强制拦截，改为结果页拦截（如果用户体验需要）
+    /*
     if (config.settings?.accessMode === 'code_required') {
       const savedCard = localStorage.getItem(`card_${id}`);
       if (!savedCard) {
@@ -27,6 +38,7 @@ const fetchConfig = async (id: string) => {
         return;
       }
     }
+    */
     
     // 打乱题目顺序
     const shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
@@ -64,6 +76,19 @@ const handleNext = () => {
 const handleComplete = () => {
   store.calculateResult();
   isFinished.value = true;
+  
+  // 如果需要卡密验证且尚未验证，则弹出弹窗
+  if (!isCodeVerified.value) {
+    showVerifyModal.value = true;
+  }
+};
+
+const handleVerified = () => {
+  showVerifyModal.value = false;
+};
+
+const handleCancelVerify = () => {
+  router.push('/');
 };
 
 const restart = () => {
@@ -122,10 +147,19 @@ const restart = () => {
 
     <div v-else class="animate-fade-in max-w-4xl mx-auto">
       <ResultFactory
+        v-if="isCodeVerified"
         :result="store.calculationResult"
         :rule="store.matchedRule"
         :config="store.projectConfig.resultConfig"
         @restart="restart"
+      />
+      
+      <!-- 卡密验证弹窗 -->
+      <CardVerifyModal
+        v-if="showVerifyModal"
+        :projectId="(route.params.id as string)"
+        @verified="handleVerified"
+        @cancel="handleCancelVerify"
       />
     </div>
   </div>
