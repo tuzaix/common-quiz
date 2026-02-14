@@ -35,3 +35,9 @@ frontend/dist/
 # Backend specific
 backend/node_modules/
 backend/dist/
+backend/data/uploads/
+
+backend/data/shares.json
+backend/data/cards.json
+# 项目设置，避免覆盖，线上通过settings.json.example复制过去
+backend/data/settings.json
