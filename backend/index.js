@@ -64,6 +64,21 @@ app.post('/api/cards/generate', (req, res) => {
   }
 });
 
+// 批量删除卡密
+app.post('/api/cards/batch-delete', (req, res) => {
+  const { codes } = req.body;
+  if (!Array.isArray(codes)) return res.status(400).json({ error: 'Codes array is required' });
+
+  try {
+    let cards = JSON.parse(fs.readFileSync(CARDS_FILE, 'utf8'));
+    cards = cards.filter(c => !codes.includes(c.code));
+    fs.writeFileSync(CARDS_FILE, JSON.stringify(cards, null, 2));
+    res.json({ success: true });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to delete cards' });
+  }
+});
+
 // 获取所有项目列表
 app.get('/api/projects', (req, res) => {
   try {
