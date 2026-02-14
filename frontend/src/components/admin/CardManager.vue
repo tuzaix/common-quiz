@@ -41,6 +41,15 @@ const sortBy = ref('createdAt');
 const sortOrder = ref<'asc' | 'desc'>('desc');
 const selectedCodes = ref<string[]>([]);
 
+// 分页逻辑
+const currentPage = ref(1);
+const pageSize = ref(10);
+
+// 当筛选条件改变时，重置页码到第一页
+const handleFilterChange = () => {
+  currentPage.value = 1;
+};
+
 const filteredCards = computed(() => {
   const result = cards.value.filter(card => {
     const projectMatch = !filterProjectId.value || card.projectId === filterProjectId.value;
@@ -58,6 +67,16 @@ const filteredCards = computed(() => {
   });
 });
 
+const paginatedCards = computed(() => {
+  const start = (currentPage.value - 1) * pageSize.value;
+  const end = start + pageSize.value;
+  return filteredCards.value.slice(start, end);
+});
+
+const totalPages = computed(() => {
+  return Math.ceil(filteredCards.value.length / pageSize.value);
+});
+
 const toggleSort = (field: string) => {
   if (sortBy.value === field) {
     sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc';
@@ -68,14 +87,24 @@ const toggleSort = (field: string) => {
 };
 
 const isAllSelected = computed(() => {
-  return filteredCards.value.length > 0 && selectedCodes.value.length === filteredCards.value.length;
+  return paginatedCards.value.length > 0 && paginatedCards.value.every(c => selectedCodes.value.includes(c.code));
 });
 
 const toggleSelectAll = () => {
   if (isAllSelected.value) {
-    selectedCodes.value = [];
+    // 仅取消当前页的选择
+    const currentCodes = paginatedCards.value.map(c => c.code);
+    selectedCodes.value = selectedCodes.value.filter(code => !currentCodes.includes(code));
   } else {
-    selectedCodes.value = filteredCards.value.map(c => c.code);
+    // 将当前页未选中的加入
+    const currentCodes = paginatedCards.value.map(c => c.code);
+    const newSelected = [...selectedCodes.value];
+    currentCodes.forEach(code => {
+      if (!newSelected.includes(code)) {
+        newSelected.push(code);
+      }
+    });
+    selectedCodes.value = newSelected;
   }
 };
 
@@ -154,6 +183,7 @@ onMounted(() => {
           <span class="text-sm text-gray-500">项目:</span>
           <select 
             v-model="filterProjectId"
+            @change="handleFilterChange"
             class="px-3 py-1.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none bg-white min-w-[150px]"
           >
             <option value="">全部项目</option>
@@ -164,6 +194,7 @@ onMounted(() => {
           <span class="text-sm text-gray-500">状态:</span>
           <select 
             v-model="filterStatus"
+            @change="handleFilterChange"
             class="px-3 py-1.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none bg-white"
           >
             <option value="">全部状态</option>
@@ -312,7 +343,7 @@ onMounted(() => {
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-100">
-          <tr v-for="card in filteredCards" :key="card.code" class="hover:bg-gray-50">
+          <tr v-for="card in paginatedCards" :key="card.code" class="hover:bg-gray-50">
             <td class="px-4 py-4">
               <input 
                 type="checkbox" 
@@ -367,6 +398,58 @@ onMounted(() => {
           </tr>
         </tbody>
       </table>
+
+      <!-- 分页控件 -->
+      <div v-if="filteredCards.length > 0" class="px-6 py-4 bg-gray-50 border-t flex items-center justify-between">
+        <div class="flex items-center gap-4 text-sm text-gray-500">
+          <span>共 {{ filteredCards.length }} 个卡密</span>
+          <div class="flex items-center gap-2">
+            <span>每页显示:</span>
+            <select 
+              v-model.number="pageSize"
+              @change="currentPage = 1"
+              class="px-2 py-1 border rounded bg-white outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option :value="10">10</option>
+              <option :value="20">20</option>
+              <option :value="50">50</option>
+              <option :value="100">100</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <button 
+            @click="currentPage--"
+            :disabled="currentPage === 1"
+            class="px-3 py-1.5 border rounded-lg bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm font-medium"
+          >
+            上一页
+          </button>
+          
+          <div class="flex items-center gap-1">
+            <template v-for="p in totalPages" :key="p">
+              <button 
+                v-if="p === 1 || p === totalPages || (p >= currentPage - 2 && p <= currentPage + 2)"
+                @click="currentPage = p"
+                :class="currentPage === p ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'"
+                class="w-8 h-8 border rounded-lg text-sm font-medium transition-colors"
+              >
+                {{ p }}
+              </button>
+              <span v-else-if="p === currentPage - 3 || p === currentPage + 3" class="text-gray-400">...</span>
+            </template>
+          </div>
+
+          <button 
+            @click="currentPage++"
+            :disabled="currentPage === totalPages"
+            class="px-3 py-1.5 border rounded-lg bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm font-medium"
+          >
+            下一页
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
