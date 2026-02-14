@@ -5,17 +5,31 @@
  */
 
 import { computed, ref } from 'vue';
+import axios from 'axios';
 import ShareCard from './ShareCard.vue';
 
 const props = defineProps<{
   result: any;
   rule: any;
   config: any;
+  projectId?: string;
 }>();
 
 const emit = defineEmits(['restart']);
 
 const showShareCard = ref(false);
+
+const handleShowShare = async () => {
+  showShareCard.value = true;
+  // 记录分享次数
+  if (props.projectId) {
+    try {
+      await axios.post(`http://localhost:3000/api/projects/${props.projectId}/share`);
+    } catch (error) {
+      console.error('Failed to track share:', error);
+    }
+  }
+};
 
 const shareData = computed(() => ({
   title: props.rule?.title || '测试结果',
@@ -113,7 +127,7 @@ const showRadar = computed(() => props.config.shareCard?.elements?.showRadar && 
       <!-- 交互按钮 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
         <button
-          @click="showShareCard = true"
+          @click="handleShowShare"
           class="group relative flex items-center justify-center gap-2 py-4 bg-gray-900 text-white rounded-2xl font-bold hover:bg-black transition-all shadow-xl hover:-translate-y-1 active:scale-95 overflow-hidden"
         >
           <div class="absolute inset-0 bg-gradient-to-r from-rose-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>

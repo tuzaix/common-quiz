@@ -64,6 +64,41 @@ const importData = ref({
 });
 
 const currentView = ref('projects'); // projects, cards, stats
+const statsData = ref<any>(null);
+
+// 统计页分页相关状态
+const statsCurrentPage = ref(1);
+const statsPageSize = ref(10);
+
+const paginatedProjectStats = computed(() => {
+  if (!statsData.value?.projectStats) return [];
+  const start = (statsCurrentPage.value - 1) * statsPageSize.value;
+  const end = start + statsPageSize.value;
+  return statsData.value.projectStats.slice(start, end);
+});
+
+const statsTotalPages = computed(() => {
+  if (!statsData.value?.projectStats) return 0;
+  return Math.ceil(statsData.value.projectStats.length / statsPageSize.value);
+});
+
+const handleStatsPageChange = (page: number) => {
+  if (page < 1 || page > statsTotalPages.value) return;
+  statsCurrentPage.value = page;
+};
+
+const handleStatsPageSizeChange = () => {
+  statsCurrentPage.value = 1;
+};
+
+const fetchStats = async () => {
+  try {
+    const response = await axios.get('http://localhost:3000/api/stats/overview');
+    statsData.value = response.data;
+  } catch (error) {
+    console.error('Failed to fetch stats:', error);
+  }
+};
 
 const fetchProjects = async () => {
   isLoading.value = true;
@@ -164,7 +199,7 @@ onMounted(fetchProjects);
           class="w-full text-left px-4 py-2 rounded-lg font-medium transition-colors"
         >卡密管理</button>
         <button 
-          @click="currentView = 'stats'"
+          @click="currentView = 'stats'; fetchStats()"
           :class="currentView === 'stats' ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50'"
           class="w-full text-left px-4 py-2 rounded-lg font-medium transition-colors"
         >数据统计</button>
@@ -336,11 +371,154 @@ onMounted(fetchProjects);
       </div>
 
       <div v-else-if="currentView === 'stats'">
-        <header class="mb-8">
-          <h2 class="text-2xl font-bold text-gray-800">数据统计</h2>
+        <header class="flex justify-between items-center mb-8">
+          <h2 class="text-2xl font-bold text-gray-800">数据统计概览</h2>
+          <button @click="fetchStats" class="text-sm text-blue-600 hover:underline">刷新数据</button>
         </header>
-        <div class="bg-white p-12 rounded-xl shadow-sm text-center text-gray-400">
-          统计功能开发中...
+
+        <div v-if="!statsData" class="flex justify-center py-20">
+          <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600"></div>
+        </div>
+
+        <div v-else class="space-y-8">
+          <!-- 核心指标 -->
+          <div class="grid grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+              <div class="text-sm text-gray-400 mb-1">总项目数</div>
+              <div class="text-3xl font-bold text-gray-800">{{ statsData.totalProjects }}</div>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-indigo-500">
+              <div class="text-sm text-gray-400 mb-1">总卡密数</div>
+              <div class="text-3xl font-bold text-gray-800">{{ statsData.totalCards }}</div>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+              <div class="text-sm text-gray-400 mb-1">已使用卡密</div>
+              <div class="text-3xl font-bold text-gray-800">{{ statsData.usedCards }}</div>
+              <div class="text-xs text-green-500 mt-1">使用率: {{ statsData.totalCards ? Math.round(statsData.usedCards / statsData.totalCards * 100) : 0 }}%</div>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-orange-500">
+              <div class="text-sm text-gray-400 mb-1">待使用卡密</div>
+              <div class="text-3xl font-bold text-gray-800">{{ statsData.unusedCards }}</div>
+            </div>
+          </div>
+
+          <!-- 最近 7 天趋势 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h3 class="font-bold text-gray-800 mb-6 flex items-center gap-2">
+              <span class="w-1 h-4 bg-blue-600 rounded"></span>
+              最近 7 天活跃趋势
+            </h3>
+            <div class="flex items-end justify-between h-48 gap-2">
+              <div v-for="day in statsData.trends" :key="day.date" class="flex-1 flex flex-col items-center group">
+                <div class="w-full flex justify-center gap-1 mb-2">
+                  <!-- 生成条 -->
+                  <div 
+                    class="w-3 bg-blue-200 rounded-t-sm transition-all group-hover:bg-blue-300" 
+                    :style="{ height: `${Math.max(day.newCards * 5, 2)}px` }"
+                    :title="`新生成: ${day.newCards}`"
+                  ></div>
+                  <!-- 使用条 -->
+                  <div 
+                    class="w-3 bg-green-400 rounded-t-sm transition-all group-hover:bg-green-500" 
+                    :style="{ height: `${Math.max(day.usedCards * 5, 2)}px` }"
+                    :title="`已使用: ${day.usedCards}`"
+                  ></div>
+                </div>
+                <div class="text-[10px] text-gray-400 rotate-45 mt-2 origin-left">{{ day.date.split('-').slice(1).join('/') }}</div>
+              </div>
+            </div>
+            <div class="mt-8 flex justify-center gap-6 text-xs text-gray-500">
+              <div class="flex items-center gap-1">
+                <span class="w-3 h-3 bg-blue-200 rounded-sm"></span> 新生成卡密
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="w-3 h-3 bg-green-400 rounded-sm"></span> 已验证卡密
+              </div>
+            </div>
+          </div>
+
+          <!-- 项目明细统计 -->
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="p-4 border-b bg-gray-50">
+              <h3 class="font-bold text-gray-800">各项目数据明细</h3>
+            </div>
+            <table class="w-full text-left border-collapse">
+              <thead class="bg-gray-50 border-b text-xs text-gray-500 uppercase">
+                <tr>
+                  <th class="px-6 py-3 font-semibold text-left">项目名称</th>
+                  <th class="px-6 py-3 font-semibold text-center">总卡密</th>
+                  <th class="px-6 py-3 font-semibold text-center">已使用</th>
+                  <th class="px-6 py-3 font-semibold text-center">未使用</th>
+                  <th class="px-6 py-3 font-semibold text-center">分享次数</th>
+                  <th class="px-6 py-3 font-semibold">使用进度</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y text-sm">
+                <tr v-for="p in paginatedProjectStats" :key="p.id" class="hover:bg-gray-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-gray-800">{{ p.title }}</td>
+                  <td class="px-6 py-4 text-center text-gray-600">{{ p.total }}</td>
+                  <td class="px-6 py-4 text-center text-green-600 font-bold">{{ p.used }}</td>
+                  <td class="px-6 py-4 text-center text-gray-400">{{ p.unused }}</td>
+                  <td class="px-6 py-4 text-center text-blue-600 font-bold">{{ p.shares || 0 }}</td>
+                  <td class="px-6 py-4">
+                    <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                      <div 
+                        class="bg-blue-500 h-full transition-all duration-500"
+                        :style="{ width: `${p.total ? (p.used / p.total * 100) : 0}%` }"
+                      ></div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- 分页控制 -->
+            <div class="px-6 py-4 bg-gray-50 border-t flex items-center justify-between text-sm text-gray-600">
+              <div class="flex items-center space-x-4">
+                <span>共 {{ statsData.projectStats.length }} 个项目</span>
+                <div class="flex items-center space-x-2">
+                  <span>每页显示:</span>
+                  <select 
+                    v-model="statsPageSize" 
+                    @change="handleStatsPageSizeChange"
+                    class="border rounded px-2 py-1 outline-none focus:ring-1 focus:ring-blue-500 bg-white"
+                  >
+                    <option v-for="option in pageSizeOptions" :key="option" :value="option">{{ option }}</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="flex items-center space-x-2">
+                <button 
+                  @click="handleStatsPageChange(statsCurrentPage - 1)"
+                  :disabled="statsCurrentPage === 1"
+                  class="px-3 py-1 border rounded hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  上一页
+                </button>
+                <div class="flex items-center space-x-1">
+                  <template v-for="page in statsTotalPages" :key="page">
+                    <button 
+                      v-if="Math.abs(page - statsCurrentPage) <= 2 || page === 1 || page === statsTotalPages"
+                      @click="handleStatsPageChange(page)"
+                      :class="statsCurrentPage === page ? 'bg-blue-600 text-white border-blue-600' : 'hover:bg-white'"
+                      class="w-8 h-8 border rounded transition-colors"
+                    >
+                      {{ page }}
+                    </button>
+                    <span v-else-if="page === 2 || page === statsTotalPages - 1" class="px-1 text-gray-400">...</span>
+                  </template>
+                </div>
+                <button 
+                  @click="handleStatsPageChange(statsCurrentPage + 1)"
+                  :disabled="statsCurrentPage === statsTotalPages"
+                  class="px-3 py-1 border rounded hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  下一页
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

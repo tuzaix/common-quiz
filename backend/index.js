@@ -79,6 +79,61 @@ app.post('/api/cards/batch-delete', (req, res) => {
   }
 });
 
+// 获取统计数据
+app.get('/api/stats/overview', (req, res) => {
+  try {
+    const projects = fs.readdirSync(PROJECTS_DIR).filter(id => {
+      return fs.existsSync(path.join(PROJECTS_DIR, id, 'config.json'));
+    });
+    
+    let cards = [];
+    if (fs.existsSync(CARDS_FILE)) {
+      cards = JSON.parse(fs.readFileSync(CARDS_FILE, 'utf8'));
+    }
+
+    // 计算统计信息
+    const stats = {
+      totalProjects: projects.length,
+      totalCards: cards.length,
+      usedCards: cards.filter(c => c.status === 'used').length,
+      unusedCards: cards.filter(c => c.status === 'unused').length,
+      
+      // 按项目统计卡密使用情况
+      projectStats: projects.map(projectId => {
+        const projectCards = cards.filter(c => c.projectId === projectId);
+        const config = JSON.parse(fs.readFileSync(path.join(PROJECTS_DIR, projectId, 'config.json'), 'utf8'));
+        return {
+          id: projectId,
+          title: config.title || projectId,
+          total: projectCards.length,
+          used: projectCards.filter(c => c.status === 'used').length,
+          unused: projectCards.filter(c => c.status === 'unused').length,
+          shares: config.shares || 0
+        };
+      }),
+
+      // 最近 7 天的趋势 (模拟数据或从日志中提取)
+      // 这里暂时根据卡密生成时间做简单统计
+      trends: Array.from({ length: 7 }).map((_, i) => {
+        const date = new Date();
+        date.setDate(date.getDate() - (6 - i));
+        const dateStr = date.toISOString().split('T')[0];
+        
+        return {
+          date: dateStr,
+          newCards: cards.filter(c => c.createdAt && c.createdAt.startsWith(dateStr)).length,
+          usedCards: cards.filter(c => c.usedAt && c.usedAt.startsWith(dateStr)).length
+        };
+      })
+    };
+
+    res.json(stats);
+  } catch (e) {
+    console.error('Stats error:', e);
+    res.status(500).json({ error: 'Failed to fetch statistics' });
+  }
+});
+
 // 获取所有项目列表
 app.get('/api/projects', (req, res) => {
   try {
@@ -303,6 +358,24 @@ app.post('/api/projects/import', (req, res) => {
   } catch (e) {
     console.error('Import failed:', e);
     res.status(500).json({ error: 'Failed to import project: ' + e.message });
+  }
+});
+
+// 增加项目分享统计
+app.post('/api/projects/:projectId/share', (req, res) => {
+  const { projectId } = req.params;
+  const projectPath = path.join(PROJECTS_DIR, projectId);
+  const configPath = path.join(projectPath, 'config.json');
+
+  if (!fs.existsSync(configPath)) return res.status(404).json({ error: 'Project not found' });
+
+  try {
+    const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+    config.shares = (config.shares || 0) + 1;
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+    res.json({ success: true, shares: config.shares });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to update share count' });
   }
 });
 

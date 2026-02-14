@@ -156,6 +156,7 @@ const restart = () => {
         :result="store.calculationResult"
         :rule="store.matchedRule"
         :config="store.projectConfig.resultConfig"
+        :projectId="(route.params.id as string)"
         @restart="restart"
       />
       
