@@ -72,20 +72,40 @@ const restart = () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50 py-12 px-4">
-    <div v-if="store.isLoading" class="flex justify-center items-center h-64">
-      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  <div class="min-h-screen bg-[#fffafa] py-12 px-4 relative overflow-hidden">
+    <!-- 背景装饰元素 -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+      <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-rose-100/30 rounded-full blur-[100px]"></div>
+      <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-pink-100/30 rounded-full blur-[120px]"></div>
+      <div class="absolute top-[20%] right-[5%] w-[20%] h-[20%] bg-orange-50/20 rounded-full blur-[80px]"></div>
     </div>
 
-    <div v-else-if="store.error" class="max-w-md mx-auto p-8 bg-white shadow-lg rounded-xl text-center">
-      <div class="text-red-500 mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-        </svg>
+    <div v-if="store.isLoading" class="flex flex-col justify-center items-center h-96">
+      <div class="relative">
+        <div class="animate-spin rounded-full h-16 w-16 border-4 border-rose-100 border-t-rose-500"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center">
+          <div class="w-4 h-4 bg-rose-200 rounded-full animate-pulse"></div>
+        </div>
       </div>
-      <h2 class="text-xl font-bold text-gray-800 mb-2">出错了</h2>
-      <p class="text-gray-600 mb-6">{{ store.error }}</p>
-      <button @click="router.push('/')" class="px-6 py-2 bg-blue-600 text-white rounded-lg">返回首页</button>
+      <p class="mt-6 text-rose-400 font-medium tracking-widest animate-pulse">正在加载精彩内容...</p>
+    </div>
+
+    <div v-else-if="store.error" class="max-w-md mx-auto p-10 bg-white/80 backdrop-blur-md shadow-2xl rounded-3xl text-center border border-rose-100/50">
+      <div class="text-rose-400 mb-6">
+        <div class="w-20 h-20 bg-rose-50 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+        </div>
+      </div>
+      <h2 class="text-2xl font-black text-gray-800 mb-3">哎呀，出错了</h2>
+      <p class="text-gray-500 mb-8 leading-relaxed">{{ store.error }}</p>
+      <button 
+        @click="router.push('/')" 
+        class="w-full px-8 py-4 bg-gradient-to-r from-rose-400 to-pink-500 text-white rounded-2xl font-bold shadow-lg shadow-rose-200 hover:scale-[1.02] active:scale-95 transition-all"
+      >
+        返回首页
+      </button>
     </div>
 
     <div v-else-if="!isFinished" class="animate-fade-in">
@@ -100,7 +120,7 @@ const restart = () => {
       />
     </div>
 
-    <div v-else class="animate-fade-in">
+    <div v-else class="animate-fade-in max-w-4xl mx-auto">
       <ResultFactory
         :result="store.calculationResult"
         :rule="store.matchedRule"
