@@ -13,8 +13,12 @@ const router = useRouter();
 const store = useQuizStore();
 const isFinished = ref(false);
 const showVerifyModal = ref(false);
+const internalVerifiedTrigger = ref(0);
 
 const isCodeVerified = computed(() => {
+  // 依赖 trigger 以便在验证成功后强制重新计算
+  internalVerifiedTrigger.value;
+  
   if (!store.projectConfig?.settings?.accessMode) return true;
   if (store.projectConfig.settings.accessMode !== 'code_required') return true;
   
@@ -84,6 +88,7 @@ const handleComplete = () => {
 };
 
 const handleVerified = () => {
+  internalVerifiedTrigger.value++;
   showVerifyModal.value = false;
 };
 
