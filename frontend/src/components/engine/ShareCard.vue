@@ -23,26 +23,68 @@ const isGenerating = ref(true);
 
 const defaultLayout: { width: number, height: number, layers: Layer[] } = {
   width: 750,
-  height: 1000,
+  height: 850,
   layers: [
-    // 背景渐变感
-    { type: 'rect', x: 0, y: 0, width: 750, height: 1000, color: '#fff5f5' },
-    // 顶部装饰块
-    { type: 'rect', x: 0, y: 0, width: 750, height: 300, color: '#ffe4e6' },
-    // 主白卡片
-    { type: 'rect', x: 40, y: 150, width: 670, height: 800, color: '#ffffff', borderRadius: 40 },
-    // 标题
-    { type: 'text', content: '✨ 测评报告', x: 80, y: 230, fontSize: 32, color: '#fb7185' },
-    { type: 'text', content: '{title}', x: 80, y: 320, fontSize: 56, color: '#1f2937', fontWeight: 'bold' },
-    // 分隔线
-    { type: 'rect', x: 80, y: 380, width: 100, height: 6, color: '#fb7185', borderRadius: 3 },
-    // 得分/MBTI 展示
-    { type: 'text', content: '我的专属特质：', x: 80, y: 480, fontSize: 36, color: '#9ca3af' },
-    { type: 'text', content: '{mbti}', x: 80, y: 600, fontSize: 120, color: '#fb7185', fontWeight: 'bold' },
-    { type: 'text', content: '评分：{score}', x: 80, y: 720, fontSize: 48, color: '#4b5563' },
-    // 底部引导
-    { type: 'text', content: '扫码或搜索「测评中心」解锁你的灵魂类型', x: 80, y: 880, fontSize: 24, color: '#9ca3af' },
-    { type: 'text', content: '长按保存图片，分享给懂你的人', x: 80, y: 920, fontSize: 20, color: '#d1d5db' }
+    // 1. 全局背景渐变
+    { 
+      type: 'rect', x: 0, y: 0, width: 750, height: 850, 
+      gradient: { colors: ['#fff1f2', '#ffe4e6', '#fecdd3'], direction: 'vertical' } 
+    },
+    // 2. 装饰性背景圆 (左下角)
+    { type: 'circle', x: 0, y: 850, width: 400, color: '#fda4af', opacity: 0.3 },
+    
+    // 3. 主卡片容器 (白色背景)
+    { 
+      type: 'rect', x: 50, y: 40, width: 650, height: 770, color: '#ffffff', borderRadius: 40,
+      shadow: { color: 'rgba(251, 113, 133, 0.15)', blur: 30, offsetX: 0, offsetY: 15 }
+    },
+    // 4. 卡片底部阴影增强
+    { type: 'rect', x: 80, y: 790, width: 590, height: 20, color: '#fda4af', borderRadius: 10, opacity: 0.2 },
+
+    // 5. 标题区域
+    { type: 'text', content: 'PERSONALITY REPORT', x: 375, y: 100, fontSize: 24, color: '#fb7185', fontWeight: '900', textAlign: 'center' },
+    { type: 'text', content: '✨ 专属测评报告 ✨', x: 375, y: 150, fontSize: 36, color: '#4b5563', fontWeight: 'bold', textAlign: 'center' },
+    
+    // 6. 用户标题 (比如：你是哪种职场性格？)
+    { type: 'text', content: '{title}', x: 375, y: 220, fontSize: 52, color: '#1f2937', fontWeight: 'bold', textAlign: 'center' },
+    
+    // 7. 装饰线
+    { type: 'line', x: 225, y: 310, width: 300, height: 4, color: '#fecdd3' },
+    
+    // 8. 核心特质展示
+    { type: 'text', content: '我的核心特质', x: 375, y: 340, fontSize: 32, color: '#9ca3af', textAlign: 'center' },
+    
+    // 9. MBTI/核心结果 (超大字体)
+    { 
+      type: 'text', content: '{mbti}', x: 375, y: 410, fontSize: 130, color: '#f43f5e', fontWeight: 'bold', textAlign: 'center',
+      shadow: { color: 'rgba(244, 63, 94, 0.2)', blur: 20, offsetX: 0, offsetY: 10 }
+    },
+    
+    // 10. 综合评分 - 突出重点
+    { 
+      type: 'rect', x: 275, y: 410, width: 200, height: 40, color: '#fff1f2', borderRadius: 20 
+    },
+    { 
+      type: 'text', content: '综合评分', x: 375, y: 418, fontSize: 24, color: '#fb7185', fontWeight: 'bold', textAlign: 'center' 
+    },
+    { 
+      type: 'text', content: '{score}', x: 375, y: 480, fontSize: 110, color: '#fb7185', fontWeight: '900', textAlign: 'center',
+      shadow: { color: 'rgba(244, 63, 94, 0.15)', blur: 10, offsetX: 0, offsetY: 5 }
+    },
+    
+    // 11. 寄语/描述
+    { type: 'text', content: '每一份特质，都是独一无二的光 ✨', x: 375, y: 620, fontSize: 28, color: '#6b7280', textAlign: 'center' },
+    
+    // 12. 底部引导区
+    { type: 'line', x: 100, y: 680, width: 550, height: 2, color: '#f3f4f6' },
+    
+    // 二维码占位/品牌区域
+    { type: 'rect', x: 100, y: 700, width: 90, height: 90, color: '#f9fafb', borderRadius: 15 },
+    { type: 'text', content: '长按扫码解锁你的灵魂', x: 210, y: 720, fontSize: 26, color: '#4b5563', fontWeight: 'bold' },
+    { type: 'text', content: '探索更多精准有趣的心理测评', x: 210, y: 760, fontSize: 22, color: '#9ca3af' },
+    
+    // 品牌标识
+    { type: 'text', content: '@测评中心', x: 650, y: 760, fontSize: 22, color: '#fb7185', fontWeight: 'bold', textAlign: 'right' }
   ]
 };
 
