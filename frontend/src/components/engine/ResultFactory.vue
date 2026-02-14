@@ -132,26 +132,6 @@ const showRadar = computed(() => props.config.shareCard?.elements?.showRadar && 
           再测一次
         </button>
       </div>
-
-      <!-- 分享提示 -->
-      <div class="mt-10 flex items-center justify-center gap-6 opacity-60 grayscale hover:grayscale-0 transition-all">
-        <div class="flex flex-col items-center gap-1">
-          <div class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white text-xs font-bold">小</div>
-          <span class="text-[10px] text-gray-500">小红书</span>
-        </div>
-        <div class="flex flex-col items-center gap-1">
-          <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white p-2">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.225 3.1c-4.47 0-8.1 3.32-8.1 7.42 0 2.22 1.05 4.22 2.7 5.62l-.68 2.52 2.38-1.25c.53.15 1.1.23 1.7.23 4.47 0 8.1-3.32 8.1-7.42 0-4.1-3.63-7.42-8.1-7.42zm4.35 6.02c-.3 0-.55-.25-.55-.55s.25-.55.55-.55.55.25.55.55-.25.55-.55.55zm-3.2 0c-.3 0-.55-.25-.55-.55s.25-.55.55-.55.55.25.55.55-.25.55-.55.55zM19.05 13.7c-.23 0-.45-.02-.68-.05-.4.85-.92 1.63-1.55 2.3.4.15.82.25 1.25.25.45 0 .88-.1 1.28-.28l1.78.93-.5-1.88c1.23-1.05 2.02-2.55 2.02-4.22 0-3.08-2.72-5.58-6.08-5.58-.33 0-.65.03-.98.08.73.98 1.18 2.18 1.18 3.48 0 3.32-2.92 6.02-6.52 6.02l-1.2-.12z"/></svg>
-          </div>
-          <span class="text-[10px] text-gray-500">朋友圈</span>
-        </div>
-        <div class="flex flex-col items-center gap-1">
-          <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white p-2">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.31.26 2.56.73 3.71l-1.7 4.29 4.29-1.7c1.15.47 2.4.73 3.71.73 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
-          </div>
-          <span class="text-[10px] text-gray-500">微信群</span>
-        </div>
-      </div>
     </div>
 
     <!-- 分享卡片弹窗 -->
