@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import QuizView from '../views/QuizView.vue';
 import CardVerifyView from '../views/CardVerifyView.vue';
 import AdminView from '../views/AdminView.vue';
+import LoginView from '../views/LoginView.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -23,11 +24,25 @@ const router = createRouter({
       component: CardVerifyView
     },
     {
+      path: '/login',
+      name: 'login',
+      component: LoginView
+    },
+    {
       path: '/admin',
       name: 'admin',
-      component: AdminView
+      component: AdminView,
+      meta: { requiresAuth: true }
     }
   ]
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.requiresAuth && !localStorage.getItem('admin_token')) {
+    next('/login');
+  } else {
+    next();
+  }
 });
 
 export default router;

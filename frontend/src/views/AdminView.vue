@@ -15,13 +15,31 @@ interface Project {
 const projects = ref<Project[]>([]);
 const isLoading = ref(true);
 
+// 筛选状态
+const filterStatus = ref('');
+const filterAccess = ref('');
+
 // 分页相关状态
 const currentPage = ref(1);
 const pageSize = ref(10);
 const pageSizeOptions = [5, 10, 20, 50];
 
+const filteredProjects = computed(() => {
+  let list = [...projects.value];
+  
+  if (filterStatus.value) {
+    list = list.filter(p => p.status === filterStatus.value);
+  }
+  
+  if (filterAccess.value) {
+    list = list.filter(p => p.access === filterAccess.value);
+  }
+  
+  return list;
+});
+
 const sortedProjects = computed(() => {
-  return [...projects.value].sort((a, b) => {
+  return [...filteredProjects.value].sort((a, b) => {
     return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
   });
 });
@@ -33,6 +51,10 @@ const paginatedProjects = computed(() => {
   const end = start + pageSize.value;
   return sortedProjects.value.slice(start, end);
 });
+
+const handleFilterChange = () => {
+  currentPage.value = 1;
+};
 
 const handlePageChange = (page: number) => {
   if (page < 1 || page > totalPages.value) return;
@@ -232,13 +254,31 @@ const handleDeleteProject = async (id: string) => {
   }
 };
 
+const handleToggleStatus = async (id: string) => {
+  try {
+    const response = await axios.post(`http://localhost:3000/api/projects/${id}/toggle-status`);
+    const project = projects.value.find(p => p.id === id);
+    if (project) {
+      project.status = response.data.status;
+    }
+  } catch (error) {
+    console.error('Failed to toggle status:', error);
+    alert('切换状态失败');
+  }
+};
+
+const handleLogout = () => {
+  localStorage.removeItem('admin_token');
+  window.location.href = '/login';
+};
+
 onMounted(fetchProjects);
 </script>
 
 <template>
   <div class="min-h-screen bg-gray-100 flex">
     <!-- 侧边栏 -->
-    <aside class="w-64 bg-white shadow-md">
+    <aside class="w-64 bg-white shadow-md flex flex-col h-screen sticky top-0">
       <div class="p-6 border-b">
         <h1 class="text-xl font-bold text-gray-800 flex items-center">
           <span class="w-8 h-8 bg-blue-600 rounded mr-2 flex items-center justify-center text-white text-sm">QA</span>
@@ -267,6 +307,17 @@ onMounted(fetchProjects);
           class="w-full text-left px-4 py-2 rounded-lg font-medium transition-colors"
         >系统设置</button>
       </nav>
+      <div class="p-4 border-t mt-auto">
+        <button 
+          @click="handleLogout"
+          class="w-full text-left px-4 py-2 rounded-lg font-medium text-red-500 hover:bg-red-50 transition-colors flex items-center gap-2"
+        >
+          <span>退出登录</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+        </button>
+      </div>
     </aside>
 
     <!-- 主内容区 -->
@@ -290,6 +341,43 @@ onMounted(fetchProjects);
           </div>
         </header>
 
+        <!-- 筛选框 -->
+        <div class="bg-white p-4 rounded-xl shadow-sm mb-6 flex items-center space-x-6">
+          <div class="flex items-center space-x-2">
+            <span class="text-sm font-medium text-gray-600">访问模式:</span>
+            <select 
+              v-model="filterAccess" 
+              @change="handleFilterChange"
+              class="border rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
+            >
+              <option value="">全部模式</option>
+              <option value="public">公开</option>
+              <option value="code_required">卡密验证</option>
+            </select>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <span class="text-sm font-medium text-gray-600">项目状态:</span>
+            <select 
+              v-model="filterStatus" 
+              @change="handleFilterChange"
+              class="border rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
+            >
+              <option value="">全部状态</option>
+              <option value="online">已上线</option>
+              <option value="offline">已下线</option>
+            </select>
+          </div>
+
+          <button 
+            v-if="filterAccess || filterStatus"
+            @click="filterAccess = ''; filterStatus = ''; handleFilterChange()"
+            class="text-sm text-blue-600 hover:underline"
+          >
+            重置筛选
+          </button>
+        </div>
+
         <!-- 加载状态 -->
         <div v-if="isLoading" class="flex justify-center py-12">
           <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
@@ -302,6 +390,7 @@ onMounted(fetchProjects);
               <tr>
                 <th class="px-6 py-4 text-sm font-semibold text-gray-600 w-16 text-center">#</th>
                 <th class="px-6 py-4 text-sm font-semibold text-gray-600">项目名称</th>
+                <th class="px-6 py-4 text-sm font-semibold text-gray-600">用户访问</th>
                 <th class="px-6 py-4 text-sm font-semibold text-gray-600">访问模式</th>
                 <th class="px-6 py-4 text-sm font-semibold text-gray-600">创建时间</th>
                 <th class="px-6 py-4 text-sm font-semibold text-gray-600">状态</th>
@@ -314,8 +403,24 @@ onMounted(fetchProjects);
                   {{ (currentPage - 1) * pageSize + index + 1 }}
                 </td>
                 <td class="px-6 py-4">
-                  <div class="font-medium text-gray-900">{{ project.title }}</div>
+                  <a 
+                    :href="`/quiz/${project.id}?preview=true`" 
+                    target="_blank"
+                    class="font-medium text-blue-600 hover:underline"
+                  >{{ project.title }}</a>
                   <div class="text-xs text-gray-400">ID: {{ project.id }}</div>
+                </td>
+                <td class="px-6 py-4">
+                  <a 
+                    :href="`/quiz/${project.id}`" 
+                    target="_blank"
+                    class="text-xs text-blue-500 hover:underline flex items-center gap-1"
+                  >
+                    <span>点击访问</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
                 </td>
                 <td class="px-6 py-4">
                   <span :class="project.access === 'public' ? 'text-green-600 bg-green-50' : 'text-orange-600 bg-orange-50'" class="px-2 py-1 rounded text-xs font-bold uppercase">
@@ -326,11 +431,18 @@ onMounted(fetchProjects);
                   {{ formatDate(project.createdAt) }}
                 </td>
                 <td class="px-6 py-4">
-                  <span :class="project.status === 'published' ? 'text-blue-600 bg-blue-50' : 'text-gray-600 bg-gray-100'" class="px-2 py-1 rounded text-xs font-bold uppercase">
-                    {{ project.status === 'published' ? '已发布' : '草稿' }}
+                  <span :class="project.status === 'online' ? 'text-blue-600 bg-blue-50' : 'text-gray-500 bg-gray-100'" class="px-2 py-1 rounded text-xs font-bold uppercase">
+                    {{ project.status === 'online' ? '已上线' : '已下线' }}
                   </span>
                 </td>
                 <td class="px-6 py-4 space-x-3">
+                  <button 
+                    @click="handleToggleStatus(project.id)"
+                    :class="project.status === 'online' ? 'text-orange-600' : 'text-blue-600'"
+                    class="hover:underline text-sm font-medium"
+                  >
+                    {{ project.status === 'online' ? '下线' : '上线' }}
+                  </button>
                   <button 
                     @click="editingProjectId = project.id"
                     class="text-blue-600 hover:underline text-sm font-medium"
@@ -339,19 +451,10 @@ onMounted(fetchProjects);
                     @click="handleManageCards(project.id)"
                     class="text-orange-600 hover:underline text-sm font-medium"
                   >卡密</button>
-                  <a 
-                    :href="`/quiz/${project.id}`"
-                    target="_blank"
-                    class="text-gray-600 hover:underline text-sm font-medium"
-                  >预览</a>
-                  <button 
-                    @click="handleDeleteProject(project.id)"
-                    class="text-red-600 hover:underline text-sm font-medium"
-                  >删除</button>
                 </td>
               </tr>
               <tr v-if="paginatedProjects.length === 0">
-                <td colspan="6" class="px-6 py-12 text-center text-gray-400">暂无项目</td>
+                <td colspan="7" class="px-6 py-12 text-center text-gray-400">暂无项目</td>
               </tr>
             </tbody>
           </table>

@@ -40,6 +40,7 @@ const filterStatus = ref('');
 const sortBy = ref('createdAt');
 const sortOrder = ref<'asc' | 'desc'>('desc');
 const selectedCodes = ref<string[]>([]);
+const copyStatus = ref<Record<string, boolean>>({});
 
 // 分页逻辑
 const currentPage = ref(1);
@@ -109,17 +110,20 @@ const toggleSelectAll = () => {
 };
 
 const handleBatchDelete = async () => {
-  if (selectedCodes.value.length === 0) return;
-  if (!confirm(`确定要删除选中的 ${selectedCodes.value.length} 个卡密吗？`)) return;
+  if (!selectedCodes.value.length) return;
+  
+  if (!confirm(`确定要删除选中的 ${selectedCodes.value.length} 个卡密吗？此操作不可恢复。`)) {
+    return;
+  }
 
   try {
     await axios.post('http://localhost:3000/api/cards/batch-delete', {
       codes: selectedCodes.value
     });
-    await fetchCards();
     selectedCodes.value = [];
-    alert('删除成功');
+    fetchCards();
   } catch (error) {
+    console.error('Failed to delete cards:', error);
     alert('删除失败');
   }
 };
@@ -164,6 +168,33 @@ const handleGenerate = async () => {
     alert('生成失败');
   } finally {
     isGenerating.value = false;
+  }
+};
+
+const handleCopyCode = async (code: string) => {
+  try {
+    await navigator.clipboard.writeText(code);
+    copyStatus.value[code] = true;
+    setTimeout(() => {
+      delete copyStatus.value[code];
+    }, 2000);
+  } catch (err) {
+    console.error('Failed to copy:', err);
+    // 回退方案
+    const input = document.createElement('input');
+    input.value = code;
+    document.body.appendChild(input);
+    input.select();
+    try {
+      document.execCommand('copy');
+      copyStatus.value[code] = true;
+      setTimeout(() => {
+        delete copyStatus.value[code];
+      }, 2000);
+    } catch (e) {
+      alert('复制失败，请手动复制');
+    }
+    document.body.removeChild(input);
   }
 };
 
@@ -352,7 +383,35 @@ onMounted(() => {
                 class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
             </td>
-            <td class="px-6 py-4 font-mono font-bold text-blue-600">{{ card.code }}</td>
+            <td class="px-6 py-4">
+              <div 
+                class="flex items-center gap-2 group cursor-pointer"
+                @click="handleCopyCode(card.code)"
+                title="点击复制卡密"
+              >
+                <span class="font-mono font-bold text-blue-600 group-hover:text-blue-700 transition-colors">
+                  {{ card.code }}
+                </span>
+                <div class="relative flex items-center">
+                  <svg v-if="!copyStatus[card.code]" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-300 group-hover:text-blue-500 transition-all opacity-0 group-hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                  </svg>
+                  <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  
+                  <!-- 复制成功的浮动提示 -->
+                  <transition name="fade">
+                    <span 
+                      v-if="copyStatus[card.code]" 
+                      class="absolute left-6 whitespace-nowrap bg-gray-800 text-white text-[10px] px-2 py-1 rounded shadow-lg z-10"
+                    >
+                      已复制
+                    </span>
+                  </transition>
+                </div>
+              </div>
+            </td>
             <td class="px-6 py-4 text-gray-600">{{ card.projectId }}</td>
             <td class="px-6 py-4">
               <span 
@@ -453,3 +512,16 @@ onMounted(() => {
     </div>
   </div>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(-5px);
+}
+</style>

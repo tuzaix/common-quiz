@@ -255,7 +255,7 @@ app.get('/api/projects', (req, res) => {
           isHot: config.isHot || config.meta?.isHot || false,
           views: config.views || Math.floor(Math.random() * 10000) + 1000,
           access: config.settings?.accessMode || 'public',
-          status: 'published',
+          status: config.status || 'online',
           createdAt
         };
       }
@@ -304,11 +304,27 @@ app.post('/api/projects', (req, res) => {
 
     fs.writeFileSync(path.join(projectPath, 'config.json'), JSON.stringify(defaultConfig, null, 2));
     fs.writeFileSync(path.join(projectPath, 'questions.json'), JSON.stringify(defaultQuestions, null, 2));
-
     res.status(201).json({ success: true, id });
   } catch (e) {
     console.error('Project creation failed:', e);
     res.status(500).json({ error: 'Failed to create project: ' + e.message });
+  }
+});
+
+// 切换项目状态 (上线/下线)
+app.post('/api/projects/:projectId/toggle-status', (req, res) => {
+  const { projectId } = req.params;
+  const configPath = path.join(PROJECTS_DIR, projectId, 'config.json');
+
+  if (!fs.existsSync(configPath)) return res.status(404).json({ error: 'Project not found' });
+
+  try {
+    const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+    config.status = config.status === 'offline' ? 'online' : 'offline';
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+    res.json({ success: true, status: config.status });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to toggle status' });
   }
 });
 
@@ -372,6 +388,12 @@ app.get('/api/projects/:projectId/config', (req, res) => {
   try {
     const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
     const questions = JSON.parse(fs.readFileSync(questionsPath, 'utf8'));
+    
+    // 如果项目已下线，且不是管理员预览模式（这里可以通过 query 参数区分）
+    if (config.status === 'offline' && req.query.preview !== 'true') {
+      return res.status(403).json({ error: 'Project is offline', status: 'offline' });
+    }
+
     res.json({ config, questions });
   } catch (e) {
     res.status(500).json({ error: 'Failed to parse project data' });
@@ -382,6 +404,15 @@ app.get('/api/projects/:projectId/config', (req, res) => {
 app.post('/api/verify-card', (req, res) => {
   const { cardCode, projectId, deviceId } = req.body;
   try {
+    // 检查项目状态
+    const configPath = path.join(PROJECTS_DIR, projectId, 'config.json');
+    if (fs.existsSync(configPath)) {
+      const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+      if (config.status === 'offline') {
+        return res.status(403).json({ success: false, message: '该项目已下线，无法验证卡密' });
+      }
+    }
+
     const cards = JSON.parse(fs.readFileSync(CARDS_FILE, 'utf8'));
     
     if (cardCode === '123456') { // 保留演示卡密
@@ -473,6 +504,18 @@ app.post('/api/projects/:projectId/share', (req, res) => {
 });
 
 // 系统设置 API
+app.post('/api/admin/login', (req, res) => {
+  const { username, password } = req.body;
+  const settings = getSettings();
+  
+  if (username === settings.adminUsername && password === settings.adminPassword) {
+    // 简单起见，返回一个模拟 token
+    res.json({ success: true, token: 'admin-session-token' });
+  } else {
+    res.status(401).json({ success: false, message: '账号或密码错误' });
+  }
+});
+
 app.get('/api/settings', (req, res) => {
   res.json(getSettings());
 });

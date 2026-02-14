@@ -29,28 +29,25 @@ const isCodeVerified = computed(() => {
 // 从后端获取配置
 const fetchConfig = async (id: string) => {
   store.isLoading = true;
+  store.error = null;
   try {
-    const response = await axios.get(`http://localhost:3000/api/projects/${id}/config`);
+    const isPreview = route.query.preview === 'true';
+    const response = await axios.get(`http://localhost:3000/api/projects/${id}/config`, {
+      params: { preview: isPreview }
+    });
     const { config, questions } = response.data;
-    
-    // 检查访问模式 - 暂时移除进入时的强制拦截，改为结果页拦截（如果用户体验需要）
-    /*
-    if (config.settings?.accessMode === 'code_required') {
-      const savedCard = localStorage.getItem(`card_${id}`);
-      if (!savedCard) {
-        router.push({ name: 'verify', query: { projectId: id } });
-        return;
-      }
-    }
-    */
     
     // 打乱题目顺序
     const shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
     
     store.setProjectData(config, shuffledQuestions);
-  } catch (error) {
+  } catch (error: any) {
     console.error('Failed to fetch config:', error);
-    store.error = '无法加载项目配置，请检查后端服务是否启动。';
+    if (error.response?.status === 403 && error.response?.data?.status === 'offline') {
+      store.error = '该项目已下线，暂时无法访问。';
+    } else {
+      store.error = '无法加载项目配置，请检查后端服务是否启动。';
+    }
   } finally {
     store.isLoading = false;
   }
