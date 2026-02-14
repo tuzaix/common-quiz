@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import axios from 'axios';
+import api from '../api';
 
 const router = useRouter();
 const username = ref('');
@@ -19,7 +19,7 @@ const handleLogin = async () => {
   error.value = '';
 
   try {
-    const response = await axios.post('http://localhost:3000/api/admin/login', {
+    const response = await api.post('/api/admin/login', {
       username: username.value,
       password: password.value
     });

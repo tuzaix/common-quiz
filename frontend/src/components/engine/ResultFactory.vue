@@ -5,7 +5,7 @@
  */
 
 import { computed, ref } from 'vue';
-import axios from 'axios';
+import api from '../../api';
 import ShareCard from './ShareCard.vue';
 
 const props = defineProps<{
@@ -24,7 +24,7 @@ const handleShowShare = async () => {
   // 记录分享次数
   if (props.projectId) {
     try {
-      await axios.post(`http://localhost:3000/api/projects/${props.projectId}/share`);
+      await api.post(`/api/projects/${props.projectId}/share`);
     } catch (error) {
       console.error('Failed to track share:', error);
     }

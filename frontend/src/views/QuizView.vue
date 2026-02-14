@@ -5,8 +5,7 @@ import { useQuizStore } from '../store/quiz';
 import QuestionContainer from '../components/engine/QuestionContainer.vue';
 import ResultFactory from '../components/engine/ResultFactory.vue';
 import CardVerifyModal from '../components/engine/CardVerifyModal.vue';
-
-import axios from 'axios';
+import api from '../api';
 
 const route = useRoute();
 const router = useRouter();
@@ -32,7 +31,7 @@ const fetchConfig = async (id: string) => {
   store.error = null;
   try {
     const isPreview = route.query.preview === 'true';
-    const response = await axios.get(`http://localhost:3000/api/projects/${id}/config`, {
+    const response = await api.get(`/api/projects/${id}/config`, {
       params: { preview: isPreview }
     });
     const { config, questions } = response.data;
@@ -81,7 +80,7 @@ const handleComplete = async () => {
   // 记录完成次数
   try {
     const projectId = route.params.id as string;
-    await axios.post(`http://localhost:3000/api/projects/${projectId}/complete`);
+    await api.post(`/api/projects/${projectId}/complete`);
   } catch (err) {
     console.error('Failed to record completion:', err);
   }

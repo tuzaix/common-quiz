@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
-import axios from 'axios';
+import api, { resolveUrl } from '../api';
 import ProjectEditor from '../components/admin/ProjectEditor.vue';
 import CardManager from '../components/admin/CardManager.vue';
 
@@ -106,13 +106,13 @@ const handleSaveCover = async () => {
       // 上传文件
       const formData = new FormData();
       formData.append('cover', coverUploadFile.value);
-      const res = await axios.post(`http://localhost:3000/api/admin/projects/${currentCoverProject.value.id}/cover`, formData);
+      const res = await api.post(`/api/admin/projects/${currentCoverProject.value.id}/cover`, formData);
       if (res.data.success) {
         alert('封面上传成功');
       }
     } else if (coverUploadUrl.value !== currentCoverProject.value.coverImage) {
       // 保存链接
-      await axios.post(`http://localhost:3000/api/admin/projects/${currentCoverProject.value.id}/cover-url`, {
+      await api.post(`/api/admin/projects/${currentCoverProject.value.id}/cover-url`, {
         coverUrl: coverUploadUrl.value
       });
       alert('封面链接设置成功');
@@ -170,7 +170,7 @@ const handleUploadQrcode = async (event: Event) => {
   
   isUploading.value = true;
   try {
-    const response = await axios.post('http://localhost:3000/api/settings/upload-qrcode', formData, {
+    const response = await api.post('/api/settings/upload-qrcode', formData, {
       headers: { 'Content-Type': 'multipart/form-data' }
     });
     settings.value.qrcodeUrl = response.data.url;
@@ -184,7 +184,7 @@ const handleUploadQrcode = async (event: Event) => {
 
 const fetchSettings = async () => {
   try {
-    const response = await axios.get('http://localhost:3000/api/settings');
+    const response = await api.get('/api/settings');
     settings.value = response.data;
   } catch (error) {
     console.error('Failed to fetch settings:', error);
@@ -194,7 +194,7 @@ const fetchSettings = async () => {
 const handleSaveSettings = async () => {
   isSavingSettings.value = true;
   try {
-    await axios.post('http://localhost:3000/api/settings', settings.value);
+    await api.post('/api/settings', settings.value);
     alert('系统设置已保存');
   } catch (error) {
     console.error('Failed to save settings:', error);
@@ -231,7 +231,7 @@ const handleStatsPageSizeChange = () => {
 
 const fetchStats = async () => {
   try {
-    const response = await axios.get('http://localhost:3000/api/stats/overview');
+    const response = await api.get('/api/stats/overview');
     statsData.value = response.data;
   } catch (error) {
     console.error('Failed to fetch stats:', error);
@@ -241,7 +241,7 @@ const fetchStats = async () => {
 const fetchProjects = async () => {
   isLoading.value = true;
   try {
-    const response = await axios.get('http://localhost:3000/api/projects');
+    const response = await api.get('/api/projects');
     projects.value = response.data;
   } catch (error) {
     console.error('Failed to fetch projects:', error);
@@ -254,7 +254,7 @@ const handleCreateProject = async () => {
   if (!newProject.value.id || !newProject.value.title) return;
   
   try {
-    await axios.post('http://localhost:3000/api/projects', newProject.value);
+    await api.post('/api/projects', newProject.value);
     showCreateModal.value = false;
     newProject.value = { id: '', title: '' };
     await fetchProjects();
@@ -273,7 +273,7 @@ const handleImportProject = async () => {
     const config = JSON.parse(importData.value.config);
     const questions = JSON.parse(importData.value.questions);
     
-    await axios.post('http://localhost:3000/api/projects/import', { config, questions });
+    await api.post('/api/projects/import', { config, questions });
     showImportModal.value = false;
     importData.value = { config: '', questions: '' };
     await fetchProjects();
@@ -305,7 +305,7 @@ const handleDeleteProject = async (id: string) => {
   if (!confirm('确定要删除该项目吗？此操作不可撤销。')) return;
   
   try {
-    await axios.delete(`http://localhost:3000/api/projects/${id}`);
+    await api.delete(`/api/projects/${id}`);
     await fetchProjects();
   } catch (error) {
     console.error('Failed to delete project:', error);
@@ -314,7 +314,7 @@ const handleDeleteProject = async (id: string) => {
 
 const handleToggleStatus = async (id: string) => {
   try {
-    const response = await axios.post(`http://localhost:3000/api/projects/${id}/toggle-status`);
+    const response = await api.post(`/api/projects/${id}/toggle-status`);
     const project = projects.value.find(p => p.id === id);
     if (project) {
       project.status = response.data.status;
@@ -885,7 +885,7 @@ onMounted(fetchProjects);
                   <div class="relative group">
                     <img 
                       v-if="settings.qrcodeUrl" 
-                      :src="settings.qrcodeUrl" 
+                      :src="resolveUrl(settings.qrcodeUrl)" 
                       class="w-32 h-32 object-contain bg-white rounded shadow-sm"
                       alt="分享二维码"
                     />
@@ -1019,7 +1019,7 @@ onMounted(fetchProjects);
             <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-100 border-2 border-dashed border-gray-300">
               <img 
                 v-if="coverUploadUrl" 
-                :src="coverUploadUrl" 
+                :src="resolveUrl(coverUploadUrl)" 
                 class="w-full h-full object-cover"
               />
               <div v-else class="absolute inset-0 flex flex-col items-center justify-center text-gray-400">

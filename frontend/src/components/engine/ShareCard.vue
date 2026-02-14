@@ -5,7 +5,7 @@
  */
 
 import { ref, onMounted } from 'vue';
-import axios from 'axios';
+import api, { resolveUrl } from '../../api';
 import { CanvasRenderer, type Layer } from '../../services/CanvasRenderer';
 
 const props = defineProps<{
@@ -94,7 +94,7 @@ onMounted(async () => {
   
   // 获取系统配置中的二维码
   try {
-    const settingsRes = await axios.get('http://localhost:3000/api/settings');
+    const settingsRes = await api.get('/api/settings');
     const qrcodeUrl = settingsRes.data.qrcodeUrl;
     
     if (qrcodeUrl) {
@@ -105,7 +105,7 @@ onMounted(async () => {
         // 替换为图片图层
         layout.layers[qrcodeLayerIndex] = {
           type: 'image',
-          content: qrcodeUrl, // CanvasRenderer 使用 content 字段加载图片
+          content: resolveUrl(qrcodeUrl), // CanvasRenderer 使用 content 字段加载图片
           x: 100,
           y: 700,
           width: 90,

@@ -5,7 +5,7 @@
  */
 
 import { ref } from 'vue';
-import axios from 'axios';
+import api from '../../api';
 
 const props = defineProps<{
   projectId: string;
@@ -36,7 +36,7 @@ const verify = async () => {
   error.value = '';
 
   try {
-    const response = await axios.post('http://localhost:3000/api/verify-card', {
+    const response = await api.post('/api/verify-card', {
       cardCode: cardCode.value,
       projectId: props.projectId,
       deviceId: getDeviceId()

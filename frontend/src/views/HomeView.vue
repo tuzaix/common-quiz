@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
 import { useRouter } from 'vue-router';
-import axios from 'axios';
+import api, { resolveUrl } from '../api';
 
 interface Project {
   id: string;
@@ -75,7 +75,7 @@ const isNewProject = (createdAt: string) => {
 
 const fetchProjects = async () => {
   try {
-    const response = await axios.get('http://localhost:3000/api/projects');
+    const response = await api.get('/api/projects');
     projects.value = response.data;
   } catch (error) {
     console.error('Failed to fetch projects:', error);
@@ -169,7 +169,7 @@ onMounted(fetchProjects);
           <!-- Card Image -->
           <div class="relative h-48 overflow-hidden">
             <img 
-              :src="project.coverImage" 
+              :src="resolveUrl(project.coverImage)" 
               :alt="project.title"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />

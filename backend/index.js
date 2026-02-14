@@ -581,7 +581,7 @@ app.post('/api/admin/projects/:projectId/cover', upload.single('cover'), (req, r
 
   try {
     const covers = getQuizCovers();
-    const coverUrl = `http://localhost:3000/uploads/${req.file.filename}`;
+    const coverUrl = `/uploads/${req.file.filename}`;
     covers[projectId] = coverUrl;
     saveQuizCovers(covers);
     res.json({ success: true, coverUrl });
@@ -636,7 +636,7 @@ app.post('/api/settings', (req, res) => {
 app.post('/api/settings/upload-qrcode', upload.single('file'), (req, res) => {
   if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
   
-  const qrcodeUrl = `http://localhost:3000/uploads/${req.file.filename}`;
+  const qrcodeUrl = `/uploads/${req.file.filename}`;
   res.json({ url: qrcodeUrl });
 });
 

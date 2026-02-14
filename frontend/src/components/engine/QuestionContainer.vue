@@ -6,6 +6,7 @@
 
 import { computed, ref } from 'vue';
 import { getComponentByType } from './QuestionTypeRegistry';
+import { resolveUrl } from '../../api';
 
 interface Question {
   id: string;
@@ -83,7 +84,7 @@ const progress = computed(() => {
         
         <div v-if="currentQuestion.content.media" class="mb-8 group">
           <img v-if="currentQuestion.content.media.type === 'image'" 
-            :src="currentQuestion.content.media.url" 
+            :src="resolveUrl(currentQuestion.content.media.url)" 
             class="w-full rounded-2xl shadow-xl border-4 border-white transition-transform duration-500 group-hover:scale-[1.01]" 
           />
         </div>

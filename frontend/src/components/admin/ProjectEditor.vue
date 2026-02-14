@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import axios from 'axios';
+import api from '../../api';
 
 const props = defineProps<{
   projectId: string;
@@ -99,7 +99,7 @@ const handleImport = () => {
 const fetchProjectData = async () => {
   isLoading.value = true;
   try {
-    const response = await axios.get(`http://localhost:3000/api/projects/${props.projectId}/config`);
+    const response = await api.get(`/api/projects/${props.projectId}/config`);
     config.value = {
       ...response.data.config,
       settings: response.data.config.settings || { accessMode: 'public' },
@@ -116,7 +116,7 @@ const fetchProjectData = async () => {
 
 const saveConfig = async () => {
   try {
-    await axios.put(`http://localhost:3000/api/projects/${props.projectId}/config`, config.value);
+    await api.put(`/api/projects/${props.projectId}/config`, config.value);
     alert('配置已保存');
   } catch (error) {
     alert('保存失败');
@@ -125,7 +125,7 @@ const saveConfig = async () => {
 
 const saveQuestions = async () => {
   try {
-    await axios.put(`http://localhost:3000/api/projects/${props.projectId}/questions`, questions.value);
+    await api.put(`/api/projects/${props.projectId}/questions`, questions.value);
     alert('题目已保存');
   } catch (error) {
     alert('保存失败');

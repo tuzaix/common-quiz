@@ -6,7 +6,7 @@
 
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import axios from 'axios';
+import api from '../api';
 
 const route = useRoute();
 const router = useRouter();
@@ -25,7 +25,7 @@ const verify = async () => {
 
   try {
     const projectId = route.query.projectId as string;
-    const response = await axios.post('http://localhost:3000/api/verify-card', {
+    const response = await api.post('/api/verify-card', {
       cardCode: cardCode.value,
       projectId
     });

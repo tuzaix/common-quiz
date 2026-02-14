@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
-import axios from 'axios';
+import api from '../../api';
 
 interface Card {
   code: string;
@@ -117,7 +117,7 @@ const handleBatchDelete = async () => {
   }
 
   try {
-    await axios.post('http://localhost:3000/api/cards/batch-delete', {
+    await api.post('/api/cards/batch-delete', {
       codes: selectedCodes.value
     });
     selectedCodes.value = [];
@@ -131,7 +131,7 @@ const handleBatchDelete = async () => {
 const fetchCards = async () => {
   isLoading.value = true;
   try {
-    const response = await axios.get('http://localhost:3000/api/cards');
+    const response = await api.get('/api/cards');
     cards.value = response.data;
   } catch (error) {
     console.error('Failed to fetch cards:', error);
@@ -142,7 +142,7 @@ const fetchCards = async () => {
 
 const fetchProjects = async () => {
   try {
-    const response = await axios.get('http://localhost:3000/api/projects');
+    const response = await api.get('/api/projects');
     projects.value = response.data;
     
     // 优先使用传入的 ID，否则使用列表第一个
@@ -160,7 +160,7 @@ const handleGenerate = async () => {
   if (!generateForm.value.projectId) return;
   isGenerating.value = true;
   try {
-    await axios.post('http://localhost:3000/api/cards/generate', generateForm.value);
+    await api.post('/api/cards/generate', generateForm.value);
     await fetchCards();
     showGenerateModal.value = false;
     alert('卡密生成成功');
