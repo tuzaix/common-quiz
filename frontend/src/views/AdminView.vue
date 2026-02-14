@@ -70,6 +70,64 @@ const showImportModal = ref(false);
 const editingProjectId = ref<string | null>(null);
 const managingCardProjectId = ref<string | null>(null);
 
+// 封面管理相关
+const showCoverModal = ref(false);
+const currentCoverProject = ref<any>(null);
+const coverUploadFile = ref<File | null>(null);
+const coverUploadUrl = ref('');
+const isUploadingCover = ref(false);
+
+const openCoverModal = (project: any) => {
+  currentCoverProject.value = project;
+  coverUploadUrl.value = project.coverImage || '';
+  coverUploadFile.value = null;
+  showCoverModal.value = true;
+};
+
+const handleCoverFileChange = (e: any) => {
+  const file = e.target.files[0];
+  if (file) {
+    coverUploadFile.value = file;
+    // 预览图
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      coverUploadUrl.value = event.target?.result as string;
+    };
+    reader.readAsDataURL(file);
+  }
+};
+
+const handleSaveCover = async () => {
+  if (!currentCoverProject.value) return;
+  
+  isUploadingCover.value = true;
+  try {
+    if (coverUploadFile.value) {
+      // 上传文件
+      const formData = new FormData();
+      formData.append('cover', coverUploadFile.value);
+      const res = await axios.post(`http://localhost:3000/api/admin/projects/${currentCoverProject.value.id}/cover`, formData);
+      if (res.data.success) {
+        alert('封面上传成功');
+      }
+    } else if (coverUploadUrl.value !== currentCoverProject.value.coverImage) {
+      // 保存链接
+      await axios.post(`http://localhost:3000/api/admin/projects/${currentCoverProject.value.id}/cover-url`, {
+        coverUrl: coverUploadUrl.value
+      });
+      alert('封面链接设置成功');
+    }
+    
+    showCoverModal.value = false;
+    fetchProjects(); // 刷新列表
+  } catch (err) {
+    console.error('Failed to save cover:', err);
+    alert('保存失败');
+  } finally {
+    isUploadingCover.value = false;
+  }
+};
+
 const handleManageCards = (projectId: string) => {
   managingCardProjectId.value = projectId;
   currentView.value = 'cards';
@@ -451,6 +509,10 @@ onMounted(fetchProjects);
                     @click="handleManageCards(project.id)"
                     class="text-orange-600 hover:underline text-sm font-medium"
                   >卡密</button>
+                  <button 
+                    @click="openCoverModal(project)"
+                    class="text-green-600 hover:underline text-sm font-medium"
+                  >封面</button>
                 </td>
               </tr>
               <tr v-if="paginatedProjects.length === 0">
@@ -935,6 +997,81 @@ onMounted(fetchProjects);
             @click="handleImportProject"
             class="px-8 py-2 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 shadow-md"
           >立即导入</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 更换封面弹窗 -->
+    <div v-if="showCoverModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+      <div class="bg-white rounded-xl shadow-xl max-w-md w-full p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-xl font-bold text-gray-800">设置项目封面</h3>
+          <button @click="showCoverModal = false" class="text-gray-400 hover:text-gray-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="space-y-6">
+          <!-- 预览区域 -->
+          <div class="flex justify-center">
+            <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-100 border-2 border-dashed border-gray-300">
+              <img 
+                v-if="coverUploadUrl" 
+                :src="coverUploadUrl" 
+                class="w-full h-full object-cover"
+              />
+              <div v-else class="absolute inset-0 flex flex-col items-center justify-center text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span>暂无封面</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 上传方式 -->
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">图片链接 (URL)</label>
+              <input 
+                v-model="coverUploadUrl" 
+                type="text" 
+                placeholder="https://example.com/image.jpg"
+                class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
+              />
+            </div>
+            
+            <div class="relative">
+              <div class="flex items-center justify-between mb-1">
+                <label class="block text-sm font-medium text-gray-700">或上传本地图片</label>
+                <span v-if="coverUploadFile" class="text-xs text-blue-600 font-medium">已选择: {{ coverUploadFile.name }}</span>
+              </div>
+              <label class="flex items-center justify-center w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+                <span class="text-sm text-gray-600">点击上传文件</span>
+                <input type="file" class="hidden" accept="image/*" @change="handleCoverFileChange" />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex justify-end space-x-3">
+          <button 
+            @click="showCoverModal = false"
+            class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+          >取消</button>
+          <button 
+            @click="handleSaveCover"
+            :disabled="isUploadingCover"
+            class="px-8 py-2 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 shadow-md disabled:opacity-50 flex items-center gap-2"
+          >
+            <span v-if="isUploadingCover" class="animate-spin text-sm">⏳</span>
+            {{ isUploadingCover ? '正在保存...' : '保存封面' }}
+          </button>
         </div>
       </div>
     </div>

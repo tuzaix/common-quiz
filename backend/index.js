@@ -35,6 +35,7 @@ const VIEWS_FILE = path.join(__dirname, 'data', 'views.json');
 const COMPLETIONS_FILE = path.join(__dirname, 'data', 'completions.json');
 const SETTINGS_FILE = path.join(__dirname, 'data', 'settings.json');
 const DAILY_STATS_FILE = path.join(__dirname, 'data', 'daily_stats.json');
+const QUIZ_COVERS_FILE = path.join(__dirname, 'data', 'quiz_covers.json');
 
 // 助手函数：读取/写入系统设置
 const getSettings = () => {
@@ -92,6 +93,10 @@ const saveCompletions = (completions) => saveStatsData(COMPLETIONS_FILE, complet
 const getDailyStats = () => getStatsData(DAILY_STATS_FILE);
 const saveDailyStats = (stats) => saveStatsData(DAILY_STATS_FILE, stats);
 
+// 助手函数：读取/写入封面配置
+const getQuizCovers = () => getStatsData(QUIZ_COVERS_FILE);
+const saveQuizCovers = (covers) => saveStatsData(QUIZ_COVERS_FILE, covers);
+
 const recordDailyStat = (type) => {
   const dateStr = new Date().toISOString().split('T')[0];
   const stats = getDailyStats();
@@ -116,7 +121,7 @@ if (!fs.existsSync(PROJECTS_DIR)) {
 }
 
 // 确保统计数据文件存在
-[SHARES_FILE, VIEWS_FILE, COMPLETIONS_FILE, DAILY_STATS_FILE].forEach(file => {
+[SHARES_FILE, VIEWS_FILE, COMPLETIONS_FILE, DAILY_STATS_FILE, QUIZ_COVERS_FILE].forEach(file => {
   if (!fs.existsSync(file)) {
     fs.writeFileSync(file, '{}');
   }
@@ -277,6 +282,7 @@ app.get('/api/stats/overview', (req, res) => {
 app.get('/api/projects', (req, res) => {
   try {
     const projectDirs = fs.readdirSync(PROJECTS_DIR);
+    const quizCovers = getQuizCovers();
     const projects = projectDirs.map(id => {
       const projectPath = path.join(PROJECTS_DIR, id);
       const configPath = path.join(projectPath, 'config.json');
@@ -293,7 +299,7 @@ app.get('/api/projects', (req, res) => {
           description: config.description || config.meta?.description || '暂无描述',
           category: config.category || '其他',
           tags: config.tags || [],
-          coverImage: config.coverImage || 'https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+          coverImage: quizCovers[id] || config.coverImage || 'https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
           isHot: config.isHot || config.meta?.isHot || false,
           views: config.views || Math.floor(Math.random() * 10000) + 1000,
           access: config.settings?.accessMode || 'public',
@@ -565,6 +571,38 @@ app.post('/api/projects/:projectId/complete', (req, res) => {
     res.json({ success: true, completions: completions[projectId] });
   } catch (e) {
     res.status(500).json({ error: 'Failed to update completion count' });
+  }
+});
+
+// 上传项目封面
+app.post('/api/admin/projects/:projectId/cover', upload.single('cover'), (req, res) => {
+  const { projectId } = req.params;
+  if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
+
+  try {
+    const covers = getQuizCovers();
+    const coverUrl = `http://localhost:3000/uploads/${req.file.filename}`;
+    covers[projectId] = coverUrl;
+    saveQuizCovers(covers);
+    res.json({ success: true, coverUrl });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save cover configuration' });
+  }
+});
+
+// 设置项目封面链接 (直接输入 URL)
+app.post('/api/admin/projects/:projectId/cover-url', (req, res) => {
+  const { projectId } = req.params;
+  const { coverUrl } = req.body;
+  if (!coverUrl) return res.status(400).json({ error: 'Cover URL is required' });
+
+  try {
+    const covers = getQuizCovers();
+    covers[projectId] = coverUrl;
+    saveQuizCovers(covers);
+    res.json({ success: true, coverUrl });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save cover configuration' });
   }
 });
 
