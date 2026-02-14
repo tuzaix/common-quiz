@@ -12,6 +12,21 @@ app.use(express.json());
 
 const PROJECTS_DIR = path.join(__dirname, 'data', 'projects');
 const CARDS_FILE = path.join(__dirname, 'data', 'cards.json');
+const SHARES_FILE = path.join(__dirname, 'data', 'shares.json');
+
+// 助手函数：读取/写入分享数据
+const getShares = () => {
+  if (!fs.existsSync(SHARES_FILE)) return {};
+  try {
+    return JSON.parse(fs.readFileSync(SHARES_FILE, 'utf8'));
+  } catch (e) {
+    return {};
+  }
+};
+
+const saveShares = (shares) => {
+  fs.writeFileSync(SHARES_FILE, JSON.stringify(shares, null, 2));
+};
 
 // 确保数据目录存在
 if (!fs.existsSync(path.join(__dirname, 'data'))) {
@@ -24,6 +39,38 @@ if (!fs.existsSync(CARDS_FILE)) {
 // 确保项目目录存在
 if (!fs.existsSync(PROJECTS_DIR)) {
   fs.mkdirSync(PROJECTS_DIR, { recursive: true });
+}
+
+// 确保分享数据文件存在
+if (!fs.existsSync(SHARES_FILE)) {
+  fs.writeFileSync(SHARES_FILE, '{}');
+}
+
+// 数据迁移：从 config.json 迁移分享数据到 shares.json
+try {
+  const projects = fs.readdirSync(PROJECTS_DIR);
+  const shares = getShares();
+  let migrated = false;
+
+  projects.forEach(projectId => {
+    const configPath = path.join(PROJECTS_DIR, projectId, 'config.json');
+    if (fs.existsSync(configPath)) {
+      const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+      if (config.shares !== undefined) {
+        shares[projectId] = (shares[projectId] || 0) + config.shares;
+        delete config.shares;
+        fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+        migrated = true;
+        console.log(`Migrated shares for project: ${projectId}`);
+      }
+    }
+  });
+
+  if (migrated) {
+    saveShares(shares);
+  }
+} catch (e) {
+  console.error('Migration error:', e);
 }
 
 // 获取卡密列表
@@ -91,6 +138,8 @@ app.get('/api/stats/overview', (req, res) => {
       cards = JSON.parse(fs.readFileSync(CARDS_FILE, 'utf8'));
     }
 
+    const allShares = getShares();
+
     // 计算统计信息
     const stats = {
       totalProjects: projects.length,
@@ -108,7 +157,7 @@ app.get('/api/stats/overview', (req, res) => {
           total: projectCards.length,
           used: projectCards.filter(c => c.status === 'used').length,
           unused: projectCards.filter(c => c.status === 'unused').length,
-          shares: config.shares || 0
+          shares: allShares[projectId] || 0
         };
       }),
 
@@ -364,16 +413,12 @@ app.post('/api/projects/import', (req, res) => {
 // 增加项目分享统计
 app.post('/api/projects/:projectId/share', (req, res) => {
   const { projectId } = req.params;
-  const projectPath = path.join(PROJECTS_DIR, projectId);
-  const configPath = path.join(projectPath, 'config.json');
-
-  if (!fs.existsSync(configPath)) return res.status(404).json({ error: 'Project not found' });
-
+  
   try {
-    const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-    config.shares = (config.shares || 0) + 1;
-    fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
-    res.json({ success: true, shares: config.shares });
+    const shares = getShares();
+    shares[projectId] = (shares[projectId] || 0) + 1;
+    saveShares(shares);
+    res.json({ success: true, shares: shares[projectId] });
   } catch (e) {
     res.status(500).json({ error: 'Failed to update share count' });
   }
