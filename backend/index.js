@@ -278,6 +278,71 @@ app.get('/api/stats/overview', (req, res) => {
   }
 });
 
+// 批量修改项目访问模式
+app.post('/api/projects/batch-access', (req, res) => {
+  const { ids, accessMode } = req.body;
+  if (!Array.isArray(ids) || !accessMode) {
+    return res.status(400).json({ error: 'IDs array and accessMode are required' });
+  }
+
+  try {
+    const results = { success: [], failed: [] };
+    
+    ids.forEach(projectId => {
+      const configPath = path.join(PROJECTS_DIR, projectId, 'config.json');
+      if (fs.existsSync(configPath)) {
+        try {
+          const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+          if (!config.settings) config.settings = {};
+          config.settings.accessMode = accessMode;
+          fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+          results.success.push(projectId);
+        } catch (e) {
+          results.failed.push({ id: projectId, error: e.message });
+        }
+      } else {
+        results.failed.push({ id: projectId, error: 'Project not found' });
+      }
+    });
+
+    res.json({ success: true, ...results });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to update access mode' });
+  }
+});
+
+// 批量修改项目状态
+app.post('/api/projects/batch-status', (req, res) => {
+  const { ids, status } = req.body;
+  if (!Array.isArray(ids) || !status) {
+    return res.status(400).json({ error: 'IDs array and status are required' });
+  }
+
+  try {
+    const results = { success: [], failed: [] };
+    
+    ids.forEach(projectId => {
+      const configPath = path.join(PROJECTS_DIR, projectId, 'config.json');
+      if (fs.existsSync(configPath)) {
+        try {
+          const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+          config.status = status;
+          fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+          results.success.push(projectId);
+        } catch (e) {
+          results.failed.push({ id: projectId, error: e.message });
+        }
+      } else {
+        results.failed.push({ id: projectId, error: 'Project not found' });
+      }
+    });
+
+    res.json({ success: true, ...results });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to update project status' });
+  }
+});
+
 // 获取所有项目列表
 app.get('/api/projects', (req, res) => {
   try {

@@ -19,6 +19,73 @@ const isLoading = ref(true);
 const filterStatus = ref('');
 const filterAccess = ref('');
 
+// 批量操作相关
+const selectedProjectIds = ref<string[]>([]);
+const isAllSelected = computed(() => {
+  return paginatedProjects.value.length > 0 && paginatedProjects.value.every(p => selectedProjectIds.value.includes(p.id));
+});
+
+const toggleSelectAll = () => {
+  if (isAllSelected.value) {
+    const currentIds = paginatedProjects.value.map(p => p.id);
+    selectedProjectIds.value = selectedProjectIds.value.filter(id => !currentIds.includes(id));
+  } else {
+    const currentIds = paginatedProjects.value.map(p => p.id);
+    const newSelected = [...selectedProjectIds.value];
+    currentIds.forEach(id => {
+      if (!newSelected.includes(id)) {
+        newSelected.push(id);
+      }
+    });
+    selectedProjectIds.value = newSelected;
+  }
+};
+
+const toggleSelectProject = (id: string) => {
+  const index = selectedProjectIds.value.indexOf(id);
+  if (index > -1) {
+    selectedProjectIds.value.splice(index, 1);
+  } else {
+    selectedProjectIds.value.push(id);
+  }
+};
+
+const handleBatchAccess = async (accessMode: string) => {
+  if (selectedProjectIds.value.length === 0) return;
+  if (!confirm(`确定要将选中的 ${selectedProjectIds.value.length} 个项目的访问模式修改为 ${accessMode === 'public' ? '公开' : '卡密验证'} 吗？`)) return;
+
+  try {
+    await api.post('/api/projects/batch-access', {
+      ids: selectedProjectIds.value,
+      accessMode
+    });
+    alert('批量修改成功');
+    selectedProjectIds.value = [];
+    fetchProjects();
+  } catch (error) {
+    console.error('Failed to batch update access mode:', error);
+    alert('批量修改失败');
+  }
+};
+
+const handleBatchStatus = async (status: string) => {
+  if (selectedProjectIds.value.length === 0) return;
+  if (!confirm(`确定要将选中的 ${selectedProjectIds.value.length} 个项目状态修改为 ${status === 'online' ? '已上线' : '已下线'} 吗？`)) return;
+
+  try {
+    await api.post('/api/projects/batch-status', {
+      ids: selectedProjectIds.value,
+      status
+    });
+    alert('批量修改成功');
+    selectedProjectIds.value = [];
+    fetchProjects();
+  } catch (error) {
+    console.error('Failed to batch update status:', error);
+    alert('批量修改失败');
+  }
+};
+
 // 分页相关状态
 const currentPage = ref(1);
 const pageSize = ref(10);
@@ -434,6 +501,55 @@ onMounted(fetchProjects);
           >
             重置筛选
           </button>
+
+          <!-- 批量操作栏 -->
+          <div v-if="selectedProjectIds.length > 0" class="flex-1 flex items-center justify-end animate-fade-in">
+            <div class="flex items-center space-x-3 bg-blue-50 px-4 py-2 rounded-lg border border-blue-100">
+              <span class="text-sm font-bold text-blue-700">已选 {{ selectedProjectIds.length }} 项</span>
+              <div class="h-4 w-px bg-blue-200"></div>
+              <span class="text-sm text-gray-600">批量修改:</span>
+              <div class="flex space-x-2">
+                <!-- 访问模式 -->
+                <div class="flex border rounded overflow-hidden">
+                  <button 
+                    @click="handleBatchAccess('public')"
+                    title="设为公开"
+                    class="px-2 py-1 bg-white text-green-600 text-xs font-bold hover:bg-green-50 transition-colors border-r"
+                  >
+                    公开
+                  </button>
+                  <button 
+                    @click="handleBatchAccess('code_required')"
+                    title="设为卡密"
+                    class="px-2 py-1 bg-white text-orange-600 text-xs font-bold hover:bg-orange-50 transition-colors"
+                  >
+                    卡密
+                  </button>
+                </div>
+                <!-- 状态 -->
+                <div class="flex border rounded overflow-hidden">
+                  <button 
+                    @click="handleBatchStatus('online')"
+                    title="批量上线"
+                    class="px-2 py-1 bg-white text-blue-600 text-xs font-bold hover:bg-blue-50 transition-colors border-r"
+                  >
+                    上线
+                  </button>
+                  <button 
+                    @click="handleBatchStatus('offline')"
+                    title="批量下线"
+                    class="px-2 py-1 bg-white text-gray-600 text-xs font-bold hover:bg-gray-50 transition-colors"
+                  >
+                    下线
+                  </button>
+                </div>
+              </div>
+              <button 
+                @click="selectedProjectIds = []"
+                class="text-xs text-gray-400 hover:text-gray-600"
+              >取消</button>
+            </div>
+          </div>
         </div>
 
         <!-- 加载状态 -->
@@ -446,6 +562,14 @@ onMounted(fetchProjects);
           <table class="w-full text-left border-collapse">
             <thead class="bg-gray-50 border-b">
               <tr>
+                <th class="px-6 py-4 text-sm font-semibold text-gray-600 w-12 text-center">
+                  <input 
+                    type="checkbox" 
+                    :checked="isAllSelected" 
+                    @change="toggleSelectAll"
+                    class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  >
+                </th>
                 <th class="px-6 py-4 text-sm font-semibold text-gray-600 w-16 text-center">#</th>
                 <th class="px-6 py-4 text-sm font-semibold text-gray-600">项目名称</th>
                 <th class="px-6 py-4 text-sm font-semibold text-gray-600">用户访问</th>
@@ -457,6 +581,14 @@ onMounted(fetchProjects);
             </thead>
             <tbody class="divide-y">
               <tr v-for="(project, index) in paginatedProjects" :key="project.id" class="hover:bg-gray-50 transition-colors">
+                <td class="px-6 py-4 text-center">
+                  <input 
+                    type="checkbox" 
+                    :checked="selectedProjectIds.includes(project.id)" 
+                    @change="toggleSelectProject(project.id)"
+                    class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  >
+                </td>
                 <td class="px-6 py-4 text-sm text-gray-400 text-center font-mono">
                   {{ (currentPage - 1) * pageSize + index + 1 }}
                 </td>
