@@ -147,6 +147,7 @@ const restart = () => {
         :questions="store.questions"
         :currentQuestionIndex="store.currentQuestionIndex"
         :answers="store.answers"
+        :projectTitle="store.projectConfig?.title"
         @answer="handleAnswer"
         @next="handleNext"
         @prev="store.prevQuestion"

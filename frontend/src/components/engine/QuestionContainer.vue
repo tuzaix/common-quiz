@@ -23,6 +23,7 @@ const props = defineProps<{
   questions: Question[];
   currentQuestionIndex: number;
   answers: Record<string, any>;
+  projectTitle?: string;
 }>();
 
 const emit = defineEmits(['answer', 'next', 'prev', 'complete']);
@@ -50,7 +51,10 @@ const progress = computed(() => {
     <div class="bg-gradient-to-r from-rose-100/50 via-pink-100/50 to-rose-100/50 px-6 py-6 md:px-10 border-b border-pink-100/30">
       <div class="flex justify-between items-end mb-4">
         <div>
-          <span class="text-xs font-bold text-rose-400 uppercase tracking-widest block mb-1">Current Progress</span>
+          <div v-if="projectTitle" class="flex items-center gap-1.5 mb-2">
+            <span class="w-1 h-3 bg-rose-400 rounded-full"></span>
+            <span class="text-sm font-bold text-gray-700 tracking-tight">{{ projectTitle }}</span>
+          </div>
           <h3 class="text-2xl font-black text-gray-800 tabular-nums">
             {{ currentQuestionIndex + 1 }} <span class="text-gray-300 font-light mx-1">/</span> {{ questions.length }}
           </h3>
