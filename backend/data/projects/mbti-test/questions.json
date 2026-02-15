@@ -1,0 +1,1066 @@
+[
+  {
+    "id": "Q1",
+    "type": "single_choice",
+    "content": {
+      "text": "在社交聚会上，你通常感到精力充沛，并享受与许多人交谈。"
+    },
+    "options": [
+      {
+        "id": "Q1_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q1_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q1_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q1_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q1_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "I"
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "type": "single_choice",
+    "content": {
+      "text": "独处时，我能更好地恢复精力，并享受安静的时光。"
+    },
+    "options": [
+      {
+        "id": "Q2_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q2_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q2_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q2_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q2_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "E"
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "type": "single_choice",
+    "content": {
+      "text": "我更关注具体的事实和细节，而不是抽象的理论和可能性。"
+    },
+    "options": [
+      {
+        "id": "Q3_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q3_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q3_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q3_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q3_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "N"
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢思考未来的可能性、新想法和事物的深层含义。"
+    },
+    "options": [
+      {
+        "id": "Q4_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q4_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q4_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q4_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q4_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "S"
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "type": "single_choice",
+    "content": {
+      "text": "在做决定时，逻辑和客观分析对我来说比个人价值观和他人感受更重要。"
+    },
+    "options": [
+      {
+        "id": "Q5_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "T"
+      },
+      {
+        "id": "Q5_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "T"
+      },
+      {
+        "id": "Q5_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q5_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "F"
+      },
+      {
+        "id": "Q5_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "F"
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "type": "single_choice",
+    "content": {
+      "text": "在做决定时，我优先考虑和谐的人际关系以及决定对他人情感的影响。"
+    },
+    "options": [
+      {
+        "id": "Q6_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "F"
+      },
+      {
+        "id": "Q6_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "F"
+      },
+      {
+        "id": "Q6_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q6_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "T"
+      },
+      {
+        "id": "Q6_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "T"
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢有计划、有组织的生活，并乐于做出决定和得出结论。"
+    },
+    "options": [
+      {
+        "id": "Q7_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "J"
+      },
+      {
+        "id": "Q7_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "J"
+      },
+      {
+        "id": "Q7_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q7_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "P"
+      },
+      {
+        "id": "Q7_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "P"
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢灵活、开放的生活方式，享受探索和适应新信息的过程。"
+    },
+    "options": [
+      {
+        "id": "Q8_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "P"
+      },
+      {
+        "id": "Q8_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "P"
+      },
+      {
+        "id": "Q8_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q8_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "J"
+      },
+      {
+        "id": "Q8_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "J"
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "type": "single_choice",
+    "content": {
+      "text": "结识新朋友让我感到兴奋和充满活力。"
+    },
+    "options": [
+      {
+        "id": "Q9_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q9_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q9_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q9_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q9_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "I"
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "type": "single_choice",
+    "content": {
+      "text": "在深入思考一个问题时，我更喜欢独自一人，不受打扰。"
+    },
+    "options": [
+      {
+        "id": "Q10_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q10_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q10_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q10_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q10_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "E"
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "type": "single_choice",
+    "content": {
+      "text": "我相信经验是比灵感更可靠的指导。"
+    },
+    "options": [
+      {
+        "id": "Q11_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q11_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q11_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q11_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q11_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "N"
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "type": "single_choice",
+    "content": {
+      "text": "我经常能注意到别人忽略的新模式和联系。"
+    },
+    "options": [
+      {
+        "id": "Q12_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q12_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q12_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q12_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q12_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "S"
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "type": "single_choice",
+    "content": {
+      "text": "公平和公正比仁慈和同情更重要。"
+    },
+    "options": [
+      {
+        "id": "Q13_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "T"
+      },
+      {
+        "id": "Q13_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "T"
+      },
+      {
+        "id": "Q13_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q13_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "F"
+      },
+      {
+        "id": "Q13_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "F"
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "type": "single_choice",
+    "content": {
+      "text": "我很难对需要但逻辑上不合理的决定感到心安理得。"
+    },
+    "options": [
+      {
+        "id": "Q14_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "F"
+      },
+      {
+        "id": "Q14_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "F"
+      },
+      {
+        "id": "Q14_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q14_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "T"
+      },
+      {
+        "id": "Q14_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "T"
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢让事情有定论，做出决定后感到轻松。"
+    },
+    "options": [
+      {
+        "id": "Q15_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "J"
+      },
+      {
+        "id": "Q15_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "J"
+      },
+      {
+        "id": "Q15_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q15_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "P"
+      },
+      {
+        "id": "Q15_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "P"
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "type": "single_choice",
+    "content": {
+      "text": "我更喜欢保持选择的开放性，以便在最后一刻改变主意。"
+    },
+    "options": [
+      {
+        "id": "Q16_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "P"
+      },
+      {
+        "id": "Q16_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "P"
+      },
+      {
+        "id": "Q16_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q16_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "J"
+      },
+      {
+        "id": "Q16_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "J"
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "type": "single_choice",
+    "content": {
+      "text": "在团队中，我通常是那个主动发起对话和活动的人。"
+    },
+    "options": [
+      {
+        "id": "Q17_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q17_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q17_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q17_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q17_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "I"
+      }
+    ]
+  },
+  {
+    "id": "Q18",
+    "type": "single_choice",
+    "content": {
+      "text": "我经常需要独处的时间来‘充电’，反思自己的想法。"
+    },
+    "options": [
+      {
+        "id": "Q18_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q18_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q18_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q18_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q18_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "E"
+      }
+    ]
+  },
+  {
+    "id": "Q19",
+    "type": "single_choice",
+    "content": {
+      "text": "我倾向于关注当下正在发生的事情，而不是未来可能发生的事情。"
+    },
+    "options": [
+      {
+        "id": "Q19_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q19_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q19_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q19_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q19_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "N"
+      }
+    ]
+  },
+  {
+    "id": "Q20",
+    "type": "single_choice",
+    "content": {
+      "text": "我经常从看似无关的事物中发现象征意义和深层联系。"
+    },
+    "options": [
+      {
+        "id": "Q20_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q20_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q20_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q20_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q20_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "S"
+      }
+    ]
+  },
+  {
+    "id": "Q21",
+    "type": "single_choice",
+    "content": {
+      "text": "我认为真理比圆滑的言辞更重要，即使真相可能伤人。"
+    },
+    "options": [
+      {
+        "id": "Q21_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "T"
+      },
+      {
+        "id": "Q21_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "T"
+      },
+      {
+        "id": "Q21_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q21_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "F"
+      },
+      {
+        "id": "Q21_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "F"
+      }
+    ]
+  },
+  {
+    "id": "Q22",
+    "type": "single_choice",
+    "content": {
+      "text": "我经常能敏锐地察觉到周围人的情绪和需求。"
+    },
+    "options": [
+      {
+        "id": "Q22_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "F"
+      },
+      {
+        "id": "Q22_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "F"
+      },
+      {
+        "id": "Q22_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q22_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "T"
+      },
+      {
+        "id": "Q22_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "T"
+      }
+    ]
+  },
+  {
+    "id": "Q23",
+    "type": "single_choice",
+    "content": {
+      "text": "我喜欢在开始工作前制定详细的计划和时间表。"
+    },
+    "options": [
+      {
+        "id": "Q23_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "J"
+      },
+      {
+        "id": "Q23_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "J"
+      },
+      {
+        "id": "Q23_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q23_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "P"
+      },
+      {
+        "id": "Q23_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "P"
+      }
+    ]
+  },
+  {
+    "id": "Q24",
+    "type": "single_choice",
+    "content": {
+      "text": "我认为计划会限制我的自发性和应对新机会的能力。"
+    },
+    "options": [
+      {
+        "id": "Q24_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "P"
+      },
+      {
+        "id": "Q24_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "P"
+      },
+      {
+        "id": "Q24_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q24_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "J"
+      },
+      {
+        "id": "Q24_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "J"
+      }
+    ]
+  },
+  {
+    "id": "Q25",
+    "type": "single_choice",
+    "content": {
+      "text": "与他人讨论想法能帮助我理清自己的思路。"
+    },
+    "options": [
+      {
+        "id": "Q25_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q25_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q25_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q25_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q25_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "I"
+      }
+    ]
+  },
+  {
+    "id": "Q26",
+    "type": "single_choice",
+    "content": {
+      "text": "在表达观点前，我倾向于先在内心完全想清楚。"
+    },
+    "options": [
+      {
+        "id": "Q26_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q26_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "I"
+      },
+      {
+        "id": "Q26_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q26_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "E"
+      },
+      {
+        "id": "Q26_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "E"
+      }
+    ]
+  },
+  {
+    "id": "Q27",
+    "type": "single_choice",
+    "content": {
+      "text": "我更喜欢处理明确、具体的信息，而不是模糊、抽象的概念。"
+    },
+    "options": [
+      {
+        "id": "Q27_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q27_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q27_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q27_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q27_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "N"
+      }
+    ]
+  },
+  {
+    "id": "Q28",
+    "type": "single_choice",
+    "content": {
+      "text": "我享受头脑风暴和思考各种未来场景。"
+    },
+    "options": [
+      {
+        "id": "Q28_o1",
+        "label": "非常不同意",
+        "value": 1,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q28_o2",
+        "label": "不同意",
+        "value": 2,
+        "dimensionKey": "N"
+      },
+      {
+        "id": "Q28_o3",
+        "label": "中立",
+        "value": 3
+      },
+      {
+        "id": "Q28_o4",
+        "label": "同意",
+        "value": 4,
+        "dimensionKey": "S"
+      },
+      {
+        "id": "Q28_o5",
+        "label": "非常同意",
+        "value": 5,
+        "dimensionKey": "S"
+      }
+    ]
+  }
+]
