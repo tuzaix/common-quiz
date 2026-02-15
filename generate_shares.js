@@ -131,6 +131,8 @@ async function saveAsJpg(svgString, outputPath) {
   }
 }
 
+const TARGET_COUNT = 30; // 每个项目至少生成的图片数量
+
 async function run() {
   const projects = fs.readdirSync(PROJECTS_DIR);
 
@@ -149,29 +151,17 @@ async function run() {
         fs.mkdirSync(projectOutputDir, { recursive: true });
       }
 
-      console.log(`正在为项目 [${config.title}] 生成 JPG 图片...`);
+      // 计算最终生成数量：取指定数量与规则总数的较大值
+      const finalCount = Math.max(TARGET_COUNT, rules.length);
 
-      // 选取最多 50 个结果（或者全部）
-      const count = Math.min(rules.length, 50);
-      const selectedRules = rules.slice(0, count);
+      console.log(`正在为项目 [${config.title}] 生成 ${finalCount} 张 JPG 图片...`);
 
-      for (let index = 0; index < selectedRules.length; index++) {
-        const rule = selectedRules[index];
-        const score = parseScore(rule.condition);
+      for (let i = 0; i < finalCount; i++) {
+        const rule = rules[i % rules.length]; // 循环使用规则
+        const score = parseScore(rule.condition); // 每次随机生成分数
         const svg = generateSVG(config.title, rule.title || '测试结果', rule.description, score, projectId);
-        const fileName = `share_${index + 1}.jpg`;
+        const fileName = `share_${i + 1}.jpg`;
         await saveAsJpg(svg, path.join(projectOutputDir, fileName));
-      }
-
-      // 如果结果不足10个，循环补充
-      if (count < 10) {
-        for (let i = count; i < 10; i++) {
-          const rule = rules[i % rules.length];
-          const score = parseScore(rule.condition);
-          const svg = generateSVG(config.title, rule.title || '测试结果', rule.description, score, projectId);
-          const fileName = `share_${i + 1}.jpg`;
-          await saveAsJpg(svg, path.join(projectOutputDir, fileName));
-        }
       }
 
     } catch (e) {
