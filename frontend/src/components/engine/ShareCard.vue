@@ -97,7 +97,7 @@ const getLayout = () => {
       { type: 'text', content: '探索更多精准有趣的心理测评', x: 210, y: 735, fontSize: 24, color: '#9ca3af' },
       
       // 品牌标识
-      { type: 'text', content: '@测评中心', x: 650, y: 732, fontSize: 22, color: '#fb7185', fontWeight: 'bold', textAlign: 'right' }
+      // { type: 'text', content: '@测评中心', x: 650, y: 732, fontSize: 22, color: '#fb7185', fontWeight: 'bold', textAlign: 'right' }
     );
   }
 
