@@ -6,7 +6,7 @@ const multer = require('multer');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3870;
 
 // 静态文件目录，允许跨域访问图片
 app.use('/uploads', cors(), express.static(path.join(__dirname, 'data/uploads')));
