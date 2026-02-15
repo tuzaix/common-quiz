@@ -32,13 +32,14 @@ const handleShowShare = async () => {
 };
 
 const shareData = computed(() => ({
+  projectTitle: props.config?.title || '', // 项目标题
   title: props.rule?.title || '测试结果',
   score: Math.round(props.result?.totalScore || 0),
   mbti: props.result?.mbti || '',
   description: props.rule?.description || ''
 }));
 
-const showRadar = computed(() => props.config.shareCard?.elements?.showRadar && props.result.dimensions);
+const showRadar = computed(() => props.config?.resultConfig?.shareCard?.elements?.showRadar && props.result.dimensions);
 </script>
 
 <template>
@@ -50,8 +51,8 @@ const showRadar = computed(() => props.config.shareCard?.elements?.showRadar && 
         <div class="absolute bottom-[-10%] right-[-10%] w-40 h-40 bg-pink-300 rounded-full blur-3xl"></div>
       </div>
       <div class="relative z-10">
-        <div class="inline-block px-4 py-1.5 rounded-full bg-white/60 backdrop-blur-md text-rose-500 text-sm font-medium mb-3 shadow-sm">
-          ✨ 测评报告已生成
+        <div v-if="config?.title" class="inline-block px-4 py-1.5 rounded-full bg-white/60 backdrop-blur-md text-rose-500 text-base font-medium mb-3 shadow-sm">
+          ✨ 【{{ config.title }}】· 测评报告
         </div>
         <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight drop-shadow-sm">{{ rule?.title }}</h1>
       </div>

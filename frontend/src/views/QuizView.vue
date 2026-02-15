@@ -159,7 +159,7 @@ const restart = () => {
         v-if="isCodeVerified"
         :result="store.calculationResult"
         :rule="store.matchedRule"
-        :config="store.projectConfig.resultConfig"
+        :config="store.projectConfig"
         :projectId="(route.params.id as string)"
         @restart="restart"
       />
