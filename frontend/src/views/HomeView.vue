@@ -176,22 +176,26 @@ onMounted(async () => {
               :alt="project.title"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            <div class="absolute top-3 left-3 flex flex-col gap-2">
-              <span class="px-2.5 py-1 bg-white/90 backdrop-blur-sm text-blue-600 text-xs font-bold rounded-lg shadow-sm w-fit">
+            <div class="absolute top-3 left-3 flex flex-col gap-1.5">
+              <!-- 分类标签 -->
+              <span class="px-2 py-0.5 bg-black/20 backdrop-blur-md text-white text-[10px] font-medium rounded-md w-fit">
                 {{ project.category }}
               </span>
-              <span v-if="project.isHot || project.views > 5000" class="px-2.5 py-1 bg-red-500 text-white text-xs font-bold rounded-lg shadow-sm flex items-center gap-1 animate-pulse w-fit">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.342c-.716.445-1.315 1.037-1.752 1.732-.475.758-.888 1.612-1.241 2.545-.403 1.066-.74 2.14-1.038 3.203-1.032 3.667-1.616 6.347-1.616 6.347a1 1 0 001.243 1.177c.413-.108.847-.323 1.25-.63.454-.347.886-.807 1.258-1.31.761-1.028 1.458-2.42 1.954-4.124.404-1.38.641-2.836.702-4.305.01-.253.017-.504.022-.753l.011-.533zM10.925 10.313a4.333 4.333 0 00.435-1.203c.124-.523.184-1.053.184-1.587 0-.075-.001-.15-.003-.225a1 1 0 00-.44-.812 1 1 0 00-1.157.079 5.646 5.646 0 01-1.235.88c-.39.215-.79.385-1.189.502a1 1 0 00-.71 1.238l.003.011s.46 1.624 1.114 3.538c.128.372.293.74.495 1.106a1 1 0 001.432.351 5.79 5.79 0 011.353-.694c.41-.165.81-.277 1.187-.33a1 1 0 00.832-1.257z" clip-rule="evenodd" />
-                </svg>
-                热门
-              </span>
-              <span v-if="isNewProject(project.createdAt)" class="px-2.5 py-1 bg-green-500 text-white text-xs font-bold rounded-lg shadow-sm flex items-center gap-1 w-fit">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                最新
-              </span>
+              <!-- 状态标签组 -->
+              <div class="flex gap-1">
+                <span v-if="isNewProject(project.createdAt)" class="px-2 py-0.5 bg-green-500 text-white text-[10px] font-bold rounded-md shadow-sm flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  最新
+                </span>
+                <span v-if="project.isHot || project.views > 5000" class="px-2 py-0.5 bg-red-500 text-white text-[10px] font-bold rounded-md shadow-sm flex items-center gap-1 animate-pulse">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.342c-.716.445-1.315 1.037-1.752 1.732-.475.758-.888 1.612-1.241 2.545-.403 1.066-.74 2.14-1.038 3.203-1.032 3.667-1.616 6.347-1.616 6.347a1 1 0 001.243 1.177c.413-.108.847-.323 1.25-.63.454-.347.886-.807 1.258-1.31.761-1.028 1.458-2.42 1.954-4.124.404-1.38.641-2.836.702-4.305.01-.253.017-.504.022-.753l.011-.533zM10.925 10.313a4.333 4.333 0 00.435-1.203c.124-.523.184-1.053.184-1.587 0-.075-.001-.15-.003-.225a1 1 0 00-.44-.812 1 1 0 00-1.157.079 5.646 5.646 0 01-1.235.88c-.39.215-.79.385-1.189.502a1 1 0 00-.71 1.238l.003.011s.46 1.624 1.114 3.538c.128.372.293.74.495 1.106a1 1 0 001.432.351 5.79 5.79 0 011.353-.694c.41-.165.81-.277 1.187-.33a1 1 0 00.832-1.257z" clip-rule="evenodd" />
+                  </svg>
+                  热门
+                </span>
+              </div>
             </div>
             <div v-if="project.access === 'code_required'" class="absolute top-3 right-3">
               <span class="p-1.5 bg-yellow-400 text-yellow-900 rounded-lg shadow-sm" title="需要激活码">

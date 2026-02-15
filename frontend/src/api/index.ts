@@ -13,6 +13,14 @@ export const resolveUrl = (path: string) => {
   if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) {
     return path;
   }
+  
+  // 如果路径是以 /covers/ 开头的，说明是前端 public 目录下的静态资源
+  // 在开发环境下，Vite 会处理 public 目录
+  // 在生产环境下，这些资源会被部署到根目录
+  if (path.startsWith('/covers/') || path.startsWith('covers/')) {
+    return path.startsWith('/') ? path : `/${path}`;
+  }
+
   // 确保 path 以 / 开头
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   return `${baseURL}${normalizedPath}`;
