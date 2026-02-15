@@ -23,7 +23,15 @@ export const resolveUrl = (path: string) => {
 
   // 确保 path 以 / 开头
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-  return `${baseURL}${normalizedPath}`;
+  
+  // 如果 baseURL 是 /，则直接返回路径，避免出现 //api/xxx 的情况
+  if (baseURL === '/') {
+    return normalizedPath;
+  }
+  
+  // 去掉 baseURL 末尾的 / (如果存在)
+  const cleanBaseURL = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL;
+  return `${cleanBaseURL}${normalizedPath}`;
 };
 
 // 请求拦截器
