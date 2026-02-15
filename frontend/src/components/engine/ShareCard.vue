@@ -15,32 +15,39 @@ const props = defineProps<{
     height: number;
     layers: Layer[];
   };
+  version?: 'full' | 'simple';
 }>();
 
 const emit = defineEmits(['close']);
 
+const currentVersion = ref(props.version || 'full');
 const imageBase64 = ref('');
 const isGenerating = ref(true);
 
-const defaultLayout: { width: number, height: number, layers: Layer[] } = {
-  width: 750,
-  height: 850,
-  layers: [
+/**
+ * 获取当前布局配置
+ */
+const getLayout = () => {
+  const isSimple = currentVersion.value === 'simple';
+  const canvasHeight = isSimple ? 700 : 850;
+  const cardHeight = isSimple ? 620 : 770;
+
+  const layers: Layer[] = [
     // 1. 全局背景渐变
     { 
-      type: 'rect', x: 0, y: 0, width: 750, height: 850, 
+      type: 'rect', x: 0, y: 0, width: 750, height: canvasHeight, 
       gradient: { colors: ['#fff1f2', '#ffe4e6', '#fecdd3'], direction: 'vertical' } 
     },
     // 2. 装饰性背景圆 (左下角)
-    { type: 'circle', x: 0, y: 850, width: 400, color: '#fda4af', opacity: 0.3 },
+    { type: 'circle', x: 0, y: canvasHeight, width: 400, color: '#fda4af', opacity: 0.3 },
     
     // 3. 主卡片容器 (白色背景)
     { 
-      type: 'rect', x: 50, y: 40, width: 650, height: 770, color: '#ffffff', borderRadius: 40,
+      type: 'rect', x: 50, y: 40, width: 650, height: cardHeight, color: '#ffffff', borderRadius: 40,
       shadow: { color: 'rgba(251, 113, 133, 0.15)', blur: 30, offsetX: 0, offsetY: 15 }
     },
     // 4. 卡片底部阴影增强
-    { type: 'rect', x: 80, y: 790, width: 590, height: 20, color: '#fda4af', borderRadius: 10, opacity: 0.2 },
+    { type: 'rect', x: 80, y: cardHeight + 20, width: 590, height: 20, color: '#fda4af', borderRadius: 10, opacity: 0.2 },
 
     // 5. 标题区域
     { type: 'text', content: 'PERSONALITY REPORT', x: 375, y: 90, fontSize: 24, color: '#fb7185', fontWeight: '900', textAlign: 'center' },
@@ -76,22 +83,30 @@ const defaultLayout: { width: number, height: number, layers: Layer[] } = {
     
     // 11. 寄语/描述
     { type: 'text', content: '每一份特质，都是独一无二的光 ✨', x: 375, y: 600, fontSize: 28, color: '#6b7280', textAlign: 'center' },
-    
-    // 12. 底部引导区
-    { type: 'line', x: 100, y: 665, width: 550, height: 2, color: '#f3f4f6' },
-    
-    // 二维码占位/品牌区域
-    { type: 'rect', x: 100, y: 680, width: 100, height: 100, color: '#f9fafb', borderRadius: 15 },
-    { type: 'text', content: '长按扫码解锁你的灵魂', x: 210, y: 695, fontSize: 28, color: '#4b5563', fontWeight: 'bold' },
-    { type: 'text', content: '探索更多精准有趣的心理测评', x: 210, y: 735, fontSize: 24, color: '#9ca3af' },
-    
-    // 品牌标识
-    // { type: 'text', content: '@测评中心', x: 650, y: 732, fontSize: 22, color: '#fb7185', fontWeight: 'bold', textAlign: 'right' }
-  ]
+  ];
+
+  // 仅完整版添加底部引导区
+  if (!isSimple) {
+    layers.push(
+      // 12. 底部引导区
+      { type: 'line', x: 100, y: 665, width: 550, height: 2, color: '#f3f4f6' },
+      
+      // 二维码占位/品牌区域
+      { type: 'rect', x: 100, y: 680, width: 100, height: 100, color: '#f9fafb', borderRadius: 15 },
+      { type: 'text', content: '长按扫码解锁你的灵魂', x: 210, y: 695, fontSize: 28, color: '#4b5563', fontWeight: 'bold' },
+      { type: 'text', content: '探索更多精准有趣的心理测评', x: 210, y: 735, fontSize: 24, color: '#9ca3af' },
+      
+      // 品牌标识
+      { type: 'text', content: '@测评中心', x: 650, y: 732, fontSize: 22, color: '#fb7185', fontWeight: 'bold', textAlign: 'right' }
+    );
+  }
+
+  return { width: 750, height: canvasHeight, layers };
 };
 
-onMounted(async () => {
-  const layout = JSON.parse(JSON.stringify(props.layout || defaultLayout));
+const generateImage = async () => {
+  isGenerating.value = true;
+  const layout = props.layout || getLayout();
   
   // 获取系统配置中的二维码
   try {
@@ -102,17 +117,16 @@ onMounted(async () => {
     if (!props.data.score && props.data.mbti) {
       const mbtiLayer = layout.layers.find((l: any) => l.content === '{mbti}');
       if (mbtiLayer) {
-        mbtiLayer.y = 420; 
+        // 精简版由于总高度变小，居中位置也需要微调
+        mbtiLayer.y = currentVersion.value === 'simple' ? 380 : 420; 
         mbtiLayer.fontSize = 160; 
       }
     }
 
-    if (qrcodeUrl) {
-      // 查找二维码图层（目前是占位矩形）
-      // 我们的 defaultLayout 中，二维码相关的是 y: 680 的 rect
+    if (qrcodeUrl && currentVersion.value === 'full') {
+      // 查找二维码图层
       const qrcodeLayerIndex = layout.layers.findIndex((l: any) => l.x === 100 && l.y === 680 && l.width === 100);
       if (qrcodeLayerIndex !== -1) {
-        // 替换为图片图层
         layout.layers[qrcodeLayerIndex] = {
           type: 'image',
           content: resolveUrl(qrcodeUrl),
@@ -136,7 +150,20 @@ onMounted(async () => {
   } finally {
     isGenerating.value = false;
   }
+};
+
+onMounted(() => {
+  generateImage();
 });
+
+/**
+ * 切换布局版本
+ */
+const toggleVersion = (version: 'full' | 'simple') => {
+  if (currentVersion.value === version) return;
+  currentVersion.value = version;
+  generateImage();
+};
 
 const download = () => {
   const now = new Date();
@@ -172,6 +199,28 @@ const download = () => {
       </div>
       
       <div class="p-8 flex flex-col items-center">
+        <!-- 布局版本切换 -->
+        <div class="flex bg-gray-100 p-1 rounded-xl mb-6 self-stretch">
+          <button 
+            @click="toggleVersion('full')"
+            :class="[
+              'flex-1 py-2 px-4 rounded-lg font-bold transition-all text-sm flex items-center justify-center gap-2',
+              currentVersion === 'full' ? 'bg-white text-rose-500 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+            ]"
+          >
+            <span class="text-lg">📱</span> 完整海报
+          </button>
+          <button 
+            @click="toggleVersion('simple')"
+            :class="[
+              'flex-1 py-2 px-4 rounded-lg font-bold transition-all text-sm flex items-center justify-center gap-2',
+              currentVersion === 'simple' ? 'bg-white text-rose-500 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+            ]"
+          >
+            <span class="text-lg">✨</span> 精简纯净
+          </button>
+        </div>
+
         <div v-if="isGenerating" class="h-96 flex flex-col items-center justify-center gap-4">
           <div class="relative w-16 h-16">
             <div class="absolute inset-0 rounded-full border-4 border-rose-100"></div>
