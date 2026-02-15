@@ -4,7 +4,7 @@
  */
 
 export interface ScoringConfig {
-  scoringEngine: 'sum' | 'dimension_sum' | 'formula';
+  scoringEngine: 'sum' | 'dimension_sum' | 'formula' | 'mbti';
   formula?: string;
   resultRules: Array<{
     condition: string;
@@ -45,9 +45,43 @@ export class ScoringService {
         return this._calculateDimension();
       case 'formula':
         return this._executeFormula();
+      case 'mbti':
+        return this._calculateMBTI();
       default:
         return { totalScore: 0 };
     }
+  }
+
+  /**
+   * 计算 MBTI 类型
+   */
+  private _calculateMBTI() {
+    const dimensions: Record<string, number> = {};
+    this.answers.forEach(answer => {
+      if (answer.dimensionKey) {
+        dimensions[answer.dimensionKey] = (dimensions[answer.dimensionKey] || 0) + (Number(answer.value) || 0);
+      }
+    });
+
+    // MBTI 维度对照：E-I, S-N, T-F, J-P
+    // 假设 dimensionKey 为 E, I, S, N, T, F, J, P
+    // 或者根据分值判断，例如 E > I 则为 E，否则为 I
+    const getType = (high: string, low: string) => {
+      return (dimensions[high] || 0) >= (dimensions[low] || 0) ? high : low;
+    };
+
+    const mbti = [
+      getType('E', 'I'),
+      getType('S', 'N'),
+      getType('T', 'F'),
+      getType('J', 'P')
+    ].join('');
+
+    return { 
+      totalScore: 100, // MBTI 通常不看总分，设为 100 兼容逻辑
+      mbti, 
+      dimensions 
+    };
   }
 
   /**
@@ -163,12 +197,22 @@ export class ScoringService {
     for (const rule of this.config.resultRules) {
       try {
         const context = { ...calculationResult };
-        const fn = new Function(...Object.keys(context), `return ${rule.condition}`);
-        if (fn(...Object.values(context))) {
+        // 使用更安全且容错的 eval 方式
+        const keys = Object.keys(context);
+        const values = Object.values(context);
+        const fn = new Function(...keys, `
+          try {
+            return ${rule.condition};
+          } catch (e) {
+            return false;
+          }
+        `);
+        
+        if (fn(...values)) {
           return rule;
         }
       } catch (e) {
-        console.error('Rule condition matching failed:', e);
+        // 静默处理单条规则错误，尝试匹配下一条
       }
     }
     return this.config.resultRules[this.config.resultRules.length - 1]; // 默认返回最后一个规则

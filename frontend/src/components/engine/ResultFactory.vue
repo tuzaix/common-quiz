@@ -31,19 +31,23 @@ const handleShowShare = async () => {
   }
 };
 
-// 如果有 mbti 结果，通常不展示分数
-  const showScore = computed(() => {
-    if (props.result?.mbti) return false;
-    return (props.result?.totalScore !== undefined && props.result?.totalScore !== null);
-  });
-  
-  const shareData = computed(() => ({
-    projectTitle: props.config?.title || '', // 项目标题
-    title: props.rule?.title || '测试结果',
-    score: showScore.value ? Math.round(props.result?.totalScore || 0) : null,
-    mbti: props.result?.mbti || '',
-    description: props.rule?.description || ''
-  }));
+// 统一的结果展示逻辑：根据数据是否存在决定渲染
+const showScore = computed(() => {
+  return (props.result?.totalScore !== undefined && props.result?.totalScore !== null);
+});
+
+const showMBTI = computed(() => {
+  return !!props.result?.mbti;
+});
+
+const shareData = computed(() => ({
+  projectTitle: props.config?.title || '', // 项目标题
+  title: props.rule?.title || '测试结果',
+  // 如果有 mbti，强制 score 为 null，以触发分享卡片中分数图层的隐藏逻辑
+  score: showMBTI.value ? null : (showScore.value ? Math.round(props.result?.totalScore || 0) : null),
+  mbti: showMBTI.value ? props.result?.mbti : '',
+  description: props.rule?.description || ''
+}));
 
 const showRadar = computed(() => props.config?.resultConfig?.shareCard?.elements?.showRadar && props.result.dimensions);
 </script>
@@ -66,7 +70,8 @@ const showRadar = computed(() => props.config?.resultConfig?.shareCard?.elements
 
     <div class="px-6 py-10 md:px-12">
       <!-- 核心结果展示区 -->
-      <div class="relative mb-12">
+      <div class="relative mb-12 space-y-8">
+        <!-- 分数展示 (通用) -->
         <div v-if="showScore" class="flex flex-col items-center">
           <div class="relative inline-block">
             <svg class="w-40 h-40 -rotate-90">
@@ -81,7 +86,8 @@ const showRadar = computed(() => props.config?.resultConfig?.shareCard?.elements
           </div>
         </div>
 
-        <div v-if="result && result.mbti" class="mb-4 animate-bounce-slow">
+        <!-- 类型展示 (通用，如 MBTI) -->
+        <div v-if="showMBTI" class="animate-bounce-slow">
           <div class="text-7xl font-black bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent italic tracking-tighter">{{ result.mbti }}</div>
           <div class="text-sm text-rose-400 font-bold uppercase tracking-[0.2em] mt-2">✨ 你的专属灵魂类型 ✨</div>
         </div>

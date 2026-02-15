@@ -47,14 +47,15 @@ const defaultLayout: { width: number, height: number, layers: Layer[] } = {
     { type: 'text', content: '✨ 【{projectTitle}】 ✨', x: 375, y: 155, fontSize: 32, color: '#4b5563', fontWeight: 'bold', textAlign: 'center' },
     
     // 6. 结果等级/标题
-    { type: 'text', content: '{title}', x: 375, y: 240, fontSize: 50, color: '#fb7185', fontWeight: 'bold', textAlign: 'center' },
+    { type: 'text', content: '{title}', x: 375, y: 245, fontSize: 52, color: '#fb7185', fontWeight: 'bold', textAlign: 'center' },
     
     // 7. 装饰线
-    { type: 'line', x: 225, y: 335, width: 300, height: 4, color: '#fecdd3' },
+    { type: 'line', x: 225, y: 340, width: 300, height: 4, color: '#fecdd3' },
 
-    // 9. MBTI/核心结果 (超大字体)
+    // 9. 类型结果 (如 MBTI)
     { 
-      type: 'text', content: '{mbti}', x: 375, y: 440, fontSize: 130, color: '#f43f5e', fontWeight: 'bold', textAlign: 'center',
+      type: 'text', content: '{mbti}', x: 375, y: 380, fontSize: 140, color: '#f43f5e', fontWeight: 'bold', textAlign: 'center',
+      visible: '{mbti}',
       shadow: { color: 'rgba(244, 63, 94, 0.2)', blur: 20, offsetX: 0, offsetY: 10 }
     },
     
@@ -97,12 +98,12 @@ onMounted(async () => {
     const settingsRes = await api.get('/api/settings');
     const qrcodeUrl = settingsRes.data.qrcodeUrl;
     
-    // 如果没有分数，我们需要调整 MBTI 的位置使其垂直居中
+    // 如果没有分数且有 mbti，调整其位置使其垂直居中，让排版更合理
     if (!props.data.score && props.data.mbti) {
       const mbtiLayer = layout.layers.find((l: any) => l.content === '{mbti}');
       if (mbtiLayer) {
-        mbtiLayer.y = 480; // 往下移动一点，使其在原本分数的位置附近居中
-        mbtiLayer.fontSize = 160; // 稍微加大一点
+        mbtiLayer.y = 420; 
+        mbtiLayer.fontSize = 160; 
       }
     }
 
