@@ -4,7 +4,7 @@
  * 负责题目展示、进度条、题目切换逻辑
  */
 
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import { getComponentByType } from './QuestionTypeRegistry';
 import { resolveUrl } from '../../api';
 
