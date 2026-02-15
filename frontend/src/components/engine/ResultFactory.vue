@@ -31,13 +31,19 @@ const handleShowShare = async () => {
   }
 };
 
-const shareData = computed(() => ({
-  projectTitle: props.config?.title || '', // 项目标题
-  title: props.rule?.title || '测试结果',
-  score: Math.round(props.result?.totalScore || 0),
-  mbti: props.result?.mbti || '',
-  description: props.rule?.description || ''
-}));
+// 如果有 mbti 结果，通常不展示分数
+  const showScore = computed(() => {
+    if (props.result?.mbti) return false;
+    return (props.result?.totalScore !== undefined && props.result?.totalScore !== null);
+  });
+  
+  const shareData = computed(() => ({
+    projectTitle: props.config?.title || '', // 项目标题
+    title: props.rule?.title || '测试结果',
+    score: showScore.value ? Math.round(props.result?.totalScore || 0) : null,
+    mbti: props.result?.mbti || '',
+    description: props.rule?.description || ''
+  }));
 
 const showRadar = computed(() => props.config?.resultConfig?.shareCard?.elements?.showRadar && props.result.dimensions);
 </script>
@@ -61,7 +67,7 @@ const showRadar = computed(() => props.config?.resultConfig?.shareCard?.elements
     <div class="px-6 py-10 md:px-12">
       <!-- 核心结果展示区 -->
       <div class="relative mb-12">
-        <div v-if="result && result.totalScore !== undefined" class="flex flex-col items-center">
+        <div v-if="showScore" class="flex flex-col items-center">
           <div class="relative inline-block">
             <svg class="w-40 h-40 -rotate-90">
               <circle cx="80" cy="80" r="70" fill="none" stroke="#fee2e2" stroke-width="12" />
@@ -75,7 +81,7 @@ const showRadar = computed(() => props.config?.resultConfig?.shareCard?.elements
           </div>
         </div>
 
-        <div v-if="result && result.mbti" class="mb-10 animate-bounce-slow">
+        <div v-if="result && result.mbti" class="mb-4 animate-bounce-slow">
           <div class="text-7xl font-black bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent italic tracking-tighter">{{ result.mbti }}</div>
           <div class="text-sm text-rose-400 font-bold uppercase tracking-[0.2em] mt-2">✨ 你的专属灵魂类型 ✨</div>
         </div>

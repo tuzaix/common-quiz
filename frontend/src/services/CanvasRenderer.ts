@@ -15,6 +15,7 @@ export interface Layer {
   borderRadius?: number;
   fontWeight?: string;
   textAlign?: 'left' | 'center' | 'right';
+  visible?: string; // 支持简单的占位符判断，如 "{score}"，如果对应的 data[score] 为空则不渲染
   gradient?: {
     colors: string[];
     direction: 'horizontal' | 'vertical';
@@ -53,8 +54,17 @@ export class CanvasRenderer {
   private async drawLayer(layer: Layer, data: Record<string, any>) {
     const { 
       type, x, y, width, height, color, fontSize, content, 
-      borderRadius, fontWeight, textAlign, gradient, shadow, opacity 
+      borderRadius, fontWeight, textAlign, gradient, shadow, opacity, visible 
     } = layer;
+    
+    // 处理可见性逻辑
+    if (visible) {
+      const visibleKey = visible.replace(/[\{\}]/g, '');
+      const visibleVal = data[visibleKey];
+      if (visibleVal === undefined || visibleVal === null || visibleVal === '') {
+        return; // 不渲染
+      }
+    }
     
     // 解析占位符 {variableName}
     const resolvedContent = content?.replace(/\{(\w+)\}/g, (_, key) => {

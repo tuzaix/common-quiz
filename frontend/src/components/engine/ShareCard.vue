@@ -58,15 +58,18 @@ const defaultLayout: { width: number, height: number, layers: Layer[] } = {
       shadow: { color: 'rgba(244, 63, 94, 0.2)', blur: 20, offsetX: 0, offsetY: 10 }
     },
     
-    // 10. 综合评分 - 突出重点
+    // 10. 综合评分 - 突出重点 (仅在有分数时展示)
     { 
-      type: 'rect', x: 275, y: 370, width: 200, height: 40, color: '#fff1f2', borderRadius: 20 
+      type: 'rect', x: 275, y: 380, width: 200, height: 40, color: '#fff1f2', borderRadius: 20,
+      visible: '{score}' 
     },
     { 
-      type: 'text', content: '综合评分', x: 375, y: 380, fontSize: 24, color: '#fb7185', fontWeight: 'bold', textAlign: 'center' 
+      type: 'text', content: '综合评分', x: 375, y: 390, fontSize: 24, color: '#fb7185', fontWeight: 'bold', textAlign: 'center',
+      visible: '{score}' 
     },
     { 
-      type: 'text', content: '{score}', x: 375, y: 450, fontSize: 130, color: '#fb7185', fontWeight: '900', textAlign: 'center',
+      type: 'text', content: '{score}', x: 375, y: 462, fontSize: 130, color: '#fb7185', fontWeight: '900', textAlign: 'center',
+      visible: '{score}',
       shadow: { color: 'rgba(244, 63, 94, 0.15)', blur: 10, offsetX: 0, offsetY: 5 }
     },
     
@@ -94,6 +97,15 @@ onMounted(async () => {
     const settingsRes = await api.get('/api/settings');
     const qrcodeUrl = settingsRes.data.qrcodeUrl;
     
+    // 如果没有分数，我们需要调整 MBTI 的位置使其垂直居中
+    if (!props.data.score && props.data.mbti) {
+      const mbtiLayer = layout.layers.find((l: any) => l.content === '{mbti}');
+      if (mbtiLayer) {
+        mbtiLayer.y = 480; // 往下移动一点，使其在原本分数的位置附近居中
+        mbtiLayer.fontSize = 160; // 稍微加大一点
+      }
+    }
+
     if (qrcodeUrl) {
       // 查找二维码图层（目前是占位矩形）
       // 我们的 defaultLayout 中，二维码相关的是 y: 680 的 rect
@@ -126,8 +138,19 @@ onMounted(async () => {
 });
 
 const download = () => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  
+  const timestamp = `${year}${month}${day}-${hours}${minutes}${seconds}`;
+  const projectName = props.data.projectTitle || '测评结果';
+  
   const link = document.createElement('a');
-  link.download = `result-${Date.now()}.png`;
+  link.download = `${projectName}-${timestamp}.png`;
   link.href = imageBase64.value;
   link.click();
 };
