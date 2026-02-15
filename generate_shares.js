@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const sharp = require('sharp');
 
 const PROJECTS_DIR = path.join(__dirname, 'backend', 'data', 'projects');
 const OUTPUT_DIR = path.join(__dirname, '运营', '分享图片');
@@ -120,50 +121,65 @@ function generateSVG(projectTitle, resultTitle, resultDescription, score = 85, p
   `.trim();
 }
 
-const projects = fs.readdirSync(PROJECTS_DIR);
-
-projects.forEach(projectId => {
-  const configPath = path.join(PROJECTS_DIR, projectId, 'config.json');
-  if (!fs.existsSync(configPath)) return;
-
+async function saveAsJpg(svgString, outputPath) {
   try {
-    const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-    const rules = config.resultConfig?.resultRules || [];
-    
-    if (rules.length === 0) return;
+    await sharp(Buffer.from(svgString))
+      .jpeg({ quality: 90 })
+      .toFile(outputPath);
+  } catch (e) {
+    console.error(`保存图片失败: ${outputPath}`, e);
+  }
+}
 
-    const projectOutputDir = path.join(OUTPUT_DIR, projectId);
-    if (!fs.existsSync(projectOutputDir)) {
-      fs.mkdirSync(projectOutputDir, { recursive: true });
-    }
+async function run() {
+  const projects = fs.readdirSync(PROJECTS_DIR);
 
-    console.log(`正在为项目 [${config.title}] 生成图片...`);
+  for (const projectId of projects) {
+    const configPath = path.join(PROJECTS_DIR, projectId, 'config.json');
+    if (!fs.existsSync(configPath)) continue;
 
-    // 选取最多10个结果
-    const count = Math.min(rules.length, 50);
-    const selectedRules = rules.slice(0, count);
+    try {
+      const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+      const rules = config.resultConfig?.resultRules || [];
+      
+      if (rules.length === 0) continue;
 
-    selectedRules.forEach((rule, index) => {
-      const score = parseScore(rule.condition);
-      const svg = generateSVG(config.title, rule.title || '测试结果', rule.description, score, projectId);
-      const fileName = `share_${index + 1}.svg`;
-      fs.writeFileSync(path.join(projectOutputDir, fileName), svg);
-    });
+      const projectOutputDir = path.join(OUTPUT_DIR, projectId);
+      if (!fs.existsSync(projectOutputDir)) {
+        fs.mkdirSync(projectOutputDir, { recursive: true });
+      }
 
-    // 如果结果不足10个，循环补充
-    if (count < 10) {
-      for (let i = count; i < 10; i++) {
-        const rule = rules[i % rules.length];
+      console.log(`正在为项目 [${config.title}] 生成 JPG 图片...`);
+
+      // 选取最多 50 个结果（或者全部）
+      const count = Math.min(rules.length, 50);
+      const selectedRules = rules.slice(0, count);
+
+      for (let index = 0; index < selectedRules.length; index++) {
+        const rule = selectedRules[index];
         const score = parseScore(rule.condition);
         const svg = generateSVG(config.title, rule.title || '测试结果', rule.description, score, projectId);
-        const fileName = `share_${i + 1}.svg`;
-        fs.writeFileSync(path.join(projectOutputDir, fileName), svg);
+        const fileName = `share_${index + 1}.jpg`;
+        await saveAsJpg(svg, path.join(projectOutputDir, fileName));
       }
+
+      // 如果结果不足10个，循环补充
+      if (count < 10) {
+        for (let i = count; i < 10; i++) {
+          const rule = rules[i % rules.length];
+          const score = parseScore(rule.condition);
+          const svg = generateSVG(config.title, rule.title || '测试结果', rule.description, score, projectId);
+          const fileName = `share_${i + 1}.jpg`;
+          await saveAsJpg(svg, path.join(projectOutputDir, fileName));
+        }
+      }
+
+    } catch (e) {
+      console.error(`处理项目 ${projectId} 时出错:`, e);
     }
-
-  } catch (e) {
-    console.error(`处理项目 ${projectId} 时出错:`, e);
   }
-});
 
-console.log('所有分享图片生成完成！');
+  console.log('所有分享图片生成完成！');
+}
+
+run();
