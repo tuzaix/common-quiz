@@ -88,7 +88,10 @@ const goToQuiz = (id: string) => {
   router.push(`/quiz/${id}`);
 };
 
-onMounted(fetchProjects);
+onMounted(async () => {
+  document.title = '心理测评中心 - 探索真实的自己';
+  await fetchProjects();
+});
 </script>
 
 <template>

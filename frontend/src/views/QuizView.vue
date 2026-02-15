@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, computed } from 'vue';
+import { onMounted, ref, computed, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useQuizStore } from '../store/quiz';
 import QuestionContainer from '../components/engine/QuestionContainer.vue';
@@ -56,6 +56,13 @@ onMounted(() => {
   const projectId = route.params.id as string;
   fetchConfig(projectId);
 });
+
+// 动态修改页面标题
+watch(() => store.projectConfig?.title, (newTitle) => {
+  if (newTitle) {
+    document.title = `${newTitle} - 心理测评中心`;
+  }
+}, { immediate: true });
 
 const lastJumpTo = ref<string | undefined>(undefined);
 
