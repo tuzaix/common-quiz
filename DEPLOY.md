@@ -47,13 +47,9 @@ cd common-quiz
 cd backend
 npm install
 
-# 配置环境变量 (如有需要)
-# cp .env.example .env
-# nano .env
-
 # 使用 PM2 启动后端
-pm2 start index.js --name "quiz-backend"
-
+pm2 start index.js --name "quiz-backend" -- --port 3870
+```
 # 设置 PM2 自启动
 pm2 save
 pm2 startup
@@ -62,6 +58,8 @@ pm2 startup
 ### 3. 前端构建 (Frontend)
 ```bash
 cd ../frontend
+# 修改环境变量
+cp .env.example .env 
 npm install
 
 # 构建生产环境代码
