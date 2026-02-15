@@ -47,10 +47,10 @@ const defaultLayout: { width: number, height: number, layers: Layer[] } = {
     { type: 'text', content: '✨ 【{projectTitle}】 ✨', x: 375, y: 155, fontSize: 32, color: '#4b5563', fontWeight: 'bold', textAlign: 'center' },
     
     // 6. 结果等级/标题
-    { type: 'text', content: '{title}', x: 375, y: 245, fontSize: 52, color: '#fb7185', fontWeight: 'bold', textAlign: 'center' },
+    { type: 'text', content: '{title}', x: 375, y: 240, fontSize: 50, color: '#fb7185', fontWeight: 'bold', textAlign: 'center' },
     
     // 7. 装饰线
-    { type: 'line', x: 225, y: 340, width: 300, height: 4, color: '#fecdd3' },
+    { type: 'line', x: 225, y: 335, width: 300, height: 4, color: '#fecdd3' },
 
     // 9. MBTI/核心结果 (超大字体)
     { 
@@ -60,13 +60,13 @@ const defaultLayout: { width: number, height: number, layers: Layer[] } = {
     
     // 10. 综合评分 - 突出重点
     { 
-      type: 'rect', x: 275, y: 380, width: 200, height: 40, color: '#fff1f2', borderRadius: 20 
+      type: 'rect', x: 275, y: 370, width: 200, height: 40, color: '#fff1f2', borderRadius: 20 
     },
     { 
-      type: 'text', content: '综合评分', x: 375, y: 390, fontSize: 24, color: '#fb7185', fontWeight: 'bold', textAlign: 'center' 
+      type: 'text', content: '综合评分', x: 375, y: 380, fontSize: 24, color: '#fb7185', fontWeight: 'bold', textAlign: 'center' 
     },
     { 
-      type: 'text', content: '{score}', x: 375, y: 462, fontSize: 130, color: '#fb7185', fontWeight: '900', textAlign: 'center',
+      type: 'text', content: '{score}', x: 375, y: 450, fontSize: 130, color: '#fb7185', fontWeight: '900', textAlign: 'center',
       shadow: { color: 'rgba(244, 63, 94, 0.15)', blur: 10, offsetX: 0, offsetY: 5 }
     },
     
@@ -95,18 +95,18 @@ onMounted(async () => {
     const qrcodeUrl = settingsRes.data.qrcodeUrl;
     
     if (qrcodeUrl) {
-      // 查找二维码图层（目前是占位矩形，我们可以替换它或者在它上面叠加）
-      // 我们的 defaultLayout 中，二维码相关的是 y: 740 的 rect
-      const qrcodeLayerIndex = layout.layers.findIndex((l: any) => l.x === 100 && l.y === 740 && l.width === 90);
+      // 查找二维码图层（目前是占位矩形）
+      // 我们的 defaultLayout 中，二维码相关的是 y: 680 的 rect
+      const qrcodeLayerIndex = layout.layers.findIndex((l: any) => l.x === 100 && l.y === 680 && l.width === 100);
       if (qrcodeLayerIndex !== -1) {
         // 替换为图片图层
         layout.layers[qrcodeLayerIndex] = {
           type: 'image',
-          content: resolveUrl(qrcodeUrl), // CanvasRenderer 使用 content 字段加载图片
+          content: resolveUrl(qrcodeUrl),
           x: 100,
-          y: 740,
-          width: 90,
-          height: 90,
+          y: 680,
+          width: 100,
+          height: 100,
           borderRadius: 15
         };
       }
@@ -173,31 +173,6 @@ const download = () => {
             </svg>
             保存到手机相册
           </button>
-          
-          <div class="flex items-center justify-center gap-2 text-gray-400">
-            <div class="h-[1px] flex-1 bg-gray-100"></div>
-            <span class="text-[10px] uppercase tracking-widest font-bold">分享到</span>
-            <div class="h-[1px] flex-1 bg-gray-100"></div>
-          </div>
-
-          <div class="flex justify-center gap-8">
-            <div class="flex flex-col items-center gap-1.5 opacity-80 hover:opacity-100 cursor-pointer">
-              <div class="w-12 h-12 rounded-2xl bg-[#ff2442] flex items-center justify-center text-white text-xs font-bold shadow-md shadow-red-100">小</div>
-              <span class="text-[10px] text-gray-500 font-medium">小红书</span>
-            </div>
-            <div class="flex flex-col items-center gap-1.5 opacity-80 hover:opacity-100 cursor-pointer">
-              <div class="w-12 h-12 rounded-2xl bg-[#07c160] flex items-center justify-center text-white p-2.5 shadow-md shadow-green-100">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.225 3.1c-4.47 0-8.1 3.32-8.1 7.42 0 2.22 1.05 4.22 2.7 5.62l-.68 2.52 2.38-1.25c.53.15 1.1.23 1.7.23 4.47 0 8.1-3.32 8.1-7.42 0-4.1-3.63-7.42-8.1-7.42zm4.35 6.02c-.3 0-.55-.25-.55-.55s.25-.55.55-.55.55.25.55.55-.25.55-.55.55zm-3.2 0c-.3 0-.55-.25-.55-.55s.25-.55.55-.55.55.25.55.55-.25.55-.55.55zM19.05 13.7c-.23 0-.45-.02-.68-.05-.4.85-.92 1.63-1.55 2.3.4.15.82.25 1.25.25.45 0 .88-.1 1.28-.28l1.78.93-.5-1.88c1.23-1.05 2.02-2.55 2.02-4.22 0-3.08-2.72-5.58-6.08-5.58-.33 0-.65.03-.98.08.73.98 1.18 2.18 1.18 3.48 0 3.32-2.92 6.02-6.52 6.02l-1.2-.12z"/></svg>
-              </div>
-              <span class="text-[10px] text-gray-500 font-medium">朋友圈</span>
-            </div>
-            <div class="flex flex-col items-center gap-1.5 opacity-80 hover:opacity-100 cursor-pointer">
-              <div class="w-12 h-12 rounded-2xl bg-[#2b85e4] flex items-center justify-center text-white p-2.5 shadow-md shadow-blue-100">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.31.26 2.56.73 3.71l-1.7 4.29 4.29-1.7c1.15.47 2.4.73 3.71.73 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
-              </div>
-              <span class="text-[10px] text-gray-500 font-medium">微信群</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
