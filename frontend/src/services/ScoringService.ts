@@ -97,12 +97,18 @@ export class ScoringService {
    */
   private _calculateDimension() {
     const dimensions: Record<string, number> = {};
+    let totalScore = 0;
+    
     this.answers.forEach(answer => {
+      const val = Number(answer.value) || 0;
+      totalScore += val;
+      
       if (answer.dimensionKey) {
-        dimensions[answer.dimensionKey] = (dimensions[answer.dimensionKey] || 0) + (Number(answer.value) || 0);
+        dimensions[answer.dimensionKey] = (dimensions[answer.dimensionKey] || 0) + val;
       }
     });
-    return { dimensions };
+    
+    return { totalScore, dimensions };
   }
 
   /**
